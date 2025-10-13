@@ -4,13 +4,11 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import ProcessFlowAnimation from "@/components/ProcessFlowAnimation";
 import OORADemo from "@/components/OORADemo";
-import LeadCaptureForm, { LeadData } from "@/components/LeadCaptureForm";
 
 export default function HowItWorksSection() {
   const [expandedLayer, setExpandedLayer] = useState<number | null>(null);
   const [expandedAIComponent, setExpandedAIComponent] = useState<number | null>(null);
   const [showOORADemo, setShowOORADemo] = useState(false);
-  const [hasSubmittedLead, setHasSubmittedLead] = useState(false);
 
   const layers = [
     {
@@ -315,16 +313,7 @@ export default function HowItWorksSection() {
             )}
           </div>
 
-          {showOORADemo && !hasSubmittedLead && (
-            <div className="mt-8 animate-fade-in-up">
-              <LeadCaptureForm 
-                source="oora_demo"
-                onSubmit={() => setHasSubmittedLead(true)}
-              />
-            </div>
-          )}
-
-          {showOORADemo && hasSubmittedLead && (
+          {showOORADemo && (
             <div className="mt-8 animate-fade-in-up">
               <OORADemo />
             </div>
