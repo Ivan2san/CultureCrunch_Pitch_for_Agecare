@@ -6,7 +6,7 @@ export default function VisionSection() {
   const visionParallax = useParallax({ speed: 0.2 });
 
   return (
-    <section id="vision" className="min-h-screen bg-corporate-gradient flex items-center justify-center px-6 py-20">
+    <section id="vision" className="min-h-screen bg-corporate-gradient flex items-center justify-center px-6 py-32">
       <div className="max-w-6xl mx-auto text-center space-y-12">
         {/* Headline */}
         <div ref={headlineParallax.ref} style={headlineParallax.style} className="space-y-6 animate-fade-in-up">
