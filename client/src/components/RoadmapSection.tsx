@@ -1,7 +1,11 @@
-import { Rocket, Users, TrendingUp, Globe } from "lucide-react";
+import { useState } from "react";
+import { Rocket, Users, TrendingUp, Globe, ChevronDown } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export default function RoadmapSection() {
+  const [expandedPhases, setExpandedPhases] = useState<number[]>([]);
+
   // Color mappings for proper Tailwind compilation
   const colorClasses = {
     blue: {
@@ -108,6 +112,12 @@ export default function RoadmapSection() {
     },
   ];
 
+  const togglePhase = (index: number) => {
+    setExpandedPhases((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    );
+  };
+
   return (
     <section id="roadmap" className="min-h-screen bg-corporate-gradient px-6 py-32">
       <div className="max-w-7xl mx-auto">
@@ -126,64 +136,89 @@ export default function RoadmapSection() {
           {/* Vertical Line */}
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 via-purple-400 to-indigo-400 -translate-x-1/2" />
 
-          <div className="space-y-16">
+          <div className="space-y-8">
             {phases.map((phase, index) => {
               const Icon = phase.icon;
               const isEven = index % 2 === 0;
+              const isExpanded = expandedPhases.includes(index);
 
               return (
-                <div key={index} className={`flex items-center gap-8 ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}>
+                <div key={index} className={`flex items-start gap-8 ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}>
                   {/* Card */}
                   <Card
-                    className={`flex-1 p-8 bg-white hover:shadow-xl transition-all ${
+                    className={`flex-1 bg-white transition-all ${
                       isEven ? "md:text-right" : "md:text-left"
                     }`}
                     data-testid={`roadmap-phase-${index}`}
                   >
-                    <div className={`flex items-center gap-3 mb-4 ${isEven ? "md:justify-end" : "md:justify-start"}`}>
-                      <Icon className={`w-8 h-8 ${colorClasses[phase.color].icon}`} />
-                      <div>
-                        <h3 className="text-2xl font-bold text-gray-900">{phase.phase}</h3>
-                        <p className="text-sm text-gray-600">{phase.timeline}</p>
-                        {phase.target && <p className="text-xs text-gray-500 italic">{phase.target}</p>}
+                    {/* Header - Always Visible */}
+                    <div className="p-6">
+                      <div className={`flex items-center gap-3 mb-3 ${isEven ? "md:justify-end flex-wrap" : "md:justify-start flex-wrap"}`}>
+                        <Icon className={`w-6 h-6 ${colorClasses[phase.color].icon}`} />
+                        <div>
+                          <h3 className="text-xl font-bold text-gray-900">{phase.phase}</h3>
+                          <p className="text-sm text-gray-600">{phase.timeline}</p>
+                        </div>
                       </div>
+                      {phase.target && (
+                        <p className="text-sm text-gray-700 font-medium mb-3">{phase.target}</p>
+                      )}
+
+                      {/* Expand/Collapse Button */}
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => togglePhase(index)}
+                        className={`gap-2 ${isEven ? "md:ml-auto" : ""}`}
+                        data-testid={`button-toggle-phase-${index}`}
+                      >
+                        {isExpanded ? "Hide Details" : "View Details"}
+                        <ChevronDown
+                          className={`w-4 h-4 transition-transform ${
+                            isExpanded ? "rotate-180" : ""
+                          }`}
+                        />
+                      </Button>
                     </div>
 
-                    <div className="space-y-4">
-                      <div>
-                        <h4 className="font-bold text-gray-800 mb-2">Goals:</h4>
-                        <ul className={`space-y-1 text-sm text-gray-700 ${isEven ? "md:text-right" : "md:text-left"}`}>
-                          {phase.goals.map((goal, i) => (
-                            <li key={i}>• {goal}</li>
-                          ))}
-                        </ul>
-                      </div>
+                    {/* Details - Expandable */}
+                    {isExpanded && (
+                      <div className="px-6 pb-6 space-y-4 border-t border-gray-100 pt-4">
+                        <div>
+                          <h4 className="font-bold text-gray-800 mb-2">Goals:</h4>
+                          <ul className={`space-y-1 text-sm text-gray-700 ${isEven ? "md:text-right" : "md:text-left"}`}>
+                            {phase.goals.map((goal, i) => (
+                              <li key={i}>• {goal}</li>
+                            ))}
+                          </ul>
+                        </div>
 
-                      <div>
-                        <h4 className="font-bold text-gray-800 mb-2">Exit Criteria:</h4>
-                        <ul className={`space-y-1 text-sm text-gray-700 ${isEven ? "md:text-right" : "md:text-left"}`}>
-                          {phase.exitCriteria.map((criteria, i) => (
-                            <li key={i}>• {criteria}</li>
-                          ))}
-                        </ul>
-                      </div>
+                        <div>
+                          <h4 className="font-bold text-gray-800 mb-2">Exit Criteria:</h4>
+                          <ul className={`space-y-1 text-sm text-gray-700 ${isEven ? "md:text-right" : "md:text-left"}`}>
+                            {phase.exitCriteria.map((criteria, i) => (
+                              <li key={i}>• {criteria}</li>
+                            ))}
+                          </ul>
+                        </div>
 
-                      <div>
-                        <h4 className="font-bold text-gray-800 mb-2">Deliverables:</h4>
-                        <ul className={`space-y-1 text-sm text-gray-700 ${isEven ? "md:text-right" : "md:text-left"}`}>
-                          {phase.deliverables.map((deliverable, i) => (
-                            <li key={i}>• {deliverable}</li>
-                          ))}
-                        </ul>
+                        <div>
+                          <h4 className="font-bold text-gray-800 mb-2">Deliverables:</h4>
+                          <ul className={`space-y-1 text-sm text-gray-700 ${isEven ? "md:text-right" : "md:text-left"}`}>
+                            {phase.deliverables.map((deliverable, i) => (
+                              <li key={i}>• {deliverable}</li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </Card>
 
                   {/* Icon Circle */}
                   <div
-                    className={`hidden md:flex w-16 h-16 rounded-full bg-white border-4 ${colorClasses[phase.color].border} items-center justify-center flex-shrink-0 z-10`}
+                    className={`hidden md:flex w-12 h-12 rounded-full bg-white border-4 ${colorClasses[phase.color].border} items-center justify-center flex-shrink-0 z-10`}
                   >
-                    <Icon className={`w-8 h-8 ${colorClasses[phase.color].icon}`} />
+                    <Icon className={`w-6 h-6 ${colorClasses[phase.color].icon}`} />
                   </div>
 
                   {/* Spacer for opposite side */}
