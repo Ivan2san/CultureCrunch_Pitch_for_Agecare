@@ -21,8 +21,7 @@ export default function ROICalculator() {
   const TURNOVER_COST_MULTIPLIER = 1.5;
   const PRODUCTIVITY_LOSS_DISENGAGED = 0.18;
   const ABSENTEEISM_COST_PER_EMPLOYEE = 3500;
-  const SUBSCRIPTION_COST_PER_EMPLOYEE_MONTHLY = 10;
-  const FOUNDING_PARTNER_DISCOUNT = 0.3;
+  const FOUNDING_PARTNER_ANNUAL_COST = 25000;
   const EXPECTED_CLAIM_REDUCTION = 0.4;
   const EXPECTED_TURNOVER_REDUCTION = 0.25;
   const EXPECTED_ENGAGEMENT_IMPROVEMENT = 0.3;
@@ -49,8 +48,7 @@ export default function ROICalculator() {
   const totalAnnualSavings =
     claimsSavings + turnoverSavings + productivityGains + absenteeismSavings;
 
-  const annualSubscriptionCost =
-    employeeCount * SUBSCRIPTION_COST_PER_EMPLOYEE_MONTHLY * 12 * (1 - FOUNDING_PARTNER_DISCOUNT);
+  const annualSubscriptionCost = FOUNDING_PARTNER_ANNUAL_COST;
   const netAnnualROI = totalAnnualSavings - annualSubscriptionCost;
   const roiMultiple = (totalAnnualSavings / annualSubscriptionCost).toFixed(1);
 
@@ -252,20 +250,20 @@ export default function ROICalculator() {
                 Your ROI with CultureCrunch
               </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div>
-                  <p className="text-sm opacity-90 mb-1">Annual Investment (Founding Partner)</p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div className="text-center sm:text-left">
+                  <p className="text-sm opacity-90 mb-1">Annual Investment</p>
                   <p className="text-3xl font-bold">{formatCurrency(annualSubscriptionCost)}</p>
-                  <p className="text-xs opacity-75 mt-1">30% discount included</p>
+                  <p className="text-xs opacity-75 mt-1">Founding partner rate</p>
                 </div>
 
-                <div>
+                <div className="text-center sm:text-left">
                   <p className="text-sm opacity-90 mb-1">Net Annual ROI</p>
                   <p className="text-3xl font-bold">{formatCurrency(netAnnualROI)}</p>
                   <p className="text-xs opacity-75 mt-1">Savings minus investment</p>
                 </div>
 
-                <div>
+                <div className="text-center sm:text-left">
                   <p className="text-sm opacity-90 mb-1">ROI Multiple</p>
                   <p className="text-3xl font-bold">{roiMultiple}x</p>
                   <p className="text-xs opacity-75 mt-1">Return on investment</p>
@@ -387,22 +385,20 @@ export default function ROICalculator() {
                   <div>
                     <h4 className="text-xl font-bold text-gray-900 mb-4">Investment & ROI Calculation</h4>
                     <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
-                      <h5 className="font-bold text-purple-800 mb-3">Annual Subscription Cost</h5>
+                      <h5 className="font-bold text-purple-800 mb-3">Founding Partner Annual Investment</h5>
                       <p className="text-sm text-gray-700 mb-2">
-                        <strong>Base Rate:</strong> $10 per employee per month × 12 months
+                        <strong>Special Founding Partner Rate:</strong> $25,000 per year (flat fee)
                       </p>
-                      <p className="text-sm text-gray-700 mb-2">
-                        <strong>Founding Partner Discount:</strong> 30% off standard pricing
-                      </p>
-                      <p className="text-sm text-gray-700 mb-3">
-                        <strong>Final Cost:</strong> Employee Count × $10 × 12 × 0.7
+                      <p className="text-sm text-gray-600 mb-3">
+                        Early adopters receive exclusive flat-rate pricing regardless of organisation size,
+                        providing exceptional value for pilot program participants.
                       </p>
                       <div className="border-t border-purple-300 pt-3 mt-3">
                         <p className="text-sm text-gray-700 mb-1">
-                          <strong>Net ROI:</strong> Total Savings - Subscription Cost
+                          <strong>Net ROI:</strong> Total Savings - Annual Investment ($25,000)
                         </p>
                         <p className="text-sm text-gray-700">
-                          <strong>ROI Multiple:</strong> Total Savings ÷ Subscription Cost
+                          <strong>ROI Multiple:</strong> Total Savings ÷ Annual Investment
                         </p>
                       </div>
                     </div>
