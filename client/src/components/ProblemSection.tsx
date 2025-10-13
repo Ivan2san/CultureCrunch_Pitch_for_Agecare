@@ -80,6 +80,7 @@ export default function ProblemSection() {
                   <li>• <strong>44%</strong> see zero ROI from engagement investments</li>
                   <li>• <strong>70%</strong> of engagement variance is from managers, yet only 26% create psychological safety</li>
                 </ul>
+                <p className="text-xs text-gray-600 mt-3">Sources: Harvard Business Review 2024; McKinsey 2021</p>
               </div>
             </div>
           </Card>
