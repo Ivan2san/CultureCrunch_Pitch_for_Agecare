@@ -25,7 +25,7 @@ export default function VisionSection() {
             </span>
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight" style={{ letterSpacing: '-0.01em' }}>
             AI That Transforms<br />
             <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
               Compliance into Care

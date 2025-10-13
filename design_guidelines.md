@@ -43,17 +43,23 @@
 ## Typography
 
 **Font Stack**:
-- **Headings**: Inter (700, 800 weights) - Clean, modern, professional
-- **Body**: Inter (400, 500, 600 weights) - Excellent readability for data-heavy content
-- **Data/Numbers**: JetBrains Mono (500, 600 weights) - Monospace for metrics, calculations
+- **All Text**: DM Sans (primary font for entire application)
+- **Font Weights**:
+  - Body text: 500 (medium weight for readability)
+  - Headings: 700 (bold for hierarchy and emphasis)
+  - Buttons: 600 (semibold for interactive elements)
+- **Letter Spacing**: 
+  - Body text: -0.005em (-0.5% for natural flow)
+  - Headings: -0.01em (-1% for tighter, more impactful appearance)
 
 **Type Scale**:
-- Hero Headline: `text-5xl md:text-6xl font-bold` (48px → 60px)
+- Hero Headline: `text-4xl md:text-5xl font-bold` (36px → 48px)
 - Section Headers: `text-3xl md:text-4xl font-bold` (30px → 36px)
-- Card Titles: `text-xl font-semibold` (20px)
-- Body Text: `text-base md:text-lg` (16px → 18px)
-- Captions/Citations: `text-sm text-gray-600` (14px)
-- Data Labels: `text-xs font-mono` (12px)
+- Subsection Headers: `text-2xl font-bold` (24px)
+- Card Titles: `text-xl font-bold` (20px)
+- Body Text: `text-base md:text-lg` (16px → 18px) with font-medium (500 weight)
+- Small Text: `text-sm` (14px)
+- Captions: `text-xs text-gray-600` (12px)
 
 **Line Heights**: Generous spacing for readability - `leading-relaxed` for body, `leading-tight` for headlines
 

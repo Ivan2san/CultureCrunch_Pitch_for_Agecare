@@ -123,7 +123,7 @@ export default function RoadmapSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4" style={{ letterSpacing: '-0.01em' }}>
             Roadmap to <span className="text-indigo-600">Market Leadership</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto">
