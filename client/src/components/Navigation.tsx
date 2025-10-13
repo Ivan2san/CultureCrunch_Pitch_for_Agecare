@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
-import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
+import { ChevronDown, ChevronUp, Menu, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { exportPitchDeckToPDF } from "@/lib/pdfExport";
+import { useToast } from "@/hooks/use-toast";
 
 const sections = [
   { id: "vision", label: "Vision" },
@@ -17,6 +19,33 @@ const sections = [
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState("vision");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isExporting, setIsExporting] = useState(false);
+  const { toast } = useToast();
+
+  const handleExportPDF = async () => {
+    setIsExporting(true);
+    toast({
+      title: "Generating PDF...",
+      description: "Please wait while we create your pitch deck PDF.",
+    });
+
+    const result = await exportPitchDeckToPDF();
+
+    if (result.success) {
+      toast({
+        title: "PDF Downloaded!",
+        description: "Your pitch deck has been saved successfully.",
+      });
+    } else {
+      toast({
+        title: "Export Failed",
+        description: "There was an error generating the PDF. Please try again.",
+        variant: "destructive",
+      });
+    }
+
+    setIsExporting(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,21 +103,34 @@ export default function Navigation() {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-1 bg-muted rounded-lg p-1">
-              {sections.map((section) => (
-                <button
-                  key={section.id}
-                  onClick={() => scrollToSection(section.id)}
-                  className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
-                    activeSection === section.id
-                      ? "bg-primary text-primary-foreground"
-                      : "text-gray-600 hover:text-gray-900 hover-elevate"
-                  }`}
-                  data-testid={`nav-link-${section.id}`}
-                >
-                  {section.label}
-                </button>
-              ))}
+            <div className="hidden md:flex items-center gap-4">
+              <div className="flex items-center gap-1 bg-muted rounded-lg p-1">
+                {sections.map((section) => (
+                  <button
+                    key={section.id}
+                    onClick={() => scrollToSection(section.id)}
+                    className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
+                      activeSection === section.id
+                        ? "bg-primary text-primary-foreground"
+                        : "text-gray-600 hover:text-gray-900 hover-elevate"
+                    }`}
+                    data-testid={`nav-link-${section.id}`}
+                  >
+                    {section.label}
+                  </button>
+                ))}
+              </div>
+
+              <Button
+                onClick={handleExportPDF}
+                disabled={isExporting}
+                variant="outline"
+                size="sm"
+                data-testid="button-export-pdf"
+              >
+                <Download className="w-4 h-4 mr-2" />
+                {isExporting ? "Exporting..." : "Export PDF"}
+              </Button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -131,6 +173,20 @@ export default function Navigation() {
                 {section.label}
               </button>
             ))}
+            
+            <Button
+              onClick={() => {
+                handleExportPDF();
+                setMobileMenuOpen(false);
+              }}
+              disabled={isExporting}
+              variant="outline"
+              className="w-full mt-4"
+              data-testid="button-export-pdf-mobile"
+            >
+              <Download className="w-4 h-4 mr-2" />
+              {isExporting ? "Exporting..." : "Export PDF"}
+            </Button>
           </div>
         </div>
       )}
