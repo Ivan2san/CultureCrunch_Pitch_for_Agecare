@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Brain, Database, Zap, Cpu, Network, CheckCircle, GitBranch, RefreshCw } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import ProcessFlowAnimation from "@/components/ProcessFlowAnimation";
 
 export default function HowItWorksSection() {
   const [expandedLayer, setExpandedLayer] = useState<number | null>(null);
@@ -125,6 +126,11 @@ export default function HowItWorksSection() {
           <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto">
             Privacy-first AI that turns workplace signals into actionable leadership insights
           </p>
+        </div>
+
+        {/* Animated Process Flow */}
+        <div className="mb-16">
+          <ProcessFlowAnimation />
         </div>
 
         {/* System Architecture */}
