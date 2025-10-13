@@ -4,11 +4,13 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import ProcessFlowAnimation from "@/components/ProcessFlowAnimation";
 import OORADemo from "@/components/OORADemo";
+import LeadCaptureForm, { LeadData } from "@/components/LeadCaptureForm";
 
 export default function HowItWorksSection() {
   const [expandedLayer, setExpandedLayer] = useState<number | null>(null);
   const [expandedAIComponent, setExpandedAIComponent] = useState<number | null>(null);
   const [showOORADemo, setShowOORADemo] = useState(false);
+  const [hasSubmittedLead, setHasSubmittedLead] = useState(false);
 
   const layers = [
     {
@@ -299,18 +301,32 @@ export default function HowItWorksSection() {
               Experience how ThriveGuide AI guides leaders through difficult conversations using the 
               evidence-based OORA framework (Observe, Orient, Respond, Assess)
             </p>
-            <Button
-              onClick={() => setShowOORADemo(!showOORADemo)}
-              variant="default"
-              size="lg"
-              className="bg-indigo-600 hover:bg-indigo-700"
-              data-testid="button-toggle-oora-demo"
-            >
-              {showOORADemo ? "Hide Demo" : "Try Interactive Demo"}
-            </Button>
+            
+            {!showOORADemo && (
+              <Button
+                onClick={() => setShowOORADemo(true)}
+                variant="default"
+                size="lg"
+                className="bg-indigo-600 hover:bg-indigo-700"
+                data-testid="button-toggle-oora-demo"
+              >
+                Try Interactive Demo
+              </Button>
+            )}
           </div>
 
-          {showOORADemo && (
+          {showOORADemo && !hasSubmittedLead && (
+            <div className="mt-8 animate-fade-in-up">
+              <LeadCaptureForm 
+                onSubmit={(data: LeadData) => {
+                  console.log('Lead captured:', data);
+                  setHasSubmittedLead(true);
+                }}
+              />
+            </div>
+          )}
+
+          {showOORADemo && hasSubmittedLead && (
             <div className="mt-8 animate-fade-in-up">
               <OORADemo />
             </div>
