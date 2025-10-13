@@ -111,6 +111,7 @@ export default function ProblemSection() {
                   <p><strong>25% increase</strong> in SafeWork NSW inspections (2024-2026)</p>
                   <p><strong>200+ employee workplaces</strong> targeted for mandatory checks</p>
                 </div>
+                <p className="text-xs text-gray-600 mt-3">Sources: SafeWork NSW Psychological Health Strategy 2024-2026; Safe Work Australia 2024</p>
               </div>
             </div>
           </Card>
