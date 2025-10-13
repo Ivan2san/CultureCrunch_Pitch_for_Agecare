@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Play, Pause, RotateCcw, ChevronLeft, ChevronRight } from "lucide-react";
@@ -255,7 +255,7 @@ export default function OORADemo() {
   };
 
   // Auto-play functionality
-  useState(() => {
+  useEffect(() => {
     let interval: NodeJS.Timeout;
     if (isPlaying) {
       interval = setInterval(() => {
@@ -267,7 +267,7 @@ export default function OORADemo() {
       }, 2500);
     }
     return () => clearInterval(interval);
-  });
+  }, [isPlaying, currentStep, scenario.messages.length]);
 
   const phases = [
     { id: "observe", label: "Observe", description: "Gather Facts" },
