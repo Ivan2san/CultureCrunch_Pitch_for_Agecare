@@ -293,7 +293,7 @@ export default function HowItWorksSection() {
           <div className="text-center mb-6">
             <div className="flex items-center justify-center gap-3 mb-4">
               <MessageSquare className="w-10 h-10 text-indigo-600" />
-              <h3 className="text-3xl font-bold text-gray-900">Interactive ThriveGuide Psychosafety Resolution</h3>
+              <h3 className="text-3xl font-bold text-gray-900">Interactive ThriveGuide AI-Copilot Leader Issue Resolution</h3>
             </div>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-4">
               Experience how ThriveGuide AI guides leaders through psych safety identification, risk assessment and mitigation.
