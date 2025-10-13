@@ -22,7 +22,7 @@ export default function PositioningSection() {
       differentiators: [
         "Agentic AI that autonomously detects + recommends (not just dashboards)",
         "OORA conversation framework with contextual nudges",
-        "Behavior-based (Green/Red) instead of generic engagement scores",
+        "Behaviour-based (Green/Red) instead of generic engagement scores",
       ],
     },
     {
@@ -53,7 +53,7 @@ export default function PositioningSection() {
     {
       title: "Triple Goal Leadership Model™",
       description:
-        "10+ years of organizational behavior research distilled into our AI training. Competitors don't have this foundation.",
+        "10+ years of organisational behaviour research distilled into our AI training. Competitors don't have this foundation.",
     },
     {
       title: "Regulatory Deep Integration",

@@ -25,7 +25,7 @@ export default function ProblemSection() {
             The Problem: <span className="text-red-600">A System-Level Failure</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto">
-            Organizations measure more than ever, yet engagement has fallen to a 10-year low
+            Organisations measure more than ever, yet engagement has fallen to a 10-year low
           </p>
         </div>
 
@@ -59,7 +59,7 @@ export default function ProblemSection() {
                 <ul className="space-y-2 text-gray-700 text-sm">
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
-                    <span>Engagement dropped to <strong>21%</strong> globally (2024) — representing $8.9T in lost productivity</span>
+                    <span>Engagement dropped to <strong>21%</strong> globally (2024), representing $8.9T in lost productivity</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
@@ -75,9 +75,9 @@ export default function ProblemSection() {
               <div className="border-2 border-gray-200 p-4 rounded-lg">
                 <h4 className="font-bold text-gray-800 mb-2">Why Current Solutions Fail:</h4>
                 <ul className="space-y-1 text-gray-700 text-sm">
-                  <li>• Only <strong>58%</strong> of organizations take action after surveys</li>
+                  <li>• Only <strong>58%</strong> of organisations take action after surveys</li>
                   <li>• <strong>44%</strong> see zero ROI from engagement investments</li>
-                  <li>• <strong>70%</strong> of engagement variance is from managers—yet only 26% create psychological safety</li>
+                  <li>• <strong>70%</strong> of engagement variance is from managers, yet only 26% create psychological safety</li>
                 </ul>
               </div>
             </div>
@@ -133,7 +133,7 @@ export default function ProblemSection() {
             ))}
           </div>
           <p className="text-center text-sm text-gray-600 mt-4">
-            Source: Gallup Q12 Meta-Analysis (955,905 employees, 152 organizations)
+            Source: Gallup Q12 Meta-Analysis (955,905 employees, 152 organisations)
           </p>
         </div>
       </div>

@@ -18,7 +18,7 @@ export default function TheAskSection() {
             The Ask: <span className="text-purple-600">Be a Founding Partner</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-700">
-            Help us build the future of psychosocial safety—and secure your competitive advantage
+            Help us build the future of psychosocial safety and secure your competitive advantage
           </p>
         </div>
 
@@ -47,7 +47,7 @@ export default function TheAskSection() {
                   <div className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
                     <span>
-                      <strong>Scope:</strong> 10-15 managers, 100-150 employees
+                      <strong>Scope:</strong> 10–15 managers, 100–150 employees
                     </span>
                   </div>
                   <div className="flex items-start gap-2">
@@ -64,7 +64,7 @@ export default function TheAskSection() {
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
                     <span className="text-purple-600">•</span>
-                    <span>Your organization sees this as a strategic priority</span>
+                    <span>Your organisation sees this as a strategic priority</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-purple-600">•</span>
@@ -108,7 +108,7 @@ export default function TheAskSection() {
                   White-Glove Implementation
                 </h4>
                 <p className="text-gray-700">
-                  Direct access to our team throughout the pilot. Weekly check-ins, rapid iteration, and customized
+                  Direct access to our team throughout the pilot. Weekly check-ins, rapid iteration and customised
                   support
                 </p>
               </div>
@@ -116,7 +116,7 @@ export default function TheAskSection() {
               <div className="bg-blue-50 p-5 rounded-lg border border-blue-200">
                 <h4 className="font-bold text-lg text-blue-900 mb-2">Co-Design the Product</h4>
                 <p className="text-gray-700">
-                  Shape features, workflows, and reporting to match your needs. Your feedback directly influences our
+                  Shape features, workflows and reporting to match your needs. Your feedback directly influences our
                   roadmap
                 </p>
               </div>
@@ -157,12 +157,12 @@ export default function TheAskSection() {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                  <span>Validates our solution with real organizations</span>
+                  <span>Validates our solution with real organisations</span>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold text-xl mb-3">For Your Organization:</h4>
+              <h4 className="font-bold text-xl mb-3">For Your Organisation:</h4>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
@@ -187,7 +187,7 @@ export default function TheAskSection() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
               { num: "1", title: "This Week", desc: "30-min discovery call to align on pilot scope and success metrics" },
-              { num: "2", title: "Next Week", desc: "Custom pilot proposal delivered to match your organization" },
+              { num: "2", title: "Next Week", desc: "Custom pilot proposal delivered to match your organisation" },
               { num: "3", title: "Week 3", desc: "LOI signed, stakeholder alignment confirmed" },
               { num: "4", title: "Q2 2025", desc: "Pilot begins (April-June), results in hand by July" },
             ].map((step, index) => (
@@ -204,18 +204,18 @@ export default function TheAskSection() {
 
         {/* The Direct Ask */}
         <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-xl p-12 text-white text-center">
-          <h3 className="text-3xl font-bold mb-6">We're Looking for 3-5 Founding Partners</h3>
+          <h3 className="text-3xl font-bold mb-6">We're Looking for 3–5 Founding Partners</h3>
           <p className="text-xl mb-8 text-gray-300">
-            Organizations ready to lead on psychosocial safety, not follow
+            Organisations ready to lead on psychosocial safety, not follow
           </p>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-3xl mx-auto mb-8">
             <p className="text-2xl font-bold mb-4">The Question:</p>
             <p className="text-xl mb-6">
-              Would your organization provide a Letter of Intent to participate in our Q2 2025 pilot program?
+              Would your organisation provide a Letter of Intent to participate in our Q2 2025 pilot program?
             </p>
             <p className="text-lg text-gray-300">
-              (Non-binding, subject to final agreement, enables us to secure funding and ensures you get founding
+              (Non-binding, subject to final agreement; enables us to secure funding and ensures you get founding
               partner benefits)
             </p>
           </div>

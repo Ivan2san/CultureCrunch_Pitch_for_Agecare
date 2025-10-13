@@ -44,7 +44,7 @@ export default function VisionSection() {
             <h3 className="text-lg font-bold text-gray-900 mb-2">Agentic AI</h3>
             <p className="text-gray-600">
               Autonomous intelligence that detects psychosocial risks before they escalate, 
-              interpreting behavioral patterns with privacy-first principles.
+              interpreting behavioural patterns with privacy-first principles.
             </p>
           </div>
 

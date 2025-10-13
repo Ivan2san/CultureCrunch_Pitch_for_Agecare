@@ -63,7 +63,7 @@ export default function HowItWorksSection() {
         },
         {
           name: "Continuous Learning",
-          desc: "Model refinement, organization-specific training, pattern reinforcement",
+          desc: "Model refinement, organisation-specific training, pattern reinforcement",
         },
       ],
     },
@@ -75,7 +75,7 @@ export default function HowItWorksSection() {
       icon: Cpu,
       color: "indigo",
       description:
-        "AI systems that autonomously interpret behavioral data from internal systems, identify risk signals, and recommend leadership actions within ethical boundaries.",
+        "AI systems that autonomously interpret behavioural data from internal systems, identify risk signals, and recommend leadership actions within ethical boundaries.",
       features: [
         "Pattern Recognition: Detects anomalies in meeting loads, response times, collaboration patterns",
         "Risk Assessment: Maps patterns to 17 psychosocial hazards (per WHS regulations)",
@@ -89,9 +89,9 @@ export default function HowItWorksSection() {
       icon: Brain,
       color: "purple",
       description:
-        "Large Language Models (LLMs) translate cold data into warm, actionable manager nudges — with organization-specific context and evidence-based frameworks built in.",
+        "Large Language Models (LLMs) translate cold data into warm, actionable manager nudges — with organisation-specific context and evidence-based frameworks built in.",
       features: [
-        "Contextual Training: Fine-tuned on Triple Goal Leadership Model™ + organizational language/culture",
+        "Contextual Training: Fine-tuned on Triple Goal Leadership Model™ + organisational language/culture",
         "Nudge Generation: Crafts specific, actionable manager briefs (not generic advice)",
         "Conversation Frameworks: Generates OORA conversation starters tailored to detected risks",
         "Micro-Action Library: Recommends evidence-based actions from 10+ years of org research",
@@ -108,7 +108,7 @@ export default function HowItWorksSection() {
         "Graph Modeling: Builds network graphs from metadata (who communicates with whom, when, how often)",
         "Centrality Analysis: Identifies key connectors, influencers, and isolated team members",
         "Community Detection: Reveals informal sub-teams and collaboration clusters",
-        "Inclusion Metrics: Surfaces diversity and belonging patterns across the organization",
+        "Inclusion Metrics: Surfaces diversity and belonging patterns across the organisation",
       ],
       tech: "NetworkX, graph algorithms, community detection (Louvain), centrality measures",
     },

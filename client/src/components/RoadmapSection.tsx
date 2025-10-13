@@ -9,7 +9,7 @@ export default function RoadmapSection() {
       icon: Users,
       color: "blue",
       goals: [
-        "3-5 Founding Partner pilots (10-15 managers each)",
+        "3–5 Founding Partner pilots (10–15 managers each)",
         "Validate core AI detection + nudge effectiveness",
         "Achieve 75%+ manager action rate",
         "Prove 30%+ improvement in wellbeing metrics",
@@ -26,7 +26,7 @@ export default function RoadmapSection() {
       icon: Rocket,
       color: "purple",
       goals: [
-        "Expand to 15-25 customers (200+ managers)",
+        "Expand to 15–25 customers (200+ managers)",
         "Refine AI models based on pilot learnings",
         "Build self-service onboarding",
         "Achieve <15 min/week manager time investment",
@@ -157,7 +157,7 @@ export default function RoadmapSection() {
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Our North Star</h3>
           <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
             By 2027, every manager in the world should have an AI co-pilot that helps them build thriving teams. 
-            CultureCrunch will be the platform that makes this vision real—starting with compliance, scaling with trust, 
+            CultureCrunch will be the platform that makes this vision real: starting with compliance, scaling with trust 
             and winning with outcomes.
           </p>
         </div>

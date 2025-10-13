@@ -74,7 +74,7 @@ export default function ROICalculator() {
             <h2 className="text-4xl font-bold text-gray-900">CultureCrunch ROI Calculator</h2>
           </div>
           <p className="text-xl text-gray-600">
-            Calculate the financial impact of reducing psychosocial risk in your organization
+            Calculate the financial impact of reducing psychosocial risk in your organisation
           </p>
         </div>
 
@@ -84,7 +84,7 @@ export default function ROICalculator() {
             <Card className="p-6 sticky top-24 bg-white">
               <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
                 <Users className="w-6 h-6 text-purple-600" />
-                Your Organization
+                Your Organisation
               </h3>
 
               <div className="space-y-6">
