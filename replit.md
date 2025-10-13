@@ -10,6 +10,11 @@ CultureCrunch is a B2B SaaS platform that transforms workplace psychosocial comp
 
 ## Recent Changes
 
+- **PositioningSection Interactive Cards (October 2025)**:
+  - Added "Learn More" buttons to each positioning advantage card
+  - Implemented detailed dialog modals with comprehensive information for each advantage
+  - Each dialog includes overview, key features breakdown, and impact statistics
+  - Enhanced user engagement with expandable content for deeper understanding
 - **TheAskSection Warmer Design (October 2025)**:
   - Replaced dark gray gradient with soft purple-blue-indigo gradient for warmer, more inviting feel
   - Updated text colors from white-on-dark to dark-on-light for better readability and warmth
