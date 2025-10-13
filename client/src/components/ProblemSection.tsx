@@ -1,34 +1,24 @@
 import { TrendingDown, AlertTriangle, DollarSign } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { useParallax } from "@/hooks/useParallax";
 
 export default function ProblemSection() {
-  const headerParallax = useParallax({ speed: -0.2 });
-
   const stats = [
-    { value: "21%", label: "Global Engagement", sublabel: "Down from 23% in 2023", color: "red" },
+    { value: "58%", label: "Action Gap", sublabel: "Only 58% act on feedback", color: "red" },
+    { value: "82%", label: "Trust Collapse", sublabel: "Don't trust managers", color: "red" },
+    { value: "44%", label: "Zero ROI", sublabel: "From engagement efforts", color: "red" },
     { value: "$8.9T", label: "Lost Productivity", sublabel: "Annually worldwide", color: "red" },
-    { value: "65%", label: "No Action Taken", sublabel: "On survey results", color: "red" },
-    { value: "82%", label: "Distrust Managers", sublabel: "Don't trust manager honesty", color: "red" },
-  ];
-
-  const australianStats = [
-    { value: "$290K", label: "Mental Health Claim", sublabel: "Average cost per claim", color: "orange" },
-    { value: "97%", label: "Claims Increase", sublabel: "Over 10 years", color: "orange" },
-    { value: "61%", label: "Burnout Rate", sublabel: "Australian workers", color: "orange" },
-    { value: "$11.5M", label: "Max Penalty", sublabel: "Category 1 offenses", color: "orange" },
   ];
 
   return (
     <section id="problem" className="min-h-screen bg-corporate-gradient px-6 py-32">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div ref={headerParallax.ref} style={headerParallax.style} className="text-center mb-16">
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            The Problem: <span className="text-red-600">A System-Level Failure</span>
+            The Problem: <span className="text-red-600">The Accountability Failure Cascade</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto">
-            Organisations measure more than ever, yet engagement has fallen to a 10-year low
+            Organisations measure engagement but fail to act—destroying trust and creating a $8.9 trillion productivity crisis
           </p>
           <p className="text-sm text-gray-600 mt-4 italic max-w-4xl mx-auto">
             All statistics sourced from peer-reviewed research, government reports, and major industry studies published 2023-2025
@@ -54,69 +44,70 @@ export default function ProblemSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
           <div className="flex items-center gap-3">
             <TrendingDown className="w-8 h-8 text-red-600" />
-            <h3 className="text-2xl font-bold text-red-600">The Measurement Paradox</h3>
+            <h3 className="text-2xl font-bold text-red-600">The Action Gap & Trust Collapse</h3>
           </div>
           <div className="flex items-center gap-3">
             <DollarSign className="w-8 h-8 text-orange-600" />
-            <h3 className="text-2xl font-bold text-orange-600">The Cost: Australian Context</h3>
+            <h3 className="text-2xl font-bold text-orange-600">The Capability & ROI Crisis</h3>
           </div>
         </div>
 
         {/* Main Content Grid - 4 Symmetrical Boxes */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16 lg:grid-rows-2">
-          {/* Box 1: More Surveys, Worse Outcomes */}
+          {/* Box 1: Organizations Fail to Act */}
           <Card className="p-6 bg-white flex flex-col h-full">
-            <h4 className="font-bold text-lg text-red-900 mb-3">More Surveys, Worse Outcomes</h4>
+            <h4 className="font-bold text-lg text-red-900 mb-3">Organizations Fail to Act on Feedback</h4>
             <ul className="space-y-2 text-gray-700 text-sm flex-1">
               <li className="flex items-start gap-2">
                 <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
-                <span>Engagement dropped to <strong>21%</strong> globally (2024), representing $8.9T in lost productivity</span>
+                <span>Only <strong>58%</strong> of organizations take action to improve after receiving employee feedback</span>
               </li>
               <li className="flex items-start gap-2">
                 <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
-                <span><strong>31% US engagement</strong>: lowest in a decade (8M fewer engaged employees since 2020)</span>
+                <span><strong>65%</strong> of employees say their organization does NOT take meaningful action on survey results</span>
               </li>
               <li className="flex items-start gap-2">
                 <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
-                <span>Response rates drop to <strong>59%</strong> when surveying 4+ times annually</span>
+                <span><strong>45%</strong> say their feedback leads to no noticeable changes or improvements</span>
               </li>
             </ul>
-            <p className="text-xs text-gray-600 mt-4 pt-3 border-t">Source: Gallup 2024</p>
+            <p className="text-xs text-gray-600 mt-4 pt-3 border-t">Sources: Harvard Business Review; Quantum Workplace 2023</p>
           </Card>
 
-          {/* Box 2: Mental Health Crisis */}
+          {/* Box 2: Manager Capability Gap */}
           <Card className="p-6 bg-white flex flex-col h-full">
-            <h4 className="font-bold text-lg text-orange-900 mb-3">Mental Health Crisis</h4>
+            <h4 className="font-bold text-lg text-orange-900 mb-3">Manager Capability Gap</h4>
             <div className="space-y-2 text-gray-700 text-sm flex-1">
-              <p><strong>$290K</strong> average mental health claim (3× physical injuries)</p>
-              <p><strong>97.3%</strong> increase in claims over 10 years</p>
-              <p><strong>34.2 weeks</strong> median time lost (vs 8.0 for physical)</p>
-              <p><strong>$10.9-12.8B</strong> annual cost to employers</p>
+              <p><strong>70%</strong> of engagement variance explained by managers, yet manager engagement fell from 30% to 27%</p>
+              <p><strong>Only 26%</strong> of leaders display behaviors that instill psychological safety</p>
+              <p><strong>Only 50%</strong> of workers say managers create psychological safety</p>
+              <p><strong>Only 44%</strong> of managers globally have received any training</p>
             </div>
-            <p className="text-xs text-gray-600 mt-4 pt-3 border-t">Source: Safe Work Australia Key WHS Statistics 2024; CEDA 2024</p>
+            <p className="text-xs text-gray-600 mt-4 pt-3 border-t">Sources: Gallup 2024-2025; McKinsey 2021; Deloitte 2024</p>
           </Card>
 
-          {/* Box 3: Why Current Solutions Fail */}
+          {/* Box 3: When Action Fails, Trust Collapses */}
           <Card className="p-6 bg-white flex flex-col h-full">
-            <h4 className="font-bold text-lg text-red-900 mb-3">Why Current Solutions Fail</h4>
+            <h4 className="font-bold text-lg text-red-900 mb-3">When Action Fails, Trust Collapses</h4>
             <ul className="space-y-2 text-gray-700 text-sm flex-1">
-              <li>• Only <strong>58%</strong> of organisations take action after surveys</li>
-              <li>• <strong>44%</strong> see zero ROI from engagement investments</li>
-              <li>• <strong>70%</strong> of engagement variance is from managers, yet only 26% create psychological safety</li>
+              <li>• <strong>82%</strong> of employees don't trust their manager to tell the truth</li>
+              <li>• <strong>Only 52%</strong> believe change will happen as a result of surveys</li>
+              <li>• <strong>Only 33%</strong> strongly trust their organization's leadership</li>
+              <li>• Trust drops <strong>40%</strong> when no action follows feedback</li>
             </ul>
-            <p className="text-xs text-gray-600 mt-4 pt-3 border-t">Sources: Harvard Business Review 2024; McKinsey 2021</p>
+            <p className="text-xs text-gray-600 mt-4 pt-3 border-t">Sources: People Insight 2024; Gallup 2024; Harvard Business Review 2024</p>
           </Card>
 
-          {/* Box 4: Regulatory Pressure */}
+          {/* Box 4: The ROI Failure */}
           <Card className="p-6 bg-white flex flex-col h-full">
-            <h4 className="font-bold text-lg text-orange-900 mb-3">Regulatory Pressure</h4>
+            <h4 className="font-bold text-lg text-orange-900 mb-3">The ROI Failure</h4>
             <div className="space-y-2 text-gray-700 text-sm flex-1">
-              <p>Psychosocial hazard regulations <strong>active in all states</strong></p>
-              <p><strong>$11.5M</strong> maximum penalties for Category 1 offenses</p>
-              <p><strong>25% increase</strong> in SafeWork NSW inspections (2024-2026)</p>
-              <p><strong>200+ employee workplaces</strong> targeted for mandatory checks</p>
+              <p><strong>Only 56%</strong> achieve positive ROI from engagement investments (44% see zero return)</p>
+              <p><strong>89%</strong> report retention getting more difficult despite engagement efforts</p>
+              <p><strong>75%</strong> updated leadership programs but see no results</p>
+              <p><strong>Only 10%</strong> of $200B in training delivers real results</p>
             </div>
-            <p className="text-xs text-gray-600 mt-4 pt-3 border-t">Sources: SafeWork NSW Psychological Health Strategy 2024-2026; Safe Work Australia 2024</p>
+            <p className="text-xs text-gray-600 mt-4 pt-3 border-t">Sources: Harvard Business Review; Workbuzz 2023/24; Gartner 2024</p>
           </Card>
         </div>
 
