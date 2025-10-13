@@ -297,7 +297,7 @@ export default function HowItWorksSection() {
             </div>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-4">
               Experience how ThriveGuide AI guides leaders through difficult conversations using the 
-              evidence-based OORA framework (Observe, Orient, Respond, Assess)
+              evidence-based OORA framework (Ownership, Observation, Request, Agreement)
             </p>
             
             {!showOORADemo && (
