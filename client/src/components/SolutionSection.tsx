@@ -79,7 +79,7 @@ export default function SolutionSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           {stats.map((stat, index) => (
             <Card key={index} className="p-6 text-center bg-white/60 border border-gray-200" data-testid={`solution-stat-${index}`}>
-              <div className="text-3xl font-bold text-gray-900 mb-1 font-mono">{stat.value}</div>
+              <div className="text-3xl font-bold text-gray-900 mb-1">{stat.value}</div>
               <div className="text-sm text-gray-600">{stat.label}</div>
             </Card>
           ))}
