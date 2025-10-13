@@ -4,12 +4,19 @@
 
 CultureCrunch is a B2B SaaS platform that transforms workplace psychosocial compliance into actionable leadership insights using AI. The application is a pitch/marketing web app designed to attract founding partners for a pilot program. It presents the company's vision, problem analysis, solution architecture, ROI calculations, and partnership opportunities through an interactive single-page application.
 
-**Core Purpose**: Convert prospective enterprise clients into founding partners by demonstrating how AI can turn psychosocial hazard compliance requirements into proactive manager support tools.
+**Core Purpose**: Convert prospective enterprise clients into founding partners by demonstrating how AI can turn psychosocial hazard compliance requirements into proactive leader support tools.
 
 **Target Audience**: Australian enterprise organizations (200+ employees) facing psychosocial safety compliance requirements, particularly HR leaders and executives concerned with workplace mental health, engagement, and regulatory compliance.
 
 ## Recent Changes
 
+- **Complete Terminology Standardization (October 2025)**:
+  - Replaced all Manager/Management references with Leader/Leadership across 11+ components
+  - Updated type definitions (OORADemo.tsx role types changed from "manager" to "leader")
+  - Preserved industry-standard terminology: "risk management", "managing psychosocial hazards" (technical/legal terms)
+  - Preserved proper nouns: "Society for Human Resource Management" (SHRM)
+  - Ensured Australian English spelling and natural language flow throughout
+  - Components updated: PositioningSection, ProblemSection, HowItWorksSection, SolutionSection, VisionSection, ROICalculator, RoadmapSection, TheAskSection, LOIPreview, OORADemo, MethodologyDialog
 - **PositioningSection Interactive Cards (October 2025)**:
   - Added "Learn More" buttons to each positioning advantage card
   - Implemented detailed dialog modals with comprehensive information for each advantage
@@ -24,7 +31,7 @@ CultureCrunch is a B2B SaaS platform that transforms workplace psychosocial comp
 - **ProblemSection Reframed (October 2025)**:
   - Replaced "A System-Level Failure" with "The Accountability Failure Cascade" narrative
   - Removed parallax scrolling effect for cleaner, simpler component
-  - Updated statistics to emphasize action gaps (58% act on feedback), trust collapse (82% don't trust managers), and ROI failures (44% zero ROI)
+  - Updated statistics to emphasize action gaps (58% act on feedback), trust collapse (82% don't trust leaders), and ROI failures (44% zero ROI)
   - Reorganized content around two themes: "Action Gap & Trust Collapse" and "Capability & ROI Crisis"
   - All statistics sourced from peer-reviewed research and industry studies (2023-2025)
 - **Lead Capture System (October 2025)**:
