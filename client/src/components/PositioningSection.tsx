@@ -27,7 +27,7 @@ export default function PositioningSection() {
     },
     {
       icon: Target,
-      title: "Manager-Centric Approach",
+      title: "Leader-Centric Approach",
       description:
         "Managers are 70% of the variance. We make their job manageable, not add to their burden with more training they won't use.",
       differentiators: [
