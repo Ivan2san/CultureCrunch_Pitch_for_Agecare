@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { DollarSign, TrendingUp, Users, AlertTriangle, Calculator, ChevronDown, Info } from "lucide-react";
+import { DollarSign, TrendingUp, Users, AlertTriangle, Calculator, ChevronDown, Info, FileText } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import MethodologyDialog from "@/components/MethodologyDialog";
 
 export default function ROICalculator() {
   const [employeeCount, setEmployeeCount] = useState(250);
@@ -13,6 +14,7 @@ export default function ROICalculator() {
   const [avgSalary, setAvgSalary] = useState(80000);
   const [currentEngagementScore, setCurrentEngagementScore] = useState(45);
   const [showMethodology, setShowMethodology] = useState(false);
+  const [showFullMethodology, setShowFullMethodology] = useState(false);
 
   // Constants
   const MENTAL_HEALTH_CLAIM_COST = 290000;
@@ -408,8 +410,35 @@ export default function ROICalculator() {
                 </div>
               )}
             </Card>
+
+            {/* Full Methodology Button */}
+            <Card className="p-6 bg-gradient-to-r from-indigo-50 to-purple-50 border-2 border-indigo-200 mt-6">
+              <div className="flex items-center justify-between gap-4 flex-wrap">
+                <div className="flex items-center gap-3">
+                  <FileText className="w-6 h-6 text-indigo-600" />
+                  <div>
+                    <h4 className="font-bold text-gray-900">Complete Research Documentation</h4>
+                    <p className="text-sm text-gray-600">View full methodology with all sources and citations</p>
+                  </div>
+                </div>
+                <Button
+                  onClick={() => setShowFullMethodology(true)}
+                  className="bg-indigo-600 hover:bg-indigo-700"
+                  data-testid="button-view-full-methodology"
+                >
+                  <FileText className="w-4 h-4 mr-2" />
+                  View Full Methodology & Sources
+                </Button>
+              </div>
+            </Card>
           </div>
         </div>
+
+        {/* Methodology Dialog */}
+        <MethodologyDialog 
+          open={showFullMethodology} 
+          onOpenChange={setShowFullMethodology}
+        />
       </div>
     </section>
   );
