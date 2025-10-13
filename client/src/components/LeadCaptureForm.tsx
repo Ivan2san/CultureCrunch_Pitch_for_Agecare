@@ -3,9 +3,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
+import { apiRequest } from "@/lib/queryClient";
+import { useToast } from "@/hooks/use-toast";
 
 interface LeadCaptureFormProps {
-  onSubmit: (data: LeadData) => void;
+  onSubmit?: () => void;
+  source: string;
+  submitLabel?: string;
+  title?: string;
+  description?: string;
 }
 
 export interface LeadData {
@@ -15,17 +21,50 @@ export interface LeadData {
   email: string;
 }
 
-export default function LeadCaptureForm({ onSubmit }: LeadCaptureFormProps) {
+export default function LeadCaptureForm({ 
+  onSubmit, 
+  source,
+  submitLabel = "Access Demo",
+  title = "Experience the Demo",
+  description = "Share your details to unlock the interactive OORA framework demonstration"
+}: LeadCaptureFormProps) {
   const [formData, setFormData] = useState<LeadData>({
     name: "",
     company: "",
     mobile: "",
     email: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit(formData);
+    setIsSubmitting(true);
+
+    try {
+      await apiRequest("/api/leads", "POST", {
+        ...formData,
+        source,
+      });
+
+      toast({
+        title: "Thank you!",
+        description: "Your details have been submitted successfully.",
+      });
+
+      if (onSubmit) {
+        onSubmit();
+      }
+    } catch (error) {
+      console.error("Error submitting lead:", error);
+      toast({
+        title: "Error",
+        description: "Failed to submit your details. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (field: keyof LeadData) => (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,9 +74,9 @@ export default function LeadCaptureForm({ onSubmit }: LeadCaptureFormProps) {
   return (
     <Card className="p-8 max-w-md mx-auto bg-white">
       <div className="mb-6 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">Experience the Demo</h3>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">{title}</h3>
         <p className="text-gray-600">
-          Share your details to unlock the interactive OORA framework demonstration
+          {description}
         </p>
       </div>
 
@@ -52,6 +91,7 @@ export default function LeadCaptureForm({ onSubmit }: LeadCaptureFormProps) {
             placeholder="Your name"
             className="w-full"
             data-testid="input-name"
+            disabled={isSubmitting}
           />
         </div>
 
@@ -65,6 +105,7 @@ export default function LeadCaptureForm({ onSubmit }: LeadCaptureFormProps) {
             placeholder="Your company"
             className="w-full"
             data-testid="input-company"
+            disabled={isSubmitting}
           />
         </div>
 
@@ -78,6 +119,7 @@ export default function LeadCaptureForm({ onSubmit }: LeadCaptureFormProps) {
             placeholder="Your mobile number"
             className="w-full"
             data-testid="input-mobile"
+            disabled={isSubmitting}
           />
         </div>
 
@@ -91,6 +133,7 @@ export default function LeadCaptureForm({ onSubmit }: LeadCaptureFormProps) {
             placeholder="your.email@company.com"
             className="w-full"
             data-testid="input-email"
+            disabled={isSubmitting}
           />
         </div>
 
@@ -98,8 +141,9 @@ export default function LeadCaptureForm({ onSubmit }: LeadCaptureFormProps) {
           type="submit"
           className="w-full bg-indigo-600 hover:bg-indigo-700"
           data-testid="button-access-demo"
+          disabled={isSubmitting}
         >
-          Access Demo
+          {isSubmitting ? "Submitting..." : submitLabel}
         </Button>
 
         <p className="text-xs text-gray-500 text-center mt-4">

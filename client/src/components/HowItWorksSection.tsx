@@ -318,10 +318,8 @@ export default function HowItWorksSection() {
           {showOORADemo && !hasSubmittedLead && (
             <div className="mt-8 animate-fade-in-up">
               <LeadCaptureForm 
-                onSubmit={(data: LeadData) => {
-                  console.log('Lead captured:', data);
-                  setHasSubmittedLead(true);
-                }}
+                source="oora_demo"
+                onSubmit={() => setHasSubmittedLead(true)}
               />
             </div>
           )}
