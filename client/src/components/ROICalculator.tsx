@@ -182,37 +182,37 @@ export default function ROICalculator() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-mental-health">
                   <p className="text-sm text-gray-600 mb-1">Mental Health Claims</p>
-                  <p className="text-2xl font-bold text-red-700 font-mono">{formatCurrency(annualMentalHealthClaimsCost)}</p>
+                  <p className="text-2xl font-bold text-red-700">{formatCurrency(annualMentalHealthClaimsCost)}</p>
                   <p className="text-xs text-gray-500 mt-1">{currentMentalHealthClaims} claims × $290K each</p>
                 </div>
 
                 <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-turnover">
                   <p className="text-sm text-gray-600 mb-1">Turnover Costs</p>
-                  <p className="text-2xl font-bold text-red-700 font-mono">{formatCurrency(annualTurnoverCost)}</p>
+                  <p className="text-2xl font-bold text-red-700">{formatCurrency(annualTurnoverCost)}</p>
                   <p className="text-xs text-gray-500 mt-1">{turnoverCount} employees × 150% salary</p>
                 </div>
 
                 <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-manager-time">
                   <p className="text-sm text-gray-600 mb-1">Manager Crisis Time</p>
-                  <p className="text-2xl font-bold text-red-700 font-mono">{formatCurrency(annualManagerCrisisCost)}</p>
+                  <p className="text-2xl font-bold text-red-700">{formatCurrency(annualManagerCrisisCost)}</p>
                   <p className="text-xs text-gray-500 mt-1">5 hrs/week × {managerCount} managers</p>
                 </div>
 
                 <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-productivity">
                   <p className="text-sm text-gray-600 mb-1">Productivity Loss</p>
-                  <p className="text-2xl font-bold text-red-700 font-mono">{formatCurrency(annualProductivityLoss)}</p>
+                  <p className="text-2xl font-bold text-red-700">{formatCurrency(annualProductivityLoss)}</p>
                   <p className="text-xs text-gray-500 mt-1">{disengagedEmployees} disengaged × 18% loss</p>
                 </div>
 
                 <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-absenteeism">
                   <p className="text-sm text-gray-600 mb-1">Absenteeism</p>
-                  <p className="text-2xl font-bold text-red-700 font-mono">{formatCurrency(annualAbsenteeismCost)}</p>
+                  <p className="text-2xl font-bold text-red-700">{formatCurrency(annualAbsenteeismCost)}</p>
                   <p className="text-xs text-gray-500 mt-1">$3,500 per employee</p>
                 </div>
 
                 <div className="bg-red-600 p-4 rounded-lg text-white" data-testid="cost-total">
                   <p className="text-sm mb-1">TOTAL ANNUAL COST</p>
-                  <p className="text-3xl font-bold font-mono">{formatCurrency(totalAnnualCost)}</p>
+                  <p className="text-3xl font-bold">{formatCurrency(totalAnnualCost)}</p>
                   <p className="text-xs mt-1 opacity-90">Status quo impact</p>
                 </div>
               </div>
@@ -228,32 +228,32 @@ export default function ROICalculator() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                   <p className="text-sm text-gray-600 mb-1">Claims Reduction (40%)</p>
-                  <p className="text-2xl font-bold text-green-700 font-mono">{formatCurrency(claimsSavings)}</p>
+                  <p className="text-2xl font-bold text-green-700">{formatCurrency(claimsSavings)}</p>
                 </div>
 
                 <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                   <p className="text-sm text-gray-600 mb-1">Turnover Reduction (25%)</p>
-                  <p className="text-2xl font-bold text-green-700 font-mono">{formatCurrency(turnoverSavings)}</p>
+                  <p className="text-2xl font-bold text-green-700">{formatCurrency(turnoverSavings)}</p>
                 </div>
 
                 <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                   <p className="text-sm text-gray-600 mb-1">Manager Time Saved (60%)</p>
-                  <p className="text-2xl font-bold text-green-700 font-mono">{formatCurrency(managerTimeSavings)}</p>
+                  <p className="text-2xl font-bold text-green-700">{formatCurrency(managerTimeSavings)}</p>
                 </div>
 
                 <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                   <p className="text-sm text-gray-600 mb-1">Productivity Gains (30%)</p>
-                  <p className="text-2xl font-bold text-green-700 font-mono">{formatCurrency(productivityGains)}</p>
+                  <p className="text-2xl font-bold text-green-700">{formatCurrency(productivityGains)}</p>
                 </div>
 
                 <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                   <p className="text-sm text-gray-600 mb-1">Absenteeism Reduction (20%)</p>
-                  <p className="text-2xl font-bold text-green-700 font-mono">{formatCurrency(absenteeismSavings)}</p>
+                  <p className="text-2xl font-bold text-green-700">{formatCurrency(absenteeismSavings)}</p>
                 </div>
 
                 <div className="bg-green-600 p-4 rounded-lg text-white">
                   <p className="text-sm mb-1">TOTAL ANNUAL SAVINGS</p>
-                  <p className="text-3xl font-bold font-mono">{formatCurrency(totalAnnualSavings)}</p>
+                  <p className="text-3xl font-bold">{formatCurrency(totalAnnualSavings)}</p>
                 </div>
               </div>
             </Card>
@@ -268,19 +268,19 @@ export default function ROICalculator() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
                   <p className="text-sm opacity-90 mb-1">Annual Investment (Founding Partner)</p>
-                  <p className="text-3xl font-bold font-mono">{formatCurrency(annualSubscriptionCost)}</p>
+                  <p className="text-3xl font-bold">{formatCurrency(annualSubscriptionCost)}</p>
                   <p className="text-xs opacity-75 mt-1">30% discount included</p>
                 </div>
 
                 <div>
                   <p className="text-sm opacity-90 mb-1">Net Annual ROI</p>
-                  <p className="text-3xl font-bold font-mono">{formatCurrency(netAnnualROI)}</p>
+                  <p className="text-3xl font-bold">{formatCurrency(netAnnualROI)}</p>
                   <p className="text-xs opacity-75 mt-1">Savings minus investment</p>
                 </div>
 
                 <div>
                   <p className="text-sm opacity-90 mb-1">ROI Multiple</p>
-                  <p className="text-3xl font-bold font-mono">{roiMultiple}x</p>
+                  <p className="text-3xl font-bold">{roiMultiple}x</p>
                   <p className="text-xs opacity-75 mt-1">Return on investment</p>
                 </div>
               </div>
