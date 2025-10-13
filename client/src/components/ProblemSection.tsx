@@ -27,6 +27,9 @@ export default function ProblemSection() {
           <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto">
             Organisations measure more than ever, yet engagement has fallen to a 10-year low
           </p>
+          <p className="text-sm text-gray-600 mt-4 italic max-w-4xl mx-auto">
+            All statistics sourced from peer-reviewed research, government reports, and major industry studies published 2023-2025
+          </p>
         </div>
 
         {/* Global Stats Grid */}
