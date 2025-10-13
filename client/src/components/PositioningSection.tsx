@@ -33,7 +33,7 @@ export default function PositioningSection() {
       differentiators: [
         "10-minute weekly commitment (not 2-hour workshops)",
         "AI co-pilot that learns their team's patterns",
-        "Micro-actions proven to work (from 10+ years research)",
+        "Micro-actions proven to work (from 30+ years research)",
       ],
     },
     {
@@ -53,7 +53,7 @@ export default function PositioningSection() {
     {
       title: "Triple Goal Leadership Model™",
       description:
-        "10+ years of organisational behaviour research distilled into our AI training. Competitors don't have this foundation.",
+        "30+ years of organisational behaviour research distilled into our AI training. Competitors don't have this foundation.",
     },
     {
       title: "Regulatory Deep Integration",
