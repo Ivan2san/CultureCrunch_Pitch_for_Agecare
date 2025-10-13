@@ -32,7 +32,7 @@ export default function PositioningSection() {
         "Leaders are 70% of the variance. We make their job manageable, not add to their burden with more training they won't use.",
       differentiators: [
         "10-minute weekly commitment (not 2-hour workshops)",
-        "AI co-pilot that learns their team's patterns",
+        "An AI Leadership Co-Pilot that learns their team's patterns",
         "Micro-actions proven to work (from 30+ years research)",
       ],
     },
