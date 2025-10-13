@@ -10,6 +10,12 @@ CultureCrunch is a B2B SaaS platform that transforms workplace psychosocial comp
 
 ## Recent Changes
 
+- **ProblemSection Reframed (October 2025)**:
+  - Replaced "A System-Level Failure" with "The Accountability Failure Cascade" narrative
+  - Removed parallax scrolling effect for cleaner, simpler component
+  - Updated statistics to emphasize action gaps (58% act on feedback), trust collapse (82% don't trust managers), and ROI failures (44% zero ROI)
+  - Reorganized content around two themes: "Action Gap & Trust Collapse" and "Capability & ROI Crisis"
+  - All statistics sourced from peer-reviewed research and industry studies (2023-2025)
 - **Lead Capture System (October 2025)**:
   - Implemented PostgreSQL database with `leads` table for storing prospect information
   - Created POST /api/leads endpoint with Zod validation
