@@ -156,42 +156,57 @@ export default function ProcessFlowAnimation() {
           <Stage title="Output" data={nodes.Output} color="green" />
         </div>
 
-        <div className="mt-10 flex justify-center">
+        {/* Continuous Learning - Feedback Loop Bar */}
+        <div className="mt-8 relative">
           <div 
-            className="w-full max-w-2xl rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 p-6 shadow-lg text-center border-2 border-orange-400"
+            className="w-full rounded-lg bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 p-5 border border-purple-400/30"
             data-testid="section-continuous-learning"
           >
-            <div className="flex justify-center items-center gap-2 mb-2">
-              <RefreshCcw className="h-5 w-5 text-white" />
-              <h4 
-                className="text-xl font-bold text-white" 
-                style={{ letterSpacing: '-0.01em' }}
-                data-testid="heading-continuous-learning"
-              >
-                Continuous Learning
-              </h4>
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                  <RefreshCcw className="h-5 w-5 text-white" />
+                </div>
+                <div>
+                  <h4 
+                    className="text-lg font-bold text-white" 
+                    style={{ letterSpacing: '-0.01em' }}
+                    data-testid="heading-continuous-learning"
+                  >
+                    Continuous Learning Loop
+                  </h4>
+                  <p 
+                    className="text-white/90 text-sm" 
+                    style={{ letterSpacing: '-0.005em' }}
+                    data-testid="text-continuous-learning-subtitle"
+                  >
+                    Feedback flows back to improve all stages
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center gap-6 text-white/90 text-sm" style={{ letterSpacing: '-0.005em' }}>
+                <div className="flex items-center gap-2">
+                  <span className="size-1.5 rounded-full bg-white/80" />
+                  <span>Tracks outcomes</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="size-1.5 rounded-full bg-white/80" />
+                  <span>Refines AI models</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="size-1.5 rounded-full bg-white/80" />
+                  <span>Reduces noise</span>
+                </div>
+              </div>
             </div>
-            <p 
-              className="text-white/95 text-sm mb-3" 
-              style={{ letterSpacing: '-0.005em' }}
-              data-testid="text-continuous-learning-subtitle"
-            >
-              Closing the Loop Across All Stages
-            </p>
-            <ul className="text-white/90 text-sm space-y-1.5 text-left max-w-md mx-auto" style={{ letterSpacing: '-0.005em' }}>
-              <li className="flex items-start gap-2">
-                <span className="mt-1.5 size-1.5 rounded-full bg-white/80 shrink-0" />
-                <span>Tracks actions and outcomes across stages</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1.5 size-1.5 rounded-full bg-white/80 shrink-0" />
-                <span>Feeds new insights back into AI systems</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1.5 size-1.5 rounded-full bg-white/80 shrink-0" />
-                <span>Improves accuracy and reduces noise</span>
-              </li>
-            </ul>
+          </div>
+          {/* Optional: Subtle connecting arrows */}
+          <div className="absolute -top-3 left-0 right-0 flex justify-center opacity-50">
+            <div className="flex gap-2">
+              <div className="w-px h-3 bg-purple-400"></div>
+              <div className="w-px h-3 bg-indigo-400"></div>
+              <div className="w-px h-3 bg-blue-400"></div>
+            </div>
           </div>
         </div>
       </div>
