@@ -30,14 +30,14 @@ export default function ProcessFlowAnimation() {
   ];
 
   useEffect(() => {
-    if (!isPlaying) return;
+    if (!isPlaying || prefersReducedMotion) return;
 
     const interval = setInterval(() => {
       setActiveStage((prev) => (prev + 1) % 4);
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [isPlaying]);
+  }, [isPlaying, prefersReducedMotion]);
 
   // Color mappings for proper Tailwind compilation
   const colorClasses = {
@@ -204,14 +204,19 @@ export default function ProcessFlowAnimation() {
         {/* Stage Labels */}
         <div className="absolute top-0 left-0 right-0 flex justify-around mb-4">
           {["Input", "Processing", "Output", "Feedback"].map((stage, idx) => (
-            <div
+            <motion.div
               key={stage}
-              className={`text-sm font-semibold transition-all ${
-                activeStage === idx ? "text-purple-600 scale-110" : "text-gray-400"
+              animate={{
+                scale: activeStage === idx ? 1.15 : 1,
+                y: activeStage === idx ? -2 : 0,
+              }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className={`text-sm font-semibold transition-colors duration-300 ${
+                activeStage === idx ? "text-purple-600" : "text-gray-400"
               }`}
             >
               {stage}
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -219,6 +224,7 @@ export default function ProcessFlowAnimation() {
         <div className="absolute left-0 top-12 space-y-4">
           {stakeholders.map((stakeholder, idx) => {
             const Icon = stakeholder.icon;
+            const isActive = activeStage === 0;
             return (
               <motion.div
                 key={stakeholder.id}
@@ -226,12 +232,16 @@ export default function ProcessFlowAnimation() {
                 animate={{
                   opacity: activeStage >= 0 ? 1 : 0.3,
                   x: 0,
-                  scale: activeStage === 0 ? 1.05 : 1,
+                  scale: isActive ? 1.08 : 1,
                 }}
-                transition={{ delay: idx * 0.2 }}
-                className={`w-48 p-4 rounded-lg border-2 transition-all ${
-                  activeStage === 0
-                    ? `${colorClasses[stakeholder.color].border} ${colorClasses[stakeholder.color].bg}`
+                transition={{ 
+                  duration: 0.6, 
+                  ease: "easeInOut",
+                  delay: idx * 0.1 
+                }}
+                className={`w-48 p-4 rounded-lg border-2 transition-all duration-500 ${
+                  isActive
+                    ? `${colorClasses[stakeholder.color].border} ${colorClasses[stakeholder.color].bg} shadow-lg`
                     : "border-gray-200 bg-gray-50"
                 }`}
                 data-testid={`stakeholder-${stakeholder.id}`}
@@ -255,18 +265,23 @@ export default function ProcessFlowAnimation() {
         <div className="absolute left-1/2 -translate-x-1/2 top-12 space-y-4">
           {aiProcessing.map((processor, idx) => {
             const Icon = processor.icon;
+            const isActive = activeStage === 1;
             return (
               <motion.div
                 key={processor.id}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{
                   opacity: activeStage >= 1 ? 1 : 0.3,
-                  scale: activeStage === 1 ? 1.05 : 1,
+                  scale: isActive ? 1.08 : 1,
                 }}
-                transition={{ delay: idx * 0.2 }}
-                className={`w-48 p-4 rounded-lg border-2 transition-all ${
-                  activeStage === 1
-                    ? `${colorClasses[processor.color].border} ${colorClasses[processor.color].bg}`
+                transition={{ 
+                  duration: 0.6, 
+                  ease: "easeInOut",
+                  delay: idx * 0.1 
+                }}
+                className={`w-48 p-4 rounded-lg border-2 transition-all duration-500 ${
+                  isActive
+                    ? `${colorClasses[processor.color].border} ${colorClasses[processor.color].bg} shadow-lg`
                     : "border-gray-200 bg-gray-50"
                 }`}
                 data-testid={`processor-${processor.id}`}
@@ -290,6 +305,7 @@ export default function ProcessFlowAnimation() {
         <div className="absolute right-0 top-12 space-y-4">
           {outputs.map((output, idx) => {
             const Icon = output.icon;
+            const isActive = activeStage === 2;
             return (
               <motion.div
                 key={output.id}
@@ -297,12 +313,16 @@ export default function ProcessFlowAnimation() {
                 animate={{
                   opacity: activeStage >= 2 ? 1 : 0.3,
                   x: 0,
-                  scale: activeStage === 2 ? 1.05 : 1,
+                  scale: isActive ? 1.08 : 1,
                 }}
-                transition={{ delay: idx * 0.2 }}
-                className={`w-48 p-4 rounded-lg border-2 transition-all ${
-                  activeStage === 2
-                    ? `${colorClasses[output.color].border} ${colorClasses[output.color].bg}`
+                transition={{ 
+                  duration: 0.6, 
+                  ease: "easeInOut",
+                  delay: idx * 0.1 
+                }}
+                className={`w-48 p-4 rounded-lg border-2 transition-all duration-500 ${
+                  isActive
+                    ? `${colorClasses[output.color].border} ${colorClasses[output.color].bg} shadow-lg`
                     : "border-gray-200 bg-gray-50"
                 }`}
                 data-testid={`output-${output.id}`}
@@ -329,11 +349,15 @@ export default function ProcessFlowAnimation() {
             animate={{
               opacity: activeStage >= 3 ? 1 : 0.3,
               y: 0,
-              scale: activeStage === 3 ? 1.05 : 1,
+              scale: activeStage === 3 ? 1.08 : 1,
             }}
-            className={`w-64 p-4 rounded-lg border-2 transition-all ${
+            transition={{ 
+              duration: 0.6, 
+              ease: "easeInOut" 
+            }}
+            className={`w-64 p-4 rounded-lg border-2 transition-all duration-500 ${
               activeStage === 3
-                ? `${colorClasses[feedback.color].border} ${colorClasses[feedback.color].bg}`
+                ? `${colorClasses[feedback.color].border} ${colorClasses[feedback.color].bg} shadow-lg`
                 : "border-gray-200 bg-gray-50"
             }`}
             data-testid="feedback-loop"
@@ -365,63 +389,63 @@ export default function ProcessFlowAnimation() {
                 <motion.path
                   d="M 200 80 Q 280 80 300 100"
                   stroke="#9333ea"
-                  strokeWidth="2"
+                  strokeWidth="3"
                   fill="none"
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: activeStage >= 1 ? 1 : 0 }}
-                  transition={{ duration: 1 }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
                 />
                 <motion.path
                   d="M 200 180 Q 280 180 300 160"
                   stroke="#7c3aed"
-                  strokeWidth="2"
+                  strokeWidth="3"
                   fill="none"
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: activeStage >= 1 ? 1 : 0 }}
-                  transition={{ duration: 1, delay: 0.2 }}
+                  transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
                 />
 
                 {/* Processing to Output */}
                 <motion.path
                   d="M 500 100 Q 580 100 600 100"
                   stroke="#10b981"
-                  strokeWidth="2"
+                  strokeWidth="3"
                   fill="none"
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: activeStage >= 2 ? 1 : 0 }}
-                  transition={{ duration: 1 }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
                 />
                 <motion.path
                   d="M 500 160 Q 580 160 600 180"
                   stroke="#059669"
-                  strokeWidth="2"
+                  strokeWidth="3"
                   fill="none"
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: activeStage >= 2 ? 1 : 0 }}
-                  transition={{ duration: 1, delay: 0.2 }}
+                  transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
                 />
 
                 {/* Output to Feedback */}
                 <motion.path
                   d="M 700 220 Q 650 260 450 280"
                   stroke="#f97316"
-                  strokeWidth="2"
+                  strokeWidth="3"
                   fill="none"
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: activeStage >= 3 ? 1 : 0 }}
-                  transition={{ duration: 1 }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
                 />
 
                 {/* Feedback to Input */}
                 <motion.path
                   d="M 350 300 Q 200 300 150 250"
                   stroke="#f97316"
-                  strokeWidth="2"
+                  strokeWidth="3"
                   fill="none"
                   strokeDasharray="5,5"
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: activeStage >= 3 ? 1 : 0 }}
-                  transition={{ duration: 1, delay: 0.3 }}
+                  transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
                 />
               </motion.svg>
 
