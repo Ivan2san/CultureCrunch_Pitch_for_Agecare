@@ -1,7 +1,10 @@
 import { TrendingDown, AlertTriangle, DollarSign } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { useParallax } from "@/hooks/useParallax";
 
 export default function ProblemSection() {
+  const headerParallax = useParallax({ speed: -0.2 });
+
   const stats = [
     { value: "21%", label: "Global Engagement", sublabel: "Down from 23% in 2023", color: "red" },
     { value: "$8.9T", label: "Lost Productivity", sublabel: "Annually worldwide", color: "red" },
@@ -20,7 +23,7 @@ export default function ProblemSection() {
     <section id="problem" className="min-h-screen bg-corporate-gradient px-6 py-32">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div ref={headerParallax.ref} style={headerParallax.style} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             The Problem: <span className="text-red-600">A System-Level Failure</span>
           </h2>
