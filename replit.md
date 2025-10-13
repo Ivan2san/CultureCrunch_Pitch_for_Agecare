@@ -41,7 +41,10 @@ Preferred communication style: Simple, everyday language.
 **Key Features**:
 - Smooth scroll navigation with active section tracking
 - Interactive ROI calculator with real-time calculations
-- Animated process flow visualization (with reduced-motion support)
+- Animated process flow visualization with 4-stage cycle (Input → Processing → Output → Feedback)
+  - 0.6s card transitions with 1.08 scale and shadow effects when active
+  - 0.8s SVG path animations showing data flow
+  - Play/pause control with full reduced-motion support
 - Responsive design for mobile and desktop viewports
 - Expandable/collapsible content sections
 
