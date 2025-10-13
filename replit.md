@@ -10,6 +10,13 @@ CultureCrunch is a B2B SaaS platform that transforms workplace psychosocial comp
 
 ## Recent Changes
 
+- **ProcessFlowAnimation Connector Fix (October 2025)**:
+  - Resolved SVG connector line alignment issues using center-based path calculation
+  - Paths now connect card centers (immune to scale transforms) instead of edges
+  - Dynamic recalculation on activeStage changes and viewport resize
+  - Maintains proper alignment during 1.08 scale animations and across all desktop breakpoints
+  - Implementation uses refs + getBoundingClientRect() for real-time geometry
+  - Hidden on mobile (`hidden md:block`) where vertical stacking breaks flow
 - Updated Roadmap section with detailed 4-phase business roadmap (Q4 2025 - Q3 2026):
   - Phase 1: Validation (Q4 2025) - Target ~5 LOIs
   - Phase 2: Seek Funding (Q4 2025–Q1 2026)
@@ -17,7 +24,7 @@ CultureCrunch is a B2B SaaS platform that transforms workplace psychosocial comp
   - Phase 4: Launch (Q2–Q3 2026)
   - Added Exit Criteria section between Goals and Deliverables for each phase
   - Fixed dynamic Tailwind classes with static color mappings for production builds
-- Fixed ProcessFlowAnimation with proper timing (0.6s card transitions, 0.8s SVG animations)
+- ProcessFlowAnimation timing: 0.6s card transitions, 0.8s SVG animations
 - Enhanced animation visual feedback: 1.08 scale, shadow effects, smooth easing
 - Implemented corporate design transformation: DM Sans typography, corporate-calm gradient backgrounds with film grain overlay
 - Typography hierarchy: 500 weight for body (readability), 700 for headings (corporate emphasis), 600 for buttons
@@ -58,8 +65,10 @@ Preferred communication style: Simple, everyday language.
 - Interactive ROI calculator with real-time calculations
 - Animated process flow visualization with 4-stage cycle (Input → Processing → Output → Feedback)
   - 0.6s card transitions with 1.08 scale and shadow effects when active
-  - 0.8s SVG path animations showing data flow
+  - 0.8s SVG path animations showing data flow using center-based connections (scale-invariant)
+  - Dynamic path recalculation on stage changes and viewport resize
   - Play/pause control with full reduced-motion support
+  - Responsive: connectors visible on desktop (≥768px), hidden on mobile
 - Responsive design for mobile and desktop viewports
 - Expandable/collapsible content sections
 

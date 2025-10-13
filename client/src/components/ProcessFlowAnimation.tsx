@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Users, Brain, Zap, Target, CheckCircle, RefreshCw, Database, TrendingUp } from "lucide-react";
 
@@ -6,6 +6,25 @@ export default function ProcessFlowAnimation() {
   const [activeStage, setActiveStage] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  
+  // Refs for card positions
+  const inputRef1 = useRef<HTMLDivElement>(null);
+  const inputRef2 = useRef<HTMLDivElement>(null);
+  const processingRef1 = useRef<HTMLDivElement>(null);
+  const processingRef2 = useRef<HTMLDivElement>(null);
+  const outputRef1 = useRef<HTMLDivElement>(null);
+  const outputRef2 = useRef<HTMLDivElement>(null);
+  const feedbackRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  const [pathData, setPathData] = useState({
+    input1ToProcess1: "",
+    input2ToProcess2: "",
+    process1ToOutput1: "",
+    process2ToOutput2: "",
+    outputToFeedback: "",
+    feedbackToInput: "",
+  });
 
   // Check for prefers-reduced-motion
   useEffect(() => {
@@ -38,6 +57,65 @@ export default function ProcessFlowAnimation() {
 
     return () => clearInterval(interval);
   }, [isPlaying, prefersReducedMotion]);
+  
+  // Calculate connection paths based on actual card positions
+  useEffect(() => {
+    const calculatePaths = () => {
+      if (!containerRef.current) return;
+      
+      const container = containerRef.current.getBoundingClientRect();
+      
+      const getCenter = (ref: React.RefObject<HTMLDivElement>) => {
+        if (!ref.current) return { x: 0, y: 0 };
+        const rect = ref.current.getBoundingClientRect();
+        const containerRect = containerRef.current!.getBoundingClientRect();
+        return {
+          x: rect.left + rect.width / 2 - containerRect.left,
+          y: rect.top + rect.height / 2 - containerRect.top,
+        };
+      };
+      
+      // Calculate all paths using centers (unaffected by scale transform)
+      const in1Center = getCenter(inputRef1);
+      const in2Center = getCenter(inputRef2);
+      const proc1Center = getCenter(processingRef1);
+      const proc2Center = getCenter(processingRef2);
+      const out1Center = getCenter(outputRef1);
+      const out2Center = getCenter(outputRef2);
+      
+      // Get feedback center (also unaffected by scale)
+      const feedbackCenter = getCenter(feedbackRef);
+      
+      // Calculate control points for smooth curves using centers
+      const midX1 = (in1Center.x + proc1Center.x) / 2;
+      const midX2 = (proc1Center.x + out1Center.x) / 2;
+      const midX3 = (out2Center.x + feedbackCenter.x) / 2;
+      const midY3 = (out2Center.y + feedbackCenter.y) / 2;
+      const midX4 = (feedbackCenter.x + in1Center.x) / 2;
+      const midY4 = (feedbackCenter.y + in1Center.y) / 2;
+      
+      setPathData({
+        input1ToProcess1: `M ${in1Center.x} ${in1Center.y} Q ${midX1} ${in1Center.y} ${proc1Center.x} ${proc1Center.y}`,
+        input2ToProcess2: `M ${in2Center.x} ${in2Center.y} Q ${midX1} ${in2Center.y} ${proc2Center.x} ${proc2Center.y}`,
+        process1ToOutput1: `M ${proc1Center.x} ${proc1Center.y} Q ${midX2} ${proc1Center.y} ${out1Center.x} ${out1Center.y}`,
+        process2ToOutput2: `M ${proc2Center.x} ${proc2Center.y} Q ${midX2} ${proc2Center.y} ${out2Center.x} ${out2Center.y}`,
+        outputToFeedback: `M ${out2Center.x} ${out2Center.y} Q ${midX3} ${midY3} ${feedbackCenter.x} ${feedbackCenter.y}`,
+        feedbackToInput: `M ${feedbackCenter.x} ${feedbackCenter.y} Q ${midX4} ${midY4} ${in1Center.x} ${in1Center.y}`,
+      });
+    };
+    
+    // Calculate immediately when stage changes
+    calculatePaths();
+    
+    // Recalculate after animation completes (600ms duration)
+    const timer = setTimeout(calculatePaths, 650);
+    
+    window.addEventListener('resize', calculatePaths);
+    return () => {
+      window.removeEventListener('resize', calculatePaths);
+      clearTimeout(timer);
+    };
+  }, [activeStage]);
 
   // Color mappings for proper Tailwind compilation
   const colorClasses = {
@@ -200,7 +278,7 @@ export default function ProcessFlowAnimation() {
       </div>
 
       {/* Main Flow Diagram */}
-      <div className="relative h-[400px] overflow-hidden">
+      <div ref={containerRef} className="relative h-[500px] overflow-hidden">
         {/* Stage Labels */}
         <div className="absolute top-0 left-0 right-0 flex justify-around mb-4">
           {["Input", "Processing", "Output", "Feedback"].map((stage, idx) => (
@@ -225,9 +303,11 @@ export default function ProcessFlowAnimation() {
           {stakeholders.map((stakeholder, idx) => {
             const Icon = stakeholder.icon;
             const isActive = activeStage === 0;
+            const ref = idx === 0 ? inputRef1 : inputRef2;
             return (
               <motion.div
                 key={stakeholder.id}
+                ref={ref}
                 initial={{ opacity: 0, x: -50 }}
                 animate={{
                   opacity: activeStage >= 0 ? 1 : 0.3,
@@ -266,9 +346,11 @@ export default function ProcessFlowAnimation() {
           {aiProcessing.map((processor, idx) => {
             const Icon = processor.icon;
             const isActive = activeStage === 1;
+            const ref = idx === 0 ? processingRef1 : processingRef2;
             return (
               <motion.div
                 key={processor.id}
+                ref={ref}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{
                   opacity: activeStage >= 1 ? 1 : 0.3,
@@ -306,9 +388,11 @@ export default function ProcessFlowAnimation() {
           {outputs.map((output, idx) => {
             const Icon = output.icon;
             const isActive = activeStage === 2;
+            const ref = idx === 0 ? outputRef1 : outputRef2;
             return (
               <motion.div
                 key={output.id}
+                ref={ref}
                 initial={{ opacity: 0, x: 50 }}
                 animate={{
                   opacity: activeStage >= 2 ? 1 : 0.3,
@@ -343,8 +427,9 @@ export default function ProcessFlowAnimation() {
         </div>
 
         {/* Feedback Loop */}
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-0">
+        <div className="absolute left-1/2 -translate-x-1/2 top-[320px]">
           <motion.div
+            ref={feedbackRef}
             initial={{ opacity: 0, y: 50 }}
             animate={{
               opacity: activeStage >= 3 ? 1 : 0.3,
@@ -379,93 +464,105 @@ export default function ProcessFlowAnimation() {
         <AnimatePresence>
           {activeStage >= 0 && (
             <>
-              {/* Input to Processing */}
+              {/* Dynamic Connection Lines */}
               <motion.svg
-                className="absolute left-0 top-0 w-full h-full pointer-events-none"
+                className="absolute left-0 top-0 w-full h-full pointer-events-none hidden md:block"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
-                <motion.path
-                  d="M 200 80 Q 280 80 300 100"
-                  stroke="#9333ea"
-                  strokeWidth="3"
-                  fill="none"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: activeStage >= 1 ? 1 : 0 }}
-                  transition={{ duration: 0.8, ease: "easeInOut" }}
-                />
-                <motion.path
-                  d="M 200 180 Q 280 180 300 160"
-                  stroke="#7c3aed"
-                  strokeWidth="3"
-                  fill="none"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: activeStage >= 1 ? 1 : 0 }}
-                  transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
-                />
+                {pathData.input1ToProcess1 && (
+                  <motion.path
+                    d={pathData.input1ToProcess1}
+                    stroke="#9333ea"
+                    strokeWidth="3"
+                    fill="none"
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: activeStage >= 1 ? 1 : 0 }}
+                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                  />
+                )}
+                {pathData.input2ToProcess2 && (
+                  <motion.path
+                    d={pathData.input2ToProcess2}
+                    stroke="#7c3aed"
+                    strokeWidth="3"
+                    fill="none"
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: activeStage >= 1 ? 1 : 0 }}
+                    transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
+                  />
+                )}
 
                 {/* Processing to Output */}
-                <motion.path
-                  d="M 500 100 Q 580 100 600 100"
-                  stroke="#10b981"
-                  strokeWidth="3"
-                  fill="none"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: activeStage >= 2 ? 1 : 0 }}
-                  transition={{ duration: 0.8, ease: "easeInOut" }}
-                />
-                <motion.path
-                  d="M 500 160 Q 580 160 600 180"
-                  stroke="#059669"
-                  strokeWidth="3"
-                  fill="none"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: activeStage >= 2 ? 1 : 0 }}
-                  transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
-                />
+                {pathData.process1ToOutput1 && (
+                  <motion.path
+                    d={pathData.process1ToOutput1}
+                    stroke="#10b981"
+                    strokeWidth="3"
+                    fill="none"
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: activeStage >= 2 ? 1 : 0 }}
+                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                  />
+                )}
+                {pathData.process2ToOutput2 && (
+                  <motion.path
+                    d={pathData.process2ToOutput2}
+                    stroke="#059669"
+                    strokeWidth="3"
+                    fill="none"
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: activeStage >= 2 ? 1 : 0 }}
+                    transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
+                  />
+                )}
 
                 {/* Output to Feedback */}
-                <motion.path
-                  d="M 700 220 Q 650 260 450 280"
-                  stroke="#f97316"
-                  strokeWidth="3"
-                  fill="none"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: activeStage >= 3 ? 1 : 0 }}
-                  transition={{ duration: 0.8, ease: "easeInOut" }}
-                />
+                {pathData.outputToFeedback && (
+                  <motion.path
+                    d={pathData.outputToFeedback}
+                    stroke="#f97316"
+                    strokeWidth="3"
+                    fill="none"
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: activeStage >= 3 ? 1 : 0 }}
+                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                  />
+                )}
 
                 {/* Feedback to Input */}
-                <motion.path
-                  d="M 350 300 Q 200 300 150 250"
-                  stroke="#f97316"
-                  strokeWidth="3"
-                  fill="none"
-                  strokeDasharray="5,5"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: activeStage >= 3 ? 1 : 0 }}
-                  transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
-                />
+                {pathData.feedbackToInput && (
+                  <motion.path
+                    d={pathData.feedbackToInput}
+                    stroke="#f97316"
+                    strokeWidth="3"
+                    fill="none"
+                    strokeDasharray="5,5"
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: activeStage >= 3 ? 1 : 0 }}
+                    transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
+                  />
+                )}
               </motion.svg>
 
-              {/* Animated Particles */}
+              {/* Animated Particles - hidden on mobile for simplicity */}
               {activeStage >= 1 && (
                 <motion.div
-                  className="absolute w-3 h-3 bg-purple-500 rounded-full"
+                  className="absolute w-3 h-3 bg-purple-500 rounded-full hidden md:block"
+                  style={{ left: "25%", top: "100px" }}
                   animate={{
-                    left: ["200px", "300px"],
-                    top: ["80px", "100px"],
+                    left: ["25%", "40%"],
                   }}
                   transition={{ duration: 1, repeat: Infinity, repeatDelay: 2 }}
                 />
               )}
               {activeStage >= 2 && (
                 <motion.div
-                  className="absolute w-3 h-3 bg-green-500 rounded-full"
+                  className="absolute w-3 h-3 bg-green-500 rounded-full hidden md:block"
+                  style={{ left: "59%", top: "100px" }}
                   animate={{
-                    left: ["500px", "600px"],
-                    top: ["100px", "100px"],
+                    left: ["59%", "75%"],
                   }}
                   transition={{ duration: 1, repeat: Infinity, repeatDelay: 2, delay: 1 }}
                 />
