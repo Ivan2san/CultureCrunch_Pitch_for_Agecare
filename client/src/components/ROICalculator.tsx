@@ -15,8 +15,6 @@ export default function ROICalculator() {
   // Constants
   const MENTAL_HEALTH_CLAIM_COST = 290000;
   const TURNOVER_COST_MULTIPLIER = 1.5;
-  const MANAGER_TIME_CRISIS_HOURS_WEEKLY = 5;
-  const MANAGER_HOURLY_RATE = 75;
   const PRODUCTIVITY_LOSS_DISENGAGED = 0.18;
   const ABSENTEEISM_COST_PER_EMPLOYEE = 3500;
   const SUBSCRIPTION_COST_PER_EMPLOYEE_MONTHLY = 10;
@@ -24,32 +22,28 @@ export default function ROICalculator() {
   const EXPECTED_CLAIM_REDUCTION = 0.4;
   const EXPECTED_TURNOVER_REDUCTION = 0.25;
   const EXPECTED_ENGAGEMENT_IMPROVEMENT = 0.3;
-  const EXPECTED_MANAGER_TIME_SAVED = 0.6;
   const EXPECTED_ABSENTEEISM_REDUCTION = 0.2;
 
   // Current State Costs
   const annualMentalHealthClaimsCost = currentMentalHealthClaims * MENTAL_HEALTH_CLAIM_COST;
   const turnoverCount = Math.round((employeeCount * avgTurnoverRate) / 100);
   const annualTurnoverCost = turnoverCount * avgSalary * TURNOVER_COST_MULTIPLIER;
-  const annualManagerCrisisCost = managerCount * MANAGER_TIME_CRISIS_HOURS_WEEKLY * 52 * MANAGER_HOURLY_RATE;
   const disengagedEmployees = Math.round(employeeCount * (1 - currentEngagementScore / 100));
   const annualProductivityLoss = disengagedEmployees * avgSalary * PRODUCTIVITY_LOSS_DISENGAGED;
   const annualAbsenteeismCost = employeeCount * ABSENTEEISM_COST_PER_EMPLOYEE;
   const totalAnnualCost =
     annualMentalHealthClaimsCost +
     annualTurnoverCost +
-    annualManagerCrisisCost +
     annualProductivityLoss +
     annualAbsenteeismCost;
 
   // Savings
   const claimsSavings = annualMentalHealthClaimsCost * EXPECTED_CLAIM_REDUCTION;
   const turnoverSavings = annualTurnoverCost * EXPECTED_TURNOVER_REDUCTION;
-  const managerTimeSavings = annualManagerCrisisCost * EXPECTED_MANAGER_TIME_SAVED;
   const productivityGains = annualProductivityLoss * EXPECTED_ENGAGEMENT_IMPROVEMENT;
   const absenteeismSavings = annualAbsenteeismCost * EXPECTED_ABSENTEEISM_REDUCTION;
   const totalAnnualSavings =
-    claimsSavings + turnoverSavings + managerTimeSavings + productivityGains + absenteeismSavings;
+    claimsSavings + turnoverSavings + productivityGains + absenteeismSavings;
 
   const annualSubscriptionCost =
     employeeCount * SUBSCRIPTION_COST_PER_EMPLOYEE_MONTHLY * 12 * (1 - FOUNDING_PARTNER_DISCOUNT);
@@ -192,12 +186,6 @@ export default function ROICalculator() {
                   <p className="text-xs text-gray-500 mt-1">{turnoverCount} employees × 150% salary</p>
                 </div>
 
-                <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-manager-time">
-                  <p className="text-sm text-gray-600 mb-1">Manager Crisis Time</p>
-                  <p className="text-2xl font-bold text-red-700">{formatCurrency(annualManagerCrisisCost)}</p>
-                  <p className="text-xs text-gray-500 mt-1">5 hrs/week × {managerCount} managers</p>
-                </div>
-
                 <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-productivity">
                   <p className="text-sm text-gray-600 mb-1">Productivity Loss</p>
                   <p className="text-2xl font-bold text-red-700">{formatCurrency(annualProductivityLoss)}</p>
@@ -210,7 +198,7 @@ export default function ROICalculator() {
                   <p className="text-xs text-gray-500 mt-1">$3,500 per employee</p>
                 </div>
 
-                <div className="bg-red-600 p-4 rounded-lg text-white" data-testid="cost-total">
+                <div className="bg-red-600 p-4 rounded-lg text-white md:col-span-2" data-testid="cost-total">
                   <p className="text-sm mb-1">TOTAL ANNUAL COST</p>
                   <p className="text-3xl font-bold">{formatCurrency(totalAnnualCost)}</p>
                   <p className="text-xs mt-1 opacity-90">Status quo impact</p>
@@ -237,11 +225,6 @@ export default function ROICalculator() {
                 </div>
 
                 <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                  <p className="text-sm text-gray-600 mb-1">Manager Time Saved (60%)</p>
-                  <p className="text-2xl font-bold text-green-700">{formatCurrency(managerTimeSavings)}</p>
-                </div>
-
-                <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                   <p className="text-sm text-gray-600 mb-1">Productivity Gains (30%)</p>
                   <p className="text-2xl font-bold text-green-700">{formatCurrency(productivityGains)}</p>
                 </div>
@@ -251,7 +234,7 @@ export default function ROICalculator() {
                   <p className="text-2xl font-bold text-green-700">{formatCurrency(absenteeismSavings)}</p>
                 </div>
 
-                <div className="bg-green-600 p-4 rounded-lg text-white">
+                <div className="bg-green-600 p-4 rounded-lg text-white md:col-span-2">
                   <p className="text-sm mb-1">TOTAL ANNUAL SAVINGS</p>
                   <p className="text-3xl font-bold">{formatCurrency(totalAnnualSavings)}</p>
                 </div>
