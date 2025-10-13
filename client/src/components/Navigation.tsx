@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ChevronDown, ChevronUp, Menu, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { exportPitchDeckToPDF } from "@/lib/pdfExport";
 import { useToast } from "@/hooks/use-toast";
 
@@ -94,12 +95,12 @@ export default function Navigation() {
   return (
     <>
       {/* Top Navigation Bar */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50" data-testid="nav-main">
+      <nav className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border z-50" data-testid="nav-main">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div>
-              <span className="font-bold text-xl text-gray-900">CultureCrunch</span>
+              <span className="font-bold text-xl text-foreground">CultureCrunch</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -112,7 +113,7 @@ export default function Navigation() {
                     className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
                       activeSection === section.id
                         ? "bg-primary text-primary-foreground"
-                        : "text-gray-600 hover:text-gray-900 hover-elevate"
+                        : "text-muted-foreground hover:text-foreground hover-elevate"
                     }`}
                     data-testid={`nav-link-${section.id}`}
                   >
@@ -131,23 +132,27 @@ export default function Navigation() {
                 <Download className="w-4 h-4 mr-2" />
                 {isExporting ? "Exporting..." : "Export PDF"}
               </Button>
+
+              <ThemeToggle />
             </div>
 
-            {/* Mobile Menu Button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              data-testid="button-mobile-menu"
-            >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </Button>
+            {/* Mobile Menu Button & Theme Toggle */}
+            <div className="flex items-center gap-2 md:hidden">
+              <ThemeToggle />
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                data-testid="button-mobile-menu"
+              >
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              </Button>
+            </div>
           </div>
         </div>
 
         {/* Progress Bar */}
-        <div className="h-1 bg-gray-200">
+        <div className="h-1 bg-border">
           <div
             className="h-full bg-gradient-to-r from-purple-600 to-indigo-600 transition-all duration-300"
             style={{ width: `${progressPercentage}%` }}
@@ -157,7 +162,7 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 bg-white z-40 md:hidden pt-20" data-testid="mobile-menu">
+        <div className="fixed inset-0 bg-background z-40 md:hidden pt-20" data-testid="mobile-menu">
           <div className="p-6 space-y-2">
             {sections.map((section) => (
               <button
@@ -166,7 +171,7 @@ export default function Navigation() {
                 className={`w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all ${
                   activeSection === section.id
                     ? "bg-primary text-primary-foreground"
-                    : "text-gray-700 hover:bg-gray-100"
+                    : "text-foreground hover-elevate"
                 }`}
                 data-testid={`mobile-nav-link-${section.id}`}
               >
