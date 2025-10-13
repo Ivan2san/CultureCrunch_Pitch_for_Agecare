@@ -1,17 +1,9 @@
 import { Brain, Sparkles, Users, Zap } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { useParallax } from "@/hooks/useParallax";
 
 export default function VisionSection() {
   const headlineParallax = useParallax({ speed: -0.3 });
   const visionParallax = useParallax({ speed: 0.2 });
-
-  const scrollToNext = () => {
-    const element = document.getElementById("problem");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section id="vision" className="min-h-screen bg-corporate-gradient flex items-center justify-center px-6 py-20">
@@ -83,18 +75,6 @@ export default function VisionSection() {
             truly needs, and act with confidence every single week. Where compliance isn't a burden, 
             but a catalyst for creating workplaces where people genuinely thrive.
           </p>
-        </div>
-
-        {/* CTA */}
-        <div className="pt-8">
-          <Button 
-            size="lg" 
-            onClick={scrollToNext}
-            className="text-lg px-8 py-6"
-            data-testid="button-explore-solution"
-          >
-            Explore the Solution
-          </Button>
         </div>
       </div>
     </section>
