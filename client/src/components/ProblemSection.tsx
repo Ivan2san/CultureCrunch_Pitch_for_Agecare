@@ -40,9 +40,9 @@ export default function ProblemSection() {
               className="p-6 text-center bg-white border-2 border-red-200 hover:shadow-xl transition-all hover:-translate-y-1"
               data-testid={`stat-card-${index}`}
             >
-              <div className="text-3xl md:text-4xl font-bold text-red-700 mb-2 font-mono">{stat.value}</div>
-              <div className="text-sm font-semibold text-gray-900">{stat.label}</div>
-              <div className="text-xs text-gray-600 mt-1">{stat.sublabel}</div>
+              <div className="text-3xl md:text-4xl font-bold text-red-700 mb-2" style={{ letterSpacing: '-0.01em' }}>{stat.value}</div>
+              <div className="text-sm font-semibold text-gray-900" style={{ letterSpacing: '-0.005em' }}>{stat.label}</div>
+              <div className="text-xs text-gray-600 mt-1" style={{ letterSpacing: '-0.005em' }}>{stat.sublabel}</div>
             </Card>
           ))}
         </div>
@@ -130,8 +130,8 @@ export default function ProblemSection() {
               { value: "70%", label: "Fewer Safety Incidents" },
             ].map((item, index) => (
               <div key={index} className="text-center p-4 bg-green-50 rounded-lg border-2 border-green-200">
-                <div className="text-3xl font-bold text-green-700 mb-1">{item.value}</div>
-                <div className="text-sm font-semibold text-gray-700">{item.label}</div>
+                <div className="text-3xl font-bold text-green-700 mb-1" style={{ letterSpacing: '-0.01em' }}>{item.value}</div>
+                <div className="text-sm font-semibold text-gray-700" style={{ letterSpacing: '-0.005em' }}>{item.label}</div>
               </div>
             ))}
           </div>
