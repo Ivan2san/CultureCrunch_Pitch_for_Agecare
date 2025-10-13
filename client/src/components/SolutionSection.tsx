@@ -1,5 +1,6 @@
 import { Shield, CheckCircle, AlertTriangle, Clock, Target, Users } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Anchor, Rocket, ArrowDown, ArrowUp } from "lucide-react";
 
 export default function SolutionSection() {
   const complianceSteps = [
@@ -95,34 +96,72 @@ export default function SolutionSection() {
           </p>
         </div>
 
-        {/* Behavioural Overlay */}
-        <div className="bg-white rounded-2xl p-8 border border-gray-200">
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-4">
-            TripleGoal/LGP Behavioural Overlay
+        {/* Behaviour Drives Outcomes */}
+        <div className="bg-white rounded-2xl p-8 md:p-12 border-2 border-gray-200">
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2" style={{ letterSpacing: '-0.01em' }}>
+            Behaviour Drives Outcomes
           </h3>
-          <p className="text-center text-lg text-gray-700 mb-8">
-            Tie every hazard to leadership behaviours to amplify (Green) and counter (Red)
-          </p>
+          <div className="border-t-2 border-dotted border-teal-400 mb-8"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="rounded-xl border-2 border-emerald-200 bg-emerald-50 p-6">
-              <h4 className="text-lg font-bold text-emerald-900 mb-3">Green behaviours to amplify</h4>
-              <ul className="space-y-2 text-sm text-gray-800">
-                <li>• Respectful feedback and active listening</li>
-                <li>• Empowerment: freedom/choice on approach</li>
-                <li>• Focus: prioritise and reduce low-value meetings</li>
-                <li>• Fairness: transparent decision-making</li>
-              </ul>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Reduce Section */}
+            <div className="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-6 relative">
+              <h4 className="text-2xl font-bold text-red-700 mb-4" style={{ letterSpacing: '-0.01em' }}>
+                Reduce
+              </h4>
+              <p className="text-gray-800 mb-6 leading-relaxed" style={{ letterSpacing: '-0.005em' }}>
+                Behaviours that provide short term results or comfort, but drag the triple goal down in the long run
+              </p>
+              <div className="flex flex-col items-center mt-8">
+                <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-4 shadow-md">
+                  <Anchor className="w-10 h-10 text-teal-600" />
+                </div>
+                <ArrowDown className="w-12 h-12 text-red-600" strokeWidth={3} />
+              </div>
             </div>
 
-            <div className="rounded-xl border-2 border-rose-200 bg-rose-50 p-6">
-              <h4 className="text-lg font-bold text-rose-900 mb-3">Red behaviours to counter</h4>
-              <ul className="space-y-2 text-sm text-gray-800">
-                <li>• Micromanagement and meeting domination</li>
-                <li>• Defensiveness and reactivity under pressure</li>
-                <li>• Unrealistic deadlines and scope creep</li>
-                <li>• Public blame and idea shutdowns</li>
-              </ul>
+            {/* 3 Outcomes (Triple Goal) */}
+            <div className="bg-gradient-to-br from-teal-50 to-green-50 rounded-2xl p-6 relative">
+              <div className="text-center">
+                <h4 className="text-2xl font-bold text-teal-700 mb-1" style={{ letterSpacing: '-0.01em' }}>
+                  3 Outcomes
+                </h4>
+                <p className="text-sm font-semibold text-teal-600 mb-4" style={{ letterSpacing: '-0.005em' }}>
+                  (Triple Goal)
+                </p>
+                <ol className="text-left space-y-1 mb-6 text-teal-700 font-semibold" style={{ letterSpacing: '-0.005em' }}>
+                  <li>1. Great Performance</li>
+                  <li>2. Great Learning</li>
+                  <li>3. Great Workplace</li>
+                </ol>
+                <div className="flex justify-center">
+                  <ArrowUp className="w-16 h-16 text-green-600" strokeWidth={3} />
+                </div>
+              </div>
+            </div>
+
+            {/* Cultivate Section */}
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 relative">
+              <h4 className="text-2xl font-bold text-green-700 mb-4" style={{ letterSpacing: '-0.01em' }}>
+                Cultivate
+              </h4>
+              <p className="text-gray-800 mb-6 leading-relaxed" style={{ letterSpacing: '-0.005em' }}>
+                Values based behaviours that generate trust, accountability, belonging, learning etc. and put "rocket fuel" into the triple goal.
+              </p>
+              <div className="flex flex-col items-center mt-8">
+                <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-4 shadow-md">
+                  <Rocket className="w-10 h-10 text-teal-600" />
+                </div>
+                <ArrowUp className="w-12 h-12 text-green-600" strokeWidth={3} />
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t-2 border-dotted border-teal-400 mt-8 pt-6">
+            <div className="flex justify-between items-center text-xs text-gray-500">
+              <span>© Awakened Mind Group</span>
+              <span>www.triplegoal.com</span>
+              <span className="font-semibold text-teal-600">TripleGoal</span>
             </div>
           </div>
         </div>
