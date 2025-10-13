@@ -41,7 +41,7 @@ export default function TheAskSection() {
                   <div className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
                     <span>
-                      <strong>Timeline:</strong> Q2 2025 (April-June)
+                      <strong>Timeline:</strong> Q1–Q2 2026 (MVP pilot phase)
                     </span>
                   </div>
                   <div className="flex items-start gap-2">
@@ -186,10 +186,10 @@ export default function TheAskSection() {
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Next Steps & Timeline</h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
-              { num: "1", title: "This Week", desc: "30-min discovery call to align on pilot scope and success metrics" },
-              { num: "2", title: "Next Week", desc: "Custom pilot proposal delivered to match your organisation" },
-              { num: "3", title: "Week 3", desc: "LOI signed, stakeholder alignment confirmed" },
-              { num: "4", title: "Q2 2025", desc: "Pilot begins (April-June), results in hand by July" },
+              { num: "1", title: "Next Week", desc: "30-min discovery call to align on pilot scope and success metrics" },
+              { num: "2", title: "Week 2", desc: "Custom pilot proposal delivered to match your organisation" },
+              { num: "3", title: "Week 4", desc: "LOI signed, stakeholder alignment confirmed" },
+              { num: "4", title: "Q2–Q3 2026", desc: "Launch with 10 paying customers, proven compliance outcomes" },
             ].map((step, index) => (
               <div key={index} className="text-center" data-testid={`timeline-step-${index}`}>
                 <div className="bg-purple-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
@@ -212,7 +212,7 @@ export default function TheAskSection() {
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-3xl mx-auto mb-8">
             <p className="text-2xl font-bold mb-4">The Question:</p>
             <p className="text-xl mb-6">
-              Would your organisation provide a Letter of Intent to participate in our Q2 2025 pilot program?
+              Would your organisation provide a Letter of Intent to participate in our Q1–Q2 2026 pilot program?
             </p>
             <p className="text-lg text-gray-300">
               (Non-binding, subject to final agreement; enables us to secure funding and ensures you get founding
