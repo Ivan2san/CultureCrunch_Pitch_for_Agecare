@@ -35,12 +35,6 @@ export default function VisionSection() {
               Compliance into Care
             </span>
           </h1>
-          
-          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            We're entering an era of abundance, where AI doesn't replace human connection, 
-            but amplifies it. CultureCrunch empowers managers to lead with insight, 
-            turning workplace data into moments of genuine support.
-          </p>
         </div>
 
         {/* AI Evolution Cards */}
