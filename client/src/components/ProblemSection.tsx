@@ -60,9 +60,9 @@ export default function ProblemSection() {
         </div>
 
         {/* Main Content Grid - 4 Symmetrical Boxes */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16 lg:grid-rows-2">
           {/* Box 1: More Surveys, Worse Outcomes */}
-          <Card className="p-6 bg-white flex flex-col">
+          <Card className="p-6 bg-white flex flex-col h-full">
             <h4 className="font-bold text-lg text-red-900 mb-3">More Surveys, Worse Outcomes</h4>
             <ul className="space-y-2 text-gray-700 text-sm flex-1">
               <li className="flex items-start gap-2">
@@ -82,7 +82,7 @@ export default function ProblemSection() {
           </Card>
 
           {/* Box 2: Mental Health Crisis */}
-          <Card className="p-6 bg-white flex flex-col">
+          <Card className="p-6 bg-white flex flex-col h-full">
             <h4 className="font-bold text-lg text-orange-900 mb-3">Mental Health Crisis</h4>
             <div className="space-y-2 text-gray-700 text-sm flex-1">
               <p><strong>$290K</strong> average mental health claim (3× physical injuries)</p>
@@ -94,7 +94,7 @@ export default function ProblemSection() {
           </Card>
 
           {/* Box 3: Why Current Solutions Fail */}
-          <Card className="p-6 bg-white flex flex-col">
+          <Card className="p-6 bg-white flex flex-col h-full">
             <h4 className="font-bold text-lg text-red-900 mb-3">Why Current Solutions Fail</h4>
             <ul className="space-y-2 text-gray-700 text-sm flex-1">
               <li>• Only <strong>58%</strong> of organisations take action after surveys</li>
@@ -105,7 +105,7 @@ export default function ProblemSection() {
           </Card>
 
           {/* Box 4: Regulatory Pressure */}
-          <Card className="p-6 bg-white flex flex-col">
+          <Card className="p-6 bg-white flex flex-col h-full">
             <h4 className="font-bold text-lg text-orange-900 mb-3">Regulatory Pressure</h4>
             <div className="space-y-2 text-gray-700 text-sm flex-1">
               <p>Psychosocial hazard regulations <strong>active in all states</strong></p>
