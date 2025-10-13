@@ -36,7 +36,7 @@ export default function RoadmapSection() {
       goals: [
         "5 qualified LOIs across 2–3 industries (incl. 1 healthcare)",
         "Validate: detection signal set, OORA micro-practice cadence, and audit artefacts",
-        "Prove manager action rate ≥ 60% with ≤ 10 min/week",
+        "Prove leader action rate ≥ 60% with ≤ 10 min/week",
       ],
       exitCriteria: [
         "5 signed LOIs + 3 drafted SoWs",
@@ -44,7 +44,7 @@ export default function RoadmapSection() {
         "Privacy fact sheet + DPA template approved by one legal team",
       ],
       deliverables: [
-        "Clickable demo (Manager Brief → OORA → Audit Pack)",
+        "Clickable demo (Leader Brief → OORA → Audit Pack)",
         "Audit pack sample (PDF/JSON)",
         "Procurement packet v1: data minimisation, AU residency, cohort thresholds",
       ],
@@ -73,8 +73,8 @@ export default function RoadmapSection() {
       icon: TrendingUp,
       color: "green" as keyof typeof colorClasses,
       goals: [
-        "Ship MVP to 3 early adopters, ≥ 50 managers live",
-        "Achieve time-to-first-action ≤ 7 days; weekly active managers ≥ 60%; action rate ≥ 70%",
+        "Ship MVP to 3 early adopters, ≥ 50 leaders live",
+        "Achieve time-to-first-action ≤ 7 days; weekly active leaders ≥ 60%; action rate ≥ 70%",
         "Demonstrate two compliance wins: risk register entries + review logs used in governance",
       ],
       exitCriteria: [
@@ -95,7 +95,7 @@ export default function RoadmapSection() {
       icon: Globe,
       color: "indigo" as keyof typeof colorClasses,
       goals: [
-        "10 paying customers, ≥ 200 managers covered; net MRR milestone; churn < 5% quarterly",
+        "10 paying customers, ≥ 200 leaders covered; net MRR milestone; churn < 5% quarterly",
         "Self-serve onboarding for small teams; procurement path documented for enterprise",
       ],
       exitCriteria: [

@@ -179,7 +179,7 @@ export default function MethodologyDialog({ open, onOpenChange }: MethodologyDia
                   <li>Recruitment costs: ~20% of salary</li>
                   <li>Onboarding and training: ~20% of salary</li>
                   <li>Lost productivity (3 months ramp-up): ~25% of salary</li>
-                  <li>Manager/team productivity impact: ~20% of salary</li>
+                  <li>Leader/team productivity impact: ~20% of salary</li>
                   <li>Cultural impact and knowledge loss: ~15% of salary</li>
                 </ul>
               </section>

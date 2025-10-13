@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 export default function ProblemSection() {
   const stats = [
     { value: "58%", label: "Action Gap", sublabel: "Only 58% act on feedback", color: "red" },
-    { value: "82%", label: "Trust Collapse", sublabel: "Don't trust managers", color: "red" },
+    { value: "82%", label: "Trust Collapse", sublabel: "Don't trust leaders", color: "red" },
     { value: "44%", label: "Zero ROI", sublabel: "From engagement efforts", color: "red" },
     { value: "$8.9T", label: "Lost Productivity", sublabel: "Annually worldwide", color: "red" },
   ];
@@ -54,17 +54,17 @@ export default function ProblemSection() {
 
         {/* Main Content Grid - 4 Symmetrical Boxes */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16 lg:grid-rows-2">
-          {/* Box 1: Organizations Fail to Act */}
+          {/* Box 1: Organisations Fail to Act */}
           <Card className="p-6 bg-white flex flex-col h-full">
-            <h4 className="font-bold text-lg text-red-900 mb-3">Organizations Fail to Act on Feedback</h4>
+            <h4 className="font-bold text-lg text-red-900 mb-3">Organisations Fail to Act on Feedback</h4>
             <ul className="space-y-2 text-gray-700 text-sm flex-1">
               <li className="flex items-start gap-2">
                 <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
-                <span>Only <strong>58%</strong> of organizations take action to improve after receiving employee feedback</span>
+                <span>Only <strong>58%</strong> of organisations take action to improve after receiving employee feedback</span>
               </li>
               <li className="flex items-start gap-2">
                 <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
-                <span><strong>65%</strong> of employees say their organization does NOT take meaningful action on survey results</span>
+                <span><strong>65%</strong> of employees say their organisation does NOT take meaningful action on survey results</span>
               </li>
               <li className="flex items-start gap-2">
                 <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
@@ -74,14 +74,14 @@ export default function ProblemSection() {
             <p className="text-xs text-gray-600 mt-4 pt-3 border-t">Sources: Harvard Business Review; Quantum Workplace 2023</p>
           </Card>
 
-          {/* Box 2: Manager Capability Gap */}
+          {/* Box 2: Leader Capability Gap */}
           <Card className="p-6 bg-white flex flex-col h-full">
-            <h4 className="font-bold text-lg text-orange-900 mb-3">Manager Capability Gap</h4>
+            <h4 className="font-bold text-lg text-orange-900 mb-3">Leader Capability Gap</h4>
             <div className="space-y-2 text-gray-700 text-sm flex-1">
-              <p><strong>70%</strong> of engagement variance explained by managers, yet manager engagement fell from 30% to 27%</p>
-              <p><strong>Only 26%</strong> of leaders display behaviors that instill psychological safety</p>
-              <p><strong>Only 50%</strong> of workers say managers create psychological safety</p>
-              <p><strong>Only 44%</strong> of managers globally have received any training</p>
+              <p><strong>70%</strong> of engagement variance explained by leaders, yet leader engagement fell from 30% to 27%</p>
+              <p><strong>Only 26%</strong> of leaders display behaviours that instill psychological safety</p>
+              <p><strong>Only 50%</strong> of workers say leaders create psychological safety</p>
+              <p><strong>Only 44%</strong> of leaders globally have received any training</p>
             </div>
             <p className="text-xs text-gray-600 mt-4 pt-3 border-t">Sources: Gallup 2024-2025; McKinsey 2021; Deloitte 2024</p>
           </Card>
@@ -90,9 +90,9 @@ export default function ProblemSection() {
           <Card className="p-6 bg-white flex flex-col h-full">
             <h4 className="font-bold text-lg text-red-900 mb-3">When Action Fails, Trust Collapses</h4>
             <ul className="space-y-2 text-gray-700 text-sm flex-1">
-              <li>• <strong>82%</strong> of employees don't trust their manager to tell the truth</li>
+              <li>• <strong>82%</strong> of employees don't trust their leader to tell the truth</li>
               <li>• <strong>Only 52%</strong> believe change will happen as a result of surveys</li>
-              <li>• <strong>Only 33%</strong> strongly trust their organization's leadership</li>
+              <li>• <strong>Only 33%</strong> strongly trust their organisation's leadership</li>
               <li>• Trust drops <strong>40%</strong> when no action follows feedback</li>
             </ul>
             <p className="text-xs text-gray-600 mt-4 pt-3 border-t">Sources: People Insight 2024; Gallup 2024; Harvard Business Review 2024</p>

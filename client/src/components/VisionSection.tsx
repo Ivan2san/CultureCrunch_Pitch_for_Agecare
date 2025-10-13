@@ -34,7 +34,7 @@ export default function VisionSection() {
           
           <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             We're entering an era of abundance, where AI doesn't replace human connection, 
-            but amplifies it. CultureCrunch empowers managers to lead with insight, 
+            but amplifies it. CultureCrunch empowers leaders with insight, 
             turning workplace data into moments of genuine support.
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function VisionSection() {
             </div>
             <h3 className="text-lg font-bold text-gray-900 mb-2">Real-Time Nudges</h3>
             <p className="text-gray-600">
-              Contextual guidance delivered to managers at the perfect moment, 
+              Contextual guidance delivered to leaders at the perfect moment, 
               transforming cold data into warm, actionable conversations.
             </p>
           </div>
@@ -78,7 +78,7 @@ export default function VisionSection() {
         {/* Vision Statement */}
         <div ref={visionParallax.ref} style={visionParallax.style} className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto border border-gray-200">
           <p className="text-lg text-gray-800 leading-relaxed">
-            <span className="font-bold text-purple-600">Our Vision:</span> A world where every manager 
+            <span className="font-bold text-purple-600">Our Vision:</span> A world where every leader 
             has an AI co-pilot that helps them see what surveys can't show, understand what their team 
             truly needs, and act with confidence every single week. Where compliance isn't a burden, 
             but a catalyst for creating workplaces where people genuinely thrive.

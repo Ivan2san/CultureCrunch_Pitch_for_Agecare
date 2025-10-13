@@ -176,7 +176,7 @@ export default function LOIPreview({ open, onOpenChange }: LOIPreviewProps) {
               <div className="bg-purple-50 p-4 rounded-lg">
                 <p className="font-bold text-purple-900 mb-2">3. White-Glove Implementation</p>
                 <ul className="list-disc list-inside ml-4 text-gray-700 text-sm">
-                  <li>Dedicated customer success manager</li>
+                  <li>Dedicated customer success leader</li>
                   <li>Weekly check-ins throughout pilot</li>
                   <li>Rapid iteration and support</li>
                 </ul>

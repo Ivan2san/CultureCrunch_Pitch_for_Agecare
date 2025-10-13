@@ -38,21 +38,21 @@ export default function PositioningSection() {
             description: "AI monitors for emerging patterns that indicate new or escalating psychosocial hazards, alerting you before they become compliance issues."
           }
         ],
-        impact: "Organisations using compliance-first systems reduce audit preparation time by 75% and demonstrate proactive management rather than reactive responses to incidents."
+        impact: "Organisations using compliance-first systems reduce audit preparation time by 75% and demonstrate proactive leadership rather than reactive responses to incidents."
       }
     },
     {
       icon: Zap,
       title: "Action-Oriented AI",
       description:
-        "We don't just identify problems; we give managers the exact conversations and micro-actions to solve them, right when they need it.",
+        "We don't just identify problems; we give leaders the exact conversations and micro-actions to solve them, right when they need it.",
       differentiators: [
         "Agentic AI that autonomously detects + recommends (not just dashboards)",
         "OORA conversation framework with contextual nudges",
         "Behaviour-based (Green/Red) instead of generic engagement scores",
       ],
       details: {
-        overview: "Most platforms stop at showing you problems. ThriveGuide AI is your action engine—providing managers with specific, contextual guidance on what to do, how to do it, and when to do it.",
+        overview: "Most platforms stop at showing you problems. ThriveGuide AI is your action engine—providing leaders with specific, contextual guidance on what to do, how to do it, and when to do it.",
         keyFeatures: [
           {
             title: "Agentic AI Detection",
@@ -60,18 +60,18 @@ export default function PositioningSection() {
           },
           {
             title: "OORA Conversation Framework",
-            description: "Managers receive scripted conversation starters using the proven OORA method (Observe, Offer, Request, Agree) tailored to their team's specific situation."
+            description: "Leaders receive scripted conversation starters using the proven OORA method (Observe, Offer, Request, Agree) tailored to their team's specific situation."
           },
           {
             title: "Behaviour-Based Insights",
-            description: "Instead of vague 'engagement scores', managers see clear Green (protective behaviours) and Red (risk indicators) signals with specific actions to reinforce or address each."
+            description: "Instead of vague 'engagement scores', leaders see clear Green (protective behaviours) and Red (risk indicators) signals with specific actions to reinforce or address each."
           },
           {
             title: "Just-in-Time Nudges",
-            description: "Contextual prompts delivered when managers can act on them—not buried in weekly reports they'll never read."
+            description: "Contextual prompts delivered when leaders can act on them—not buried in weekly reports they'll never read."
           }
         ],
-        impact: "Managers report 10-minute weekly time investment vs traditional 2-hour training sessions, with 3x higher action completion rates due to specific, timely guidance."
+        impact: "Leaders report 10-minute weekly time investment vs traditional 2-hour training sessions, with 3x higher action completion rates due to specific, timely guidance."
       }
     },
     {
@@ -85,7 +85,7 @@ export default function PositioningSection() {
         "Micro-actions proven to work (from 30+ years research)",
       ],
       details: {
-        overview: "Research shows managers drive 70% of engagement variance, yet most tools overwhelm them with dashboards and generic training. We built an AI co-pilot that makes leadership development effortless and effective.",
+        overview: "Research shows leaders drive 70% of engagement variance, yet most tools overwhelm them with dashboards and generic training. We built an AI co-pilot that makes leadership development effortless and effective.",
         keyFeatures: [
           {
             title: "Minimal Time Investment",
@@ -93,7 +93,7 @@ export default function PositioningSection() {
           },
           {
             title: "Personalised AI Co-Pilot",
-            description: "The AI learns each manager's team patterns, communication style, and challenges. Recommendations become more precise over time, adapting to what works for this specific leader and team."
+            description: "The AI learns each leader's team patterns, communication style, and challenges. Recommendations become more precise over time, adapting to what works for this specific leader and team."
           },
           {
             title: "Research-Backed Actions",
@@ -101,7 +101,7 @@ export default function PositioningSection() {
           },
           {
             title: "Progressive Skill Building",
-            description: "Managers develop psychological safety capabilities through doing, not sitting in training. Each micro-action is a learning opportunity embedded in real work."
+            description: "Leaders develop psychological safety capabilities through doing, not sitting in training. Each micro-action is a learning opportunity embedded in real work."
           }
         ],
         impact: "Leaders using AI co-pilot approaches show 44% better retention of practices vs traditional training, with measurable team psychological safety improvements within 6 weeks."
@@ -115,7 +115,7 @@ export default function PositioningSection() {
       differentiators: [
         "Zero message content ingestion (activity patterns only)",
         "Aggregate reporting (min cohort size enforced)",
-        "Transparent AI: managers see the 'why' behind every nudge",
+        "Transparent AI: leaders see the 'why' behind every nudge",
       ],
       details: {
         overview: "Privacy isn't a feature we added—it's our architecture. From day one, ThriveGuide AI was designed to deliver insights without surveillance, building trust with employees and leaders alike.",
@@ -126,11 +126,11 @@ export default function PositioningSection() {
           },
           {
             title: "Aggregated Intelligence",
-            description: "Minimum cohort sizes enforced (typically 8+ employees). Individual patterns never exposed. Managers see team trends, never individual tracking data."
+            description: "Minimum cohort sizes enforced (typically 8+ employees). Individual patterns never exposed. Leaders see team trends, never individual tracking data."
           },
           {
             title: "Transparent AI Reasoning",
-            description: "Every recommendation shows the 'why'. Managers and employees understand the patterns that triggered suggestions, building trust in the system."
+            description: "Every recommendation shows the 'why'. Leaders and employees understand the patterns that triggered suggestions, building trust in the system."
           },
           {
             title: "Australian Data Sovereignty",
@@ -244,7 +244,7 @@ export default function PositioningSection() {
           <p className="text-lg max-w-4xl mx-auto leading-relaxed">
             We're not competing with engagement survey tools (Culture Amp, Peakon). We're not competing with compliance consultants. 
             We're creating a <span className="font-bold underline">new category</span>: <strong>AI-Powered Psychosocial Safety Platforms</strong>, 
-            where compliance meets continuous action, and managers become equipped leaders.
+            where compliance meets continuous action, and leaders become better equipped.
           </p>
         </div>
       </div>

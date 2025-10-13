@@ -5,7 +5,7 @@ import { Play, Pause, RotateCcw, ChevronLeft, ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils";
 
 interface Message {
-  role: "manager" | "ai" | "system";
+  role: "leader" | "ai" | "system";
   content: string;
   phase?: string;
 }
@@ -31,7 +31,7 @@ const scenarios: Scenario[] = [
         phase: "observe"
       },
       {
-        role: "manager",
+        role: "leader",
         content: "I've noticed Sarah and Tom have been avoiding each other in meetings, and their collaboration has dropped significantly.",
       },
       {
@@ -57,7 +57,7 @@ const scenarios: Scenario[] = [
         content: "Recommended approach using the hierarchy of controls: First, speak with each privately to understand their perspective. Here's a conversation starter: 'I've noticed some changes in how the team is collaborating. I wanted to check in with you about how things are going with the project and your working relationships.' Would you like me to prepare specific questions for each conversation?",
       },
       {
-        role: "manager",
+        role: "leader",
         content: "Yes, that would help. I want to make sure I handle this sensitively.",
       },
       {
@@ -74,7 +74,7 @@ const scenarios: Scenario[] = [
         content: "I'll track: 1) Collaboration frequency (targeting return to 2x/week within 2 weeks), 2) Working hours normalisation (back to standard within 3 weeks), 3) Meeting participation patterns. I've set a review point for 2 weeks from now. You'll receive an alert if patterns don't improve or worsen. All actions are logged for compliance documentation.",
       },
       {
-        role: "manager",
+        role: "leader",
         content: "[Two weeks later] The 1:1s helped. They had a miscommunication about project ownership. How are things looking now?",
       },
       {
@@ -95,7 +95,7 @@ const scenarios: Scenario[] = [
         phase: "observe"
       },
       {
-        role: "manager",
+        role: "leader",
         content: "Alex has been working late every night and seems increasingly withdrawn during team meetings.",
       },
       {
@@ -121,7 +121,7 @@ const scenarios: Scenario[] = [
         content: "Immediate action recommended (hierarchy of controls - elimination first): 1) Have a supportive conversation today about workload, 2) Review and redistribute current tasks, 3) Set clear boundaries on after-hours work. Here's your conversation approach: 'Alex, I've noticed you've been putting in very long hours. I'm concerned about your wellbeing. Can we talk about your current workload and how I can support you?'",
       },
       {
-        role: "manager",
+        role: "leader",
         content: "Should I be worried about the weekend work? That's not normal for our team.",
       },
       {
@@ -138,7 +138,7 @@ const scenarios: Scenario[] = [
         content: "Monitoring plan: Weekly hours target: ≤42 hours within 2 weeks. After-hours work target: <10% of total hours within 3 weeks. Meeting participation: return to baseline within 3 weeks. I'll send you a progress update next week and alert you if working hours exceed 50 hours. All control measures and consultation with Alex are documented for your psychosocial risk register.",
       },
       {
-        role: "manager",
+        role: "leader",
         content: "[Three weeks later] We redistributed 3 projects and set clear boundaries. What's the outcome?",
       },
       {
@@ -159,7 +159,7 @@ const scenarios: Scenario[] = [
         phase: "observe"
       },
       {
-        role: "manager",
+        role: "leader",
         content: "Multiple people have mentioned that Jordan's behaviour in meetings has become aggressive and dismissive.",
       },
       {
@@ -185,7 +185,7 @@ const scenarios: Scenario[] = [
         content: "This requires formal process (hierarchy of controls - elimination/substitution): 1) Private conversation with Jordan about behaviour impact (today), 2) Document specific incidents with witnesses, 3) Consider temporary meeting facilitation changes, 4) Provide support to affected team members. I've prepared: incident documentation template, conversation script for Jordan, and support resources for the team.",
       },
       {
-        role: "manager",
+        role: "leader",
         content: "This feels serious. Do I need to involve HR?",
       },
       {
@@ -202,7 +202,7 @@ const scenarios: Scenario[] = [
         content: "Post-intervention monitoring (required for compliance): 1) Meeting behaviour analysis (weekly for 6 weeks), 2) Team member check-ins (I'll prompt you before each), 3) Anonymous pulse questions on psychological safety (bi-weekly), 4) HSR consultation logged. If behaviour doesn't improve within 2 weeks, escalation protocols will automatically trigger. All actions documented in hazard register with review dates.",
       },
       {
-        role: "manager",
+        role: "leader",
         content: "[Six weeks later] We had HR mediation and set clear behaviour expectations. What's the result?",
       },
       {
@@ -364,23 +364,23 @@ export default function OORADemo() {
               );
             }
 
-            const isManager = message.role === "manager";
+            const isLeader = message.role === "leader";
             return (
               <div
                 key={index}
                 className={cn(
                   "flex",
-                  isManager ? "justify-end" : "justify-start"
+                  isLeader ? "justify-end" : "justify-start"
                 )}
               >
                 <div className={cn(
                   "max-w-[80%] rounded-lg p-4",
-                  isManager 
+                  isLeader 
                     ? "bg-indigo-600 text-white" 
                     : "bg-white border-2 border-gray-200 text-gray-900"
                 )}>
                   <div className="text-xs font-bold mb-1 opacity-70">
-                    {isManager ? "Manager" : "ThriveGuide AI"}
+                    {isLeader ? "Leader" : "ThriveGuide AI"}
                   </div>
                   <div className="text-sm leading-relaxed">{message.content}</div>
                 </div>

@@ -54,7 +54,7 @@ export default function TheAskSection() {
                   <div className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
                     <span>
-                      <strong>Scope:</strong> 10–15 managers, 100–150 employees
+                      <strong>Scope:</strong> 10–15 leaders, 100–150 employees
                     </span>
                   </div>
                   <div className="flex items-start gap-2">

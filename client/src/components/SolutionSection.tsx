@@ -61,7 +61,7 @@ export default function SolutionSection() {
 
   const stats = [
     { value: "≤ 30 days", label: "Time to Audit-Ready" },
-    { value: "75%+", label: "Manager Action Rate" },
+    { value: "75%+", label: "Leader Action Rate" },
     { value: "25-35%", label: "After-hours ↓ in 4 wks" },
     { value: "1-click", label: "Evidence Generation" },
   ];
@@ -95,7 +95,7 @@ export default function SolutionSection() {
           <p className="text-xl max-w-4xl mx-auto leading-relaxed">
             Regulators need proof you're managing psychosocial hazards. Leaders need practical ways to do it.
             ThriveGuide gives you both: <span className="font-bold underline">evidence by default</span> and
-            <span className="font-bold underline"> real-time manager coaching</span>.
+            <span className="font-bold underline"> real-time leader coaching</span>.
           </p>
         </div>
 

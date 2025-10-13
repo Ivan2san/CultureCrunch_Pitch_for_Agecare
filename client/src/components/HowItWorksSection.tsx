@@ -57,10 +57,10 @@ export default function HowItWorksSection() {
       title: "Action & Feedback Loop",
       icon: Zap,
       color: "green",
-      summary: "Manager interface with continuous learning",
+      summary: "Leader interface with continuous learning",
       details: [
         {
-          name: "Manager Interface",
+          name: "Leader Interface",
           desc: "Weekly nudges, OORA conversation guides, micro-action prompts",
         },
         {
@@ -95,10 +95,10 @@ export default function HowItWorksSection() {
       icon: Brain,
       color: "purple",
       description:
-        "Large Language Models (LLMs) translate cold data into warm, actionable manager nudges, with organisation-specific context and evidence-based frameworks built in.",
+        "Large Language Models (LLMs) translate cold data into warm, actionable leader nudges, with organisation-specific context and evidence-based frameworks built in.",
       features: [
         "Contextual Training: Fine-tuned on Triple Goal Leadership Model™ + organisational language/culture",
-        "Nudge Generation: Crafts specific, actionable manager briefs (not generic advice)",
+        "Nudge Generation: Crafts specific, actionable leader briefs (not generic advice)",
         "Conversation Frameworks: Generates OORA conversation starters tailored to detected risks",
         "Micro-Action Library: Recommends evidence-based actions from 10+ years of org research",
       ],

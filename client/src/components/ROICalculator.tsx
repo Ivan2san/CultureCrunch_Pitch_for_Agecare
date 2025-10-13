@@ -100,15 +100,15 @@ export default function ROICalculator() {
                 </div>
 
                 <div>
-                  <Label htmlFor="manager-count">Number of Managers</Label>
+                  <Label htmlFor="leader-count">Number of Leaders</Label>
                   <Input
-                    id="manager-count"
+                    id="leader-count"
                     type="number"
                     value={managerCount}
                     onChange={(e) => setManagerCount(Number(e.target.value))}
                     min="5"
                     max="500"
-                    data-testid="input-manager-count"
+                    data-testid="input-leader-count"
                   />
                 </div>
 
@@ -361,7 +361,7 @@ export default function ROICalculator() {
                       <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                         <h5 className="font-bold text-green-800 mb-2">Turnover: 25% Reduction</h5>
                         <p className="text-sm text-gray-700">
-                          Manager support programs demonstrate measurable impact on employee retention and reduced voluntary turnover
+                          Leader support programs demonstrate measurable impact on employee retention and reduced voluntary turnover
                         </p>
                       </div>
 
