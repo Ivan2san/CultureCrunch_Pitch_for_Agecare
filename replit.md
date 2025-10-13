@@ -1,0 +1,125 @@
+# CultureCrunch - AI-Powered Psychosocial Safety Platform
+
+## Overview
+
+CultureCrunch is a B2B SaaS platform that transforms workplace psychosocial compliance into actionable leadership insights using AI. The application is a pitch/marketing web app designed to attract founding partners for a pilot program. It presents the company's vision, problem analysis, solution architecture, ROI calculations, and partnership opportunities through an interactive single-page application.
+
+**Core Purpose**: Convert prospective enterprise clients into founding partners by demonstrating how AI can turn psychosocial hazard compliance requirements into proactive manager support tools.
+
+**Target Audience**: Australian enterprise organizations (200+ employees) facing psychosocial safety compliance requirements, particularly HR leaders and executives concerned with workplace mental health, engagement, and regulatory compliance.
+
+## User Preferences
+
+Preferred communication style: Simple, everyday language.
+
+## System Architecture
+
+### Frontend Architecture
+
+**Framework**: React 18 with TypeScript, built using Vite as the build tool and development server.
+
+**Routing**: Wouter for client-side routing (lightweight React router alternative). Currently implements a single-page application with smooth scrolling navigation between sections.
+
+**UI Component System**: Shadcn/ui (Radix UI primitives) with the "new-york" style variant, providing accessible, composable components with Tailwind CSS styling.
+
+**State Management**: TanStack Query (React Query) v5 for server state management, though currently the app is primarily presentational without active data fetching.
+
+**Styling Approach**: 
+- Tailwind CSS with custom design tokens matching Material Design principles adapted for B2B SaaS
+- Custom color palette with HSL color variables for light/dark mode support
+- Design guidelines emphasize trust, credibility, and data-first clarity
+- Typography uses Inter font family for headings/body, JetBrains Mono for numerical data
+
+**Component Organization**:
+- Page components in `client/src/pages/`
+- Reusable section components in `client/src/components/`
+- UI primitives in `client/src/components/ui/`
+- Example components for development in `client/src/components/examples/`
+
+**Key Features**:
+- Smooth scroll navigation with active section tracking
+- Interactive ROI calculator with real-time calculations
+- Animated process flow visualization (with reduced-motion support)
+- Responsive design for mobile and desktop viewports
+- Expandable/collapsible content sections
+
+### Backend Architecture
+
+**Server Framework**: Express.js with TypeScript running on Node.js.
+
+**API Design**: RESTful API structure with routes prefixed with `/api`. Currently minimal backend implementation as the application is primarily a static marketing site.
+
+**Build Process**: 
+- Client built with Vite (outputs to `dist/public`)
+- Server bundled with esbuild (outputs to `dist`)
+- ESM (ES Modules) used throughout
+
+**Development Tools**:
+- Hot module replacement via Vite
+- TSX for TypeScript execution in development
+- Replit-specific plugins for development experience (cartographer, dev banner, runtime error overlay)
+
+**Storage Layer**: Currently uses in-memory storage (`MemStorage` class) with a simple user model. Prepared for PostgreSQL migration with Drizzle ORM configuration in place.
+
+### Data Storage Solutions
+
+**Current State**: In-memory storage implementation for basic user entities.
+
+**Planned Database**: PostgreSQL via Neon serverless driver, configured but not yet actively used.
+
+**ORM**: Drizzle ORM v0.39+ with:
+- Schema definitions in `shared/schema.ts`
+- Migrations directory: `./migrations`
+- Drizzle-Zod integration for runtime validation
+- Type-safe query building
+
+**Schema Design** (Minimal Current Implementation):
+- `users` table with id (UUID), username, and password fields
+- Extensible schema structure prepared for psychosocial data models, engagement metrics, and compliance tracking
+
+### Authentication and Authorization
+
+**Current State**: No active authentication implementation. Basic user schema exists but authentication/session management not implemented.
+
+**Prepared Infrastructure**:
+- Connect-pg-simple package for PostgreSQL session storage
+- User schema with username/password fields
+- Express session middleware ready for configuration
+
+**Future Architecture**: Likely session-based authentication with secure password hashing, prepared for role-based access control (managers, HR admins, executives).
+
+### External Dependencies
+
+**Core UI Libraries**:
+- Radix UI component primitives (40+ components: dialog, dropdown, accordion, toast, etc.)
+- Embla Carousel for interactive content
+- Framer Motion for animations (used in ProcessFlowAnimation component)
+- Lucide React for iconography
+- React Hook Form with Zod resolvers for future form handling
+
+**Development Tools**:
+- Vite 5.x for blazing-fast builds and HMR
+- TypeScript 5.x for type safety
+- Tailwind CSS with PostCSS for styling
+- Replit-specific tooling for cloud development
+
+**Data Visualization** (Prepared but not actively used):
+- Recharts library available for future dashboard implementation
+- Date-fns for date manipulation in ROI calculations
+
+**API Integration Readiness**:
+- TanStack Query configured for data fetching
+- Fetch API wrapper with credential handling in `lib/queryClient.ts`
+- Error handling and 401 response management built-in
+
+**Third-Party Service Integration** (Referenced in Content):
+- Microsoft 365 (mentioned for calendar/metadata)
+- Google Workspace (mentioned for calendar/metadata)
+- Slack (mentioned for activity patterns)
+- HRIS systems (generic integration points)
+- Note: These are conceptual integrations described in the pitch content, not currently implemented
+
+**Database Services**:
+- Neon serverless PostgreSQL (configured via `@neondatabase/serverless`)
+- Connection string via `DATABASE_URL` environment variable
+- Drizzle Kit for schema management and migrations
