@@ -10,6 +10,18 @@ CultureCrunch is a B2B SaaS platform that transforms workplace psychosocial comp
 
 ## Recent Changes
 
+- **Lead Capture System (October 2025)**:
+  - Implemented PostgreSQL database with `leads` table for storing prospect information
+  - Created POST /api/leads endpoint with Zod validation
+  - Updated LeadCaptureForm to save data to database with source tracking
+  - Added lead capture for both OORA demo access (source: "oora_demo") and Discovery Call requests (source: "discovery_call")
+  - All fields optional with toast notifications for submission feedback
+  - Database uses Drizzle ORM with Neon serverless PostgreSQL
+- **LOI Preview Modal (October 2025)**:
+  - Created branded Letter of Intent preview dialog accessible from "The Ask" section
+  - Displays key LOI sections with Culture Crunch Pty Ltd branding
+  - Contact details: Campbell McGlynn, campbell@culturecrunch.io
+  - Includes download button for full template (ready for future PDF generation)
 - **ProcessFlowAnimation Connector Fix (October 2025)**:
   - Resolved SVG connector line alignment issues using center-based path calculation
   - Paths now connect card centers (immune to scale transforms) instead of edges
@@ -88,23 +100,26 @@ Preferred communication style: Simple, everyday language.
 - TSX for TypeScript execution in development
 - Replit-specific plugins for development experience (cartographer, dev banner, runtime error overlay)
 
-**Storage Layer**: Currently uses in-memory storage (`MemStorage` class) with a simple user model. Prepared for PostgreSQL migration with Drizzle ORM configuration in place.
+**Storage Layer**: PostgreSQL database (`DbStorage` class) using Drizzle ORM with Neon serverless driver for lead capture and future data persistence.
 
 ### Data Storage Solutions
 
-**Current State**: In-memory storage implementation for basic user entities.
+**Current State**: Active PostgreSQL database implementation for lead capture with plans to expand for full application data.
 
-**Planned Database**: PostgreSQL via Neon serverless driver, configured but not yet actively used.
+**Database**: PostgreSQL via Neon serverless driver with pooled connections configured in `server/db.ts`.
 
 **ORM**: Drizzle ORM v0.39+ with:
 - Schema definitions in `shared/schema.ts`
-- Migrations directory: `./migrations`
+- Database push commands via `npm run db:push` for schema synchronization
 - Drizzle-Zod integration for runtime validation
 - Type-safe query building
 
-**Schema Design** (Minimal Current Implementation):
-- `users` table with id (UUID), username, and password fields
-- Extensible schema structure prepared for psychosocial data models, engagement metrics, and compliance tracking
+**Schema Design** (Current Implementation):
+- `users` table with id (UUID), username, and password fields (not actively used)
+- `leads` table with id (UUID), name, company, mobile, email, source (required), and createdAt timestamp
+  - All contact fields optional to reduce friction in lead capture
+  - Source field tracks lead origin ("oora_demo" or "discovery_call")
+  - Ready for CRM integration in production
 
 ### Authentication and Authorization
 

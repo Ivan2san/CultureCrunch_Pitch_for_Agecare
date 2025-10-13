@@ -1,6 +1,6 @@
 import { drizzle } from "drizzle-orm/neon-serverless";
 import ws from "ws";
-import { Pool } from "@neondatabase/serverless";
+import { Pool, neonConfig } from "@neondatabase/serverless";
 
 if (!process.env.DATABASE_URL) {
   throw new Error(
@@ -8,8 +8,8 @@ if (!process.env.DATABASE_URL) {
   );
 }
 
+neonConfig.webSocketConstructor = ws;
+
 const pool = new Pool({ connectionString: process.env.DATABASE_URL });
-// @ts-ignore - webSocketConstructor type issue
-pool.neonConfig.webSocketConstructor = ws;
 
 export const db = drizzle(pool);
