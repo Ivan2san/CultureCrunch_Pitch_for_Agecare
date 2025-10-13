@@ -6,6 +6,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
@@ -70,6 +71,9 @@ export default function MethodologyDialog({ open, onOpenChange }: MethodologyDia
                 ROI Methodology & Research Sources
               </DialogTitle>
             </div>
+            <DialogDescription className="sr-only">
+              Comprehensive research documentation and calculation methodology for the ThriveGuide AI ROI Calculator
+            </DialogDescription>
             <Button
               variant="ghost"
               size="icon"

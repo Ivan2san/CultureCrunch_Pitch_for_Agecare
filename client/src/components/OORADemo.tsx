@@ -27,7 +27,7 @@ const scenarios: Scenario[] = [
     messages: [
       {
         role: "system",
-        content: "Phase 1: Observe - Gather Observable Facts",
+        content: "Phase 1: Observe - Identifying Collaboration Breakdown Signals",
         phase: "observe"
       },
       {
@@ -40,7 +40,7 @@ const scenarios: Scenario[] = [
       },
       {
         role: "system",
-        content: "Phase 2: Orient - Understand Context & Psychosocial Risk",
+        content: "Phase 2: Orient - Assessing Interpersonal Risk Severity",
         phase: "orient"
       },
       {
@@ -49,7 +49,7 @@ const scenarios: Scenario[] = [
       },
       {
         role: "system",
-        content: "Phase 3: Respond - Guided Action Framework",
+        content: "Phase 3: Respond - Implementing Conflict Resolution Controls",
         phase: "respond"
       },
       {
@@ -66,12 +66,20 @@ const scenarios: Scenario[] = [
       },
       {
         role: "system",
-        content: "Phase 4: Assess - Monitor & Verify Effectiveness",
+        content: "Phase 4: Assess - Tracking Relationship Recovery Metrics",
         phase: "assess"
       },
       {
         role: "ai",
         content: "I'll track: 1) Collaboration frequency (targeting return to 2x/week within 2 weeks), 2) Working hours normalisation (back to standard within 3 weeks), 3) Meeting participation patterns. I've set a review point for 2 weeks from now. You'll receive an alert if patterns don't improve or worsen. All actions are logged for compliance documentation.",
+      },
+      {
+        role: "manager",
+        content: "[Two weeks later] The 1:1s helped. They had a miscommunication about project ownership. How are things looking now?",
+      },
+      {
+        role: "ai",
+        content: "Excellent progress! Collaboration has recovered to 90% of baseline. Sarah and Tom have resumed weekly 1:1s, working hours are back to normal, and their joint project deliverables are on track. I've documented this successful intervention in your hazard register. The control measures (facilitated conversations) were effective. Case closed with positive outcome.",
       },
     ],
   },
@@ -83,7 +91,7 @@ const scenarios: Scenario[] = [
     messages: [
       {
         role: "system",
-        content: "Phase 1: Observe - Gather Observable Facts",
+        content: "Phase 1: Observe - Detecting Overwork & Withdrawal Patterns",
         phase: "observe"
       },
       {
@@ -96,7 +104,7 @@ const scenarios: Scenario[] = [
       },
       {
         role: "system",
-        content: "Phase 2: Orient - Understand Context & Psychosocial Risk",
+        content: "Phase 2: Orient - Identifying Burnout Risk & Job Demand Hazards",
         phase: "orient"
       },
       {
@@ -105,7 +113,7 @@ const scenarios: Scenario[] = [
       },
       {
         role: "system",
-        content: "Phase 3: Respond - Guided Action Framework",
+        content: "Phase 3: Respond - Applying Workload Reduction Controls",
         phase: "respond"
       },
       {
@@ -122,12 +130,20 @@ const scenarios: Scenario[] = [
       },
       {
         role: "system",
-        content: "Phase 4: Assess - Monitor & Verify Effectiveness",
+        content: "Phase 4: Assess - Monitoring Recovery & Workload Normalisation",
         phase: "assess"
       },
       {
         role: "ai",
         content: "Monitoring plan: Weekly hours target: ≤42 hours within 2 weeks. After-hours work target: <10% of total hours within 3 weeks. Meeting participation: return to baseline within 3 weeks. I'll send you a progress update next week and alert you if working hours exceed 50 hours. All control measures and consultation with Alex are documented for your psychosocial risk register.",
+      },
+      {
+        role: "manager",
+        content: "[Three weeks later] We redistributed 3 projects and set clear boundaries. What's the outcome?",
+      },
+      {
+        role: "ai",
+        content: "Successful recovery! Alex's hours decreased to 41 hours/week average. After-hours work dropped to 5%, weekend logins eliminated. Meeting participation restored to 95% of baseline. Alex reported feeling supported and in control again. Your intervention prevented potential burnout and workers' comp claim. Documented as 'control effective' in hazard register.",
       },
     ],
   },
@@ -139,7 +155,7 @@ const scenarios: Scenario[] = [
     messages: [
       {
         role: "system",
-        content: "Phase 1: Observe - Gather Observable Facts",
+        content: "Phase 1: Observe - Documenting Bullying & Harassment Indicators",
         phase: "observe"
       },
       {
@@ -152,7 +168,7 @@ const scenarios: Scenario[] = [
       },
       {
         role: "system",
-        content: "Phase 2: Orient - Understand Context & Psychosocial Risk",
+        content: "Phase 2: Orient - Determining Legal Risk & Severity Classification",
         phase: "orient"
       },
       {
@@ -161,7 +177,7 @@ const scenarios: Scenario[] = [
       },
       {
         role: "system",
-        content: "Phase 3: Respond - Guided Action Framework",
+        content: "Phase 3: Respond - Activating Formal Intervention Protocols",
         phase: "respond"
       },
       {
@@ -178,12 +194,20 @@ const scenarios: Scenario[] = [
       },
       {
         role: "system",
-        content: "Phase 4: Assess - Monitor & Verify Effectiveness",
+        content: "Phase 4: Assess - Verifying Behaviour Change & Team Safety",
         phase: "assess"
       },
       {
         role: "ai",
         content: "Post-intervention monitoring (required for compliance): 1) Meeting behaviour analysis (weekly for 6 weeks), 2) Team member check-ins (I'll prompt you before each), 3) Anonymous pulse questions on psychological safety (bi-weekly), 4) HSR consultation logged. If behaviour doesn't improve within 2 weeks, escalation protocols will automatically trigger. All actions documented in hazard register with review dates.",
+      },
+      {
+        role: "manager",
+        content: "[Six weeks later] We had HR mediation and set clear behaviour expectations. What's the result?",
+      },
+      {
+        role: "ai",
+        content: "Positive resolution achieved. Jordan's interruptions decreased to baseline (1-2 per meeting), speaking time normalized, and team participation recovered. Anonymous pulse shows 85% feel psychologically safe (up from 40%). No new complaints filed. All team members received EAP support. Intervention documented as successful with ongoing 3-month monitoring to ensure sustained improvement.",
       },
     ],
   },
@@ -295,13 +319,19 @@ export default function OORADemo() {
                   isActive ? `${colors.bg} ${colors.border}` : "bg-gray-50 border-gray-200",
                   isCompleted && "opacity-60"
                 )}
+                role="status"
+                aria-label={`${phase.label} phase: ${isActive ? 'current' : isCompleted ? 'completed' : 'pending'}. ${phase.description}`}
+                aria-current={isActive ? "step" : undefined}
                 data-testid={`phase-indicator-${phase.id}`}
               >
                 <div className="flex items-center gap-2 mb-1">
-                  <div className={cn(
-                    "w-3 h-3 rounded-full",
-                    isActive ? colors.accent : isCompleted ? "bg-gray-400" : "bg-gray-300"
-                  )} />
+                  <div 
+                    className={cn(
+                      "w-3 h-3 rounded-full",
+                      isActive ? colors.accent : isCompleted ? "bg-gray-400" : "bg-gray-300"
+                    )}
+                    aria-hidden="true"
+                  />
                   <span className={cn(
                     "font-bold text-sm",
                     isActive ? colors.text : "text-gray-600"

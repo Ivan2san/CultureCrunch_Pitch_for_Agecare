@@ -26,8 +26,10 @@ export function useParallax(options: ParallaxOptions = {}) {
         if (!elementRef.current) return;
 
         const rect = elementRef.current.getBoundingClientRect();
-        const scrollPercent = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
-        const parallaxOffset = scrollPercent * speed * 100;
+        const viewportHeight = window.innerHeight;
+        const elementCenter = rect.top + rect.height / 2;
+        const scrollPercent = (viewportHeight / 2 - elementCenter) / viewportHeight;
+        const parallaxOffset = Math.max(-30, Math.min(30, scrollPercent * speed * 100));
 
         setOffset(parallaxOffset);
       });
