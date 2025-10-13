@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { CheckCircle, FileText, TrendingUp, Shield, Users, Download, Eye } from "lucide-react";
+import { CheckCircle, FileText, TrendingUp, Shield, Users, Download, Eye, Calendar } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import LOIPreview from "@/components/LOIPreview";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
 
 export default function TheAskSection() {
   const [showLOIPreview, setShowLOIPreview] = useState(false);
+  const [showDiscoveryDialog, setShowDiscoveryDialog] = useState(false);
 
   const handleDownloadLOI = () => {
     console.log("Download LOI template triggered");
@@ -237,9 +240,11 @@ export default function TheAskSection() {
             <Button
               size="lg"
               variant="outline"
+              onClick={() => setShowDiscoveryDialog(true)}
               className="bg-white/10 border-white text-white hover:bg-white/20 px-8 py-6 text-lg"
               data-testid="button-schedule-call"
             >
+              <Calendar className="w-5 h-5 mr-2" />
               Schedule Discovery Call
             </Button>
           </div>
@@ -250,6 +255,25 @@ export default function TheAskSection() {
           open={showLOIPreview} 
           onOpenChange={setShowLOIPreview}
         />
+
+        {/* Discovery Call Lead Capture Dialog */}
+        <Dialog open={showDiscoveryDialog} onOpenChange={setShowDiscoveryDialog}>
+          <DialogContent className="max-w-2xl">
+            <DialogHeader>
+              <DialogTitle className="text-2xl font-bold text-center">Schedule a Discovery Call</DialogTitle>
+              <DialogDescription className="text-center">
+                Share your details and we'll reach out to schedule a conversation about how ThriveGuide AI can support your organisation
+              </DialogDescription>
+            </DialogHeader>
+            <LeadCaptureForm
+              source="discovery_call"
+              submitLabel="Request Discovery Call"
+              title="Let's Connect"
+              description="We'll contact you within 1 business day to arrange a time that works for you"
+              onSubmit={() => setShowDiscoveryDialog(false)}
+            />
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
