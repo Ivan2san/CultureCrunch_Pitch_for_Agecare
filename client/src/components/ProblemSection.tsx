@@ -47,77 +47,73 @@ export default function ProblemSection() {
           ))}
         </div>
 
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {/* The Measurement Paradox */}
-          <Card className="p-8 bg-white">
-            <div className="flex items-center gap-3 mb-6">
-              <TrendingDown className="w-8 h-8 text-red-600" />
-              <h3 className="text-2xl font-bold text-red-600">The Measurement Paradox</h3>
-            </div>
-            
-            <div className="space-y-4">
-              <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
-                <h4 className="font-bold text-lg text-red-900 mb-2">More Surveys, Worse Outcomes</h4>
-                <ul className="space-y-2 text-gray-700 text-sm">
-                  <li className="flex items-start gap-2">
-                    <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
-                    <span>Engagement dropped to <strong>21%</strong> globally (2024), representing $8.9T in lost productivity</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
-                    <span><strong>31% US engagement</strong>: lowest in a decade (8M fewer engaged employees since 2020)</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
-                    <span>Response rates drop to <strong>59%</strong> when surveying 4+ times annually</span>
-                  </li>
-                </ul>
-                <p className="text-xs text-gray-600 mt-3">Source: Gallup 2024</p>
-              </div>
+        {/* Section Headings */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+          <div className="flex items-center gap-3">
+            <TrendingDown className="w-8 h-8 text-red-600" />
+            <h3 className="text-2xl font-bold text-red-600">The Measurement Paradox</h3>
+          </div>
+          <div className="flex items-center gap-3">
+            <DollarSign className="w-8 h-8 text-orange-600" />
+            <h3 className="text-2xl font-bold text-orange-600">The Cost: Australian Context</h3>
+          </div>
+        </div>
 
-              <div className="border-2 border-gray-200 p-4 rounded-lg">
-                <h4 className="font-bold text-gray-800 mb-2">Why Current Solutions Fail:</h4>
-                <ul className="space-y-1 text-gray-700 text-sm">
-                  <li>• Only <strong>58%</strong> of organisations take action after surveys</li>
-                  <li>• <strong>44%</strong> see zero ROI from engagement investments</li>
-                  <li>• <strong>70%</strong> of engagement variance is from managers, yet only 26% create psychological safety</li>
-                </ul>
-                <p className="text-xs text-gray-600 mt-3">Sources: Harvard Business Review 2024; McKinsey 2021</p>
-              </div>
-            </div>
+        {/* Main Content Grid - 4 Symmetrical Boxes */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
+          {/* Box 1: More Surveys, Worse Outcomes */}
+          <Card className="p-6 bg-white flex flex-col">
+            <h4 className="font-bold text-lg text-red-900 mb-3">More Surveys, Worse Outcomes</h4>
+            <ul className="space-y-2 text-gray-700 text-sm flex-1">
+              <li className="flex items-start gap-2">
+                <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
+                <span>Engagement dropped to <strong>21%</strong> globally (2024), representing $8.9T in lost productivity</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
+                <span><strong>31% US engagement</strong>: lowest in a decade (8M fewer engaged employees since 2020)</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
+                <span>Response rates drop to <strong>59%</strong> when surveying 4+ times annually</span>
+              </li>
+            </ul>
+            <p className="text-xs text-gray-600 mt-4 pt-3 border-t">Source: Gallup 2024</p>
           </Card>
 
-          {/* Australian Context */}
-          <Card className="p-8 bg-white">
-            <div className="flex items-center gap-3 mb-6">
-              <DollarSign className="w-8 h-8 text-orange-600" />
-              <h3 className="text-2xl font-bold text-orange-600">The Cost: Australian Context</h3>
+          {/* Box 2: Mental Health Crisis */}
+          <Card className="p-6 bg-white flex flex-col">
+            <h4 className="font-bold text-lg text-orange-900 mb-3">Mental Health Crisis</h4>
+            <div className="space-y-2 text-gray-700 text-sm flex-1">
+              <p><strong>$290K</strong> average mental health claim (3× physical injuries)</p>
+              <p><strong>97.3%</strong> increase in claims over 10 years</p>
+              <p><strong>34.2 weeks</strong> median time lost (vs 8.0 for physical)</p>
+              <p><strong>$10.9-12.8B</strong> annual cost to employers</p>
             </div>
-            
-            <div className="space-y-4">
-              <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
-                <h4 className="font-bold text-lg text-orange-900 mb-2">Mental Health Crisis</h4>
-                <div className="space-y-2 text-gray-700 text-sm">
-                  <p><strong>$290K</strong> average mental health claim (3× physical injuries)</p>
-                  <p><strong>97.3%</strong> increase in claims over 10 years</p>
-                  <p><strong>34.2 weeks</strong> median time lost (vs 8.0 for physical)</p>
-                  <p><strong>$10.9-12.8B</strong> annual cost to employers</p>
-                </div>
-                <p className="text-xs text-gray-600 mt-3">Source: Safe Work Australia Key WHS Statistics 2024; CEDA 2024</p>
-              </div>
+            <p className="text-xs text-gray-600 mt-4 pt-3 border-t">Source: Safe Work Australia Key WHS Statistics 2024; CEDA 2024</p>
+          </Card>
 
-              <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
-                <h4 className="font-bold text-lg text-orange-900 mb-2">Regulatory Pressure</h4>
-                <div className="space-y-2 text-gray-700 text-sm">
-                  <p>Psychosocial hazard regulations <strong>active in all states</strong></p>
-                  <p><strong>$11.5M</strong> maximum penalties for Category 1 offenses</p>
-                  <p><strong>25% increase</strong> in SafeWork NSW inspections (2024-2026)</p>
-                  <p><strong>200+ employee workplaces</strong> targeted for mandatory checks</p>
-                </div>
-                <p className="text-xs text-gray-600 mt-3">Sources: SafeWork NSW Psychological Health Strategy 2024-2026; Safe Work Australia 2024</p>
-              </div>
+          {/* Box 3: Why Current Solutions Fail */}
+          <Card className="p-6 bg-white flex flex-col">
+            <h4 className="font-bold text-lg text-red-900 mb-3">Why Current Solutions Fail</h4>
+            <ul className="space-y-2 text-gray-700 text-sm flex-1">
+              <li>• Only <strong>58%</strong> of organisations take action after surveys</li>
+              <li>• <strong>44%</strong> see zero ROI from engagement investments</li>
+              <li>• <strong>70%</strong> of engagement variance is from managers, yet only 26% create psychological safety</li>
+            </ul>
+            <p className="text-xs text-gray-600 mt-4 pt-3 border-t">Sources: Harvard Business Review 2024; McKinsey 2021</p>
+          </Card>
+
+          {/* Box 4: Regulatory Pressure */}
+          <Card className="p-6 bg-white flex flex-col">
+            <h4 className="font-bold text-lg text-orange-900 mb-3">Regulatory Pressure</h4>
+            <div className="space-y-2 text-gray-700 text-sm flex-1">
+              <p>Psychosocial hazard regulations <strong>active in all states</strong></p>
+              <p><strong>$11.5M</strong> maximum penalties for Category 1 offenses</p>
+              <p><strong>25% increase</strong> in SafeWork NSW inspections (2024-2026)</p>
+              <p><strong>200+ employee workplaces</strong> targeted for mandatory checks</p>
             </div>
+            <p className="text-xs text-gray-600 mt-4 pt-3 border-t">Sources: SafeWork NSW Psychological Health Strategy 2024-2026; Safe Work Australia 2024</p>
           </Card>
         </div>
 
