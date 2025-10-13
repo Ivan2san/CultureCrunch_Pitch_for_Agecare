@@ -8,6 +8,21 @@ CultureCrunch is a B2B SaaS platform that transforms workplace psychosocial comp
 
 **Target Audience**: Australian enterprise organizations (200+ employees) facing psychosocial safety compliance requirements, particularly HR leaders and executives concerned with workplace mental health, engagement, and regulatory compliance.
 
+## Recent Changes
+
+- Updated Roadmap section with detailed 4-phase business roadmap (Q4 2025 - Q3 2026):
+  - Phase 1: Validation (Q4 2025) - Target ~5 LOIs
+  - Phase 2: Seek Funding (Q4 2025–Q1 2026)
+  - Phase 3: Build MVP with Early Adopters (Q1–Q2 2026)
+  - Phase 4: Launch (Q2–Q3 2026)
+  - Added Exit Criteria section between Goals and Deliverables for each phase
+  - Fixed dynamic Tailwind classes with static color mappings for production builds
+- Fixed ProcessFlowAnimation with proper timing (0.6s card transitions, 0.8s SVG animations)
+- Enhanced animation visual feedback: 1.08 scale, shadow effects, smooth easing
+- Implemented corporate design transformation: DM Sans typography, corporate-calm gradient backgrounds with film grain overlay
+- Typography hierarchy: 500 weight for body (readability), 700 for headings (corporate emphasis), 600 for buttons
+- Letter-spacing: -0.005em (-0.5%) for body, -0.01em (-1%) for headings
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
