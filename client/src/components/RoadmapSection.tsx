@@ -2,76 +2,108 @@ import { Rocket, Users, TrendingUp, Globe } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 export default function RoadmapSection() {
+  // Color mappings for proper Tailwind compilation
+  const colorClasses = {
+    blue: {
+      icon: "text-blue-600",
+      border: "border-blue-400",
+    },
+    purple: {
+      icon: "text-purple-600",
+      border: "border-purple-400",
+    },
+    green: {
+      icon: "text-green-600",
+      border: "border-green-400",
+    },
+    indigo: {
+      icon: "text-indigo-600",
+      border: "border-indigo-400",
+    },
+  } as const;
+
   const phases = [
     {
       phase: "Phase 1: Validation",
-      timeline: "Q2 2025",
+      timeline: "Q4 2025",
+      target: "Target ~5 LOIs",
       icon: Users,
-      color: "blue",
+      color: "blue" as keyof typeof colorClasses,
       goals: [
-        "3–5 Founding Partner pilots (10–15 managers each)",
-        "Validate core AI detection + nudge effectiveness",
-        "Achieve 75%+ manager action rate",
-        "Prove 30%+ improvement in wellbeing metrics",
+        "5 qualified LOIs across 2–3 industries (incl. 1 healthcare)",
+        "Validate: detection signal set, OORA micro-practice cadence, and audit artefacts",
+        "Prove manager action rate ≥ 60% with ≤ 10 min/week",
+      ],
+      exitCriteria: [
+        "5 signed LOIs + 3 drafted SoWs",
+        "2 redacted case blurbs",
+        "Privacy fact sheet + DPA template approved by one legal team",
       ],
       deliverables: [
-        "MVP: OORA framework + weekly manager briefs",
-        "Compliance evidence pack (audit-ready)",
-        "Founding Partner case studies",
+        "Clickable demo (Manager Brief → OORA → Audit Pack)",
+        "Audit pack sample (PDF/JSON)",
+        "Procurement packet v1: data minimisation, AU residency, cohort thresholds",
       ],
     },
     {
-      phase: "Phase 2: Product-Market Fit",
-      timeline: "Q3-Q4 2025",
+      phase: "Phase 2: Seek Funding",
+      timeline: "Q4 2025–Q1 2026",
       icon: Rocket,
-      color: "purple",
+      color: "purple" as keyof typeof colorClasses,
       goals: [
-        "Expand to 15–25 customers (200+ managers)",
-        "Refine AI models based on pilot learnings",
-        "Build self-service onboarding",
-        "Achieve <15 min/week manager time investment",
+        "Raise a seed to cover 12–15 months; secure 2–3 domain angels",
+        "Lock first hires: founding engineer, PM/implementer, RevOps contractor",
+      ],
+      exitCriteria: [
+        "Term sheet signed; capital ≥ runway target",
+        "Security baseline docs ratified (RBAC, encryption, retention policy)",
       ],
       deliverables: [
-        "Full compliance dashboard",
-        "Integration marketplace (MS365, Slack, HRIS)",
-        "Manager training automation",
-        "Executive reporting suite",
+        "Investor deck + 18-month plan, financial model, product roadmap",
+        "Trust pack: InfoSec policy set, SOC2 readiness plan, DPIA template",
       ],
     },
     {
-      phase: "Phase 3: Scale",
-      timeline: "2026",
+      phase: "Phase 3: Build MVP with Early Adopters",
+      timeline: "Q1–Q2 2026",
       icon: TrendingUp,
-      color: "green",
+      color: "green" as keyof typeof colorClasses,
       goals: [
-        "100+ enterprise customers",
-        "$5M ARR milestone",
-        "Industry-specific AI models",
-        "Expand beyond Australia (NZ, UK, EU)",
+        "Ship MVP to 3 early adopters, ≥ 50 managers live",
+        "Achieve time-to-first-action ≤ 7 days; weekly active managers ≥ 60%; action rate ≥ 70%",
+        "Demonstrate two compliance wins: risk register entries + review logs used in governance",
+      ],
+      exitCriteria: [
+        "3 live tenants",
+        "2 documented before/after deltas (e.g., after-hours ↓ 20%+)",
+        "One board/exec pack delivered",
       ],
       deliverables: [
-        "Advanced ONA (Organizational Network Analysis)",
-        "Predictive risk modeling (30-day forecasts)",
-        "Manager co-pilot mobile app",
-        "API for enterprise HRIS/ERP integration",
+        "SafetyShield v1: signals, hazard cards, risk rating, consultation timeline",
+        "ManagerGPT Coach v1: goals, weekly check-ins, \"next best micro-practice\"",
+        "ActionLoop v1: milestones, review pulses, audit export",
+        "Light integrations: M365 calendar + Slack events; Perceptyx import adapter read-only",
       ],
     },
     {
-      phase: "Phase 4: Platform",
-      timeline: "2027+",
+      phase: "Phase 4: Launch",
+      timeline: "Q2–Q3 2026",
       icon: Globe,
-      color: "indigo",
+      color: "indigo" as keyof typeof colorClasses,
       goals: [
-        "Platform ecosystem with 3rd-party integrations",
-        "Global market leader in psychosocial AI",
-        "Research partnerships with universities",
-        "Industry benchmarking network",
+        "10 paying customers, ≥ 200 managers covered; net MRR milestone; churn < 5% quarterly",
+        "Self-serve onboarding for small teams; procurement path documented for enterprise",
+      ],
+      exitCriteria: [
+        "Price/packaging validated",
+        "2 public case studies",
+        "First external audit or ISO/SOC letter of intent in motion",
       ],
       deliverables: [
-        "Open API for developers",
-        "White-label solutions for consultancies",
-        "Global compliance framework (OSHA, HSE, etc.)",
-        "AI coaching for individual contributors",
+        "Pricing page + contracts",
+        "Integration pack v1 (M365, Slack, HRIS read-only)",
+        "Exec reporting suite",
+        "Partner playbook",
       ],
     },
   ];
@@ -109,10 +141,11 @@ export default function RoadmapSection() {
                     data-testid={`roadmap-phase-${index}`}
                   >
                     <div className={`flex items-center gap-3 mb-4 ${isEven ? "md:justify-end" : "md:justify-start"}`}>
-                      <Icon className={`w-8 h-8 text-${phase.color}-600`} />
+                      <Icon className={`w-8 h-8 ${colorClasses[phase.color].icon}`} />
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">{phase.phase}</h3>
                         <p className="text-sm text-gray-600">{phase.timeline}</p>
+                        {phase.target && <p className="text-xs text-gray-500 italic">{phase.target}</p>}
                       </div>
                     </div>
 
@@ -122,6 +155,15 @@ export default function RoadmapSection() {
                         <ul className={`space-y-1 text-sm text-gray-700 ${isEven ? "md:text-right" : "md:text-left"}`}>
                           {phase.goals.map((goal, i) => (
                             <li key={i}>• {goal}</li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="font-bold text-gray-800 mb-2">Exit Criteria:</h4>
+                        <ul className={`space-y-1 text-sm text-gray-700 ${isEven ? "md:text-right" : "md:text-left"}`}>
+                          {phase.exitCriteria.map((criteria, i) => (
+                            <li key={i}>• {criteria}</li>
                           ))}
                         </ul>
                       </div>
@@ -139,9 +181,9 @@ export default function RoadmapSection() {
 
                   {/* Icon Circle */}
                   <div
-                    className={`hidden md:flex w-16 h-16 rounded-full bg-white border-4 border-${phase.color}-400 items-center justify-center flex-shrink-0 z-10`}
+                    className={`hidden md:flex w-16 h-16 rounded-full bg-white border-4 ${colorClasses[phase.color].border} items-center justify-center flex-shrink-0 z-10`}
                   >
-                    <Icon className={`w-8 h-8 text-${phase.color}-600`} />
+                    <Icon className={`w-8 h-8 ${colorClasses[phase.color].icon}`} />
                   </div>
 
                   {/* Spacer for opposite side */}
@@ -154,11 +196,12 @@ export default function RoadmapSection() {
 
         {/* Vision Statement */}
         <div className="mt-16 bg-white rounded-2xl p-8 border border-gray-200 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Our North Star</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Path Forward</h3>
           <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
-            By 2027, every manager in the world should have an AI co-pilot that helps them build thriving teams. 
-            CultureCrunch will be the platform that makes this vision real: starting with compliance, scaling with trust 
-            and winning with outcomes.
+            From 5 founding partners to 10 paying customers in 12 months. We're building trust through validation, 
+            securing the right capital and talent, shipping an MVP that proves value, and launching with a repeatable 
+            go-to-market motion. Every milestone brings us closer to making psychosocial safety a strategic advantage, 
+            not just a compliance burden.
           </p>
         </div>
       </div>
