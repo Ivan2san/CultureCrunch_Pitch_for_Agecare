@@ -70,6 +70,7 @@ export default function ProblemSection() {
                     <span>Response rates drop to <strong>59%</strong> when surveying 4+ times annually</span>
                   </li>
                 </ul>
+                <p className="text-xs text-gray-600 mt-3">Source: Gallup 2024</p>
               </div>
 
               <div className="border-2 border-gray-200 p-4 rounded-lg">
