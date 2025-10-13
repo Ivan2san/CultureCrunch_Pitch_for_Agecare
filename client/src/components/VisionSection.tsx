@@ -1,7 +1,11 @@
 import { Brain, Sparkles, Users, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useParallax } from "@/hooks/useParallax";
 
 export default function VisionSection() {
+  const headlineParallax = useParallax({ speed: -0.3 });
+  const visionParallax = useParallax({ speed: 0.2 });
+
   const scrollToNext = () => {
     const element = document.getElementById("problem");
     if (element) {
@@ -13,7 +17,7 @@ export default function VisionSection() {
     <section id="vision" className="min-h-screen bg-corporate-gradient flex items-center justify-center px-6 py-20">
       <div className="max-w-6xl mx-auto text-center space-y-12">
         {/* Headline */}
-        <div className="space-y-6 animate-fade-in-up">
+        <div ref={headlineParallax.ref} style={headlineParallax.style} className="space-y-6 animate-fade-in-up">
           <div className="inline-block">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 font-semibold text-sm">
               <Sparkles className="w-4 h-4" />
@@ -72,7 +76,7 @@ export default function VisionSection() {
         </div>
 
         {/* Vision Statement */}
-        <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto border border-gray-200">
+        <div ref={visionParallax.ref} style={visionParallax.style} className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto border border-gray-200">
           <p className="text-lg text-gray-800 leading-relaxed">
             <span className="font-bold text-purple-600">Our Vision:</span> A world where every manager 
             has an AI co-pilot that helps them see what surveys can't show, understand what their team 
