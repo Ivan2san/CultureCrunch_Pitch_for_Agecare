@@ -304,7 +304,7 @@ export default function OORADemo() {
 
       {/* OORA Phase Indicators */}
       <div className="bg-white rounded-lg p-6 border-2 border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-4">OORA Framework Progress</h4>
+        <h4 className="font-bold text-gray-900 mb-4">Framework Progress</h4>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {phases.map((phase, index) => {
             const isActive = getCurrentPhaseIndex() === index;
