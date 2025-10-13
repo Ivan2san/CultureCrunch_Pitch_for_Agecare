@@ -100,6 +100,7 @@ export default function ProblemSection() {
                   <p><strong>34.2 weeks</strong> median time lost (vs 8.0 for physical)</p>
                   <p><strong>$10.9-12.8B</strong> annual cost to employers</p>
                 </div>
+                <p className="text-xs text-gray-600 mt-3">Source: Safe Work Australia Key WHS Statistics 2024; CEDA 2024</p>
               </div>
 
               <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
