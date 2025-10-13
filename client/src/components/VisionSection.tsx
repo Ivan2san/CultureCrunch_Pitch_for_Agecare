@@ -10,7 +10,7 @@ export default function VisionSection() {
   };
 
   return (
-    <section id="vision" className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50 flex items-center justify-center px-6 py-20">
+    <section id="vision" className="min-h-screen bg-corporate-gradient flex items-center justify-center px-6 py-20">
       <div className="max-w-6xl mx-auto text-center space-y-12">
         {/* Headline */}
         <div className="space-y-6 animate-fade-in-up">

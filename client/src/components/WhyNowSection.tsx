@@ -2,7 +2,7 @@ import { Scale, HeartCrack, BrainCircuit } from "lucide-react";
 
 export default function WhyNowSection() {
   return (
-    <section id="why-now" className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 px-6 py-32 flex items-center">
+    <section id="why-now" className="min-h-screen bg-corporate-gradient px-6 py-32 flex items-center">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           WHY NOW: <span className="text-blue-600">Three Forces Have Collided</span>

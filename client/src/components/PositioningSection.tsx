@@ -73,7 +73,7 @@ export default function PositioningSection() {
   ];
 
   return (
-    <section id="positioning" className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-50 px-6 py-32">
+    <section id="positioning" className="min-h-screen bg-corporate-gradient px-6 py-32">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">

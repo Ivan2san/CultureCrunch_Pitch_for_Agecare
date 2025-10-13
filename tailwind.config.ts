@@ -83,9 +83,15 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        sans: ["DM Sans", "Inter", "system-ui", "sans-serif"],
         serif: ["Georgia", "serif"],
         mono: ["JetBrains Mono", "monospace"],
+      },
+      letterSpacing: {
+        corporate: "-0.01em", // -1% tracking for corporate look
+      },
+      fontWeight: {
+        corporate: "700", // Bold weight as base
       },
       keyframes: {
         "accordion-down": {

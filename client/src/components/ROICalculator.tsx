@@ -66,7 +66,7 @@ export default function ROICalculator() {
   };
 
   return (
-    <section id="roi" className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 px-6 py-32">
+    <section id="roi" className="min-h-screen bg-corporate-gradient px-6 py-32">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
