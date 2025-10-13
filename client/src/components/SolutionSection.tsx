@@ -86,7 +86,7 @@ export default function SolutionSection() {
         </div>
 
         {/* Value Proposition */}
-        <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-xl p-8 mb-16 text-white text-center">
+        <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-xl p-8 mb-16 text-white text-center">
           <h3 className="text-2xl font-bold mb-3">Why it matters</h3>
           <p className="text-xl max-w-4xl mx-auto leading-relaxed">
             Regulators need proof you're managing psychosocial hazards. Leaders need practical ways to do it.
