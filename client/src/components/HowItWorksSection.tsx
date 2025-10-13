@@ -121,7 +121,7 @@ export default function HowItWorksSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Technical Architecture: <span className="text-indigo-600">How It Works</span>
+            How It Works
           </h2>
           <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto">
             Privacy-first AI that turns workplace signals into actionable leadership insights
