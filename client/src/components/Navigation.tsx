@@ -71,8 +71,8 @@ export default function Navigation() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-lg bg-purple-600 flex items-center justify-center p-1.5">
-                <img src={logoUrl} alt="CultureCrunch Logo" className="w-full h-full object-contain" />
+              <div className="w-10 h-10 rounded-md bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center">
+                <img src={logoUrl} alt="CultureCrunch Logo" className="w-6 h-6 object-contain brightness-0 invert" />
               </div>
               <span className="font-bold text-xl text-gray-900">CultureCrunch</span>
             </div>
