@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { DollarSign, TrendingUp, Users, AlertTriangle, Calculator } from "lucide-react";
+import { DollarSign, TrendingUp, Users, AlertTriangle, Calculator, ChevronDown, Info } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 
 export default function ROICalculator() {
   const [employeeCount, setEmployeeCount] = useState(250);
@@ -11,6 +12,7 @@ export default function ROICalculator() {
   const [avgTurnoverRate, setAvgTurnoverRate] = useState(15);
   const [avgSalary, setAvgSalary] = useState(80000);
   const [currentEngagementScore, setCurrentEngagementScore] = useState(45);
+  const [showMethodology, setShowMethodology] = useState(false);
 
   // Constants
   const MENTAL_HEALTH_CLAIM_COST = 290000;
@@ -267,6 +269,144 @@ export default function ROICalculator() {
                   <p className="text-xs opacity-75 mt-1">Return on investment</p>
                 </div>
               </div>
+            </Card>
+
+            {/* Methodology Section */}
+            <Card className="p-6 bg-white mt-6">
+              <Button
+                variant="ghost"
+                onClick={() => setShowMethodology(!showMethodology)}
+                className="w-full justify-between p-4 hover-elevate"
+                data-testid="button-toggle-methodology"
+              >
+                <div className="flex items-center gap-3">
+                  <Info className="w-5 h-5 text-purple-600" />
+                  <span className="text-lg font-bold text-gray-900">How the Calculator Works</span>
+                </div>
+                <ChevronDown
+                  className={`w-5 h-5 text-gray-600 transition-transform ${
+                    showMethodology ? "rotate-180" : ""
+                  }`}
+                />
+              </Button>
+
+              {showMethodology && (
+                <div className="mt-6 space-y-6 border-t border-gray-200 pt-6">
+                  {/* Cost Calculations */}
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-4">Current Cost Calculations</h4>
+                    <div className="space-y-4">
+                      <div className="bg-gray-50 p-4 rounded-lg">
+                        <h5 className="font-bold text-gray-800 mb-2">1. Mental Health Claims Cost</h5>
+                        <p className="text-sm text-gray-700 mb-2">
+                          <strong>Formula:</strong> Claims × $290,000
+                        </p>
+                        <p className="text-sm text-gray-600">
+                          <strong>Source:</strong> $290,000 per claim is the average total cost of a mental health workers' 
+                          compensation claim in Australia (SafeWork Australia research)
+                        </p>
+                      </div>
+
+                      <div className="bg-gray-50 p-4 rounded-lg">
+                        <h5 className="font-bold text-gray-800 mb-2">2. Turnover Costs</h5>
+                        <p className="text-sm text-gray-700 mb-2">
+                          <strong>Formula:</strong> (Employee Count × Turnover Rate %) × Salary × 1.5
+                        </p>
+                        <p className="text-sm text-gray-600">
+                          <strong>Source:</strong> 150% of salary is the standard replacement cost including recruitment, 
+                          onboarding, and lost productivity (SHRM/Deloitte benchmarks)
+                        </p>
+                      </div>
+
+                      <div className="bg-gray-50 p-4 rounded-lg">
+                        <h5 className="font-bold text-gray-800 mb-2">3. Productivity Loss from Disengagement</h5>
+                        <p className="text-sm text-gray-700 mb-2">
+                          <strong>Formula:</strong> Disengaged Employees × Salary × 18%
+                        </p>
+                        <p className="text-sm text-gray-700 mb-2">
+                          <strong>Calculation:</strong> Disengaged = Total × (1 - Engagement Score ÷ 100)
+                        </p>
+                        <p className="text-sm text-gray-600">
+                          <strong>Source:</strong> 18% productivity loss from disengaged employees (Gallup State of the 
+                          Global Workplace research)
+                        </p>
+                      </div>
+
+                      <div className="bg-gray-50 p-4 rounded-lg">
+                        <h5 className="font-bold text-gray-800 mb-2">4. Absenteeism Cost</h5>
+                        <p className="text-sm text-gray-700 mb-2">
+                          <strong>Formula:</strong> Employee Count × $3,500
+                        </p>
+                        <p className="text-sm text-gray-600">
+                          <strong>Source:</strong> $3,500 per employee annual absenteeism cost (Australian HR Institute data)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Savings Calculations */}
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-4">Expected Savings (Research-Backed Reduction Rates)</h4>
+                    <div className="space-y-4">
+                      <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+                        <h5 className="font-bold text-green-800 mb-2">Mental Health Claims: 40% Reduction</h5>
+                        <p className="text-sm text-gray-700">
+                          Evidence from early intervention programs in psychological safety shows significant reduction in 
+                          mental health claims when proactive support is provided
+                        </p>
+                      </div>
+
+                      <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+                        <h5 className="font-bold text-green-800 mb-2">Turnover: 25% Reduction</h5>
+                        <p className="text-sm text-gray-700">
+                          Manager support programs demonstrate measurable impact on employee retention and reduced voluntary turnover
+                        </p>
+                      </div>
+
+                      <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+                        <h5 className="font-bold text-green-800 mb-2">Productivity: 30% Improvement</h5>
+                        <p className="text-sm text-gray-700">
+                          Engagement intervention effectiveness studies show substantial productivity gains when disengagement 
+                          is addressed through targeted leadership support
+                        </p>
+                      </div>
+
+                      <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+                        <h5 className="font-bold text-green-800 mb-2">Absenteeism: 20% Reduction</h5>
+                        <p className="text-sm text-gray-700">
+                          Wellbeing program outcomes data demonstrates consistent reduction in absence rates when preventive 
+                          measures are implemented
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Investment */}
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-4">Investment & ROI Calculation</h4>
+                    <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                      <h5 className="font-bold text-purple-800 mb-3">Annual Subscription Cost</h5>
+                      <p className="text-sm text-gray-700 mb-2">
+                        <strong>Base Rate:</strong> $10 per employee per month × 12 months
+                      </p>
+                      <p className="text-sm text-gray-700 mb-2">
+                        <strong>Founding Partner Discount:</strong> 30% off standard pricing
+                      </p>
+                      <p className="text-sm text-gray-700 mb-3">
+                        <strong>Final Cost:</strong> Employee Count × $10 × 12 × 0.7
+                      </p>
+                      <div className="border-t border-purple-300 pt-3 mt-3">
+                        <p className="text-sm text-gray-700 mb-1">
+                          <strong>Net ROI:</strong> Total Savings - Subscription Cost
+                        </p>
+                        <p className="text-sm text-gray-700">
+                          <strong>ROI Multiple:</strong> Total Savings ÷ Subscription Cost
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </Card>
           </div>
         </div>
