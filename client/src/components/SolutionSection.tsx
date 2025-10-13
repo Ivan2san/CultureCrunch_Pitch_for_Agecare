@@ -68,7 +68,7 @@ export default function SolutionSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            ThriveGuard AI: <span className="text-indigo-600">Compliance-First</span>, Behaviour-Powered
+            ThriveGuide AI: <span className="text-indigo-600">Compliance-First</span>, Behaviour-Powered
           </h2>
           <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto">
             Turn psychosocial compliance into auditable action and better leadership, automatically
@@ -90,7 +90,7 @@ export default function SolutionSection() {
           <h3 className="text-2xl font-bold mb-3">Why it matters</h3>
           <p className="text-xl max-w-4xl mx-auto leading-relaxed">
             Regulators need proof you're managing psychosocial hazards. Leaders need practical ways to do it.
-            ThriveGuard gives you both: <span className="font-bold underline">evidence by default</span> and
+            ThriveGuide gives you both: <span className="font-bold underline">evidence by default</span> and
             <span className="font-bold underline"> real-time manager coaching</span>.
           </p>
         </div>

@@ -127,7 +127,7 @@
   - Expandable detail cards on hover/click
   - Technical stack badges (pill-shaped, blue background)
 
-### Solution Section (ThriveGuard)
+### Solution Section (ThriveGuide)
 - **Timeline View**: Horizontal scrollable cards showing weekly flow
   - Monday → Friday progression
   - Icon-led cards with color coding
