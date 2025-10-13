@@ -25,10 +25,12 @@ Preferred communication style: Simple, everyday language.
 **State Management**: TanStack Query (React Query) v5 for server state management, though currently the app is primarily presentational without active data fetching.
 
 **Styling Approach**: 
-- Tailwind CSS with custom design tokens matching Material Design principles adapted for B2B SaaS
+- Tailwind CSS with custom design tokens for corporate B2B SaaS aesthetic
+- Corporate gradient background system with white→pale-blue gradient, radial blooms, vignette, and film grain texture
 - Custom color palette with HSL color variables for light/dark mode support
-- Design guidelines emphasize trust, credibility, and data-first clarity
-- Typography uses Inter font family for headings/body, JetBrains Mono for numerical data
+- Design guidelines emphasize trust, credibility, and "corporate-calm" board-ready presentation
+- Typography uses DM Sans font family: 500 weight for body text, 700 for headings, 600 for buttons
+- Letter-spacing: -0.005em (-0.5%) for body, -0.01em (-1%) for headings
 
 **Component Organization**:
 - Page components in `client/src/pages/`
