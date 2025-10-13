@@ -195,7 +195,7 @@ export default function WhyNowSection() {
       </div>
 
       {/* Footer caption */}
-      <div className="mx-auto mt-32 lg:mt-40 max-w-4xl text-center">
+      <div className="mx-auto mt-12 lg:mt-40 max-w-4xl text-center">
         <p className="text-lg md:text-xl font-semibold text-gray-800" style={{ letterSpacing: '-0.005em' }}>
           <span className="font-bold text-blue-600">2025:</span> The market is ready to bridge{" "}
           compliance requirements with practical, AI-driven action.
