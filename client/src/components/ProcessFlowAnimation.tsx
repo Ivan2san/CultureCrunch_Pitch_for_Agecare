@@ -143,20 +143,20 @@ export default function ProcessFlowAnimation() {
           Process Flow
         </h2>
         <p 
-          className="text-center text-lg text-gray-700 max-w-2xl mx-auto mb-12" 
+          className="text-center text-lg text-gray-700 max-w-2xl mx-auto mb-8" 
           style={{ letterSpacing: '-0.005em' }}
           data-testid="text-process-flow-description"
         >
           How ThriveGuide transforms signals into insight.
         </p>
 
-        <div className="space-y-10">
+        <div className="space-y-6">
           <Stage title="Input" data={nodes.Input} color="blue" />
           <Stage title="Processing" data={nodes.Processing} color="purple" />
           <Stage title="Output" data={nodes.Output} color="green" />
         </div>
 
-        <div className="mt-16 flex justify-center">
+        <div className="mt-10 flex justify-center">
           <div 
             className="w-full max-w-2xl rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 p-6 shadow-lg text-center border-2 border-orange-400"
             data-testid="section-continuous-learning"
