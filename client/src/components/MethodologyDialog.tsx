@@ -24,9 +24,19 @@ export default function MethodologyDialog({ open, onOpenChange }: MethodologyDia
     };
 
     const preventKeyboard = (e: KeyboardEvent) => {
+      // Block copy, select all, cut, save, print
       if (
         (e.ctrlKey || e.metaKey) &&
         (e.key === "c" || e.key === "a" || e.key === "x" || e.key === "s" || e.key === "p")
+      ) {
+        e.preventDefault();
+        return false;
+      }
+      // Block F12 (dev tools), Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U (view source)
+      if (
+        e.key === "F12" ||
+        ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "I" || e.key === "i" || e.key === "J" || e.key === "j" || e.key === "C" || e.key === "c")) ||
+        ((e.ctrlKey || e.metaKey) && (e.key === "U" || e.key === "u"))
       ) {
         e.preventDefault();
         return false;
