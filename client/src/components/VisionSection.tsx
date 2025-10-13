@@ -1,4 +1,4 @@
-import { Brain, Sparkles, Users, Zap } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function VisionSection() {
@@ -35,42 +35,6 @@ export default function VisionSection() {
               Compliance into Care
             </span>
           </h1>
-        </div>
-
-        {/* AI Evolution Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1" data-testid="card-ai-evolution-1">
-            <div className="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center mb-4">
-              <Brain className="w-6 h-6 text-purple-600" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2">Agentic AI</h3>
-            <p className="text-gray-600">
-              Autonomous intelligence that detects psychosocial risks before they escalate, 
-              interpreting behavioural patterns with privacy-first principles.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1" data-testid="card-ai-evolution-2">
-            <div className="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mb-4">
-              <Zap className="w-6 h-6 text-indigo-600" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2">Real-Time Nudges</h3>
-            <p className="text-gray-600">
-              Contextual guidance delivered to managers at the perfect moment, 
-              transforming cold data into warm, actionable conversations.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1" data-testid="card-ai-evolution-3">
-            <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
-              <Users className="w-6 h-6 text-blue-600" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2">Human-Centered</h3>
-            <p className="text-gray-600">
-              Technology that enhances managerial capacity, not replaces it,
-              building thriving teams through evidence-based micro-actions.
-            </p>
-          </div>
         </div>
 
         {/* Vision Statement */}
