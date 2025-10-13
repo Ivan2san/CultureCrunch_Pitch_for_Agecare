@@ -104,6 +104,9 @@ export default function SolutionSection() {
           <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2" style={{ letterSpacing: '-0.01em' }}>
             Behaviour Drives Outcomes
           </h3>
+          <p className="text-lg md:text-xl text-gray-700 mb-6" style={{ letterSpacing: '-0.005em' }}>
+            ThriveGuide turns culture into performance—linking behaviour to results through the Triple Goal framework and a proven psychological safety playbook.
+          </p>
           <div className="border-t-2 border-dotted border-teal-400 mb-8"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
