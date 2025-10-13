@@ -78,7 +78,7 @@ export default function WhyNowSection() {
       </div>
 
       {/* Desktop: 3 lanes -> convergence bar */}
-      <div className="mx-auto mt-14 hidden max-w-7xl lg:grid lg:grid-cols-12 lg:gap-6">
+      <div className="mx-auto mt-14 hidden max-w-7xl lg:grid lg:grid-cols-12 lg:gap-6 lg:items-start">
         {FORCES.map((f, i) => {
           const Icon = f.icon;
           return (
@@ -108,11 +108,8 @@ export default function WhyNowSection() {
                 ))}
               </ul>
 
-              {/* lane body */}
-              <div className="mt-6 h-14 rounded-lg bg-gradient-to-r from-gray-100 to-white border border-dashed border-gray-300" />
-
               {/* chevron into convergence rail */}
-              <div className="mt-4 flex items-center text-sm text-gray-600 flex-wrap gap-2" style={{ letterSpacing: '-0.005em' }}>
+              <div className="mt-6 flex items-center text-sm text-gray-600 flex-wrap gap-2" style={{ letterSpacing: '-0.005em' }}>
                 <ArrowRight className="size-4 shrink-0" />
                 <span>Flows into the Convergence Point</span>
               </div>
