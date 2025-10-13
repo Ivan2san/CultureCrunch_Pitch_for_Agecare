@@ -78,14 +78,14 @@ export default function WhyNowSection() {
       </div>
 
       {/* Desktop: 3 lanes -> convergence bar */}
-      <div className="mx-auto mt-14 hidden max-w-7xl lg:grid lg:grid-cols-12 lg:gap-6 lg:items-start">
+      <div className="mx-auto mt-14 hidden max-w-7xl lg:grid lg:grid-cols-12 lg:gap-6 lg:items-stretch">
         {FORCES.map((f, i) => {
           const Icon = f.icon;
           return (
             <div
               key={f.id}
               data-testid={`force-card-${f.id}`}
-              className={`col-span-4 group rounded-xl bg-white/90 backdrop-blur p-6 shadow-md transition-all hover:shadow-lg focus-within:ring-2 ${toneStyles[f.tone]}`}
+              className={`col-span-4 group rounded-xl bg-white/90 backdrop-blur p-6 shadow-md transition-all hover:shadow-lg focus-within:ring-2 h-full flex flex-col ${toneStyles[f.tone]}`}
             >
               <div className="flex items-center gap-3 flex-wrap">
                 <div className="size-12 rounded-full bg-gray-50 grid place-items-center shrink-0">
@@ -109,7 +109,7 @@ export default function WhyNowSection() {
               </ul>
 
               {/* chevron into convergence rail */}
-              <div className="mt-6 flex items-center text-sm text-gray-600 flex-wrap gap-2" style={{ letterSpacing: '-0.005em' }}>
+              <div className="mt-auto pt-6 flex items-center text-sm text-gray-600 flex-wrap gap-2" style={{ letterSpacing: '-0.005em' }}>
                 <ArrowRight className="size-4 shrink-0" />
                 <span>Flows into the Convergence Point</span>
               </div>
