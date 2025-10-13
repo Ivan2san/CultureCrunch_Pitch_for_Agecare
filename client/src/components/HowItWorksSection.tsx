@@ -89,7 +89,7 @@ export default function HowItWorksSection() {
       icon: Brain,
       color: "purple",
       description:
-        "Large Language Models (LLMs) translate cold data into warm, actionable manager nudges — with organisation-specific context and evidence-based frameworks built in.",
+        "Large Language Models (LLMs) translate cold data into warm, actionable manager nudges, with organisation-specific context and evidence-based frameworks built in.",
       features: [
         "Contextual Training: Fine-tuned on Triple Goal Leadership Model™ + organisational language/culture",
         "Nudge Generation: Crafts specific, actionable manager briefs (not generic advice)",
@@ -103,7 +103,7 @@ export default function HowItWorksSection() {
       icon: Network,
       color: "teal",
       description:
-        "Maps collaboration and communication patterns across teams — revealing hidden leaders, bottlenecks, inclusion gaps, and influence flows that traditional surveys miss entirely.",
+        "Maps collaboration and communication patterns across teams, revealing hidden leaders, bottlenecks, inclusion gaps and influence flows that traditional surveys miss entirely.",
       features: [
         "Graph Modeling: Builds network graphs from metadata (who communicates with whom, when, how often)",
         "Centrality Analysis: Identifies key connectors, influencers, and isolated team members",

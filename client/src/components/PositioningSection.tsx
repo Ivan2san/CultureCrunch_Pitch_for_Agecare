@@ -7,7 +7,7 @@ export default function PositioningSection() {
       icon: Shield,
       title: "Compliance-First Design",
       description:
-        "Built around WHS psychosocial hazard regulations from day one. Not retrofitted compliance—it's our foundation.",
+        "Built around WHS psychosocial hazard regulations from day one. Not retrofitted compliance; it's our foundation.",
       differentiators: [
         "Evidence generation by default (Identify-Assess-Control-Review-Consult loop)",
         "Audit-ready reporting in ≤30 days",
@@ -18,7 +18,7 @@ export default function PositioningSection() {
       icon: Zap,
       title: "Action-Oriented AI",
       description:
-        "We don't just identify problems—we give managers the exact conversations and micro-actions to solve them, right when they need it.",
+        "We don't just identify problems; we give managers the exact conversations and micro-actions to solve them, right when they need it.",
       differentiators: [
         "Agentic AI that autonomously detects + recommends (not just dashboards)",
         "OORA conversation framework with contextual nudges",
@@ -44,7 +44,7 @@ export default function PositioningSection() {
       differentiators: [
         "Zero message content ingestion (activity patterns only)",
         "Aggregate reporting (min cohort size enforced)",
-        "Transparent AI—managers see the 'why' behind every nudge",
+        "Transparent AI: managers see the 'why' behind every nudge",
       ],
     },
   ];
@@ -136,7 +136,7 @@ export default function PositioningSection() {
           <h3 className="text-2xl font-bold mb-4">Market Positioning</h3>
           <p className="text-lg max-w-4xl mx-auto leading-relaxed">
             We're not competing with engagement survey tools (Culture Amp, Peakon). We're not competing with compliance consultants. 
-            We're creating a <span className="font-bold underline">new category</span>: <strong>AI-Powered Psychosocial Safety Platforms</strong> — 
+            We're creating a <span className="font-bold underline">new category</span>: <strong>AI-Powered Psychosocial Safety Platforms</strong>, 
             where compliance meets continuous action, and managers become equipped leaders.
           </p>
         </div>

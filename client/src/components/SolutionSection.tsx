@@ -68,7 +68,7 @@ export default function SolutionSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            ThriveGuard AI — <span className="text-indigo-600">Compliance-First</span>, Behaviour-Powered
+            ThriveGuard AI: <span className="text-indigo-600">Compliance-First</span>, Behaviour-Powered
           </h2>
           <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto">
             Turn psychosocial compliance into auditable action and better leadership, automatically

@@ -63,7 +63,7 @@ export default function ProblemSection() {
                   </li>
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
-                    <span><strong>31% US engagement</strong> — lowest in a decade (8M fewer engaged employees since 2020)</span>
+                    <span><strong>31% US engagement</strong>: lowest in a decade (8M fewer engaged employees since 2020)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />

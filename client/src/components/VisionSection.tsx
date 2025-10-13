@@ -29,7 +29,7 @@ export default function VisionSection() {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            We're entering an era of abundance—where AI doesn't replace human connection, 
+            We're entering an era of abundance, where AI doesn't replace human connection, 
             but amplifies it. CultureCrunch empowers managers to lead with insight, 
             turning workplace data into moments of genuine support.
           </p>
@@ -65,7 +65,7 @@ export default function VisionSection() {
             </div>
             <h3 className="text-lg font-bold text-gray-900 mb-2">Human-Centered</h3>
             <p className="text-gray-600">
-              Technology that enhances managerial capacity, not replaces it—
+              Technology that enhances managerial capacity, not replaces it,
               building thriving teams through evidence-based micro-actions.
             </p>
           </div>
@@ -76,7 +76,7 @@ export default function VisionSection() {
           <p className="text-lg text-gray-800 leading-relaxed">
             <span className="font-bold text-purple-600">Our Vision:</span> A world where every manager 
             has an AI co-pilot that helps them see what surveys can't show, understand what their team 
-            truly needs, and act with confidence—every single week. Where compliance isn't a burden, 
+            truly needs, and act with confidence every single week. Where compliance isn't a burden, 
             but a catalyst for creating workplaces where people genuinely thrive.
           </p>
         </div>

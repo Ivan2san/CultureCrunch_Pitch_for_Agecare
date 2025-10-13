@@ -97,7 +97,7 @@ export default function TheAskSection() {
                   Founding Partner Pricing (Locked In)
                 </h4>
                 <p className="text-gray-700">
-                  $25K pilot price guaranteed—won't be available after launch. Post-pilot subscription at founding
+                  $25K pilot price guaranteed; won't be available after launch. Post-pilot subscription at founding
                   partner rates (30% below standard pricing)
                 </p>
               </div>
@@ -124,7 +124,7 @@ export default function TheAskSection() {
               <div className="bg-blue-50 p-5 rounded-lg border border-blue-200">
                 <h4 className="font-bold text-lg text-blue-900 mb-2">Early Mover Compliance Advantage</h4>
                 <p className="text-gray-700">
-                  Get ahead of WHS psychosocial regulations with evidence-based risk management—before competitors
+                  Get ahead of WHS psychosocial regulations with evidence-based risk management, before competitors
                   catch up
                 </p>
               </div>
@@ -132,7 +132,7 @@ export default function TheAskSection() {
               <div className="bg-blue-50 p-5 rounded-lg border border-blue-200">
                 <h4 className="font-bold text-lg text-blue-900 mb-2">No Long-Term Commitment</h4>
                 <p className="text-gray-700">
-                  LOI is non-binding. Pilot only. If it doesn't work, you've invested $25K to learn—not committed years
+                  LOI is non-binding. Pilot only. If it doesn't work, you've invested $25K to learn, not committed years
                   of budget
                 </p>
               </div>
