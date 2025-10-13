@@ -227,35 +227,16 @@ export default function ProcessFlowAnimation() {
               </div>
             </div>
           </div>
-          
-          {/* Feedback Loop Arrow - Returns to Input */}
-          <div className="absolute -right-16 top-1/2 -translate-y-1/2 hidden lg:block" data-testid="feedback-loop-arrow">
-            <div className="flex flex-col items-center gap-1">
-              <svg 
-                className="h-24 w-24 text-blue-500" 
-                viewBox="0 0 100 100" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <defs>
-                  <linearGradient id="loopGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-                    <stop offset="0%" stopColor="rgb(79 70 229)" />
-                    <stop offset="100%" stopColor="rgb(59 130 246)" />
-                  </linearGradient>
-                </defs>
-                <path 
-                  d="M 80 80 Q 90 50, 80 20 L 80 35 L 65 20 L 80 5 L 80 20" 
-                  stroke="url(#loopGradient)" 
-                  strokeWidth="3" 
-                  fill="none"
-                  markerEnd="url(#arrowhead)"
-                />
-                <polygon points="80,5 75,15 85,15" fill="rgb(59 130 246)" />
-              </svg>
-              <span className="text-xs font-semibold text-blue-600 whitespace-nowrap" style={{ letterSpacing: '-0.005em' }}>
-                Feedback Loop
-              </span>
-            </div>
+        </div>
+        
+        {/* Feedback Loop Indicator - Centered Below */}
+        <div className="flex justify-center mt-6" data-testid="feedback-loop-indicator">
+          <div className="flex items-center gap-3 flex-wrap justify-center">
+            <RefreshCcw className="h-6 w-6 text-indigo-600" />
+            <span className="text-sm font-semibold text-gray-700" style={{ letterSpacing: '-0.005em' }} data-testid="text-feedback-loop">
+              Feedback flows back to improve Input stage
+            </span>
+            <RefreshCcw className="h-6 w-6 text-blue-600 scale-x-[-1]" />
           </div>
         </div>
       </div>
