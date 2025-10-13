@@ -210,18 +210,18 @@ export default function TheAskSection() {
         </Card>
 
         {/* The Direct Ask */}
-        <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-xl p-12 text-white text-center">
-          <h3 className="text-3xl font-bold mb-6">We're Looking for 3–5 Founding Partners</h3>
-          <p className="text-xl mb-8 text-gray-300">
+        <div className="bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 rounded-xl p-12 text-center border border-purple-200/50">
+          <h3 className="text-3xl font-bold mb-6 text-gray-900">We're Looking for 3–5 Founding Partners</h3>
+          <p className="text-xl mb-8 text-gray-700">
             Organisations ready to lead on psychosocial safety, not follow
           </p>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-3xl mx-auto mb-8">
-            <p className="text-2xl font-bold mb-4">The Question:</p>
-            <p className="text-xl mb-6">
+          <div className="bg-white/80 backdrop-blur-sm rounded-lg p-8 max-w-3xl mx-auto mb-8 border border-purple-100">
+            <p className="text-2xl font-bold mb-4 text-purple-900">The Question:</p>
+            <p className="text-xl mb-6 text-gray-800">
               Would your organisation provide a Letter of Intent to participate in our Q1–Q2 2026 pilot program?
             </p>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-gray-600">
               (Non-binding, subject to final agreement; enables us to secure funding and ensures you get founding
               partner benefits)
             </p>
@@ -241,7 +241,7 @@ export default function TheAskSection() {
               size="lg"
               variant="outline"
               onClick={() => setShowDiscoveryDialog(true)}
-              className="bg-white/10 border-white text-white hover:bg-white/20 px-8 py-6 text-lg"
+              className="bg-white border-2 border-purple-600 text-purple-600 hover:bg-purple-50 px-8 py-6 text-lg"
               data-testid="button-schedule-call"
             >
               <Calendar className="w-5 h-5 mr-2" />

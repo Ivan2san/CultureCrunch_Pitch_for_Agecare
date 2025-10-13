@@ -10,6 +10,12 @@ CultureCrunch is a B2B SaaS platform that transforms workplace psychosocial comp
 
 ## Recent Changes
 
+- **TheAskSection Warmer Design (October 2025)**:
+  - Replaced dark gray gradient with soft purple-blue-indigo gradient for warmer, more inviting feel
+  - Updated text colors from white-on-dark to dark-on-light for better readability and warmth
+  - Changed question box to translucent white with purple accents instead of dark overlay
+  - Updated button styling to use proper secondary variant with purple border instead of translucent white
+  - Maintains professional corporate-calm aesthetic while feeling more partnership-oriented
 - **ProblemSection Reframed (October 2025)**:
   - Replaced "A System-Level Failure" with "The Accountability Failure Cascade" narrative
   - Removed parallax scrolling effect for cleaner, simpler component
