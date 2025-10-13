@@ -8,7 +8,8 @@ import {
   RefreshCcw,
   BarChart3,
   FileBarChart,
-  Share2
+  Share2,
+  ChevronDown
 } from "lucide-react";
 
 export default function ProcessFlowAnimation() {
@@ -132,6 +133,15 @@ export default function ProcessFlowAnimation() {
     </div>
   );
 
+  const FlowArrow = ({ gradientClass, iconClass }: { gradientClass: string; iconClass: string }) => (
+    <div className="flex justify-center items-center py-2" data-testid="flow-arrow">
+      <div className="flex flex-col items-center">
+        <div className={`h-8 w-1 ${gradientClass}`}></div>
+        <ChevronDown className={`h-8 w-8 ${iconClass} -mt-2`} />
+      </div>
+    </div>
+  );
+
   return (
     <div className="w-full bg-corporate-gradient px-6 py-16">
       <div className="max-w-7xl mx-auto">
@@ -150,14 +160,31 @@ export default function ProcessFlowAnimation() {
           How ThriveGuide transforms signals into insight.
         </p>
 
-        <div className="space-y-6">
+        <div className="relative">
           <Stage title="Input" data={nodes.Input} color="blue" />
+          
+          <FlowArrow 
+            gradientClass="bg-gradient-to-b from-blue-500 to-purple-500" 
+            iconClass="text-purple-500"
+          />
+          
           <Stage title="Processing" data={nodes.Processing} color="purple" />
+          
+          <FlowArrow 
+            gradientClass="bg-gradient-to-b from-purple-500 to-green-500" 
+            iconClass="text-green-500"
+          />
+          
           <Stage title="Output" data={nodes.Output} color="green" />
+          
+          <FlowArrow 
+            gradientClass="bg-gradient-to-b from-green-500 to-indigo-500" 
+            iconClass="text-indigo-500"
+          />
         </div>
 
         {/* Continuous Learning - Feedback Loop Bar */}
-        <div className="mt-8 relative">
+        <div className="mt-4 relative">
           <div 
             className="w-full rounded-lg bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 p-5 border border-purple-400/30"
             data-testid="section-continuous-learning"
@@ -200,12 +227,34 @@ export default function ProcessFlowAnimation() {
               </div>
             </div>
           </div>
-          {/* Optional: Subtle connecting arrows */}
-          <div className="absolute -top-3 left-0 right-0 flex justify-center opacity-50">
-            <div className="flex gap-2">
-              <div className="w-px h-3 bg-purple-400"></div>
-              <div className="w-px h-3 bg-indigo-400"></div>
-              <div className="w-px h-3 bg-blue-400"></div>
+          
+          {/* Feedback Loop Arrow - Returns to Input */}
+          <div className="absolute -right-16 top-1/2 -translate-y-1/2 hidden lg:block" data-testid="feedback-loop-arrow">
+            <div className="flex flex-col items-center gap-1">
+              <svg 
+                className="h-24 w-24 text-blue-500" 
+                viewBox="0 0 100 100" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient id="loopGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" stopColor="rgb(79 70 229)" />
+                    <stop offset="100%" stopColor="rgb(59 130 246)" />
+                  </linearGradient>
+                </defs>
+                <path 
+                  d="M 80 80 Q 90 50, 80 20 L 80 35 L 65 20 L 80 5 L 80 20" 
+                  stroke="url(#loopGradient)" 
+                  strokeWidth="3" 
+                  fill="none"
+                  markerEnd="url(#arrowhead)"
+                />
+                <polygon points="80,5 75,15 85,15" fill="rgb(59 130 246)" />
+              </svg>
+              <span className="text-xs font-semibold text-blue-600 whitespace-nowrap" style={{ letterSpacing: '-0.005em' }}>
+                Feedback Loop
+              </span>
             </div>
           </div>
         </div>
