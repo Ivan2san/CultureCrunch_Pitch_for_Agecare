@@ -270,10 +270,10 @@ export default function OORADemo() {
   }, [isPlaying, currentStep, scenario.messages.length]);
 
   const phases = [
-    { id: "observe", label: "Identification", description: "Ownership" },
-    { id: "orient", label: "Risk assessment", description: "Observation" },
-    { id: "respond", label: "Action", description: "Request" },
-    { id: "assess", label: "Monitoring", description: "Agreement" },
+    { id: "observe", label: "Identification", description: "Gather Facts" },
+    { id: "orient", label: "Risk assessment", description: "Understand Risk" },
+    { id: "respond", label: "Action", description: "Take Action" },
+    { id: "assess", label: "Monitoring", description: "Monitor Impact" },
   ];
 
   const getCurrentPhaseIndex = () => {
