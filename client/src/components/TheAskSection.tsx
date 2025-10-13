@@ -1,8 +1,12 @@
-import { CheckCircle, FileText, TrendingUp, Shield, Users, Download } from "lucide-react";
+import { useState } from "react";
+import { CheckCircle, FileText, TrendingUp, Shield, Users, Download, Eye } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import LOIPreview from "@/components/LOIPreview";
 
 export default function TheAskSection() {
+  const [showLOIPreview, setShowLOIPreview] = useState(false);
+
   const handleDownloadLOI = () => {
     console.log("Download LOI template triggered");
     // In production, this would trigger a file download
@@ -223,12 +227,12 @@ export default function TheAskSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              onClick={handleDownloadLOI}
+              onClick={() => setShowLOIPreview(true)}
               className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 text-lg"
-              data-testid="button-download-loi"
+              data-testid="button-preview-loi"
             >
-              <Download className="w-5 h-5 mr-2" />
-              View & Download LOI Template
+              <Eye className="w-5 h-5 mr-2" />
+              Preview LOI Template
             </Button>
             <Button
               size="lg"
@@ -240,6 +244,12 @@ export default function TheAskSection() {
             </Button>
           </div>
         </div>
+
+        {/* LOI Preview Modal */}
+        <LOIPreview 
+          open={showLOIPreview} 
+          onOpenChange={setShowLOIPreview}
+        />
       </div>
     </section>
   );
