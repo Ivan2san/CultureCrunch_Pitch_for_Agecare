@@ -6,6 +6,7 @@ import ProcessFlowAnimation from "@/components/ProcessFlowAnimation";
 
 export default function HowItWorksSection() {
   const [expandedLayer, setExpandedLayer] = useState<number | null>(null);
+  const [expandedAIComponent, setExpandedAIComponent] = useState<number | null>(null);
 
   const layers = [
     {
@@ -209,59 +210,80 @@ export default function HowItWorksSection() {
           </p>
         </div>
 
-        {/* AI Components Detail */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {aiComponents.map((component, index) => {
-            const Icon = component.icon;
-            return (
-              <Card key={index} className="p-8 bg-white" data-testid={`ai-component-${index}`}>
-                <div className="flex items-center gap-3 mb-6">
-                  <Icon
-                    className={`w-10 h-10 ${
-                      component.color === "indigo"
-                        ? "text-indigo-600"
-                        : component.color === "purple"
-                        ? "text-purple-600"
-                        : "text-teal-600"
-                    }`}
-                  />
-                  <h3 className="text-2xl font-bold text-gray-900">{component.title}</h3>
-                </div>
+        {/* Core AI Capabilities */}
+        <div className="bg-white rounded-xl p-8 border border-gray-200">
+          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Core AI Capabilities</h3>
 
-                <p className="text-gray-700 mb-4">{component.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {aiComponents.map((component, index) => {
+              const Icon = component.icon;
+              const isExpanded = expandedAIComponent === index;
 
-                <div className="space-y-2 mb-4">
-                  {component.features.map((feature, i) => (
-                    <div key={i} className="flex items-start gap-2">
-                      <CheckCircle
-                        className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
-                          component.color === "indigo"
-                            ? "text-indigo-600"
-                            : component.color === "purple"
-                            ? "text-purple-600"
-                            : "text-teal-600"
-                        }`}
-                      />
-                      <span className="text-sm text-gray-700">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
+              return (
                 <div
-                  className={`rounded-lg p-4 ${
+                  key={index}
+                  className={`rounded-xl p-6 border-2 transition-all ${
                     component.color === "indigo"
-                      ? "bg-indigo-50"
+                      ? "bg-indigo-50 border-indigo-300"
                       : component.color === "purple"
-                      ? "bg-purple-50"
-                      : "bg-teal-50"
+                      ? "bg-purple-50 border-purple-300"
+                      : "bg-teal-50 border-teal-300"
                   }`}
+                  data-testid={`ai-component-${index}`}
                 >
-                  <p className="text-sm font-semibold text-gray-900 mb-1">Technical Stack:</p>
-                  <p className="text-sm text-gray-700">{component.tech}</p>
+                  <div className="flex items-center gap-3 mb-4">
+                    <Icon
+                      className={`w-8 h-8 ${
+                        component.color === "indigo"
+                          ? "text-indigo-600"
+                          : component.color === "purple"
+                          ? "text-purple-600"
+                          : "text-teal-600"
+                      }`}
+                    />
+                    <h4 className="text-xl font-bold text-gray-900">{component.title}</h4>
+                  </div>
+
+                  <p className="text-gray-700 mb-4 text-sm">{component.description}</p>
+
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setExpandedAIComponent(isExpanded ? null : index)}
+                    className="w-full"
+                    data-testid={`button-expand-ai-${index}`}
+                  >
+                    {isExpanded ? "Show Less" : "Learn More"}
+                  </Button>
+
+                  {isExpanded && (
+                    <div className="mt-4 space-y-3 animate-fade-in-up">
+                      <div className="space-y-2">
+                        {component.features.map((feature, i) => (
+                          <div key={i} className="flex items-start gap-2 bg-white p-2 rounded-lg">
+                            <CheckCircle
+                              className={`w-4 h-4 flex-shrink-0 mt-0.5 ${
+                                component.color === "indigo"
+                                  ? "text-indigo-600"
+                                  : component.color === "purple"
+                                  ? "text-purple-600"
+                                  : "text-teal-600"
+                              }`}
+                            />
+                            <span className="text-xs text-gray-700">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="bg-white p-3 rounded-lg">
+                        <p className="text-xs font-semibold text-gray-900 mb-1">Technical Stack:</p>
+                        <p className="text-xs text-gray-600">{component.tech}</p>
+                      </div>
+                    </div>
+                  )}
                 </div>
-              </Card>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
