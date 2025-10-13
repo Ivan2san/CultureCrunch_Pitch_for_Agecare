@@ -15,6 +15,7 @@ const sections = [
 ];
 
 export default function Navigation() {
+  const logoUrl = new URL('../../attached_assets/CC Logo_1760351046879.PNG', import.meta.url).href;
   const [activeSection, setActiveSection] = useState("vision");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -70,9 +71,7 @@ export default function Navigation() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-md bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center">
-                <span className="text-white font-bold text-lg">C</span>
-              </div>
+              <img src={logoUrl} alt="CultureCrunch Logo" className="w-8 h-8" />
               <span className="font-bold text-xl text-gray-900">CultureCrunch</span>
             </div>
 
