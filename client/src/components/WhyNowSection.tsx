@@ -23,13 +23,13 @@ const FORCES: Force[] = [
   },
   {
     id: "burnout",
-    title: "Burnout Crisis",
+    title: "Business Pressure & Leader Anxiety",
     period: "(2023–2025)",
     icon: HeartCrack,
     tone: "red",
     bullets: [
-      "76% of Australian workers report burnout",
-      "Mental-health claims up ~97% over a decade",
+      "60% of leaders report high stress from external pressures (McKinsey)",
+      "Leaders drive 70% of team outcomes yet lack support",
     ],
   },
   {
@@ -72,7 +72,7 @@ export default function WhyNowSection() {
           WHY NOW: <span className="text-blue-600 dark:text-blue-400">Three forces converge</span>
         </h2>
         <p className="mt-4 text-base md:text-lg text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>
-          Clear lanes show the pressure from regulation, the human cost of burnout, and
+          Clear lanes show regulatory pressure, leaders under strain from external forces, and
           the leap in AI capability—meeting at a single decision point.
         </p>
       </div>
@@ -131,9 +131,9 @@ export default function WhyNowSection() {
               >
                 <h4 className="text-white text-2xl font-bold" style={{ letterSpacing: '-0.01em' }}>The Convergence Point</h4>
                 <p className="mt-2 text-white/95" style={{ letterSpacing: '-0.005em' }}>
-                  Regulatory urgency × Burnout severity × AI capability →{" "}
+                  Regulatory urgency × Leader pressure × AI capability →{" "}
                   <span className="font-semibold">
-                    compliance-ready, evidence-based action.
+                    compliance-ready, leader-supporting action.
                   </span>
                 </p>
               </div>
@@ -184,8 +184,7 @@ export default function WhyNowSection() {
           >
             <h4 className="text-white text-xl font-bold" style={{ letterSpacing: '-0.01em' }}>The Convergence Point</h4>
             <p className="mt-1.5 text-white/95 text-sm" style={{ letterSpacing: '-0.005em' }}>
-              The three forces now align → time to act with a compliance-ready AI
-              solution.
+              The three forces now align → time to support leaders with compliance-ready AI.
             </p>
           </div>
         </div>
