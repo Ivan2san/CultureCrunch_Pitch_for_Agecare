@@ -122,17 +122,6 @@ export default function Navigation() {
                 ))}
               </div>
 
-              <Button
-                onClick={handleExportPDF}
-                disabled={isExporting}
-                variant="outline"
-                size="sm"
-                data-testid="button-export-pdf"
-              >
-                <Download className="w-4 h-4 mr-2" />
-                {isExporting ? "Exporting..." : "Export PDF"}
-              </Button>
-
               <ThemeToggle />
             </div>
 
