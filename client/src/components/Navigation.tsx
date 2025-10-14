@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
-import { ChevronDown, ChevronUp, Menu, X, Download } from "lucide-react";
+import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { exportPitchDeckToPDF } from "@/lib/pdfExport";
-import { useToast } from "@/hooks/use-toast";
 
 const sections = [
   { id: "vision", label: "Vision" },
@@ -20,33 +18,6 @@ const sections = [
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState("vision");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isExporting, setIsExporting] = useState(false);
-  const { toast } = useToast();
-
-  const handleExportPDF = async () => {
-    setIsExporting(true);
-    toast({
-      title: "Generating PDF...",
-      description: "Please wait while we create your pitch deck PDF.",
-    });
-
-    const result = await exportPitchDeckToPDF();
-
-    if (result.success) {
-      toast({
-        title: "PDF Downloaded!",
-        description: "Your pitch deck has been saved successfully.",
-      });
-    } else {
-      toast({
-        title: "Export Failed",
-        description: "There was an error generating the PDF. Please try again.",
-        variant: "destructive",
-      });
-    }
-
-    setIsExporting(false);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
