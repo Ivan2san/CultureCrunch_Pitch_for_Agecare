@@ -1,14 +1,6 @@
-import { TrendingDown, AlertTriangle, DollarSign } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 export default function ProblemSection() {
-  const stats = [
-    { value: "58%", label: "Action Gap", sublabel: "Only 58% act on feedback", color: "red" },
-    { value: "82%", label: "Trust Collapse", sublabel: "Don't trust leaders", color: "red" },
-    { value: "44%", label: "Zero ROI", sublabel: "From engagement efforts", color: "red" },
-    { value: "$8.9T", label: "Lost Productivity", sublabel: "Annually worldwide", color: "red" },
-  ];
-
   return (
     <section id="problem" className="min-h-screen bg-corporate-gradient px-6 py-32">
       <div className="max-w-7xl mx-auto">
@@ -23,33 +15,6 @@ export default function ProblemSection() {
           <p className="text-sm text-muted-foreground mt-4 italic max-w-4xl mx-auto">
             All statistics sourced from peer-reviewed research, government reports, and major industry studies published 2023-2025
           </p>
-        </div>
-
-        {/* Global Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16">
-          {stats.map((stat, index) => (
-            <Card 
-              key={index} 
-              className="p-6 text-center bg-card border-2 border-red-200 dark:border-red-800 hover:shadow-xl transition-all hover:-translate-y-1"
-              data-testid={`stat-card-${index}`}
-            >
-              <div className="text-3xl md:text-4xl font-bold text-red-700 dark:text-red-400 mb-2" style={{ letterSpacing: '-0.01em' }}>{stat.value}</div>
-              <div className="text-sm font-semibold text-foreground" style={{ letterSpacing: '-0.005em' }}>{stat.label}</div>
-              <div className="text-xs text-muted-foreground mt-1" style={{ letterSpacing: '-0.005em' }}>{stat.sublabel}</div>
-            </Card>
-          ))}
-        </div>
-
-        {/* Section Headings */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-          <div className="flex items-center gap-3">
-            <TrendingDown className="w-8 h-8 text-red-600 dark:text-red-400" />
-            <h3 className="text-2xl font-bold text-red-600 dark:text-red-400">The Action Gap & Trust Collapse</h3>
-          </div>
-          <div className="flex items-center gap-3">
-            <DollarSign className="w-8 h-8 text-orange-600 dark:text-orange-400" />
-            <h3 className="text-2xl font-bold text-orange-600 dark:text-orange-400">The Capability & ROI Crisis</h3>
-          </div>
         </div>
 
         {/* Main Content Grid - 4 Stylish Stat Cards */}
