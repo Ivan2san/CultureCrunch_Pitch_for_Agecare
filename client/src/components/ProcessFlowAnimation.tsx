@@ -86,9 +86,9 @@ export default function ProcessFlowAnimation() {
   };
 
   const colorClasses = {
-    blue: "text-blue-600",
-    purple: "text-purple-600",
-    green: "text-green-600"
+    blue: "text-blue-600 dark:text-blue-400",
+    purple: "text-purple-600 dark:text-purple-400",
+    green: "text-green-600 dark:text-green-400"
   };
 
   const Stage = ({ title, data, color }: { title: string; data: any[]; color: string }) => (
@@ -232,11 +232,11 @@ export default function ProcessFlowAnimation() {
         {/* Feedback Loop Indicator - Centered Below */}
         <div className="flex justify-center mt-6" data-testid="feedback-loop-indicator">
           <div className="flex items-center gap-3 flex-wrap justify-center">
-            <RefreshCcw className="h-6 w-6 text-indigo-600" />
+            <RefreshCcw className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
             <span className="text-sm font-semibold text-muted-foreground" style={{ letterSpacing: '-0.005em' }} data-testid="text-feedback-loop">
               Feedback flows back to improve Input stage
             </span>
-            <RefreshCcw className="h-6 w-6 text-blue-600 scale-x-[-1]" />
+            <RefreshCcw className="h-6 w-6 text-blue-600 dark:text-blue-400 scale-x-[-1]" />
           </div>
         </div>
       </div>

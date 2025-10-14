@@ -22,7 +22,7 @@ export default function TheAskSection() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
-            The Ask: <span className="text-purple-600">Be a Founding Partner</span>
+            The Ask: <span className="text-purple-600 dark:text-purple-400">Be a Founding Partner</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground">
             Help us build the future of psychosocial safety and secure your competitive advantage
@@ -34,31 +34,31 @@ export default function TheAskSection() {
           {/* What We're Seeking */}
           <Card className="p-8 bg-card">
             <div className="flex items-center gap-3 mb-6">
-              <FileText className="w-8 h-8 text-purple-600" />
-              <h3 className="text-2xl font-bold text-purple-600">What We're Seeking</h3>
+              <FileText className="w-8 h-8 text-purple-600 dark:text-purple-400" />
+              <h3 className="text-2xl font-bold text-purple-600 dark:text-purple-400">What We're Seeking</h3>
             </div>
 
             <div className="space-y-6">
-              <div className="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-r-lg">
+              <div className="bg-purple-50 dark:bg-purple-950 border-l-4 border-purple-500 p-6 rounded-r-lg">
                 <h4 className="font-bold text-xl text-purple-900 mb-3">Letter of Intent (LOI) for 12-Week Pilot</h4>
                 <p className="text-muted-foreground mb-4">
                   A non-binding commitment to participate in our validation pilot program
                 </p>
                 <div className="space-y-2 text-muted-foreground">
                   <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5" />
                     <span>
                       <strong>Timeline:</strong> Q1–Q2 2026 (MVP pilot phase)
                     </span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5" />
                     <span>
                       <strong>Scope:</strong> 10–15 leaders, 100–150 employees
                     </span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5" />
                     <span>
                       <strong>Investment:</strong> $25,000 AUD (12 weeks)
                     </span>
@@ -70,19 +70,19 @@ export default function TheAskSection() {
                 <h4 className="font-bold text-lg text-foreground mb-3">What the LOI Demonstrates:</h4>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <span className="text-purple-600">•</span>
+                    <span className="text-purple-600 dark:text-purple-400">•</span>
                     <span>Your organisation sees this as a strategic priority</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-purple-600">•</span>
+                    <span className="text-purple-600 dark:text-purple-400">•</span>
                     <span>Budget and stakeholder alignment for pilot participation</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-purple-600">•</span>
+                    <span className="text-purple-600 dark:text-purple-400">•</span>
                     <span>Intent to convert to full subscription if pilot succeeds</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-purple-600">•</span>
+                    <span className="text-purple-600 dark:text-purple-400">•</span>
                     <span>Real market demand for investors</span>
                   </li>
                 </ul>
@@ -93,12 +93,12 @@ export default function TheAskSection() {
           {/* What You Get */}
           <Card className="p-8 bg-card">
             <div className="flex items-center gap-3 mb-6">
-              <TrendingUp className="w-8 h-8 text-blue-600" />
-              <h3 className="text-2xl font-bold text-blue-600">What You Get as a Founding Partner</h3>
+              <TrendingUp className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+              <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400">What You Get as a Founding Partner</h3>
             </div>
 
             <div className="space-y-4">
-              <div className="bg-blue-50 p-5 rounded-lg border border-blue-200">
+              <div className="bg-blue-50 dark:bg-blue-950 p-5 rounded-lg border border-blue-200">
                 <h4 className="font-bold text-lg text-blue-900 mb-2 flex items-center gap-2">
                   <Users className="w-5 h-5" />
                   Founding Partner Pricing (Locked In)
@@ -109,7 +109,7 @@ export default function TheAskSection() {
                 </p>
               </div>
 
-              <div className="bg-blue-50 p-5 rounded-lg border border-blue-200">
+              <div className="bg-blue-50 dark:bg-blue-950 p-5 rounded-lg border border-blue-200">
                 <h4 className="font-bold text-lg text-blue-900 mb-2 flex items-center gap-2">
                   <Shield className="w-5 h-5" />
                   White-Glove Implementation
@@ -120,7 +120,7 @@ export default function TheAskSection() {
                 </p>
               </div>
 
-              <div className="bg-blue-50 p-5 rounded-lg border border-blue-200">
+              <div className="bg-blue-50 dark:bg-blue-950 p-5 rounded-lg border border-blue-200">
                 <h4 className="font-bold text-lg text-blue-900 mb-2">Co-Design the Product</h4>
                 <p className="text-gray-700">
                   Shape features, workflows and reporting to match your needs. Your feedback directly influences our
@@ -128,7 +128,7 @@ export default function TheAskSection() {
                 </p>
               </div>
 
-              <div className="bg-blue-50 p-5 rounded-lg border border-blue-200">
+              <div className="bg-blue-50 dark:bg-blue-950 p-5 rounded-lg border border-blue-200">
                 <h4 className="font-bold text-lg text-blue-900 mb-2">Early Mover Compliance Advantage</h4>
                 <p className="text-gray-700">
                   Get ahead of WHS psychosocial regulations with evidence-based risk management, before competitors
@@ -136,7 +136,7 @@ export default function TheAskSection() {
                 </p>
               </div>
 
-              <div className="bg-blue-50 p-5 rounded-lg border border-blue-200">
+              <div className="bg-blue-50 dark:bg-blue-950 p-5 rounded-lg border border-blue-200">
                 <h4 className="font-bold text-lg text-blue-900 mb-2">No Long-Term Commitment</h4>
                 <p className="text-gray-700">
                   LOI is non-binding. Pilot only. If it doesn't work, you've invested $25K to learn, not committed years
@@ -241,7 +241,7 @@ export default function TheAskSection() {
               size="lg"
               variant="outline"
               onClick={() => setShowDiscoveryDialog(true)}
-              className="bg-white border-2 border-purple-600 text-purple-600 hover:bg-purple-50 px-8 py-6 text-lg"
+              className="bg-white border-2 border-purple-600 dark:border-purple-400 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-950 px-8 py-6 text-lg"
               data-testid="button-schedule-call"
             >
               <Calendar className="w-5 h-5 mr-2" />

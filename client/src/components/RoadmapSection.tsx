@@ -9,19 +9,19 @@ export default function RoadmapSection() {
   // Color mappings for proper Tailwind compilation
   const colorClasses = {
     blue: {
-      icon: "text-blue-600",
+      icon: "text-blue-600 dark:text-blue-400",
       border: "border-blue-400",
     },
     purple: {
-      icon: "text-purple-600",
+      icon: "text-purple-600 dark:text-purple-400",
       border: "border-purple-400",
     },
     green: {
-      icon: "text-green-600",
+      icon: "text-green-600 dark:text-green-400",
       border: "border-green-400",
     },
     indigo: {
-      icon: "text-indigo-600",
+      icon: "text-indigo-600 dark:text-indigo-400",
       border: "border-indigo-400",
     },
   } as const;
@@ -124,7 +124,7 @@ export default function RoadmapSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
-            Roadmap to <span className="text-indigo-600">Market Leadership</span>
+            Roadmap to <span className="text-indigo-600 dark:text-indigo-400">Market Leadership</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
             Building the future of workplace wellbeing, one milestone at a time

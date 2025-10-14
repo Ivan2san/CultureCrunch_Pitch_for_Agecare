@@ -72,7 +72,7 @@ export default function SolutionSection() {
         {/* Header */}
         <div ref={headerParallax.ref} style={headerParallax.style} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
-            ThriveGuide AI: <span className="text-indigo-600">Compliance-First</span>, Behaviour-Powered
+            ThriveGuide AI: <span className="text-indigo-600 dark:text-indigo-400">Compliance-First</span>, Behaviour-Powered
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
             Turn psychosocial compliance into auditable action and better leadership, automatically
@@ -120,9 +120,9 @@ export default function SolutionSection() {
               </p>
               <div className="flex flex-col items-center mt-8">
                 <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-4 shadow-md">
-                  <Anchor className="w-10 h-10 text-teal-600" />
+                  <Anchor className="w-10 h-10 text-teal-600 dark:text-teal-400" />
                 </div>
-                <ArrowDown className="w-12 h-12 text-red-600" strokeWidth={3} />
+                <ArrowDown className="w-12 h-12 text-red-600 dark:text-red-400" strokeWidth={3} />
               </div>
             </div>
 
@@ -132,7 +132,7 @@ export default function SolutionSection() {
                 <h4 className="text-2xl font-bold text-teal-700 dark:text-teal-300 mb-1" style={{ letterSpacing: '-0.01em' }}>
                   3 Outcomes
                 </h4>
-                <p className="text-sm font-semibold text-teal-600 mb-4" style={{ letterSpacing: '-0.005em' }}>
+                <p className="text-sm font-semibold text-teal-600 dark:text-teal-400 mb-4" style={{ letterSpacing: '-0.005em' }}>
                   (Triple Goal)
                 </p>
                 <ol className="text-left space-y-1 mb-6 text-teal-700 dark:text-teal-300 font-semibold" style={{ letterSpacing: '-0.005em' }}>
@@ -141,7 +141,7 @@ export default function SolutionSection() {
                   <li>3. Great Workplace</li>
                 </ol>
                 <div className="flex justify-center">
-                  <ArrowUp className="w-16 h-16 text-green-600" strokeWidth={3} />
+                  <ArrowUp className="w-16 h-16 text-green-600 dark:text-green-400" strokeWidth={3} />
                 </div>
               </div>
             </div>
@@ -156,9 +156,9 @@ export default function SolutionSection() {
               </p>
               <div className="flex flex-col items-center mt-8">
                 <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-4 shadow-md">
-                  <Rocket className="w-10 h-10 text-teal-600" />
+                  <Rocket className="w-10 h-10 text-teal-600 dark:text-teal-400" />
                 </div>
-                <ArrowUp className="w-12 h-12 text-green-600" strokeWidth={3} />
+                <ArrowUp className="w-12 h-12 text-green-600 dark:text-green-400" strokeWidth={3} />
               </div>
             </div>
           </div>
@@ -167,7 +167,7 @@ export default function SolutionSection() {
             <div className="flex justify-between items-center text-xs text-muted-foreground">
               <span>© Awakened Mind Group</span>
               <span>www.triplegoal.com</span>
-              <span className="font-semibold text-teal-600">TripleGoal</span>
+              <span className="font-semibold text-teal-600 dark:text-teal-400">TripleGoal</span>
             </div>
           </div>
         </div>

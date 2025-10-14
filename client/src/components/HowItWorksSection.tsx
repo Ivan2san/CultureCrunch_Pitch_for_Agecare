@@ -161,10 +161,10 @@ export default function HowItWorksSection() {
                     <Icon
                       className={`w-8 h-8 ${
                         layer.color === "blue"
-                          ? "text-blue-600"
+                          ? "text-blue-600 dark:text-blue-400"
                           : layer.color === "purple"
-                          ? "text-purple-600"
-                          : "text-green-600"
+                          ? "text-purple-600 dark:text-purple-400"
+                          : "text-green-600 dark:text-green-400"
                       }`}
                     />
                     <h4 className="text-xl font-bold text-foreground">{index + 1}. {layer.title}</h4>
@@ -237,10 +237,10 @@ export default function HowItWorksSection() {
                     <Icon
                       className={`w-8 h-8 ${
                         component.color === "indigo"
-                          ? "text-indigo-600"
+                          ? "text-indigo-600 dark:text-indigo-400"
                           : component.color === "purple"
-                          ? "text-purple-600"
-                          : "text-teal-600"
+                          ? "text-purple-600 dark:text-purple-400"
+                          : "text-teal-600 dark:text-teal-400"
                       }`}
                     />
                     <h4 className="text-xl font-bold text-foreground">{component.title}</h4>
@@ -266,10 +266,10 @@ export default function HowItWorksSection() {
                             <CheckCircle
                               className={`w-4 h-4 flex-shrink-0 mt-0.5 ${
                                 component.color === "indigo"
-                                  ? "text-indigo-600"
+                                  ? "text-indigo-600 dark:text-indigo-400"
                                   : component.color === "purple"
-                                  ? "text-purple-600"
-                                  : "text-teal-600"
+                                  ? "text-purple-600 dark:text-purple-400"
+                                  : "text-teal-600 dark:text-teal-400"
                               }`}
                             />
                             <span className="text-xs text-muted-foreground">{feature}</span>
@@ -292,7 +292,7 @@ export default function HowItWorksSection() {
         <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8 border-2 border-indigo-200 mt-16">
           <div className="text-center mb-6">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <MessageSquare className="w-10 h-10 text-indigo-600" />
+              <MessageSquare className="w-10 h-10 text-indigo-600 dark:text-indigo-400" />
               <h3 className="text-3xl font-bold text-foreground">Interactive ThriveGuide AI-Copilot Leader Issue Resolution</h3>
             </div>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">

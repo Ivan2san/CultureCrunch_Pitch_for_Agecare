@@ -20,7 +20,7 @@ export default function LOIPreview({ open, onOpenChange }: LOIPreviewProps) {
         <DialogHeader className="px-6 pt-6 pb-4 border-b bg-card">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <FileText className="w-6 h-6 text-purple-600" />
+              <FileText className="w-6 h-6 text-purple-600 dark:text-purple-400" />
               <div>
                 <DialogTitle className="text-2xl font-bold text-foreground">
                   Letter of Intent - Pilot Program
@@ -32,7 +32,7 @@ export default function LOIPreview({ open, onOpenChange }: LOIPreviewProps) {
             </div>
             <Button
               onClick={handleDownload}
-              className="bg-indigo-600 hover:bg-indigo-700"
+              className="bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
               data-testid="button-download-loi"
             >
               <Download className="w-4 h-4 mr-2" />

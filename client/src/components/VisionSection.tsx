@@ -70,7 +70,7 @@ export default function VisionSection() {
         {/* Vision Statement */}
         <div ref={visionParallax.ref} style={visionParallax.style} className="bg-card/60 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto border border-border">
           <p className="text-lg text-foreground leading-relaxed">
-            <span className="font-bold text-purple-600">Our Vision:</span> A world where every leader 
+            <span className="font-bold text-purple-600 dark:text-purple-400">Our Vision:</span> A world where every leader 
             has an AI co-pilot that helps them see what surveys can't show, understand what their team 
             truly needs, and act with confidence every single week. Where compliance isn't a burden, 
             but a catalyst for creating workplaces where people genuinely thrive.

@@ -175,7 +175,7 @@ export default function PositioningSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
-            Positioning & <span className="text-purple-600">Competitive Moat</span>
+            Positioning & <span className="text-purple-600 dark:text-purple-400">Competitive Moat</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
             Why CultureCrunch is uniquely positioned to dominate this emerging market
@@ -189,8 +189,8 @@ export default function PositioningSection() {
             return (
               <Card key={index} className="p-8 bg-card hover:shadow-xl transition-all" data-testid={`advantage-${index}`}>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-purple-600" />
+                  <div className="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-950 flex items-center justify-center">
+                    <Icon className="w-6 h-6 text-purple-600 dark:text-purple-400" />
                   </div>
                   <h3 className="text-2xl font-bold text-foreground">{advantage.title}</h3>
                 </div>
@@ -200,7 +200,7 @@ export default function PositioningSection() {
                 <div className="space-y-2 mb-6">
                   {advantage.differentiators.map((diff, i) => (
                     <div key={i} className="flex items-start gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-purple-600 mt-2 flex-shrink-0" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-purple-600 dark:bg-purple-400 mt-2 flex-shrink-0" />
                       <p className="text-sm text-muted-foreground">{diff}</p>
                     </div>
                   ))}
@@ -209,7 +209,7 @@ export default function PositioningSection() {
                 <Button
                   variant="outline"
                   onClick={() => setSelectedAdvantage(index)}
-                  className="w-full border-purple-600 text-purple-600 hover:bg-purple-50"
+                  className="w-full border-purple-600 dark:border-purple-400 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-950"
                   data-testid={`button-learn-more-${index}`}
                 >
                   Learn More
@@ -256,10 +256,10 @@ export default function PositioningSection() {
             <>
               <DialogHeader>
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-950 flex items-center justify-center">
                     {(() => {
                       const Icon = advantages[selectedAdvantage].icon;
-                      return <Icon className="w-6 h-6 text-purple-600" />;
+                      return <Icon className="w-6 h-6 text-purple-600 dark:text-purple-400" />;
                     })()}
                   </div>
                   <DialogTitle className="text-2xl font-bold">
@@ -276,7 +276,7 @@ export default function PositioningSection() {
                   <h4 className="text-lg font-bold text-foreground mb-4">Key Features</h4>
                   <div className="space-y-4">
                     {advantages[selectedAdvantage].details.keyFeatures.map((feature, i) => (
-                      <div key={i} className="bg-purple-50 rounded-lg p-4 border border-purple-100">
+                      <div key={i} className="bg-purple-50 dark:bg-purple-950 rounded-lg p-4 border border-purple-100">
                         <h5 className="font-bold text-purple-900 mb-2">{feature.title}</h5>
                         <p className="text-muted-foreground text-sm">{feature.description}</p>
                       </div>

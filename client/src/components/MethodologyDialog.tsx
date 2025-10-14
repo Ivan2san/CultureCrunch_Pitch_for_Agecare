@@ -66,7 +66,7 @@ export default function MethodologyDialog({ open, onOpenChange }: MethodologyDia
         <DialogHeader className="px-6 pt-6 pb-4 border-b bg-card">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Shield className="w-6 h-6 text-purple-600" />
+              <Shield className="w-6 h-6 text-purple-600 dark:text-purple-400" />
               <DialogTitle className="text-2xl font-bold text-foreground">
                 ROI Methodology & Research Sources
               </DialogTitle>

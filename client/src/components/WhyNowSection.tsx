@@ -69,7 +69,7 @@ export default function WhyNowSection() {
       {/* Heading */}
       <div className="mx-auto max-w-7xl text-center">
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground" style={{ letterSpacing: '-0.01em' }}>
-          WHY NOW: <span className="text-blue-600">Three forces converge</span>
+          WHY NOW: <span className="text-blue-600 dark:text-blue-400">Three forces converge</span>
         </h2>
         <p className="mt-4 text-base md:text-lg text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>
           Clear lanes show the pressure from regulation, the human cost of burnout, and
@@ -194,7 +194,7 @@ export default function WhyNowSection() {
       {/* Footer caption */}
       <div className="mx-auto mt-12 lg:mt-40 max-w-4xl text-center">
         <p className="text-lg md:text-xl font-semibold text-foreground" style={{ letterSpacing: '-0.005em' }}>
-          <span className="font-bold text-blue-600">2025:</span> The market is ready to bridge{" "}
+          <span className="font-bold text-blue-600 dark:text-blue-400">2025:</span> The market is ready to bridge{" "}
           compliance requirements with practical, AI-driven action.
         </p>
       </div>

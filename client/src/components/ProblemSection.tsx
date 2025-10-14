@@ -15,7 +15,7 @@ export default function ProblemSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
-            The Problem: <span className="text-red-600">The Accountability Failure Cascade</span>
+            The Problem: <span className="text-red-600 dark:text-red-400">The Accountability Failure Cascade</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
             Organisations measure engagement but fail to act—destroying trust and creating a $8.9 trillion productivity crisis
@@ -43,12 +43,12 @@ export default function ProblemSection() {
         {/* Section Headings */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
           <div className="flex items-center gap-3">
-            <TrendingDown className="w-8 h-8 text-red-600" />
-            <h3 className="text-2xl font-bold text-red-600">The Action Gap & Trust Collapse</h3>
+            <TrendingDown className="w-8 h-8 text-red-600 dark:text-red-400" />
+            <h3 className="text-2xl font-bold text-red-600 dark:text-red-400">The Action Gap & Trust Collapse</h3>
           </div>
           <div className="flex items-center gap-3">
-            <DollarSign className="w-8 h-8 text-orange-600" />
-            <h3 className="text-2xl font-bold text-orange-600">The Capability & ROI Crisis</h3>
+            <DollarSign className="w-8 h-8 text-orange-600 dark:text-orange-400" />
+            <h3 className="text-2xl font-bold text-orange-600 dark:text-orange-400">The Capability & ROI Crisis</h3>
           </div>
         </div>
 
@@ -59,15 +59,15 @@ export default function ProblemSection() {
             <h4 className="font-bold text-lg text-red-900 dark:text-red-200 mb-3">Organisations Fail to Act on Feedback</h4>
             <ul className="space-y-2 text-muted-foreground text-sm flex-1">
               <li className="flex items-start gap-2">
-                <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
+                <AlertTriangle className="w-4 h-4 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
                 <span>Only <strong>58%</strong> of organisations take action to improve after receiving employee feedback</span>
               </li>
               <li className="flex items-start gap-2">
-                <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
+                <AlertTriangle className="w-4 h-4 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
                 <span><strong>65%</strong> of employees say their organisation does NOT take meaningful action on survey results</span>
               </li>
               <li className="flex items-start gap-2">
-                <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
+                <AlertTriangle className="w-4 h-4 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
                 <span><strong>45%</strong> say their feedback leads to no noticeable changes or improvements</span>
               </li>
             </ul>
