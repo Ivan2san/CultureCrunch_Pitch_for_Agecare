@@ -198,28 +198,37 @@ export default function WhyNowSection() {
         </p>
       </div>
 
-      {/* Performance Gap */}
+      {/* Performance Gap - The Business Case */}
       <div className="mx-auto mt-16 max-w-7xl">
-        <div className="bg-card rounded-xl p-8">
-          <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
-            The Opportunity: Performance Gap Between Engaged & Disengaged Teams
+        <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 rounded-2xl p-10 border-2 border-green-300 dark:border-green-700">
+          <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-3 text-center">
+            The ROI of Psychosocial Safety: Direct Impact on Profit & Productivity
           </h3>
+          <p className="text-lg md:text-xl text-muted-foreground text-center max-w-4xl mx-auto mb-8">
+            Psychosocial safety isn't a "nice to have"—it's a competitive advantage. Engaged teams dramatically outperform disengaged ones:
+          </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { value: "21%", label: "Higher Profitability" },
-              { value: "23%", label: "Higher Productivity" },
-              { value: "59%", label: "Lower Turnover" },
-              { value: "70%", label: "Fewer Safety Incidents" },
+              { value: "21%", label: "Higher Profitability", desc: "Direct bottom-line impact" },
+              { value: "23%", label: "Higher Productivity", desc: "More output per employee" },
+              { value: "59%", label: "Lower Turnover", desc: "Reduced hiring costs" },
+              { value: "70%", label: "Fewer Safety Incidents", desc: "Lower risk exposure" },
             ].map((item, index) => (
-              <div key={index} className="text-center p-4 bg-green-50 dark:bg-green-950 rounded-lg border-2 border-green-200 dark:border-green-800">
-                <div className="text-3xl font-bold text-green-700 dark:text-green-400 mb-1" style={{ letterSpacing: '-0.01em' }}>{item.value}</div>
-                <div className="text-sm font-semibold text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>{item.label}</div>
+              <div key={index} className="text-center p-5 bg-white dark:bg-background rounded-xl border-2 border-green-400 dark:border-green-600 hover-elevate transition-all">
+                <div className="text-4xl md:text-5xl font-bold text-green-700 dark:text-green-400 mb-2" style={{ letterSpacing: '-0.01em' }}>{item.value}</div>
+                <div className="text-base font-bold text-foreground mb-1" style={{ letterSpacing: '-0.005em' }}>{item.label}</div>
+                <div className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>{item.desc}</div>
               </div>
             ))}
           </div>
-          <p className="text-center text-sm text-muted-foreground mt-4">
-            Source: Gallup Q12 Meta-Analysis (955,905 employees, 152 organisations)
-          </p>
+          <div className="mt-8 pt-6 border-t-2 border-green-300 dark:border-green-700">
+            <p className="text-center text-base font-semibold text-green-700 dark:text-green-400 mb-2">
+              → Leaders who address psychosocial risks unlock measurable business performance
+            </p>
+            <p className="text-center text-sm text-muted-foreground">
+              Source: Gallup Q12 Meta-Analysis (955,905 employees, 152 organisations)
+            </p>
+          </div>
         </div>
       </div>
     </section>
