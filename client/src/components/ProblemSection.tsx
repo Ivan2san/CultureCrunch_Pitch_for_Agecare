@@ -52,62 +52,54 @@ export default function ProblemSection() {
           </div>
         </div>
 
-        {/* Main Content Grid - 4 Symmetrical Boxes */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16 lg:grid-rows-2">
-          {/* Box 1: Organisations Fail to Act */}
-          <Card className="p-6 bg-card flex flex-col h-full">
-            <h4 className="font-bold text-lg text-red-900 dark:text-red-200 mb-3">Organisations Fail to Act on Feedback</h4>
-            <ul className="space-y-2 text-muted-foreground text-sm flex-1">
-              <li className="flex items-start gap-2">
-                <AlertTriangle className="w-4 h-4 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
-                <span>Only <strong>58%</strong> of organisations take action to improve after receiving employee feedback</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <AlertTriangle className="w-4 h-4 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
-                <span><strong>65%</strong> of employees say their organisation does NOT take meaningful action on survey results</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <AlertTriangle className="w-4 h-4 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
-                <span><strong>45%</strong> say their feedback leads to no noticeable changes or improvements</span>
-              </li>
-            </ul>
-            <p className="text-xs text-muted-foreground mt-4 pt-3 border-t">Sources: Harvard Business Review; Quantum Workplace 2023</p>
+        {/* Main Content Grid - 4 Stylish Stat Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
+          {/* Box 1: Action Gap */}
+          <Card className="p-8 bg-card/40 backdrop-blur-sm flex flex-col items-center text-center hover-elevate transition-all">
+            <div className="text-6xl md:text-7xl font-bold text-red-600 dark:text-red-400 mb-4" style={{ letterSpacing: '-0.02em' }}>58%</div>
+            <h4 className="font-bold text-xl text-foreground mb-2">Organisations Fail to Act</h4>
+            <p className="text-muted-foreground text-sm max-w-md">
+              Only 58% of organisations take action after receiving employee feedback
+            </p>
+            <p className="text-xs text-muted-foreground mt-4 pt-3 border-t border-border/50 w-full">
+              Source: Harvard Business Review; Quantum Workplace 2023
+            </p>
           </Card>
 
-          {/* Box 2: Leader Capability Gap */}
-          <Card className="p-6 bg-card flex flex-col h-full">
-            <h4 className="font-bold text-lg text-orange-900 dark:text-orange-200 mb-3">Leader Capability Gap</h4>
-            <div className="space-y-2 text-muted-foreground text-sm flex-1">
-              <p><strong>70%</strong> of engagement variance explained by leaders, yet leader engagement fell from 30% to 27%</p>
-              <p><strong>Only 26%</strong> of leaders display behaviours that instill psychological safety</p>
-              <p><strong>Only 50%</strong> of workers say leaders create psychological safety</p>
-              <p><strong>Only 44%</strong> of leaders globally have received any training</p>
-            </div>
-            <p className="text-xs text-muted-foreground mt-4 pt-3 border-t">Sources: Gallup 2024-2025; McKinsey 2021; Deloitte 2024</p>
+          {/* Box 2: Leader Impact */}
+          <Card className="p-8 bg-card/40 backdrop-blur-sm flex flex-col items-center text-center hover-elevate transition-all">
+            <div className="text-6xl md:text-7xl font-bold text-orange-600 dark:text-orange-400 mb-4" style={{ letterSpacing: '-0.02em' }}>70%</div>
+            <h4 className="font-bold text-xl text-foreground mb-2">Leader Capability Gap</h4>
+            <p className="text-muted-foreground text-sm max-w-md">
+              70% of engagement variance explained by leaders, yet most lack training
+            </p>
+            <p className="text-xs text-muted-foreground mt-4 pt-3 border-t border-border/50 w-full">
+              Source: Gallup 2024-2025
+            </p>
           </Card>
 
-          {/* Box 3: When Action Fails, Trust Collapses */}
-          <Card className="p-6 bg-card flex flex-col h-full">
-            <h4 className="font-bold text-lg text-red-900 dark:text-red-200 mb-3">When Action Fails, Trust Collapses</h4>
-            <ul className="space-y-2 text-muted-foreground text-sm flex-1">
-              <li>• <strong>82%</strong> of employees don't trust their leader to tell the truth</li>
-              <li>• <strong>Only 52%</strong> believe change will happen as a result of surveys</li>
-              <li>• <strong>Only 33%</strong> strongly trust their organisation's leadership</li>
-              <li>• Trust drops <strong>40%</strong> when no action follows feedback</li>
-            </ul>
-            <p className="text-xs text-muted-foreground mt-4 pt-3 border-t">Sources: People Insight 2024; Gallup 2024; Harvard Business Review 2024</p>
+          {/* Box 3: Trust Collapse */}
+          <Card className="p-8 bg-card/40 backdrop-blur-sm flex flex-col items-center text-center hover-elevate transition-all">
+            <div className="text-6xl md:text-7xl font-bold text-red-600 dark:text-red-400 mb-4" style={{ letterSpacing: '-0.02em' }}>82%</div>
+            <h4 className="font-bold text-xl text-foreground mb-2">Trust Collapse</h4>
+            <p className="text-muted-foreground text-sm max-w-md">
+              82% of employees don't trust their leader to tell the truth
+            </p>
+            <p className="text-xs text-muted-foreground mt-4 pt-3 border-t border-border/50 w-full">
+              Source: People Insight 2024
+            </p>
           </Card>
 
-          {/* Box 4: The ROI Failure */}
-          <Card className="p-6 bg-card flex flex-col h-full">
-            <h4 className="font-bold text-lg text-orange-900 dark:text-orange-200 mb-3">The ROI Failure</h4>
-            <div className="space-y-2 text-muted-foreground text-sm flex-1">
-              <p><strong>Only 56%</strong> achieve positive ROI from engagement investments (44% see zero return)</p>
-              <p><strong>89%</strong> report retention getting more difficult despite engagement efforts</p>
-              <p><strong>75%</strong> updated leadership programs but see no results</p>
-              <p><strong>Only 10%</strong> of $200B in training delivers real results</p>
-            </div>
-            <p className="text-xs text-muted-foreground mt-4 pt-3 border-t">Sources: Harvard Business Review; Workbuzz 2023/24; Gartner 2024</p>
+          {/* Box 4: ROI Failure */}
+          <Card className="p-8 bg-card/40 backdrop-blur-sm flex flex-col items-center text-center hover-elevate transition-all">
+            <div className="text-6xl md:text-7xl font-bold text-orange-600 dark:text-orange-400 mb-4" style={{ letterSpacing: '-0.02em' }}>44%</div>
+            <h4 className="font-bold text-xl text-foreground mb-2">Zero ROI</h4>
+            <p className="text-muted-foreground text-sm max-w-md">
+              44% see zero return from engagement investments
+            </p>
+            <p className="text-xs text-muted-foreground mt-4 pt-3 border-t border-border/50 w-full">
+              Source: Harvard Business Review; Workbuzz 2023/24
+            </p>
           </Card>
         </div>
 

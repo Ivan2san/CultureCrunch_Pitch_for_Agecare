@@ -20,7 +20,7 @@ export default function VisionSection() {
           <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-[1.1]" style={{ letterSpacing: '-0.02em' }}>
             AI That Transforms<br />
             <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
-              Compliance into Care
+              Compliance into Performance
             </span>
           </h1>
           
