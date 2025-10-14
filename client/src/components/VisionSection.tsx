@@ -11,7 +11,7 @@ export default function VisionSection() {
         {/* Headline */}
         <div ref={headlineParallax.ref} style={headlineParallax.style} className="space-y-6 animate-fade-in-up">
           <div className="inline-block">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 font-semibold text-sm">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 font-semibold text-sm">
               <Sparkles className="w-4 h-4" />
               The Future of Workplace Wellbeing
             </span>
@@ -34,8 +34,8 @@ export default function VisionSection() {
         {/* AI Evolution Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
           <div className="bg-card rounded-xl p-6 shadow-lg border border-border hover:shadow-xl transition-all hover:-translate-y-1" data-testid="card-ai-evolution-1">
-            <div className="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center mb-4">
-              <Brain className="w-6 h-6 text-purple-600" />
+            <div className="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-950 flex items-center justify-center mb-4">
+              <Brain className="w-6 h-6 text-purple-600 dark:text-purple-400" />
             </div>
             <h3 className="text-lg font-bold text-foreground mb-2">Agentic AI</h3>
             <p className="text-muted-foreground">
@@ -45,8 +45,8 @@ export default function VisionSection() {
           </div>
 
           <div className="bg-card rounded-xl p-6 shadow-lg border border-border hover:shadow-xl transition-all hover:-translate-y-1" data-testid="card-ai-evolution-2">
-            <div className="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mb-4">
-              <Zap className="w-6 h-6 text-indigo-600" />
+            <div className="w-12 h-12 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center mb-4">
+              <Zap className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
             </div>
             <h3 className="text-lg font-bold text-foreground mb-2">Real-Time Nudges</h3>
             <p className="text-muted-foreground">
@@ -56,8 +56,8 @@ export default function VisionSection() {
           </div>
 
           <div className="bg-card rounded-xl p-6 shadow-lg border border-border hover:shadow-xl transition-all hover:-translate-y-1" data-testid="card-ai-evolution-3">
-            <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
-              <Users className="w-6 h-6 text-blue-600" />
+            <div className="w-12 h-12 rounded-lg bg-blue-100 dark:bg-blue-950 flex items-center justify-center mb-4">
+              <Users className="w-6 h-6 text-blue-600 dark:text-blue-400" />
             </div>
             <h3 className="text-lg font-bold text-foreground mb-2">Human-Centered</h3>
             <p className="text-muted-foreground">

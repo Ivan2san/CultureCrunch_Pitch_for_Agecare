@@ -30,10 +30,10 @@ export default function ProblemSection() {
           {stats.map((stat, index) => (
             <Card 
               key={index} 
-              className="p-6 text-center bg-card border-2 border-red-200 hover:shadow-xl transition-all hover:-translate-y-1"
+              className="p-6 text-center bg-card border-2 border-red-200 dark:border-red-800 hover:shadow-xl transition-all hover:-translate-y-1"
               data-testid={`stat-card-${index}`}
             >
-              <div className="text-3xl md:text-4xl font-bold text-red-700 mb-2" style={{ letterSpacing: '-0.01em' }}>{stat.value}</div>
+              <div className="text-3xl md:text-4xl font-bold text-red-700 dark:text-red-400 mb-2" style={{ letterSpacing: '-0.01em' }}>{stat.value}</div>
               <div className="text-sm font-semibold text-foreground" style={{ letterSpacing: '-0.005em' }}>{stat.label}</div>
               <div className="text-xs text-muted-foreground mt-1" style={{ letterSpacing: '-0.005em' }}>{stat.sublabel}</div>
             </Card>
@@ -56,7 +56,7 @@ export default function ProblemSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16 lg:grid-rows-2">
           {/* Box 1: Organisations Fail to Act */}
           <Card className="p-6 bg-card flex flex-col h-full">
-            <h4 className="font-bold text-lg text-red-900 mb-3">Organisations Fail to Act on Feedback</h4>
+            <h4 className="font-bold text-lg text-red-900 dark:text-red-200 mb-3">Organisations Fail to Act on Feedback</h4>
             <ul className="space-y-2 text-muted-foreground text-sm flex-1">
               <li className="flex items-start gap-2">
                 <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
@@ -76,7 +76,7 @@ export default function ProblemSection() {
 
           {/* Box 2: Leader Capability Gap */}
           <Card className="p-6 bg-card flex flex-col h-full">
-            <h4 className="font-bold text-lg text-orange-900 mb-3">Leader Capability Gap</h4>
+            <h4 className="font-bold text-lg text-orange-900 dark:text-orange-200 mb-3">Leader Capability Gap</h4>
             <div className="space-y-2 text-muted-foreground text-sm flex-1">
               <p><strong>70%</strong> of engagement variance explained by leaders, yet leader engagement fell from 30% to 27%</p>
               <p><strong>Only 26%</strong> of leaders display behaviours that instill psychological safety</p>
@@ -88,7 +88,7 @@ export default function ProblemSection() {
 
           {/* Box 3: When Action Fails, Trust Collapses */}
           <Card className="p-6 bg-card flex flex-col h-full">
-            <h4 className="font-bold text-lg text-red-900 mb-3">When Action Fails, Trust Collapses</h4>
+            <h4 className="font-bold text-lg text-red-900 dark:text-red-200 mb-3">When Action Fails, Trust Collapses</h4>
             <ul className="space-y-2 text-muted-foreground text-sm flex-1">
               <li>• <strong>82%</strong> of employees don't trust their leader to tell the truth</li>
               <li>• <strong>Only 52%</strong> believe change will happen as a result of surveys</li>
@@ -100,7 +100,7 @@ export default function ProblemSection() {
 
           {/* Box 4: The ROI Failure */}
           <Card className="p-6 bg-card flex flex-col h-full">
-            <h4 className="font-bold text-lg text-orange-900 mb-3">The ROI Failure</h4>
+            <h4 className="font-bold text-lg text-orange-900 dark:text-orange-200 mb-3">The ROI Failure</h4>
             <div className="space-y-2 text-muted-foreground text-sm flex-1">
               <p><strong>Only 56%</strong> achieve positive ROI from engagement investments (44% see zero return)</p>
               <p><strong>89%</strong> report retention getting more difficult despite engagement efforts</p>
@@ -123,8 +123,8 @@ export default function ProblemSection() {
               { value: "59%", label: "Lower Turnover" },
               { value: "70%", label: "Fewer Safety Incidents" },
             ].map((item, index) => (
-              <div key={index} className="text-center p-4 bg-green-50 rounded-lg border-2 border-green-200">
-                <div className="text-3xl font-bold text-green-700 mb-1" style={{ letterSpacing: '-0.01em' }}>{item.value}</div>
+              <div key={index} className="text-center p-4 bg-green-50 dark:bg-green-950 rounded-lg border-2 border-green-200 dark:border-green-800">
+                <div className="text-3xl font-bold text-green-700 dark:text-green-400 mb-1" style={{ letterSpacing: '-0.01em' }}>{item.value}</div>
                 <div className="text-sm font-semibold text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>{item.label}</div>
               </div>
             ))}

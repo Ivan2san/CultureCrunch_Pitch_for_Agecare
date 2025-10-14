@@ -107,12 +107,12 @@ export default function SolutionSection() {
           <p className="text-lg md:text-xl text-muted-foreground mb-6" style={{ letterSpacing: '-0.005em' }}>
             ThriveGuide turns culture into performance—linking behaviour to results through the Triple Goal framework and a proven psychological safety playbook.
           </p>
-          <div className="border-t-2 border-dotted border-teal-400 mb-8"></div>
+          <div className="border-t-2 border-dotted border-teal-400 dark:border-teal-600 mb-8"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Reduce Section */}
-            <div className="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-6 relative">
-              <h4 className="text-2xl font-bold text-red-700 mb-4" style={{ letterSpacing: '-0.01em' }}>
+            <div className="bg-gradient-to-br from-red-50 to-pink-50 dark:from-red-950 dark:to-pink-950 rounded-2xl p-6 relative">
+              <h4 className="text-2xl font-bold text-red-700 dark:text-red-300 mb-4" style={{ letterSpacing: '-0.01em' }}>
                 Reduce
               </h4>
               <p className="text-foreground mb-6 leading-relaxed" style={{ letterSpacing: '-0.005em' }}>
@@ -127,15 +127,15 @@ export default function SolutionSection() {
             </div>
 
             {/* 3 Outcomes (Triple Goal) */}
-            <div className="bg-gradient-to-br from-teal-50 to-green-50 rounded-2xl p-6 relative">
+            <div className="bg-gradient-to-br from-teal-50 to-green-50 dark:from-teal-950 dark:to-green-950 rounded-2xl p-6 relative">
               <div className="text-center">
-                <h4 className="text-2xl font-bold text-teal-700 mb-1" style={{ letterSpacing: '-0.01em' }}>
+                <h4 className="text-2xl font-bold text-teal-700 dark:text-teal-300 mb-1" style={{ letterSpacing: '-0.01em' }}>
                   3 Outcomes
                 </h4>
                 <p className="text-sm font-semibold text-teal-600 mb-4" style={{ letterSpacing: '-0.005em' }}>
                   (Triple Goal)
                 </p>
-                <ol className="text-left space-y-1 mb-6 text-teal-700 font-semibold" style={{ letterSpacing: '-0.005em' }}>
+                <ol className="text-left space-y-1 mb-6 text-teal-700 dark:text-teal-300 font-semibold" style={{ letterSpacing: '-0.005em' }}>
                   <li>1. Great Performance</li>
                   <li>2. Great Learning</li>
                   <li>3. Great Workplace</li>
@@ -147,8 +147,8 @@ export default function SolutionSection() {
             </div>
 
             {/* Cultivate Section */}
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 relative">
-              <h4 className="text-2xl font-bold text-green-700 mb-4" style={{ letterSpacing: '-0.01em' }}>
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 rounded-2xl p-6 relative">
+              <h4 className="text-2xl font-bold text-green-700 dark:text-green-300 mb-4" style={{ letterSpacing: '-0.01em' }}>
                 Cultivate
               </h4>
               <p className="text-foreground mb-6 leading-relaxed" style={{ letterSpacing: '-0.005em' }}>
@@ -163,7 +163,7 @@ export default function SolutionSection() {
             </div>
           </div>
 
-          <div className="border-t-2 border-dotted border-teal-400 mt-8 pt-6">
+          <div className="border-t-2 border-dotted border-teal-400 dark:border-teal-600 mt-8 pt-6">
             <div className="flex justify-between items-center text-xs text-muted-foreground">
               <span>© Awakened Mind Group</span>
               <span>www.triplegoal.com</span>

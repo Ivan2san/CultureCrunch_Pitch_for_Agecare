@@ -46,21 +46,21 @@ const FORCES: Force[] = [
 ];
 
 const toneStyles = {
-  blue: "border-2 border-blue-400 hover:border-blue-500 focus:ring-blue-300/40",
-  red: "border-2 border-red-400 hover:border-red-500 focus:ring-red-300/40",
-  green: "border-2 border-green-400 hover:border-green-500 focus:ring-green-300/40",
+  blue: "border-2 border-blue-400 dark:border-blue-600 hover:border-blue-500 dark:hover:border-blue-500 focus:ring-blue-300/40",
+  red: "border-2 border-red-400 dark:border-red-600 hover:border-red-500 dark:hover:border-red-500 focus:ring-red-300/40",
+  green: "border-2 border-green-400 dark:border-green-600 hover:border-green-500 dark:hover:border-green-500 focus:ring-green-300/40",
 };
 
 const iconColors = {
-  blue: "text-blue-600",
-  red: "text-red-600",
-  green: "text-green-600",
+  blue: "text-blue-600 dark:text-blue-400",
+  red: "text-red-600 dark:text-red-400",
+  green: "text-green-600 dark:text-green-400",
 };
 
 const bulletColors = {
-  blue: "bg-blue-400/70",
-  red: "bg-red-400/70",
-  green: "bg-green-400/70",
+  blue: "bg-blue-400/70 dark:bg-blue-500/70",
+  red: "bg-red-400/70 dark:bg-red-500/70",
+  green: "bg-green-400/70 dark:bg-green-500/70",
 };
 
 export default function WhyNowSection() {
