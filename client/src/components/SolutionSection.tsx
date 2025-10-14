@@ -89,6 +89,82 @@ export default function SolutionSection() {
           ))}
         </div>
 
+        {/* Multi-Level Leader Support Architecture */}
+        <div className="bg-card rounded-xl p-8 mb-16 border border-border">
+          <h3 className="text-3xl font-bold text-foreground mb-6 text-center">
+            Multi-Level Leader Support: From Frontline to Boardroom
+          </h3>
+          <p className="text-lg text-muted-foreground text-center max-w-4xl mx-auto mb-8">
+            One platform serving leaders at every level—team leads get actionable insights while executives track compliance and business impact
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Team-Level Insights */}
+            <Card className="p-6 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950 dark:to-purple-950 border-2 border-indigo-300 dark:border-indigo-700">
+              <div className="flex items-center gap-3 mb-4">
+                <Users className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
+                <h4 className="text-xl font-bold text-foreground">Team-Level: Leader Action Dashboard</h4>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4">
+                Frontline leaders (team leads, middle managers) receive:
+              </p>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
+                  <span>Weekly nudges with specific, actionable team insights</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
+                  <span>AI-generated OORA conversation frameworks for detected risks</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
+                  <span>Micro-action library with evidence-based interventions</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
+                  <span>Real-time feedback on action effectiveness</span>
+                </li>
+              </ul>
+            </Card>
+
+            {/* Executive/Board Dashboard */}
+            <Card className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950 dark:to-cyan-950 border-2 border-blue-300 dark:border-blue-700">
+              <div className="flex items-center gap-3 mb-4">
+                <Shield className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+                <h4 className="text-xl font-bold text-foreground">Executive/Board: Compliance & Impact</h4>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4">
+                C-suite and board members access:
+              </p>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
+                  <span>Organization-wide psychosocial hazard tracking and risk registers</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
+                  <span>Audit-ready compliance reports with evidence trails</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
+                  <span>Business impact metrics: productivity, engagement, performance</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
+                  <span>Leadership capability trends across all organizational levels</span>
+                </li>
+              </ul>
+            </Card>
+          </div>
+
+          <div className="mt-6 text-center">
+            <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400">
+              → Unified platform addressing external business pressures at every leadership level
+            </p>
+          </div>
+        </div>
+
         {/* Value Proposition */}
         <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-xl p-8 mb-16 text-white text-center">
           <h3 className="text-2xl font-bold mb-3">Why it matters</h3>
