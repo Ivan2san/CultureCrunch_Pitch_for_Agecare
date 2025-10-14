@@ -131,6 +131,37 @@ export default function HowItWorksSection() {
           </p>
         </div>
 
+        {/* OORA Conversation Framework Demo */}
+        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8 border-2 border-indigo-200 mb-16">
+          <div className="text-center mb-6">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <MessageSquare className="w-10 h-10 text-indigo-600 dark:text-indigo-400" />
+              <h3 className="text-3xl font-bold text-foreground">Interactive ThriveGuide AI-Copilot Leader Issue Resolution</h3>
+            </div>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
+              Experience how ThriveGuide AI guides leaders through psych safety identification, risk assessment and mitigation.
+            </p>
+            
+            {!showOORADemo && (
+              <Button
+                onClick={() => setShowOORADemo(true)}
+                variant="default"
+                size="lg"
+                className="bg-indigo-600 hover:bg-indigo-700"
+                data-testid="button-toggle-oora-demo"
+              >
+                Try Interactive Demo
+              </Button>
+            )}
+          </div>
+
+          {showOORADemo && (
+            <div className="mt-8 animate-fade-in-up">
+              <OORADemo />
+            </div>
+          )}
+        </div>
+
         {/* Animated Process Flow */}
         <div className="mb-16">
           <ProcessFlowAnimation />
@@ -286,37 +317,6 @@ export default function HowItWorksSection() {
               );
             })}
           </div>
-        </div>
-
-        {/* OORA Conversation Framework Demo */}
-        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8 border-2 border-indigo-200 mt-16">
-          <div className="text-center mb-6">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <MessageSquare className="w-10 h-10 text-indigo-600 dark:text-indigo-400" />
-              <h3 className="text-3xl font-bold text-foreground">Interactive ThriveGuide AI-Copilot Leader Issue Resolution</h3>
-            </div>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
-              Experience how ThriveGuide AI guides leaders through psych safety identification, risk assessment and mitigation.
-            </p>
-            
-            {!showOORADemo && (
-              <Button
-                onClick={() => setShowOORADemo(true)}
-                variant="default"
-                size="lg"
-                className="bg-indigo-600 hover:bg-indigo-700"
-                data-testid="button-toggle-oora-demo"
-              >
-                Try Interactive Demo
-              </Button>
-            )}
-          </div>
-
-          {showOORADemo && (
-            <div className="mt-8 animate-fade-in-up">
-              <OORADemo />
-            </div>
-          )}
         </div>
       </div>
     </section>

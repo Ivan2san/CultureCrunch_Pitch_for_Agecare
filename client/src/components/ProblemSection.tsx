@@ -7,10 +7,11 @@ export default function ProblemSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
-            The Problem: <span className="text-red-600 dark:text-red-400">The Accountability Failure Cascade</span>
+            The Problem: <span className="text-red-600 dark:text-red-400">The Leadership Pressure Cascade</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
-            Organisations measure engagement but fail to act—destroying trust and creating a $8.9 trillion productivity crisis
+            External business pressures create anxious leaders who lack the capability to act—
+            cascading into team psychosocial risks and a $8.9 trillion productivity crisis
           </p>
           <p className="text-sm text-muted-foreground mt-4 italic max-w-4xl mx-auto">
             All statistics sourced from peer-reviewed research, government reports, and major industry studies published 2023-2025
@@ -31,12 +32,12 @@ export default function ProblemSection() {
             </p>
           </Card>
 
-          {/* Box 2: Leader Impact */}
+          {/* Box 2: Leader Under Pressure */}
           <Card className="p-8 bg-card/40 backdrop-blur-sm flex flex-col items-center text-center hover-elevate transition-all">
             <div className="text-6xl md:text-7xl font-bold text-orange-600 dark:text-orange-400 mb-4" style={{ letterSpacing: '-0.02em' }}>70%</div>
-            <h4 className="font-bold text-xl text-foreground mb-2">Leader Capability Gap</h4>
+            <h4 className="font-bold text-xl text-foreground mb-2">Leaders Drive Team Outcomes</h4>
             <p className="text-muted-foreground text-sm max-w-md">
-              70% of engagement variance explained by leaders, yet most lack training
+              70% of team engagement explained by leader behavior, yet business pressures leave them unsupported
             </p>
             <p className="text-xs text-muted-foreground mt-4 pt-3 border-t border-border/50 w-full">
               Source: Gallup 2024-2025
