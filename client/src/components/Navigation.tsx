@@ -167,20 +167,6 @@ export default function Navigation() {
                 {section.label}
               </button>
             ))}
-            
-            <Button
-              onClick={() => {
-                handleExportPDF();
-                setMobileMenuOpen(false);
-              }}
-              disabled={isExporting}
-              variant="outline"
-              className="w-full mt-4"
-              data-testid="button-export-pdf-mobile"
-            >
-              <Download className="w-4 h-4 mr-2" />
-              {isExporting ? "Exporting..." : "Export PDF"}
-            </Button>
           </div>
         </div>
       )}
