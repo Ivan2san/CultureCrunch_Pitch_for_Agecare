@@ -68,10 +68,10 @@ export default function WhyNowSection() {
     <section id="why-now" className="relative isolate bg-corporate-gradient px-6 py-24 sm:py-32 flex-wrap">
       {/* Heading */}
       <div className="mx-auto max-w-7xl text-center">
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900" style={{ letterSpacing: '-0.01em' }}>
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground" style={{ letterSpacing: '-0.01em' }}>
           WHY NOW: <span className="text-blue-600">Three forces converge</span>
         </h2>
-        <p className="mt-4 text-base md:text-lg text-gray-700" style={{ letterSpacing: '-0.005em' }}>
+        <p className="mt-4 text-base md:text-lg text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>
           Clear lanes show the pressure from regulation, the human cost of burnout, and
           the leap in AI capability—meeting at a single decision point.
         </p>
@@ -85,21 +85,21 @@ export default function WhyNowSection() {
             <div
               key={f.id}
               data-testid={`force-card-${f.id}`}
-              className={`col-span-4 group rounded-xl bg-white/90 backdrop-blur p-6 shadow-md transition-all hover:shadow-lg focus-within:ring-2 h-full flex flex-col ${toneStyles[f.tone]}`}
+              className={`col-span-4 group rounded-xl bg-card/90 backdrop-blur p-6 shadow-md transition-all hover:shadow-lg focus-within:ring-2 h-full flex flex-col ${toneStyles[f.tone]}`}
             >
               <div className="flex items-center gap-3 flex-wrap">
-                <div className="size-12 rounded-full bg-gray-50 grid place-items-center shrink-0">
+                <div className="size-12 rounded-full bg-muted grid place-items-center shrink-0">
                   <Icon className={`size-7 ${iconColors[f.tone]}`} aria-hidden />
                 </div>
                 <div className="text-left">
-                  <h3 className="text-xl font-bold leading-tight text-gray-900" style={{ letterSpacing: '-0.01em' }}>
+                  <h3 className="text-xl font-bold leading-tight text-foreground" style={{ letterSpacing: '-0.01em' }}>
                     {f.title}
                   </h3>
-                  <p className="text-xs font-semibold text-gray-600" style={{ letterSpacing: '-0.005em' }}>{f.period}</p>
+                  <p className="text-xs font-semibold text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>{f.period}</p>
                 </div>
               </div>
 
-              <ul className="mt-4 space-y-2 text-sm text-gray-700" style={{ letterSpacing: '-0.005em' }}>
+              <ul className="mt-4 space-y-2 text-sm text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>
                 {f.bullets.map((b, j) => (
                   <li key={j} className="flex items-start gap-2" data-testid={`bullet-${f.id}-${j}`}>
                     <span className={`mt-1.5 size-1.5 rounded-full shrink-0 ${bulletColors[f.tone]}`} />
@@ -109,7 +109,7 @@ export default function WhyNowSection() {
               </ul>
 
               {/* chevron into convergence rail */}
-              <div className="mt-auto pt-6 flex items-center text-sm text-gray-600 flex-wrap gap-2" style={{ letterSpacing: '-0.005em' }}>
+              <div className="mt-auto pt-6 flex items-center text-sm text-muted-foreground flex-wrap gap-2" style={{ letterSpacing: '-0.005em' }}>
                 <ArrowRight className="size-4 shrink-0" />
                 <span>Flows into the Convergence Point</span>
               </div>
@@ -150,21 +150,21 @@ export default function WhyNowSection() {
             <div
               key={f.id}
               data-testid={`mobile-force-${f.id}`}
-              className={`relative rounded-xl bg-white/90 backdrop-blur p-5 shadow-md ${toneStyles[f.tone]}`}
+              className={`relative rounded-xl bg-card/90 backdrop-blur p-5 shadow-md ${toneStyles[f.tone]}`}
             >
-              <div className="absolute -left-3 -top-3 rounded-full bg-gray-900 text-white size-8 grid place-items-center text-xs font-bold">
+              <div className="absolute -left-3 -top-3 rounded-full bg-foreground text-background size-8 grid place-items-center text-xs font-bold">
                 {idx + 1}
               </div>
               <div className="flex items-center gap-3 flex-wrap">
-                <div className="size-10 rounded-full bg-gray-50 grid place-items-center shrink-0">
+                <div className="size-10 rounded-full bg-muted grid place-items-center shrink-0">
                   <Icon className={`size-6 ${iconColors[f.tone]}`} aria-hidden />
                 </div>
                 <div className="text-left">
-                  <h3 className="text-base font-bold text-gray-900" style={{ letterSpacing: '-0.01em' }}>{f.title}</h3>
-                  <p className="text-xs font-semibold text-gray-600" style={{ letterSpacing: '-0.005em' }}>{f.period}</p>
+                  <h3 className="text-base font-bold text-foreground" style={{ letterSpacing: '-0.01em' }}>{f.title}</h3>
+                  <p className="text-xs font-semibold text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>{f.period}</p>
                 </div>
               </div>
-              <ul className="mt-3 space-y-1.5 text-sm text-gray-700" style={{ letterSpacing: '-0.005em' }}>
+              <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>
                 {f.bullets.map((b, j) => (
                   <li key={j} className="flex items-start gap-2">
                     <span className={`mt-1.5 size-1.5 rounded-full shrink-0 ${bulletColors[f.tone]}`} />
@@ -193,7 +193,7 @@ export default function WhyNowSection() {
 
       {/* Footer caption */}
       <div className="mx-auto mt-12 lg:mt-40 max-w-4xl text-center">
-        <p className="text-lg md:text-xl font-semibold text-gray-800" style={{ letterSpacing: '-0.005em' }}>
+        <p className="text-lg md:text-xl font-semibold text-foreground" style={{ letterSpacing: '-0.005em' }}>
           <span className="font-bold text-blue-600">2025:</span> The market is ready to bridge{" "}
           compliance requirements with practical, AI-driven action.
         </p>

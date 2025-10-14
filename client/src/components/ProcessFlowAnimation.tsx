@@ -106,22 +106,22 @@ export default function ProcessFlowAnimation() {
           return (
             <div
               key={item.title}
-              className="w-72 rounded-xl bg-white/90 backdrop-blur border-2 border-gray-200 p-6 shadow-md hover:shadow-lg transition-all"
+              className="w-72 rounded-xl bg-card/90 backdrop-blur border-2 border-border p-6 shadow-md hover:shadow-lg transition-all"
               data-testid={`process-card-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
             >
               <div className="flex items-center gap-2 mb-3">
                 <Icon className={`h-5 w-5 ${colorClasses[item.color as keyof typeof colorClasses]}`} />
-                <h4 className="text-base font-bold text-gray-900" style={{ letterSpacing: '-0.01em' }}>
+                <h4 className="text-base font-bold text-foreground" style={{ letterSpacing: '-0.01em' }}>
                   {item.title}
                 </h4>
               </div>
-              <p className="text-xs font-semibold text-gray-600 mb-2" style={{ letterSpacing: '-0.005em' }}>
+              <p className="text-xs font-semibold text-muted-foreground mb-2" style={{ letterSpacing: '-0.005em' }}>
                 {item.subtitle}
               </p>
-              <ul className="text-gray-700 space-y-1 text-xs" style={{ letterSpacing: '-0.005em' }}>
+              <ul className="text-muted-foreground space-y-1 text-xs" style={{ letterSpacing: '-0.005em' }}>
                 {item.points.map((p: string) => (
                   <li key={p} className="flex items-start gap-2">
-                    <span className="mt-1.5 size-1.5 rounded-full bg-gray-400 shrink-0" />
+                    <span className="mt-1.5 size-1.5 rounded-full bg-muted-foreground/50 shrink-0" />
                     <span>{p}</span>
                   </li>
                 ))}
@@ -146,14 +146,14 @@ export default function ProcessFlowAnimation() {
     <div className="w-full bg-corporate-gradient px-6 py-16">
       <div className="max-w-7xl mx-auto">
         <h2 
-          className="text-center text-4xl md:text-5xl font-bold text-gray-900 mb-4" 
+          className="text-center text-4xl md:text-5xl font-bold text-foreground mb-4" 
           style={{ letterSpacing: '-0.01em' }}
           data-testid="heading-process-flow"
         >
           Process Flow
         </h2>
         <p 
-          className="text-center text-lg text-gray-700 max-w-2xl mx-auto mb-8" 
+          className="text-center text-lg text-muted-foreground max-w-2xl mx-auto mb-8" 
           style={{ letterSpacing: '-0.005em' }}
           data-testid="text-process-flow-description"
         >
@@ -233,7 +233,7 @@ export default function ProcessFlowAnimation() {
         <div className="flex justify-center mt-6" data-testid="feedback-loop-indicator">
           <div className="flex items-center gap-3 flex-wrap justify-center">
             <RefreshCcw className="h-6 w-6 text-indigo-600" />
-            <span className="text-sm font-semibold text-gray-700" style={{ letterSpacing: '-0.005em' }} data-testid="text-feedback-loop">
+            <span className="text-sm font-semibold text-muted-foreground" style={{ letterSpacing: '-0.005em' }} data-testid="text-feedback-loop">
               Feedback flows back to improve Input stage
             </span>
             <RefreshCcw className="h-6 w-6 text-blue-600 scale-x-[-1]" />

@@ -67,9 +67,9 @@ export default function ROICalculator() {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Calculator className="w-12 h-12 text-purple-600" />
-            <h2 className="text-4xl font-bold text-gray-900">CultureCrunch ROI Calculator</h2>
+            <h2 className="text-4xl font-bold text-foreground">CultureCrunch ROI Calculator</h2>
           </div>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-muted-foreground">
             Calculate the financial impact of reducing psychosocial risk in your organisation
           </p>
         </div>
@@ -77,8 +77,8 @@ export default function ROICalculator() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Inputs */}
           <div className="lg:col-span-1">
-            <Card className="p-6 sticky top-24 bg-white">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+            <Card className="p-6 sticky top-24 bg-card">
+              <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
                 <Users className="w-6 h-6 text-purple-600" />
                 Your Organisation
               </h3>
@@ -169,7 +169,7 @@ export default function ROICalculator() {
           {/* Results */}
           <div className="lg:col-span-2 space-y-6">
             {/* Current Costs */}
-            <Card className="p-6 bg-white">
+            <Card className="p-6 bg-card">
               <h3 className="text-2xl font-bold text-red-600 mb-4 flex items-center gap-2">
                 <AlertTriangle className="w-6 h-6" />
                 Current Annual Costs
@@ -177,27 +177,27 @@ export default function ROICalculator() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-mental-health">
-                  <p className="text-sm text-gray-600 mb-1">Mental Health Claims</p>
+                  <p className="text-sm text-muted-foreground mb-1">Mental Health Claims</p>
                   <p className="text-2xl font-bold text-red-700">{formatCurrency(annualMentalHealthClaimsCost)}</p>
-                  <p className="text-xs text-gray-500 mt-1">{currentMentalHealthClaims} claims × $290K each</p>
+                  <p className="text-xs text-muted-foreground mt-1">{currentMentalHealthClaims} claims × $290K each</p>
                 </div>
 
                 <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-turnover">
-                  <p className="text-sm text-gray-600 mb-1">Turnover Costs</p>
+                  <p className="text-sm text-muted-foreground mb-1">Turnover Costs</p>
                   <p className="text-2xl font-bold text-red-700">{formatCurrency(annualTurnoverCost)}</p>
-                  <p className="text-xs text-gray-500 mt-1">{turnoverCount} employees × 150% salary</p>
+                  <p className="text-xs text-muted-foreground mt-1">{turnoverCount} employees × 150% salary</p>
                 </div>
 
                 <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-productivity">
-                  <p className="text-sm text-gray-600 mb-1">Productivity Loss</p>
+                  <p className="text-sm text-muted-foreground mb-1">Productivity Loss</p>
                   <p className="text-2xl font-bold text-red-700">{formatCurrency(annualProductivityLoss)}</p>
-                  <p className="text-xs text-gray-500 mt-1">{disengagedEmployees} disengaged × 18% loss</p>
+                  <p className="text-xs text-muted-foreground mt-1">{disengagedEmployees} disengaged × 18% loss</p>
                 </div>
 
                 <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-absenteeism">
-                  <p className="text-sm text-gray-600 mb-1">Absenteeism</p>
+                  <p className="text-sm text-muted-foreground mb-1">Absenteeism</p>
                   <p className="text-2xl font-bold text-red-700">{formatCurrency(annualAbsenteeismCost)}</p>
-                  <p className="text-xs text-gray-500 mt-1">$3,500 per employee</p>
+                  <p className="text-xs text-muted-foreground mt-1">$3,500 per employee</p>
                 </div>
 
                 <div className="bg-red-600 p-4 rounded-lg text-white md:col-span-2" data-testid="cost-total">
@@ -209,7 +209,7 @@ export default function ROICalculator() {
             </Card>
 
             {/* Savings */}
-            <Card className="p-6 bg-white">
+            <Card className="p-6 bg-card">
               <h3 className="text-2xl font-bold text-green-600 mb-4 flex items-center gap-2">
                 <TrendingUp className="w-6 h-6" />
                 Expected Annual Savings
@@ -217,22 +217,22 @@ export default function ROICalculator() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                  <p className="text-sm text-gray-600 mb-1">Claims Reduction (40%)</p>
+                  <p className="text-sm text-muted-foreground mb-1">Claims Reduction (40%)</p>
                   <p className="text-2xl font-bold text-green-700">{formatCurrency(claimsSavings)}</p>
                 </div>
 
                 <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                  <p className="text-sm text-gray-600 mb-1">Turnover Reduction (25%)</p>
+                  <p className="text-sm text-muted-foreground mb-1">Turnover Reduction (25%)</p>
                   <p className="text-2xl font-bold text-green-700">{formatCurrency(turnoverSavings)}</p>
                 </div>
 
                 <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                  <p className="text-sm text-gray-600 mb-1">Productivity Gains (30%)</p>
+                  <p className="text-sm text-muted-foreground mb-1">Productivity Gains (30%)</p>
                   <p className="text-2xl font-bold text-green-700">{formatCurrency(productivityGains)}</p>
                 </div>
 
                 <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                  <p className="text-sm text-gray-600 mb-1">Absenteeism Reduction (20%)</p>
+                  <p className="text-sm text-muted-foreground mb-1">Absenteeism Reduction (20%)</p>
                   <p className="text-2xl font-bold text-green-700">{formatCurrency(absenteeismSavings)}</p>
                 </div>
 
@@ -272,7 +272,7 @@ export default function ROICalculator() {
             </Card>
 
             {/* Methodology Section */}
-            <Card className="p-6 bg-white mt-6">
+            <Card className="p-6 bg-card mt-6">
               <Button
                 variant="ghost"
                 onClick={() => setShowMethodology(!showMethodology)}
@@ -281,63 +281,63 @@ export default function ROICalculator() {
               >
                 <div className="flex items-center gap-3">
                   <Info className="w-5 h-5 text-purple-600" />
-                  <span className="text-lg font-bold text-gray-900">How the Calculator Works</span>
+                  <span className="text-lg font-bold text-foreground">How the Calculator Works</span>
                 </div>
                 <ChevronDown
-                  className={`w-5 h-5 text-gray-600 transition-transform ${
+                  className={`w-5 h-5 text-muted-foreground transition-transform ${
                     showMethodology ? "rotate-180" : ""
                   }`}
                 />
               </Button>
 
               {showMethodology && (
-                <div className="mt-6 space-y-6 border-t border-gray-200 pt-6">
+                <div className="mt-6 space-y-6 border-t border-border pt-6">
                   {/* Cost Calculations */}
                   <div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-4">Current Cost Calculations</h4>
+                    <h4 className="text-xl font-bold text-foreground mb-4">Current Cost Calculations</h4>
                     <div className="space-y-4">
-                      <div className="bg-gray-50 p-4 rounded-lg">
-                        <h5 className="font-bold text-gray-800 mb-2">1. Mental Health Claims Cost</h5>
-                        <p className="text-sm text-gray-700 mb-2">
+                      <div className="bg-muted p-4 rounded-lg">
+                        <h5 className="font-bold text-foreground mb-2">1. Mental Health Claims Cost</h5>
+                        <p className="text-sm text-muted-foreground mb-2">
                           <strong>Formula:</strong> Claims × $290,000
                         </p>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-muted-foreground">
                           <strong>Source:</strong> $290,000 per claim is the average total cost of a mental health workers' 
                           compensation claim in Australia (SafeWork Australia research)
                         </p>
                       </div>
 
-                      <div className="bg-gray-50 p-4 rounded-lg">
-                        <h5 className="font-bold text-gray-800 mb-2">2. Turnover Costs</h5>
-                        <p className="text-sm text-gray-700 mb-2">
+                      <div className="bg-muted p-4 rounded-lg">
+                        <h5 className="font-bold text-foreground mb-2">2. Turnover Costs</h5>
+                        <p className="text-sm text-muted-foreground mb-2">
                           <strong>Formula:</strong> (Employee Count × Turnover Rate %) × Salary × 1.5
                         </p>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-muted-foreground">
                           <strong>Source:</strong> 150% of salary is the standard replacement cost including recruitment, 
                           onboarding, and lost productivity (SHRM/Deloitte benchmarks)
                         </p>
                       </div>
 
-                      <div className="bg-gray-50 p-4 rounded-lg">
-                        <h5 className="font-bold text-gray-800 mb-2">3. Productivity Loss from Disengagement</h5>
-                        <p className="text-sm text-gray-700 mb-2">
+                      <div className="bg-muted p-4 rounded-lg">
+                        <h5 className="font-bold text-foreground mb-2">3. Productivity Loss from Disengagement</h5>
+                        <p className="text-sm text-muted-foreground mb-2">
                           <strong>Formula:</strong> Disengaged Employees × Salary × 18%
                         </p>
-                        <p className="text-sm text-gray-700 mb-2">
+                        <p className="text-sm text-muted-foreground mb-2">
                           <strong>Calculation:</strong> Disengaged = Total × (1 - Engagement Score ÷ 100)
                         </p>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-muted-foreground">
                           <strong>Source:</strong> 18% productivity loss from disengaged employees (Gallup State of the 
                           Global Workplace research)
                         </p>
                       </div>
 
-                      <div className="bg-gray-50 p-4 rounded-lg">
-                        <h5 className="font-bold text-gray-800 mb-2">4. Absenteeism Cost</h5>
-                        <p className="text-sm text-gray-700 mb-2">
+                      <div className="bg-muted p-4 rounded-lg">
+                        <h5 className="font-bold text-foreground mb-2">4. Absenteeism Cost</h5>
+                        <p className="text-sm text-muted-foreground mb-2">
                           <strong>Formula:</strong> Employee Count × $3,500
                         </p>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-muted-foreground">
                           <strong>Source:</strong> $3,500 per employee annual absenteeism cost (Australian HR Institute data)
                         </p>
                       </div>
@@ -346,11 +346,11 @@ export default function ROICalculator() {
 
                   {/* Savings Calculations */}
                   <div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-4">Expected Savings (Research-Backed Reduction Rates)</h4>
+                    <h4 className="text-xl font-bold text-foreground mb-4">Expected Savings (Research-Backed Reduction Rates)</h4>
                     <div className="space-y-4">
                       <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                         <h5 className="font-bold text-green-800 mb-2">Mental Health Claims: 40% Reduction</h5>
-                        <p className="text-sm text-gray-700">
+                        <p className="text-sm text-muted-foreground">
                           Evidence from early intervention programs in psychological safety shows significant reduction in 
                           mental health claims when proactive support is provided
                         </p>
@@ -358,14 +358,14 @@ export default function ROICalculator() {
 
                       <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                         <h5 className="font-bold text-green-800 mb-2">Turnover: 25% Reduction</h5>
-                        <p className="text-sm text-gray-700">
+                        <p className="text-sm text-muted-foreground">
                           Leader support programs demonstrate measurable impact on employee retention and reduced voluntary turnover
                         </p>
                       </div>
 
                       <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                         <h5 className="font-bold text-green-800 mb-2">Productivity: 30% Improvement</h5>
-                        <p className="text-sm text-gray-700">
+                        <p className="text-sm text-muted-foreground">
                           Engagement intervention effectiveness studies show substantial productivity gains when disengagement 
                           is addressed through targeted leadership support
                         </p>
@@ -373,7 +373,7 @@ export default function ROICalculator() {
 
                       <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                         <h5 className="font-bold text-green-800 mb-2">Absenteeism: 20% Reduction</h5>
-                        <p className="text-sm text-gray-700">
+                        <p className="text-sm text-muted-foreground">
                           Wellbeing program outcomes data demonstrates consistent reduction in absence rates when preventive 
                           measures are implemented
                         </p>
@@ -383,21 +383,21 @@ export default function ROICalculator() {
 
                   {/* Investment */}
                   <div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-4">Investment & ROI Calculation</h4>
+                    <h4 className="text-xl font-bold text-foreground mb-4">Investment & ROI Calculation</h4>
                     <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
                       <h5 className="font-bold text-purple-800 mb-3">Founding Partner Annual Investment</h5>
-                      <p className="text-sm text-gray-700 mb-2">
+                      <p className="text-sm text-muted-foreground mb-2">
                         <strong>Special Founding Partner Rate:</strong> $25,000 per year (flat fee)
                       </p>
-                      <p className="text-sm text-gray-600 mb-3">
+                      <p className="text-sm text-muted-foreground mb-3">
                         Early adopters receive exclusive flat-rate pricing regardless of organisation size,
                         providing exceptional value for pilot program participants.
                       </p>
                       <div className="border-t border-purple-300 pt-3 mt-3">
-                        <p className="text-sm text-gray-700 mb-1">
+                        <p className="text-sm text-muted-foreground mb-1">
                           <strong>Net ROI:</strong> Total Savings - Annual Investment ($25,000)
                         </p>
-                        <p className="text-sm text-gray-700">
+                        <p className="text-sm text-muted-foreground">
                           <strong>ROI Multiple:</strong> Total Savings ÷ Annual Investment
                         </p>
                       </div>
@@ -413,8 +413,8 @@ export default function ROICalculator() {
                 <div className="flex items-center gap-3">
                   <FileText className="w-6 h-6 text-indigo-600" />
                   <div>
-                    <h4 className="font-bold text-gray-900">Complete Research Documentation</h4>
-                    <p className="text-sm text-gray-600">View full methodology with all sources and citations</p>
+                    <h4 className="font-bold text-foreground">Complete Research Documentation</h4>
+                    <p className="text-sm text-muted-foreground">View full methodology with all sources and citations</p>
                   </div>
                 </div>
                 <Button

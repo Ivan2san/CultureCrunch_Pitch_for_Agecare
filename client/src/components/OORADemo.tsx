@@ -285,7 +285,7 @@ export default function OORADemo() {
     <div className="space-y-6">
       {/* Scenario Selector */}
       <div className="space-y-3">
-        <h4 className="font-bold text-gray-900">Choose a Scenario:</h4>
+        <h4 className="font-bold text-foreground">Choose a Scenario:</h4>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {scenarios.map((s, index) => (
             <Button
@@ -303,8 +303,8 @@ export default function OORADemo() {
       </div>
 
       {/* OORA Phase Indicators */}
-      <div className="bg-white rounded-lg p-6 border-2 border-gray-200">
-        <h4 className="font-bold text-gray-900 mb-4">Framework Progress</h4>
+      <div className="bg-card rounded-lg p-6 border-2 border-border">
+        <h4 className="font-bold text-foreground mb-4">Framework Progress</h4>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {phases.map((phase, index) => {
             const isActive = getCurrentPhaseIndex() === index;
@@ -316,7 +316,7 @@ export default function OORADemo() {
                 key={phase.id}
                 className={cn(
                   "p-3 rounded-lg border-2 transition-all",
-                  isActive ? `${colors.bg} ${colors.border}` : "bg-gray-50 border-gray-200",
+                  isActive ? `${colors.bg} ${colors.border}` : "bg-muted border-border",
                   isCompleted && "opacity-60"
                 )}
                 role="status"

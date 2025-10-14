@@ -123,10 +123,10 @@ export default function RoadmapSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4" style={{ letterSpacing: '-0.01em' }}>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
             Roadmap to <span className="text-indigo-600">Market Leadership</span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
             Building the future of workplace wellbeing, one milestone at a time
           </p>
         </div>
@@ -146,7 +146,7 @@ export default function RoadmapSection() {
                 <div key={index} className={`flex items-start gap-8 ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}>
                   {/* Card */}
                   <Card
-                    className={`flex-1 bg-white transition-all ${
+                    className={`flex-1 bg-card transition-all ${
                       isEven ? "md:text-right" : "md:text-left"
                     }`}
                     data-testid={`roadmap-phase-${index}`}
@@ -156,12 +156,12 @@ export default function RoadmapSection() {
                       <div className={`flex items-center gap-3 mb-3 ${isEven ? "md:justify-end flex-wrap" : "md:justify-start flex-wrap"}`}>
                         <Icon className={`w-6 h-6 ${colorClasses[phase.color].icon}`} />
                         <div>
-                          <h3 className="text-xl font-bold text-gray-900">{phase.phase}</h3>
-                          <p className="text-sm text-gray-600">{phase.timeline}</p>
+                          <h3 className="text-xl font-bold text-foreground">{phase.phase}</h3>
+                          <p className="text-sm text-muted-foreground">{phase.timeline}</p>
                         </div>
                       </div>
                       {phase.target && (
-                        <p className="text-sm text-gray-700 font-medium mb-3">{phase.target}</p>
+                        <p className="text-sm text-muted-foreground font-medium mb-3">{phase.target}</p>
                       )}
 
                       {/* Expand/Collapse Button */}
@@ -183,10 +183,10 @@ export default function RoadmapSection() {
 
                     {/* Details - Expandable */}
                     {isExpanded && (
-                      <div className="px-6 pb-6 space-y-4 border-t border-gray-100 pt-4">
+                      <div className="px-6 pb-6 space-y-4 border-t border-border pt-4">
                         <div>
-                          <h4 className="font-bold text-gray-800 mb-2">Goals:</h4>
-                          <ul className={`space-y-1 text-sm text-gray-700 ${isEven ? "md:text-right" : "md:text-left"}`}>
+                          <h4 className="font-bold text-foreground mb-2">Goals:</h4>
+                          <ul className={`space-y-1 text-sm text-muted-foreground ${isEven ? "md:text-right" : "md:text-left"}`}>
                             {phase.goals.map((goal, i) => (
                               <li key={i}>• {goal}</li>
                             ))}
@@ -194,8 +194,8 @@ export default function RoadmapSection() {
                         </div>
 
                         <div>
-                          <h4 className="font-bold text-gray-800 mb-2">Exit Criteria:</h4>
-                          <ul className={`space-y-1 text-sm text-gray-700 ${isEven ? "md:text-right" : "md:text-left"}`}>
+                          <h4 className="font-bold text-foreground mb-2">Exit Criteria:</h4>
+                          <ul className={`space-y-1 text-sm text-muted-foreground ${isEven ? "md:text-right" : "md:text-left"}`}>
                             {phase.exitCriteria.map((criteria, i) => (
                               <li key={i}>• {criteria}</li>
                             ))}
@@ -203,8 +203,8 @@ export default function RoadmapSection() {
                         </div>
 
                         <div>
-                          <h4 className="font-bold text-gray-800 mb-2">Deliverables:</h4>
-                          <ul className={`space-y-1 text-sm text-gray-700 ${isEven ? "md:text-right" : "md:text-left"}`}>
+                          <h4 className="font-bold text-foreground mb-2">Deliverables:</h4>
+                          <ul className={`space-y-1 text-sm text-muted-foreground ${isEven ? "md:text-right" : "md:text-left"}`}>
                             {phase.deliverables.map((deliverable, i) => (
                               <li key={i}>• {deliverable}</li>
                             ))}
@@ -230,9 +230,9 @@ export default function RoadmapSection() {
         </div>
 
         {/* Vision Statement */}
-        <div className="mt-16 bg-white rounded-2xl p-8 border border-gray-200 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Path Forward</h3>
-          <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+        <div className="mt-16 bg-card rounded-2xl p-8 border border-border text-center">
+          <h3 className="text-2xl font-bold text-foreground mb-4">Our Path Forward</h3>
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             From 5 founding partners to 10 paying customers in 12 months. We're building trust through validation, 
             securing the right capital and talent, shipping an MVP that proves value, and launching with a repeatable 
             go-to-market motion. Every milestone brings us closer to making psychosocial safety a strategic advantage, 

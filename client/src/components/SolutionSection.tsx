@@ -71,10 +71,10 @@ export default function SolutionSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div ref={headerParallax.ref} style={headerParallax.style} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4" style={{ letterSpacing: '-0.01em' }}>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
             ThriveGuide AI: <span className="text-indigo-600">Compliance-First</span>, Behaviour-Powered
           </h2>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
             Turn psychosocial compliance into auditable action and better leadership, automatically
           </p>
         </div>
@@ -82,9 +82,9 @@ export default function SolutionSection() {
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           {stats.map((stat, index) => (
-            <Card key={index} className="p-6 text-center bg-white/60 border border-gray-200" data-testid={`solution-stat-${index}`}>
-              <div className="text-3xl font-bold text-gray-900 mb-1">{stat.value}</div>
-              <div className="text-sm text-gray-600">{stat.label}</div>
+            <Card key={index} className="p-6 text-center bg-card/60 border border-border" data-testid={`solution-stat-${index}`}>
+              <div className="text-3xl font-bold text-foreground mb-1">{stat.value}</div>
+              <div className="text-sm text-muted-foreground">{stat.label}</div>
             </Card>
           ))}
         </div>
@@ -100,11 +100,11 @@ export default function SolutionSection() {
         </div>
 
         {/* Behaviour Drives Outcomes */}
-        <div className="bg-white rounded-2xl p-8 md:p-12 border-2 border-gray-200">
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2" style={{ letterSpacing: '-0.01em' }}>
+        <div className="bg-card rounded-2xl p-8 md:p-12 border-2 border-border">
+          <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-2" style={{ letterSpacing: '-0.01em' }}>
             Behaviour Drives Outcomes
           </h3>
-          <p className="text-lg md:text-xl text-gray-700 mb-6" style={{ letterSpacing: '-0.005em' }}>
+          <p className="text-lg md:text-xl text-muted-foreground mb-6" style={{ letterSpacing: '-0.005em' }}>
             ThriveGuide turns culture into performance—linking behaviour to results through the Triple Goal framework and a proven psychological safety playbook.
           </p>
           <div className="border-t-2 border-dotted border-teal-400 mb-8"></div>
@@ -115,7 +115,7 @@ export default function SolutionSection() {
               <h4 className="text-2xl font-bold text-red-700 mb-4" style={{ letterSpacing: '-0.01em' }}>
                 Reduce
               </h4>
-              <p className="text-gray-800 mb-6 leading-relaxed" style={{ letterSpacing: '-0.005em' }}>
+              <p className="text-foreground mb-6 leading-relaxed" style={{ letterSpacing: '-0.005em' }}>
                 Behaviours that provide short term results or comfort, but drag the triple goal down in the long run
               </p>
               <div className="flex flex-col items-center mt-8">
@@ -151,7 +151,7 @@ export default function SolutionSection() {
               <h4 className="text-2xl font-bold text-green-700 mb-4" style={{ letterSpacing: '-0.01em' }}>
                 Cultivate
               </h4>
-              <p className="text-gray-800 mb-6 leading-relaxed" style={{ letterSpacing: '-0.005em' }}>
+              <p className="text-foreground mb-6 leading-relaxed" style={{ letterSpacing: '-0.005em' }}>
                 Values based behaviours that generate trust, accountability, belonging, learning etc. and put "rocket fuel" into the triple goal.
               </p>
               <div className="flex flex-col items-center mt-8">
@@ -164,7 +164,7 @@ export default function SolutionSection() {
           </div>
 
           <div className="border-t-2 border-dotted border-teal-400 mt-8 pt-6">
-            <div className="flex justify-between items-center text-xs text-gray-500">
+            <div className="flex justify-between items-center text-xs text-muted-foreground">
               <span>© Awakened Mind Group</span>
               <span>www.triplegoal.com</span>
               <span className="font-semibold text-teal-600">TripleGoal</span>

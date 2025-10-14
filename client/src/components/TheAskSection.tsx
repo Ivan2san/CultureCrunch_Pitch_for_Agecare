@@ -21,10 +21,10 @@ export default function TheAskSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4" style={{ letterSpacing: '-0.01em' }}>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
             The Ask: <span className="text-purple-600">Be a Founding Partner</span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-700">
+          <p className="text-xl md:text-2xl text-muted-foreground">
             Help us build the future of psychosocial safety and secure your competitive advantage
           </p>
         </div>
@@ -32,7 +32,7 @@ export default function TheAskSection() {
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {/* What We're Seeking */}
-          <Card className="p-8 bg-white">
+          <Card className="p-8 bg-card">
             <div className="flex items-center gap-3 mb-6">
               <FileText className="w-8 h-8 text-purple-600" />
               <h3 className="text-2xl font-bold text-purple-600">What We're Seeking</h3>
@@ -41,10 +41,10 @@ export default function TheAskSection() {
             <div className="space-y-6">
               <div className="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-r-lg">
                 <h4 className="font-bold text-xl text-purple-900 mb-3">Letter of Intent (LOI) for 12-Week Pilot</h4>
-                <p className="text-gray-700 mb-4">
+                <p className="text-muted-foreground mb-4">
                   A non-binding commitment to participate in our validation pilot program
                 </p>
-                <div className="space-y-2 text-gray-700">
+                <div className="space-y-2 text-muted-foreground">
                   <div className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
                     <span>
@@ -66,9 +66,9 @@ export default function TheAskSection() {
                 </div>
               </div>
 
-              <div className="border-2 border-gray-200 p-6 rounded-lg">
-                <h4 className="font-bold text-lg text-gray-800 mb-3">What the LOI Demonstrates:</h4>
-                <ul className="space-y-2 text-gray-700">
+              <div className="border-2 border-border p-6 rounded-lg">
+                <h4 className="font-bold text-lg text-foreground mb-3">What the LOI Demonstrates:</h4>
+                <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="text-purple-600">•</span>
                     <span>Your organisation sees this as a strategic priority</span>
@@ -91,7 +91,7 @@ export default function TheAskSection() {
           </Card>
 
           {/* What You Get */}
-          <Card className="p-8 bg-white">
+          <Card className="p-8 bg-card">
             <div className="flex items-center gap-3 mb-6">
               <TrendingUp className="w-8 h-8 text-blue-600" />
               <h3 className="text-2xl font-bold text-blue-600">What You Get as a Founding Partner</h3>
@@ -103,7 +103,7 @@ export default function TheAskSection() {
                   <Users className="w-5 h-5" />
                   Founding Partner Pricing (Locked In)
                 </h4>
-                <p className="text-gray-700">
+                <p className="text-muted-foreground">
                   $25K pilot price guaranteed; won't be available after launch. Post-pilot subscription at founding
                   partner rates (30% below standard pricing)
                 </p>

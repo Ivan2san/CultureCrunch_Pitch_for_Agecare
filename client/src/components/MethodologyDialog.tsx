@@ -67,7 +67,7 @@ export default function MethodologyDialog({ open, onOpenChange }: MethodologyDia
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <Shield className="w-6 h-6 text-purple-600" />
-              <DialogTitle className="text-2xl font-bold text-gray-900">
+              <DialogTitle className="text-2xl font-bold text-foreground">
                 ROI Methodology & Research Sources
               </DialogTitle>
             </div>
@@ -119,8 +119,8 @@ export default function MethodologyDialog({ open, onOpenChange }: MethodologyDia
 
               {/* Overview */}
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Overview</h2>
-                <p className="text-gray-700">
+                <h2 className="text-2xl font-bold text-foreground mb-4">Overview</h2>
+                <p className="text-muted-foreground">
                   This document traces every key number used in the CultureCrunch ROI Calculator back to its research source, 
                   ensuring investor-grade credibility.
                 </p>
@@ -128,7 +128,7 @@ export default function MethodologyDialog({ open, onOpenChange }: MethodologyDia
 
               {/* 1. Mental Health Claims */}
               <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Mental Health Claim Costs</h2>
+                <h2 className="text-2xl font-bold text-foreground mb-4">1. Mental Health Claim Costs</h2>
                 <div className="bg-purple-50 p-4 rounded-lg mb-4">
                   <p className="font-bold text-purple-900">Used in Calculator: $290,000 AUD per claim</p>
                 </div>

@@ -123,10 +123,10 @@ export default function HowItWorksSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4" style={{ letterSpacing: '-0.01em' }}>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
             How It Works
           </h2>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
             Privacy-first AI that turns workplace signals into actionable leadership insights
           </p>
         </div>
@@ -137,8 +137,8 @@ export default function HowItWorksSection() {
         </div>
 
         {/* System Architecture */}
-        <div className="bg-white rounded-xl p-8 mb-16 border border-gray-200">
-          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">System Architecture</h3>
+        <div className="bg-card rounded-xl p-8 mb-16 border border-border">
+          <h3 className="text-3xl font-bold text-foreground mb-8 text-center">System Architecture</h3>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {layers.map((layer, index) => {
@@ -167,10 +167,10 @@ export default function HowItWorksSection() {
                           : "text-green-600"
                       }`}
                     />
-                    <h4 className="text-xl font-bold text-gray-900">{index + 1}. {layer.title}</h4>
+                    <h4 className="text-xl font-bold text-foreground">{index + 1}. {layer.title}</h4>
                   </div>
 
-                  <p className="text-gray-700 mb-4">{layer.summary}</p>
+                  <p className="text-muted-foreground mb-4">{layer.summary}</p>
 
                   <Button
                     variant="outline"
@@ -185,9 +185,9 @@ export default function HowItWorksSection() {
                   {isExpanded && (
                     <div className="mt-4 space-y-3 animate-fade-in-up">
                       {layer.details.map((detail, i) => (
-                        <div key={i} className="bg-white p-3 rounded-lg">
-                          <p className="font-semibold text-gray-800 text-sm mb-1">{detail.name}</p>
-                          <p className="text-xs text-gray-600">{detail.desc}</p>
+                        <div key={i} className="bg-background p-3 rounded-lg">
+                          <p className="font-semibold text-foreground text-sm mb-1">{detail.name}</p>
+                          <p className="text-xs text-muted-foreground">{detail.desc}</p>
                         </div>
                       ))}
                     </div>
@@ -207,14 +207,14 @@ export default function HowItWorksSection() {
               <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-blue-400"></div>
             </div>
           </div>
-          <p className="text-center text-gray-600 mt-4 font-medium">
+          <p className="text-center text-muted-foreground mt-4 font-medium">
             Closed-loop learning system: Data → Insight → Action → Outcome → Better Data
           </p>
         </div>
 
         {/* Core AI Capabilities */}
-        <div className="bg-white rounded-xl p-8 border border-gray-200">
-          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Core AI Capabilities</h3>
+        <div className="bg-card rounded-xl p-8 border border-border">
+          <h3 className="text-3xl font-bold text-foreground mb-8 text-center">Core AI Capabilities</h3>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {aiComponents.map((component, index) => {
@@ -243,10 +243,10 @@ export default function HowItWorksSection() {
                           : "text-teal-600"
                       }`}
                     />
-                    <h4 className="text-xl font-bold text-gray-900">{component.title}</h4>
+                    <h4 className="text-xl font-bold text-foreground">{component.title}</h4>
                   </div>
 
-                  <p className="text-gray-700 mb-4 text-sm">{component.description}</p>
+                  <p className="text-muted-foreground mb-4 text-sm">{component.description}</p>
 
                   <Button
                     variant="outline"
@@ -262,7 +262,7 @@ export default function HowItWorksSection() {
                     <div className="mt-4 space-y-3 animate-fade-in-up">
                       <div className="space-y-2">
                         {component.features.map((feature, i) => (
-                          <div key={i} className="flex items-start gap-2 bg-white p-2 rounded-lg">
+                          <div key={i} className="flex items-start gap-2 bg-background p-2 rounded-lg">
                             <CheckCircle
                               className={`w-4 h-4 flex-shrink-0 mt-0.5 ${
                                 component.color === "indigo"
@@ -272,13 +272,13 @@ export default function HowItWorksSection() {
                                   : "text-teal-600"
                               }`}
                             />
-                            <span className="text-xs text-gray-700">{feature}</span>
+                            <span className="text-xs text-muted-foreground">{feature}</span>
                           </div>
                         ))}
                       </div>
-                      <div className="bg-white p-3 rounded-lg">
-                        <p className="text-xs font-semibold text-gray-900 mb-1">Technical Stack:</p>
-                        <p className="text-xs text-gray-600">{component.tech}</p>
+                      <div className="bg-background p-3 rounded-lg">
+                        <p className="text-xs font-semibold text-foreground mb-1">Technical Stack:</p>
+                        <p className="text-xs text-muted-foreground">{component.tech}</p>
                       </div>
                     </div>
                   )}
@@ -293,9 +293,9 @@ export default function HowItWorksSection() {
           <div className="text-center mb-6">
             <div className="flex items-center justify-center gap-3 mb-4">
               <MessageSquare className="w-10 h-10 text-indigo-600" />
-              <h3 className="text-3xl font-bold text-gray-900">Interactive ThriveGuide AI-Copilot Leader Issue Resolution</h3>
+              <h3 className="text-3xl font-bold text-foreground">Interactive ThriveGuide AI-Copilot Leader Issue Resolution</h3>
             </div>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-4">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
               Experience how ThriveGuide AI guides leaders through psych safety identification, risk assessment and mitigation.
             </p>
             

@@ -22,10 +22,10 @@ export default function LOIPreview({ open, onOpenChange }: LOIPreviewProps) {
             <div className="flex items-center gap-3">
               <FileText className="w-6 h-6 text-purple-600" />
               <div>
-                <DialogTitle className="text-2xl font-bold text-gray-900">
+                <DialogTitle className="text-2xl font-bold text-foreground">
                   Letter of Intent - Pilot Program
                 </DialogTitle>
-                <DialogDescription className="text-gray-600 mt-1">
+                <DialogDescription className="text-muted-foreground mt-1">
                   Founding Partner Program Template
                 </DialogDescription>
               </div>
@@ -50,46 +50,46 @@ export default function LOIPreview({ open, onOpenChange }: LOIPreviewProps) {
             </div>
 
             <div className="mb-6">
-              <p className="text-gray-600 mb-4"><strong>Date:</strong> [Insert Date]</p>
+              <p className="text-muted-foreground mb-4"><strong>Date:</strong> [Insert Date]</p>
               
-              <p className="font-bold text-gray-900 mb-2">Between:</p>
+              <p className="font-bold text-foreground mb-2">Between:</p>
               
               <div className="bg-indigo-50 p-4 rounded-lg mb-4">
                 <p className="font-bold text-indigo-900">Culture Crunch Pty Ltd</p>
-                <p className="text-sm text-gray-700">ABN: [Pending Registration]</p>
-                <p className="text-sm text-gray-700">Address: Melbourne, Victoria, Australia</p>
-                <p className="text-sm text-gray-700">Contact: Campbell McGlynn, Founder & CEO</p>
-                <p className="text-sm text-gray-700">Email: campbell@culturecrunch.io</p>
+                <p className="text-sm text-muted-foreground">ABN: [Pending Registration]</p>
+                <p className="text-sm text-muted-foreground">Address: Melbourne, Victoria, Australia</p>
+                <p className="text-sm text-muted-foreground">Contact: Campbell McGlynn, Founder & CEO</p>
+                <p className="text-sm text-muted-foreground">Email: campbell@culturecrunch.io</p>
               </div>
               
-              <p className="font-bold text-gray-900 mb-2">AND</p>
+              <p className="font-bold text-foreground mb-2">AND</p>
               
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <p className="font-bold text-gray-900">[Client Organisation Name]</p>
-                <p className="text-sm text-gray-700">ABN: [Client ABN]</p>
-                <p className="text-sm text-gray-700">Address: [Client Address]</p>
-                <p className="text-sm text-gray-700">Contact: [Contact Name], [Title]</p>
-                <p className="text-sm text-gray-700">Email: [Contact Email]</p>
+              <div className="bg-muted p-4 rounded-lg">
+                <p className="font-bold text-foreground">[Client Organisation Name]</p>
+                <p className="text-sm text-muted-foreground">ABN: [Client ABN]</p>
+                <p className="text-sm text-muted-foreground">Address: [Client Address]</p>
+                <p className="text-sm text-muted-foreground">Contact: [Contact Name], [Title]</p>
+                <p className="text-sm text-muted-foreground">Email: [Contact Email]</p>
               </div>
             </div>
 
             <hr className="my-6 border-gray-300" />
 
             {/* Section 1 */}
-            <h2 className="text-xl font-bold text-gray-900 mt-6 mb-3">1. PURPOSE</h2>
-            <p className="text-gray-700 mb-4">
+            <h2 className="text-xl font-bold text-foreground mt-6 mb-3">1. PURPOSE</h2>
+            <p className="text-muted-foreground mb-4">
               This Letter of Intent ("LOI") expresses [Client Organisation]'s intent to participate as a Founding Partner 
               in Culture Crunch's ThriveGuide AI pilot program, subject to mutually agreed terms in a subsequent formal agreement.
             </p>
 
             {/* Section 2 */}
-            <h2 className="text-xl font-bold text-gray-900 mt-6 mb-3">2. PILOT PROGRAM OVERVIEW</h2>
+            <h2 className="text-xl font-bold text-foreground mt-6 mb-3">2. PILOT PROGRAM OVERVIEW</h2>
             <div className="bg-purple-50 p-4 rounded-lg mb-4">
-              <p className="text-gray-800 mb-2"><strong>Program Name:</strong> ThriveGuide AI - Founding Partner Pilot</p>
-              <p className="text-gray-800 mb-2"><strong>Duration:</strong> 12 weeks</p>
-              <p className="text-gray-800 mb-2"><strong>Anticipated Start Date:</strong> Q2 2026</p>
-              <p className="text-gray-800 mb-2"><strong>Pilot Scope:</strong></p>
-              <ul className="list-disc list-inside ml-4 text-gray-700">
+              <p className="text-muted-foreground mb-2"><strong>Program Name:</strong> ThriveGuide AI - Founding Partner Pilot</p>
+              <p className="text-muted-foreground mb-2"><strong>Duration:</strong> 12 weeks</p>
+              <p className="text-muted-foreground mb-2"><strong>Anticipated Start Date:</strong> Q2 2026</p>
+              <p className="text-muted-foreground mb-2"><strong>Pilot Scope:</strong></p>
+              <ul className="list-disc list-inside ml-4 text-muted-foreground">
                 <li>10-15 leaders participating</li>
                 <li>Approximately 100-150 employees covered</li>
                 <li>[Specify department/division if known]</li>

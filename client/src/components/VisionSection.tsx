@@ -17,14 +17,14 @@ export default function VisionSection() {
             </span>
           </div>
           
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight" style={{ letterSpacing: '-0.01em' }}>
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground leading-tight" style={{ letterSpacing: '-0.01em' }}>
             AI That Transforms<br />
             <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
               Compliance into Care
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             We're entering an era of abundance, where AI doesn't replace human connection, 
             but amplifies it. CultureCrunch empowers leaders with insight, 
             turning workplace data into moments of genuine support.
@@ -33,34 +33,34 @@ export default function VisionSection() {
 
         {/* AI Evolution Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1" data-testid="card-ai-evolution-1">
+          <div className="bg-card rounded-xl p-6 shadow-lg border border-border hover:shadow-xl transition-all hover:-translate-y-1" data-testid="card-ai-evolution-1">
             <div className="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center mb-4">
               <Brain className="w-6 h-6 text-purple-600" />
             </div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2">Agentic AI</h3>
-            <p className="text-gray-600">
+            <h3 className="text-lg font-bold text-foreground mb-2">Agentic AI</h3>
+            <p className="text-muted-foreground">
               Autonomous intelligence that detects psychosocial risks before they escalate, 
               interpreting behavioural patterns with privacy-first principles.
             </p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1" data-testid="card-ai-evolution-2">
+          <div className="bg-card rounded-xl p-6 shadow-lg border border-border hover:shadow-xl transition-all hover:-translate-y-1" data-testid="card-ai-evolution-2">
             <div className="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mb-4">
               <Zap className="w-6 h-6 text-indigo-600" />
             </div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2">Real-Time Nudges</h3>
-            <p className="text-gray-600">
+            <h3 className="text-lg font-bold text-foreground mb-2">Real-Time Nudges</h3>
+            <p className="text-muted-foreground">
               Contextual guidance delivered to leaders at the perfect moment, 
               transforming cold data into warm, actionable conversations.
             </p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1" data-testid="card-ai-evolution-3">
+          <div className="bg-card rounded-xl p-6 shadow-lg border border-border hover:shadow-xl transition-all hover:-translate-y-1" data-testid="card-ai-evolution-3">
             <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
               <Users className="w-6 h-6 text-blue-600" />
             </div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2">Human-Centered</h3>
-            <p className="text-gray-600">
+            <h3 className="text-lg font-bold text-foreground mb-2">Human-Centered</h3>
+            <p className="text-muted-foreground">
               Technology that enhances managerial capacity, not replaces it,
               building thriving teams through evidence-based micro-actions.
             </p>
@@ -68,8 +68,8 @@ export default function VisionSection() {
         </div>
 
         {/* Vision Statement */}
-        <div ref={visionParallax.ref} style={visionParallax.style} className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto border border-gray-200">
-          <p className="text-lg text-gray-800 leading-relaxed">
+        <div ref={visionParallax.ref} style={visionParallax.style} className="bg-card/60 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto border border-border">
+          <p className="text-lg text-foreground leading-relaxed">
             <span className="font-bold text-purple-600">Our Vision:</span> A world where every leader 
             has an AI co-pilot that helps them see what surveys can't show, understand what their team 
             truly needs, and act with confidence every single week. Where compliance isn't a burden, 
