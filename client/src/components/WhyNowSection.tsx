@@ -198,6 +198,31 @@ export default function WhyNowSection() {
           compliance requirements with practical, AI-driven action.
         </p>
       </div>
+
+      {/* Performance Gap */}
+      <div className="mx-auto mt-16 max-w-7xl">
+        <div className="bg-card rounded-xl p-8">
+          <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
+            The Opportunity: Performance Gap Between Engaged & Disengaged Teams
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { value: "21%", label: "Higher Profitability" },
+              { value: "23%", label: "Higher Productivity" },
+              { value: "59%", label: "Lower Turnover" },
+              { value: "70%", label: "Fewer Safety Incidents" },
+            ].map((item, index) => (
+              <div key={index} className="text-center p-4 bg-green-50 dark:bg-green-950 rounded-lg border-2 border-green-200 dark:border-green-800">
+                <div className="text-3xl font-bold text-green-700 dark:text-green-400 mb-1" style={{ letterSpacing: '-0.01em' }}>{item.value}</div>
+                <div className="text-sm font-semibold text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>{item.label}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-sm text-muted-foreground mt-4">
+            Source: Gallup Q12 Meta-Analysis (955,905 employees, 152 organisations)
+          </p>
+        </div>
+      </div>
     </section>
   );
 }
