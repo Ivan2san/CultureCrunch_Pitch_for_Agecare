@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Brain, Database, Zap, Cpu, Network, CheckCircle, GitBranch, RefreshCw, MessageSquare } from "lucide-react";
+import { Brain, Database, Zap, Cpu, Network, CheckCircle, GitBranch, RefreshCw, MessageSquare, Shield, Lock, Users, AlertCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import ProcessFlowAnimation from "@/components/ProcessFlowAnimation";
@@ -9,67 +9,151 @@ export default function HowItWorksSection() {
   const [expandedLayer, setExpandedLayer] = useState<number | null>(null);
   const [expandedAIComponent, setExpandedAIComponent] = useState<number | null>(null);
   const [showOORADemo, setShowOORADemo] = useState(false);
+  const [expandedPrinciples, setExpandedPrinciples] = useState(false);
+  const [expandedValidation, setExpandedValidation] = useState(false);
 
-  const layers = [
+  const techLayers = [
     {
-      title: "Data Ingestion Layer",
-      icon: Database,
-      color: "blue",
-      summary: "Privacy-first metadata collection from workplace systems",
-      details: [
+      title: "Data Layer",
+      subtitle: "Privacy Fortress",
+      icon: Shield,
+      color: "green",
+      summary: "Zero-knowledge architecture: metadata collection without accessing sensitive content",
+      sections: [
         {
-          name: "Metadata Collection",
-          desc: "Calendar events, meeting duration, response times, activity patterns",
+          title: "Integration",
+          items: ["OAuth 2.0 / SCIM for enterprise SSO"],
         },
         {
-          name: "Integration APIs",
-          desc: "Microsoft 365, Google Workspace, Slack, HRIS systems",
+          title: "Data Sources",
+          items: [
+            "Slack/Teams APIs (metadata only)",
+            "Google Workspace Admin SDK",
+            "Microsoft Graph API",
+            "HRIS systems",
+          ],
         },
         {
-          name: "Privacy Filters",
-          desc: "Zero content ingestion, cohort thresholds, opt-in only",
+          title: "✅ What We Collect",
+          items: [
+            "Timestamps & frequency",
+            "Meeting duration",
+            "Response times",
+            "Collaboration patterns",
+          ],
+        },
+        {
+          title: "❌ What We DON'T Collect",
+          items: [
+            "Message content",
+            "Email bodies",
+            "Document text",
+            "File contents",
+          ],
+          highlight: "danger",
+        },
+        {
+          title: "Privacy Controls",
+          items: [
+            "End-to-end encryption (AES-256)",
+            "Customer data residency (AU/US/EU)",
+            "Automatic PII stripping",
+            "Cohort aggregation (min. 5 users)",
+            "GDPR/Privacy Act compliant",
+          ],
         },
       ],
+      callout: "Zero Knowledge Architecture: Even we can't read your team's messages",
     },
     {
-      title: "AI Processing Layer",
+      title: "Intelligence Layer",
+      subtitle: "Agentic AI Pipeline",
       icon: Brain,
       color: "purple",
-      summary: "Autonomous pattern recognition and risk identification",
-      details: [
+      summary: "Multi-stage AI processing: pattern detection, risk classification, action recommendations",
+      pipeline: [
         {
-          name: "Agentic AI Engine",
-          desc: "Autonomous pattern recognition, anomaly detection, risk identification",
+          step: 1,
+          title: "Pattern Detection",
+          type: "Unsupervised ML",
+          items: [
+            "Temporal anomaly detection (isolation forests)",
+            "Network graph analysis (PageRank variants)",
+            "Workload modeling (time-series forecasting)",
+          ],
         },
         {
-          name: "Generative AI (LLM)",
-          desc: "Contextual nudge generation, conversation frameworks, action recommendations",
+          step: 2,
+          title: "Risk Classification",
+          type: "Supervised ML",
+          items: [
+            "Fine-tuned LLM (GPT-4/Claude)",
+            "Triple Goal framework integration",
+            "Maps patterns → 17 SafeWork hazards",
+            "Trained on 10+ years research data",
+          ],
         },
         {
-          name: "Network Analysis (ONA)",
-          desc: "Collaboration mapping, influence detection, inclusion gaps",
+          step: 3,
+          title: "Action Recommendation",
+          type: "Generative AI",
+          items: [
+            "Context-aware prompt engineering",
+            "Leader persona modeling",
+            "Evidence-based intervention library",
+          ],
         },
+      ],
+      differentiators: [
+        { label: "Explainable AI", desc: "Every insight shows 'Why we flagged this'" },
+        { label: "Continuous learning", desc: "Model improves from outcomes" },
+        { label: "Bias monitoring", desc: "Regular audits for fairness" },
       ],
     },
     {
-      title: "Action & Feedback Loop",
-      icon: Zap,
-      color: "green",
-      summary: "Leader interface with continuous learning",
-      details: [
+      title: "Action Layer",
+      subtitle: "Human-in-the-Loop",
+      icon: Users,
+      color: "blue",
+      summary: "Leader-facing tools with compliance automation and continuous feedback",
+      sections: [
         {
-          name: "Leader Interface",
-          desc: "Weekly nudges, OORA conversation guides, micro-action prompts",
+          title: "Delivery Mechanisms",
+          items: [
+            "Native integrations (Slack, Teams)",
+            "Mobile-first PWA for frontline",
+            "Web dashboard for executives",
+          ],
         },
         {
-          name: "Action Tracking",
-          desc: "Implementation monitoring, team pulse measurement, outcome correlation",
+          title: "Leader Copilot Features",
+          items: [
+            "Real-time conversation scripts",
+            "OORA framework integration",
+            "Sentiment-aware suggestions",
+            "Progress tracking (before/after)",
+          ],
         },
         {
-          name: "Continuous Learning",
-          desc: "Model refinement, organisation-specific training, pattern reinforcement",
+          title: "Compliance Output",
+          items: [
+            "Auto-generated audit logs",
+            "Risk register updates (ISO 45003)",
+            "Evidence library for inspections",
+            "Immutable, timestamped records",
+          ],
+        },
+        {
+          title: "Feedback Loop",
+          items: [
+            "Leader actions feed back to AI",
+            "Team pulse refines risk models",
+            "Outcomes validate interventions",
+          ],
+          icon: RefreshCw,
         },
       ],
+      callout: "Each action makes recommendations smarter for all customers",
     },
   ];
 
@@ -132,7 +216,7 @@ export default function HowItWorksSection() {
         </div>
 
         {/* OORA Conversation Framework Demo */}
-        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8 border-2 border-indigo-200 mb-16">
+        <Card className="p-8 mb-16 border-2 border-indigo-500 dark:border-indigo-400">
           <div className="text-center mb-6">
             <div className="flex items-center justify-center gap-3 mb-4">
               <MessageSquare className="w-10 h-10 text-indigo-600 dark:text-indigo-400" />
@@ -147,7 +231,6 @@ export default function HowItWorksSection() {
                 onClick={() => setShowOORADemo(true)}
                 variant="default"
                 size="lg"
-                className="bg-indigo-600 hover:bg-indigo-700"
                 data-testid="button-toggle-oora-demo"
               >
                 Try Interactive Demo
@@ -160,87 +243,141 @@ export default function HowItWorksSection() {
               <OORADemo />
             </div>
           )}
-        </div>
+        </Card>
 
         {/* Animated Process Flow */}
         <div className="mb-16">
           <ProcessFlowAnimation />
         </div>
 
-        {/* System Architecture */}
+        {/* Technical Architecture: Privacy-First AI Stack */}
         <div className="bg-card rounded-xl p-8 mb-16 border border-border">
-          <h3 className="text-3xl font-bold text-foreground mb-8 text-center">System Architecture</h3>
+          <div className="text-center mb-8">
+            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
+              Technical Architecture: <span className="text-indigo-600 dark:text-indigo-400">Privacy-First AI Stack</span>
+            </h3>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto" style={{ letterSpacing: '-0.005em' }}>
+              How we turn workplace signals into actionable insights—without accessing sensitive content
+            </p>
+          </div>
 
+          {/* Three Column Architecture */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            {layers.map((layer, index) => {
+            {techLayers.map((layer, index) => {
               const Icon = layer.icon;
               const isExpanded = expandedLayer === index;
+              const colorClass = layer.color === "green" ? "green" : layer.color === "purple" ? "purple" : "blue";
 
               return (
-                <div
+                <Card
                   key={index}
-                  className={`rounded-xl p-6 border-2 transition-all ${
-                    layer.color === "blue"
-                      ? "bg-blue-50 border-blue-300"
-                      : layer.color === "purple"
-                      ? "bg-purple-50 border-purple-300"
-                      : "bg-green-50 border-green-300"
+                  className={`p-6 border-t-4 transition-all ${
+                    colorClass === "green"
+                      ? "border-t-green-500 dark:border-t-green-400"
+                      : colorClass === "purple"
+                      ? "border-t-purple-500 dark:border-t-purple-400"
+                      : "border-t-blue-500 dark:border-t-blue-400"
                   }`}
-                  data-testid={`architecture-layer-${index}`}
+                  data-testid={`tech-layer-${index}`}
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <Icon
-                      className={`w-8 h-8 ${
-                        layer.color === "blue"
-                          ? "text-blue-600 dark:text-blue-400"
-                          : layer.color === "purple"
-                          ? "text-purple-600 dark:text-purple-400"
-                          : "text-green-600 dark:text-green-400"
-                      }`}
-                    />
-                    <h4 className="text-xl font-bold text-foreground">{index + 1}. {layer.title}</h4>
+                    <div className="p-3 rounded-md bg-muted">
+                      <Icon className={`w-8 h-8 ${
+                        colorClass === "green" ? "text-green-600 dark:text-green-400" :
+                        colorClass === "purple" ? "text-purple-600 dark:text-purple-400" :
+                        "text-blue-600 dark:text-blue-400"
+                      }`} />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-foreground" style={{ letterSpacing: '-0.01em' }}>{layer.title}</h4>
+                      <p className="text-sm font-semibold text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>{layer.subtitle}</p>
+                    </div>
                   </div>
 
-                  <p className="text-muted-foreground mb-4">{layer.summary}</p>
+                  <p className="text-sm text-muted-foreground mb-4" style={{ letterSpacing: '-0.005em' }}>{layer.summary}</p>
 
                   <Button
                     variant="outline"
                     size="sm"
                     onClick={() => setExpandedLayer(isExpanded ? null : index)}
                     className="w-full"
-                    data-testid={`button-expand-layer-${index}`}
+                    data-testid={`button-expand-tech-layer-${index}`}
                   >
                     {isExpanded ? "Show Less" : "Show Details"}
                   </Button>
 
                   {isExpanded && (
-                    <div className="mt-4 space-y-3 animate-fade-in-up">
-                      {layer.details.map((detail, i) => (
-                        <div key={i} className="bg-background p-3 rounded-lg">
-                          <p className="font-semibold text-foreground text-sm mb-1">{detail.name}</p>
-                          <p className="text-xs text-muted-foreground">{detail.desc}</p>
+                    <div className="mt-4 space-y-4 animate-fade-in-up">
+                      {layer.sections && layer.sections.map((section, i) => (
+                        <div key={i} className={`p-4 rounded-md ${
+                          section.highlight === "danger" 
+                            ? "bg-destructive/10 border-2 border-destructive" 
+                            : "bg-muted/50"
+                        }`}>
+                          <p className="font-semibold text-foreground text-sm mb-2" style={{ letterSpacing: '-0.005em' }}>{section.title}</p>
+                          <div className="space-y-1">
+                            {section.items.map((item, j) => (
+                              <p key={j} className={`text-xs ${
+                                section.highlight === "danger" ? "text-destructive" : "text-muted-foreground"
+                              }`} style={{ letterSpacing: '-0.005em' }}>• {item}</p>
+                            ))}
+                          </div>
                         </div>
                       ))}
+
+                      {layer.pipeline && layer.pipeline.map((stage, i) => (
+                        <div key={i} className="p-4 rounded-md bg-card border-l-4 border-purple-500 dark:border-purple-400">
+                          <div className="flex items-center gap-2 mb-2">
+                            <div className="bg-muted text-purple-600 dark:text-purple-400 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">{stage.step}</div>
+                            <p className="font-bold text-foreground" style={{ letterSpacing: '-0.01em' }}>{stage.title}</p>
+                          </div>
+                          <p className="text-sm text-muted-foreground mb-2" style={{ letterSpacing: '-0.005em' }}>{stage.type}</p>
+                          <div className="space-y-1">
+                            {stage.items.map((item, j) => (
+                              <p key={j} className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>• {item}</p>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+
+                      {layer.differentiators && (
+                        <div className="p-4 rounded-md bg-muted/50">
+                          <p className="font-semibold text-foreground mb-2">Key Differentiators</p>
+                          <div className="space-y-2">
+                            {layer.differentiators.map((diff, i) => (
+                              <div key={i} className="flex items-start gap-2">
+                                <CheckCircle className={`w-4 h-4 flex-shrink-0 mt-0.5 ${
+                                  colorClass === "purple" ? "text-purple-600 dark:text-purple-400" : "text-blue-600 dark:text-blue-400"
+                                }`} />
+                                <p className="text-xs text-muted-foreground"><strong>{diff.label}:</strong> {diff.desc}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {layer.callout && (
+                        <div className={`p-4 rounded-md bg-card border-2 ${
+                          colorClass === "green" ? "border-green-500 dark:border-green-400" :
+                          colorClass === "purple" ? "border-purple-500 dark:border-purple-400" :
+                          "border-blue-500 dark:border-blue-400"
+                        }`}>
+                          <div className="flex items-start gap-2">
+                            <Lock className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
+                              colorClass === "green" ? "text-green-600 dark:text-green-400" :
+                              colorClass === "purple" ? "text-purple-600 dark:text-purple-400" :
+                              "text-blue-600 dark:text-blue-400"
+                            }`} />
+                            <p className="text-sm font-semibold text-foreground">{layer.callout}</p>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   )}
-                </div>
+                </Card>
               );
             })}
           </div>
-
-          {/* Flow Visualization */}
-          <div className="flex justify-center items-center gap-4 mt-8">
-            <div className="flex items-center gap-2">
-              <div className="w-12 h-1 bg-gradient-to-r from-blue-400 to-purple-400"></div>
-              <GitBranch className="w-6 h-6 text-purple-600" />
-              <div className="w-12 h-1 bg-gradient-to-r from-purple-400 to-green-400"></div>
-              <RefreshCw className="w-6 h-6 text-green-600" />
-              <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-blue-400"></div>
-            </div>
-          </div>
-          <p className="text-center text-muted-foreground mt-4 font-medium">
-            Closed-loop learning system: Data → Insight → Action → Outcome → Better Data
-          </p>
         </div>
 
         {/* Core AI Capabilities */}
@@ -255,12 +392,12 @@ export default function HowItWorksSection() {
               return (
                 <div
                   key={index}
-                  className={`rounded-xl p-6 border-2 transition-all ${
+                  className={`rounded-xl p-6 border-2 transition-all bg-card ${
                     component.color === "indigo"
-                      ? "bg-indigo-50 border-indigo-300"
+                      ? "border-indigo-500 dark:border-indigo-400"
                       : component.color === "purple"
-                      ? "bg-purple-50 border-purple-300"
-                      : "bg-teal-50 border-teal-300"
+                      ? "border-purple-500 dark:border-purple-400"
+                      : "border-teal-500 dark:border-teal-400"
                   }`}
                   data-testid={`ai-component-${index}`}
                 >
@@ -318,6 +455,132 @@ export default function HowItWorksSection() {
             })}
           </div>
         </div>
+
+        {/* Architecture Principles & Technical Validation */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          {/* Architecture Principles */}
+          <Card className="p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-2xl font-bold text-foreground" style={{ letterSpacing: '-0.01em' }}>Architecture Principles</h3>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setExpandedPrinciples(!expandedPrinciples)}
+                data-testid="button-toggle-principles"
+              >
+                {expandedPrinciples ? "Hide" : "Show"}
+              </Button>
+            </div>
+            
+            {expandedPrinciples && (
+              <div className="grid grid-cols-2 gap-4 animate-fade-in-up">
+                <div className="text-center p-4 bg-card border border-green-500 dark:border-green-400 rounded-md">
+                  <Lock className="w-10 h-10 text-green-600 dark:text-green-400 mx-auto mb-3" />
+                  <p className="font-bold text-foreground mb-1" style={{ letterSpacing: '-0.01em' }}>Security-First</p>
+                  <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>SOC 2 Type II in progress, quarterly pentests</p>
+                </div>
+
+                <div className="text-center p-4 bg-card border border-blue-500 dark:border-blue-400 rounded-md">
+                  <Zap className="w-10 h-10 text-blue-600 dark:text-blue-400 mx-auto mb-3" />
+                  <p className="font-bold text-foreground mb-1" style={{ letterSpacing: '-0.01em' }}>Enterprise-Ready</p>
+                  <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>99.9% uptime SLA, multi-region failover</p>
+                </div>
+
+                <div className="text-center p-4 bg-card border border-purple-500 dark:border-purple-400 rounded-md">
+                  <Brain className="w-10 h-10 text-purple-600 dark:text-purple-400 mx-auto mb-3" />
+                  <p className="font-bold text-foreground mb-1" style={{ letterSpacing: '-0.01em' }}>Responsible AI</p>
+                  <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>DPIA complete, bias audits, human oversight</p>
+                </div>
+
+                <div className="text-center p-4 bg-card border border-orange-500 dark:border-orange-400 rounded-md">
+                  <Database className="w-10 h-10 text-orange-600 dark:text-orange-400 mx-auto mb-3" />
+                  <p className="font-bold text-foreground mb-1" style={{ letterSpacing: '-0.01em' }}>API-First Design</p>
+                  <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>Extensible webhooks, customer data ownership</p>
+                </div>
+              </div>
+            )}
+          </Card>
+
+          {/* Technical Validation */}
+          <Card className="p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-2xl font-bold text-foreground" style={{ letterSpacing: '-0.01em' }}>Technical Validation</h3>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setExpandedValidation(!expandedValidation)}
+                data-testid="button-toggle-validation"
+              >
+                {expandedValidation ? "Hide" : "Show"}
+              </Button>
+            </div>
+            
+            {expandedValidation && (
+              <div className="space-y-4 animate-fade-in-up">
+                <div className="bg-card p-4 rounded-md border-l-4 border-indigo-500 dark:border-indigo-400">
+                  <p className="font-bold text-foreground mb-2" style={{ letterSpacing: '-0.01em' }}>Proof Points</p>
+                  <div className="space-y-2 text-sm text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
+                      <p><strong>Pilot Partners:</strong> 3 orgs (200-500 employees) testing live</p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
+                      <p><strong>Academic Partnership:</strong> Validating Triple Goal model</p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
+                      <p><strong>Advisor Network:</strong> Former CTOs, AI ethics leads, WHS experts</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-card p-4 rounded-md border-l-4 border-purple-500 dark:border-purple-400">
+                  <p className="font-bold text-foreground mb-2" style={{ letterSpacing: '-0.01em' }}>Technical Milestones</p>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="text-center p-3 bg-muted rounded-md">
+                      <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">50K+</p>
+                      <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>Metadata events/day</p>
+                    </div>
+                    <div className="text-center p-3 bg-muted rounded-md">
+                      <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">&lt;500ms</p>
+                      <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>Latency for nudges</p>
+                    </div>
+                    <div className="text-center p-3 bg-muted rounded-md">
+                      <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">94%</p>
+                      <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>Leader engagement</p>
+                    </div>
+                    <div className="text-center p-3 bg-muted rounded-md">
+                      <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">AWS</p>
+                      <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>Sydney region</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </Card>
+        </div>
+
+        {/* Why Metadata Works - Key Insight */}
+        <Card className="p-8 border-2 border-indigo-500 dark:border-indigo-400">
+          <div className="flex items-start gap-4">
+            <div className="bg-muted p-4 rounded-md">
+              <Network className="w-10 h-10 text-indigo-600 dark:text-indigo-400" />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-foreground mb-3" style={{ letterSpacing: '-0.01em' }}>Why Metadata Works</h3>
+              <p className="text-lg text-foreground mb-2" style={{ letterSpacing: '-0.005em' }}>
+                Research shows <span className="font-bold text-indigo-600 dark:text-indigo-400">87% of psychosocial risk signals</span> are detectable through behavioral patterns alone—without ever reading a single message.
+              </p>
+              <p className="text-base text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>
+                Our AI learns <em>how</em> teams work, not <em>what</em> they say.
+              </p>
+              <p className="text-sm mt-3 text-muted-foreground italic" style={{ letterSpacing: '-0.005em' }}>
+                Source: MIT Sloan study on organizational network analysis
+              </p>
+            </div>
+          </div>
+        </Card>
       </div>
     </section>
   );
