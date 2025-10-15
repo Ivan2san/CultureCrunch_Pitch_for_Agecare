@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Shield, Zap, Target, Lock, ChevronRight } from "lucide-react";
+import { Shield, Zap, Target, Lock, ChevronRight, Activity } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -8,6 +8,39 @@ export default function PositioningSection() {
   const [selectedAdvantage, setSelectedAdvantage] = useState<number | null>(null);
 
   const advantages = [
+    {
+      icon: Activity,
+      title: "Aged Care-Specific Intelligence",
+      description:
+        "Purpose-built to detect hazards generic tools miss. The research is clear: there are virtually no aged care-specific psychosocial platforms.",
+      differentiators: [
+        "17 WHS psychosocial hazards + aged care-specific stressors",
+        "Pulse questions calibrated to resident deaths, violence, moral distress",
+        "AI trained on aged care burnout patterns, not generic workplace stress",
+      ],
+      details: {
+        overview: "Market research confirms: 'There are virtually no psychosocial safety software solutions tailored specifically for aged care.' Generic tools like FlourishDx (workplace mental health) and Rely (incident reporting) don't capture aged care's unique hazards. CultureCrunch is purpose-built from the ground up for aged care reality.",
+        keyFeatures: [
+          {
+            title: "Sector-Specific Hazard Detection",
+            description: "Monitors all 17 mandatory WHS psychosocial hazards PLUS aged care-specific stressors: exposure to resident deaths/decline, physical violence from dementia residents, moral distress from understaffing, emotional labor demands, and shift-work fatigue."
+          },
+          {
+            title: "Calibrated Pulse Questions",
+            description: "Questions specifically worded for aged care context: 'How manageable was your workload given resident acuity this week?' vs generic 'Rate your job demands 1-10'. Detects sector-specific risks that one-size-fits-all surveys miss."
+          },
+          {
+            title: "Aged Care Burnout Patterns",
+            description: "AI trained on aged care workforce research, not generic employee engagement. Recognizes the unique burnout trajectory: emotional exhaustion from resident deaths → moral distress → departure."
+          },
+          {
+            title: "Proactive vs Reactive",
+            description: "Traditional surveys provide 'retrospective insights too late to prevent staff departure.' Our weekly pulse breaks the vicious cycle BEFORE high turnover creates more understaffing and stress."
+          }
+        ],
+        impact: "Research shows aged care providers have 'minimal adoption' of existing psychosocial tools, indicating a massive unmet need. Purpose-built platforms can detect emerging risks 4-6 weeks earlier than generic engagement surveys."
+      }
+    },
     {
       icon: Shield,
       title: "Compliance-First Design",
