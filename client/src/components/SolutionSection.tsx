@@ -1,4 +1,5 @@
 import { CheckCircle } from "lucide-react";
+import { Card } from "@/components/ui/card";
 
 export default function SolutionSection() {
   const outcomes = [
@@ -26,14 +27,16 @@ export default function SolutionSection() {
             A 6-Week Sprint That:
           </p>
           
-          <div className="space-y-6 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {outcomes.map((outcome, index) => (
-              <div key={index} className="flex items-start gap-4 text-left">
-                <CheckCircle className="w-7 h-7 text-green-600 dark:text-green-400 flex-shrink-0 mt-1" />
-                <p className="text-xl md:text-2xl text-foreground" style={{ letterSpacing: '-0.005em' }}>
-                  {outcome}
-                </p>
-              </div>
+              <Card key={index} className="p-6 hover-elevate" data-testid={`card-outcome-${index}`}>
+                <div className="flex flex-col items-center text-center gap-4">
+                  <CheckCircle className="w-12 h-12 text-green-600 dark:text-green-400 flex-shrink-0" />
+                  <p className="text-lg md:text-xl font-medium text-foreground" style={{ letterSpacing: '-0.005em' }}>
+                    {outcome}
+                  </p>
+                </div>
+              </Card>
             ))}
           </div>
         </div>
