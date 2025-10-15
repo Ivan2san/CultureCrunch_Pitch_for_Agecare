@@ -6,7 +6,10 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import MethodologyDialog from "@/components/MethodologyDialog";
 
+type ProviderType = "residential" | "home_care";
+
 export default function ROICalculator() {
+  const [providerType, setProviderType] = useState<ProviderType>("residential");
   const [employeeCount, setEmployeeCount] = useState(65);
   const [managerCount, setManagerCount] = useState(8);
   const [currentMentalHealthClaims, setCurrentMentalHealthClaims] = useState(2);
@@ -16,8 +19,26 @@ export default function ROICalculator() {
   const [showMethodology, setShowMethodology] = useState(false);
   const [showFullMethodology, setShowFullMethodology] = useState(false);
 
+  const handleProviderTypeChange = (type: ProviderType) => {
+    setProviderType(type);
+    if (type === "residential") {
+      setEmployeeCount(65);
+      setManagerCount(8);
+      setCurrentMentalHealthClaims(2);
+      setAvgTurnoverRate(30);
+      setAvgSalary(70000);
+    } else {
+      // Home care defaults: smaller teams, higher turnover, different patterns
+      setEmployeeCount(15);
+      setManagerCount(3);
+      setCurrentMentalHealthClaims(1);
+      setAvgTurnoverRate(35);
+      setAvgSalary(65000);
+    }
+  };
+
   // Constants - Aged Care Sector Specific
-  const MENTAL_HEALTH_CLAIM_COST = 45900;
+  const MENTAL_HEALTH_CLAIM_COST = 58600;
   const TURNOVER_COST_MULTIPLIER = 0.7;
   const PRODUCTIVITY_LOSS_DISENGAGED = 0.18;
   const ABSENTEEISM_COST_PER_EMPLOYEE = 3500;
@@ -82,6 +103,30 @@ export default function ROICalculator() {
                 <Users className="w-6 h-6 text-purple-600 dark:text-purple-400" />
                 Your Aged Care Service
               </h3>
+
+              <div className="mb-6">
+                <Label className="mb-3 block">Provider Type</Label>
+                <div className="flex gap-2">
+                  <Button
+                    type="button"
+                    variant={providerType === "residential" ? "default" : "outline"}
+                    onClick={() => handleProviderTypeChange("residential")}
+                    className="flex-1"
+                    data-testid="button-provider-residential"
+                  >
+                    Residential
+                  </Button>
+                  <Button
+                    type="button"
+                    variant={providerType === "home_care" ? "default" : "outline"}
+                    onClick={() => handleProviderTypeChange("home_care")}
+                    className="flex-1"
+                    data-testid="button-provider-homecare"
+                  >
+                    Home Care
+                  </Button>
+                </div>
+              </div>
 
               <div className="space-y-6">
                 <div>
@@ -179,7 +224,7 @@ export default function ROICalculator() {
                 <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-mental-health">
                   <p className="text-sm text-muted-foreground mb-1">Mental Health Claims</p>
                   <p className="text-2xl font-bold text-red-700">{formatCurrency(annualMentalHealthClaimsCost)}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{currentMentalHealthClaims} claims × $45.9K each</p>
+                  <p className="text-xs text-muted-foreground mt-1">{currentMentalHealthClaims} claims × $58.6K each</p>
                 </div>
 
                 <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-turnover">
