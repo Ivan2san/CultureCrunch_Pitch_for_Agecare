@@ -11,13 +11,13 @@ export default function VisionSection() {
         {/* Headline - More dramatic and impactful */}
         <div ref={headlineParallax.ref} style={headlineParallax.style} className="space-y-8 animate-fade-in-up">
           <div className="inline-block">
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 text-primary font-semibold text-sm tracking-wide">
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 text-primary font-semibold text-sm" style={{ letterSpacing: '-0.005em' }}>
               <Sparkles className="w-4 h-4" />
               The Future of Workplace Wellbeing
             </span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-[1.1]" style={{ letterSpacing: '-0.02em' }}>
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground leading-[1.1]" style={{ letterSpacing: '-0.01em' }}>
             AI That Transforms<br />
             <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
               Compliance into Retention

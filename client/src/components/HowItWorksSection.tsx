@@ -166,7 +166,7 @@ export default function HowItWorksSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16" style={{ letterSpacing: '-0.01em' }}>
             How It Works
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
@@ -336,7 +336,7 @@ export default function HowItWorksSection() {
 
         {/* Service Levels & Safeguards */}
         <div className="bg-card rounded-xl p-8 mb-16 border border-border">
-          <h3 className="text-3xl font-bold text-foreground mb-8 text-center">Service Levels & Safeguards</h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center" style={{ letterSpacing: '-0.01em' }}>Service Levels & Safeguards</h3>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {servicelevels.map((level, index) => {

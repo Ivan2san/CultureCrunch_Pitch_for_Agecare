@@ -21,7 +21,7 @@ export default function TheAskSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16" style={{ letterSpacing: '-0.01em' }}>
             The Ask: <span className="text-purple-600 dark:text-purple-400">Be a Founding Partner</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground">
@@ -35,12 +35,12 @@ export default function TheAskSection() {
           <Card className="p-8 bg-card">
             <div className="flex items-center gap-3 mb-6">
               <FileText className="w-8 h-8 text-purple-600 dark:text-purple-400" />
-              <h3 className="text-2xl font-bold text-purple-600 dark:text-purple-400">What We're Seeking</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>What We're Seeking</h3>
             </div>
 
             <div className="space-y-6">
-              <div className="bg-purple-50 dark:bg-purple-950 border-l-4 border-purple-500 p-6 rounded-r-lg">
-                <h4 className="font-bold text-xl text-purple-900 mb-3">Letter of Intent (LOI) for 12-Week Pilot</h4>
+              <div className="bg-purple-50 dark:bg-purple-950 border-l-4 border-purple-500 dark:border-purple-400 p-6 rounded-r-lg">
+                <h4 className="font-bold text-xl text-purple-600 dark:text-purple-400 mb-3">Letter of Intent (LOI) for 12-Week Pilot</h4>
                 <p className="text-muted-foreground mb-4">
                   A non-binding commitment to participate in our validation pilot program
                 </p>
@@ -94,12 +94,12 @@ export default function TheAskSection() {
           <Card className="p-8 bg-card">
             <div className="flex items-center gap-3 mb-6">
               <TrendingUp className="w-8 h-8 text-blue-600 dark:text-blue-400" />
-              <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400">What You Get as a Founding Partner</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>What You Get as a Founding Partner</h3>
             </div>
 
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-950 p-5 rounded-lg border border-blue-200">
-                <h4 className="font-bold text-lg text-blue-900 mb-2 flex items-center gap-2">
+                <h4 className="font-bold text-lg text-blue-600 dark:text-blue-400 mb-2 flex items-center gap-2">
                   <Users className="w-5 h-5" />
                   Founding Partner Pricing (Locked In)
                 </h4>
@@ -110,35 +110,35 @@ export default function TheAskSection() {
               </div>
 
               <div className="bg-blue-50 dark:bg-blue-950 p-5 rounded-lg border border-blue-200">
-                <h4 className="font-bold text-lg text-blue-900 mb-2 flex items-center gap-2">
+                <h4 className="font-bold text-lg text-blue-600 dark:text-blue-400 mb-2 flex items-center gap-2">
                   <Shield className="w-5 h-5" />
                   White-Glove Implementation
                 </h4>
-                <p className="text-gray-700">
+                <p className="text-muted-foreground">
                   Direct access to our team throughout the pilot. Weekly check-ins, rapid iteration and customised
                   support
                 </p>
               </div>
 
               <div className="bg-blue-50 dark:bg-blue-950 p-5 rounded-lg border border-blue-200">
-                <h4 className="font-bold text-lg text-blue-900 mb-2">Co-Design the Product</h4>
-                <p className="text-gray-700">
+                <h4 className="font-bold text-lg text-blue-600 dark:text-blue-400 mb-2">Co-Design the Product</h4>
+                <p className="text-muted-foreground">
                   Shape features, workflows and reporting to match your needs. Your feedback directly influences our
                   roadmap
                 </p>
               </div>
 
               <div className="bg-blue-50 dark:bg-blue-950 p-5 rounded-lg border border-blue-200">
-                <h4 className="font-bold text-lg text-blue-900 mb-2">Early Mover Compliance Advantage</h4>
-                <p className="text-gray-700">
+                <h4 className="font-bold text-lg text-blue-600 dark:text-blue-400 mb-2">Early Mover Compliance Advantage</h4>
+                <p className="text-muted-foreground">
                   Get ahead of WHS psychosocial regulations with evidence-based risk management, before competitors
                   catch up
                 </p>
               </div>
 
               <div className="bg-blue-50 dark:bg-blue-950 p-5 rounded-lg border border-blue-200">
-                <h4 className="font-bold text-lg text-blue-900 mb-2">No Long-Term Commitment</h4>
-                <p className="text-gray-700">
+                <h4 className="font-bold text-lg text-blue-600 dark:text-blue-400 mb-2">No Long-Term Commitment</h4>
+                <p className="text-muted-foreground">
                   LOI is non-binding. Pilot only. If it doesn't work, you've invested $25K to learn, not committed years
                   of budget
                 </p>
@@ -149,7 +149,7 @@ export default function TheAskSection() {
 
         {/* Why This Matters */}
         <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-8 mb-12 text-white">
-          <h3 className="text-2xl font-bold mb-6 text-center">Why Your LOI Matters to Us (And to You)</h3>
+          <h3 className="text-xl font-bold mb-6 text-center" style={{ letterSpacing: '-0.01em' }}>Why Your LOI Matters to Us (And to You)</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <h4 className="font-bold text-xl mb-3">For CultureCrunch:</h4>
@@ -189,8 +189,8 @@ export default function TheAskSection() {
         </div>
 
         {/* Timeline */}
-        <Card className="p-8 mb-12 bg-white">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Next Steps & Timeline</h3>
+        <Card className="p-8 mb-12">
+          <h3 className="text-2xl font-bold text-foreground mb-8 text-center" style={{ letterSpacing: '-0.01em' }}>Next Steps & Timeline</h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
               { num: "1", title: "Next Week", desc: "30-min discovery call to align on pilot scope and success metrics" },
@@ -203,25 +203,25 @@ export default function TheAskSection() {
                   {step.num}
                 </div>
                 <h4 className="font-bold text-lg mb-2">{step.title}</h4>
-                <p className="text-gray-600 text-sm">{step.desc}</p>
+                <p className="text-muted-foreground text-sm">{step.desc}</p>
               </div>
             ))}
           </div>
         </Card>
 
         {/* The Direct Ask */}
-        <div className="bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 rounded-xl p-12 text-center border border-purple-200/50">
-          <h3 className="text-3xl font-bold mb-6 text-gray-900">We're Looking for 3–5 Founding Partners</h3>
-          <p className="text-xl mb-8 text-gray-700">
+        <div className="bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 dark:from-purple-950 dark:via-blue-950 dark:to-indigo-950 rounded-xl p-12 text-center border border-purple-200/50 dark:border-purple-800/50">
+          <h3 className="text-3xl font-bold mb-6 text-foreground">We're Looking for 3–5 Founding Partners</h3>
+          <p className="text-xl mb-8 text-muted-foreground">
             Organisations ready to lead on psychosocial safety, not follow
           </p>
 
-          <div className="bg-white/80 backdrop-blur-sm rounded-lg p-8 max-w-3xl mx-auto mb-8 border border-purple-100">
-            <p className="text-2xl font-bold mb-4 text-purple-900">The Question:</p>
-            <p className="text-xl mb-6 text-gray-800">
+          <div className="bg-card/80 backdrop-blur-sm rounded-lg p-8 max-w-3xl mx-auto mb-8 border border-purple-100 dark:border-purple-800">
+            <p className="text-2xl font-bold mb-4 text-purple-600 dark:text-purple-400">The Question:</p>
+            <p className="text-xl mb-6 text-foreground">
               Would your organisation provide a Letter of Intent to participate in our Q1–Q2 2026 pilot program?
             </p>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-muted-foreground">
               (Non-binding, subject to final agreement; enables us to secure funding and ensures you get founding
               partner benefits)
             </p>

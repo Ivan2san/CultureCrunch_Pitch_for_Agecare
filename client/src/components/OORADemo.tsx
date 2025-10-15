@@ -328,18 +328,18 @@ export default function OORADemo() {
                   <div 
                     className={cn(
                       "w-3 h-3 rounded-full",
-                      isActive ? colors.accent : isCompleted ? "bg-gray-400" : "bg-gray-300"
+                      isActive ? colors.accent : isCompleted ? "bg-muted-foreground/60" : "bg-muted-foreground/40"
                     )}
                     aria-hidden="true"
                   />
                   <span className={cn(
                     "font-bold text-sm",
-                    isActive ? colors.text : "text-gray-600"
+                    isActive ? colors.text : "text-muted-foreground"
                   )}>
                     {phase.label}
                   </span>
                 </div>
-                <p className="text-xs text-gray-600">{phase.description}</p>
+                <p className="text-xs text-muted-foreground">{phase.description}</p>
               </div>
             );
           })}
@@ -347,7 +347,7 @@ export default function OORADemo() {
       </div>
 
       {/* Conversation Display */}
-      <Card className="p-6 min-h-[400px] bg-gray-50">
+      <Card className="p-6 min-h-[400px] bg-muted/30">
         <div className="space-y-4">
           {visibleMessages.map((message, index) => {
             if (message.role === "system") {
@@ -377,7 +377,7 @@ export default function OORADemo() {
                   "max-w-[80%] rounded-lg p-4",
                   isLeader 
                     ? "bg-indigo-600 text-white" 
-                    : "bg-white border-2 border-gray-200 text-gray-900"
+                    : "bg-card border-2 border-border text-foreground"
                 )}>
                   <div className="text-xs font-bold mb-1 opacity-70">
                     {isLeader ? "Leader" : "CultureCrunch AI"}
@@ -432,7 +432,7 @@ export default function OORADemo() {
           </Button>
         </div>
 
-        <div className="text-sm text-gray-600">
+        <div className="text-sm text-muted-foreground">
           Step {currentStep + 1} of {scenario.messages.length}
         </div>
       </div>

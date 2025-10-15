@@ -54,19 +54,19 @@ export default function CustomerJourneyFlow() {
       bg: "bg-indigo-50 dark:bg-indigo-950",
       border: "border-indigo-200 dark:border-indigo-800",
       icon: "text-indigo-600 dark:text-indigo-400",
-      text: "text-indigo-900 dark:text-indigo-100"
+      text: "text-indigo-600 dark:text-indigo-400"
     },
     purple: {
       bg: "bg-purple-50 dark:bg-purple-950",
       border: "border-purple-200 dark:border-purple-800",
       icon: "text-purple-600 dark:text-purple-400",
-      text: "text-purple-900 dark:text-purple-100"
+      text: "text-purple-600 dark:text-purple-400"
     },
     green: {
       bg: "bg-green-50 dark:bg-green-950",
       border: "border-green-200 dark:border-green-800",
       icon: "text-green-600 dark:text-green-400",
-      text: "text-green-900 dark:text-green-100"
+      text: "text-green-600 dark:text-green-400"
     }
   };
 

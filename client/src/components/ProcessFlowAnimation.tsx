@@ -122,10 +122,10 @@ export default function ProcessFlowAnimation() {
   );
 
   return (
-    <div className="w-full bg-corporate-gradient px-6 py-16">
+    <div className="w-full bg-corporate-gradient px-6 py-32">
       <div className="max-w-4xl mx-auto">
         <h2 
-          className="text-center text-4xl md:text-5xl font-bold text-foreground mb-4" 
+          className="text-center text-4xl md:text-5xl font-bold text-foreground mb-16" 
           style={{ letterSpacing: '-0.01em' }}
           data-testid="heading-process-flow"
         >

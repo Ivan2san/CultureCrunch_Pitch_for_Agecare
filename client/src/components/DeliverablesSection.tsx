@@ -301,7 +301,7 @@ export default function DeliverablesSection() {
             Comprehensive Deliverables
           </span>
         </div>
-        <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-3" style={{ letterSpacing: '-0.01em' }}>
+        <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8" style={{ letterSpacing: '-0.01em' }}>
           What You Get
         </h3>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">

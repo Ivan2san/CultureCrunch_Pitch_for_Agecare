@@ -156,7 +156,7 @@ export default function LOIPreview({ open, onOpenChange }: LOIPreviewProps) {
             <p className="text-muted-foreground mb-3">As a Founding Partner, [Client Organisation] will receive:</p>
             <div className="space-y-3">
               <div className="bg-green-50 dark:bg-green-950 p-4 rounded-lg">
-                <p className="font-bold text-green-900 dark:text-green-100 mb-2">1. Locked-In Pricing</p>
+                <p className="font-bold text-green-600 dark:text-green-400 mb-2">1. Locked-In Pricing</p>
                 <ul className="list-disc list-inside ml-4 text-muted-foreground text-sm">
                   <li>Pilot price of $25,000 AUD (will not be offered after launch)</li>
                   <li>Post-pilot subscription pricing at 30% below standard rates</li>
@@ -165,7 +165,7 @@ export default function LOIPreview({ open, onOpenChange }: LOIPreviewProps) {
               </div>
 
               <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg">
-                <p className="font-bold text-blue-900 dark:text-blue-100 mb-2">2. Product Co-Design Influence</p>
+                <p className="font-bold text-blue-600 dark:text-blue-400 mb-2">2. Product Co-Design Influence</p>
                 <ul className="list-disc list-inside ml-4 text-muted-foreground text-sm">
                   <li>Direct input on feature roadmap</li>
                   <li>Customisation to organisational needs</li>
@@ -174,7 +174,7 @@ export default function LOIPreview({ open, onOpenChange }: LOIPreviewProps) {
               </div>
 
               <div className="bg-purple-50 dark:bg-purple-950 p-4 rounded-lg">
-                <p className="font-bold text-purple-900 dark:text-purple-100 mb-2">3. White-Glove Implementation</p>
+                <p className="font-bold text-purple-600 dark:text-purple-400 mb-2">3. White-Glove Implementation</p>
                 <ul className="list-disc list-inside ml-4 text-muted-foreground text-sm">
                   <li>Dedicated customer success leader</li>
                   <li>Weekly check-ins throughout pilot</li>
@@ -183,7 +183,7 @@ export default function LOIPreview({ open, onOpenChange }: LOIPreviewProps) {
               </div>
 
               <div className="bg-indigo-50 dark:bg-indigo-950 p-4 rounded-lg">
-                <p className="font-bold text-indigo-900 dark:text-indigo-100 mb-2">4. Early Compliance Advantage</p>
+                <p className="font-bold text-indigo-600 dark:text-indigo-400 mb-2">4. Early Compliance Advantage</p>
                 <ul className="list-disc list-inside ml-4 text-muted-foreground text-sm">
                   <li>WHS psychosocial safety documentation</li>
                   <li>Evidence-based risk management framework</li>

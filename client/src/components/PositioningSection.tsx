@@ -174,7 +174,7 @@ export default function PositioningSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16" style={{ letterSpacing: '-0.01em' }}>
             Positioning & <span className="text-purple-600 dark:text-purple-400">Competitive Moat</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
@@ -222,16 +222,16 @@ export default function PositioningSection() {
 
         {/* Competitive Moat */}
         <div className="bg-card rounded-2xl p-8 border border-border">
-          <h3 className="text-3xl font-bold text-foreground text-center mb-8">Our Competitive Moat</h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-8" style={{ letterSpacing: '-0.01em' }}>Our Competitive Moat</h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {moat.map((item, index) => (
               <div
                 key={index}
-                className="p-6 rounded-lg bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-200"
+                className="p-6 rounded-lg bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-950 dark:to-indigo-950 border border-purple-200 dark:border-purple-800"
                 data-testid={`moat-${index}`}
               >
-                <h4 className="text-xl font-bold text-purple-900 mb-2">{item.title}</h4>
+                <h4 className="text-xl font-bold text-purple-600 dark:text-purple-400 mb-2">{item.title}</h4>
                 <p className="text-muted-foreground">{item.description}</p>
               </div>
             ))}
@@ -276,8 +276,8 @@ export default function PositioningSection() {
                   <h4 className="text-lg font-bold text-foreground mb-4">Key Features</h4>
                   <div className="space-y-4">
                     {advantages[selectedAdvantage].details.keyFeatures.map((feature, i) => (
-                      <div key={i} className="bg-purple-50 dark:bg-purple-950 rounded-lg p-4 border border-purple-100">
-                        <h5 className="font-bold text-purple-900 mb-2">{feature.title}</h5>
+                      <div key={i} className="bg-purple-50 dark:bg-purple-950 rounded-lg p-4 border border-purple-100 dark:border-purple-800">
+                        <h5 className="font-bold text-purple-600 dark:text-purple-400 mb-2">{feature.title}</h5>
                         <p className="text-muted-foreground text-sm">{feature.description}</p>
                       </div>
                     ))}

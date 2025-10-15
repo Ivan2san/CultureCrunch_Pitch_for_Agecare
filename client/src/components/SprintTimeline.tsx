@@ -89,7 +89,7 @@ export default function SprintTimeline() {
       <div className="text-center mb-8">
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-50 dark:bg-purple-950 rounded-full mb-4">
           <Calendar className="w-4 h-4 text-purple-600 dark:text-purple-400" />
-          <span className="text-sm font-semibold text-purple-900 dark:text-purple-100">6-Week Sprint Program</span>
+          <span className="text-sm font-semibold text-purple-600 dark:text-purple-400">6-Week Sprint Program</span>
         </div>
         <p className="text-muted-foreground max-w-3xl mx-auto">
           Structured implementation pathway from setup to sustained adoption, designed for aged care leadership teams

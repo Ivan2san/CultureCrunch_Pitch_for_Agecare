@@ -214,7 +214,7 @@ export default function LeaderDashboardDemo() {
           <div className="text-center mb-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-50 dark:bg-purple-950 rounded-full mb-4">
               <Clock className="w-4 h-4 text-purple-600 dark:text-purple-400" />
-              <span className="text-sm font-semibold text-purple-900 dark:text-purple-100">10-Minute OORA Conversation</span>
+              <span className="text-sm font-semibold text-purple-600 dark:text-purple-400">10-Minute OORA Conversation</span>
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2" style={{ letterSpacing: '-0.01em' }}>
               {selectedRisk.title}
@@ -263,7 +263,7 @@ export default function LeaderDashboardDemo() {
           <div className="text-center mb-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 dark:bg-green-950 rounded-full mb-4">
               <Users className="w-4 h-4 text-green-600 dark:text-green-400" />
-              <span className="text-sm font-semibold text-green-900 dark:text-green-100">Team Micro-Action</span>
+              <span className="text-sm font-semibold text-green-600 dark:text-green-400">Team Micro-Action</span>
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2" style={{ letterSpacing: '-0.01em' }}>
               This Week's Action
@@ -321,7 +321,7 @@ export default function LeaderDashboardDemo() {
           <div className="text-center mb-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-950 rounded-full mb-4">
               <BarChart3 className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-              <span className="text-sm font-semibold text-blue-900 dark:text-blue-100">Friday, End of Week Results</span>
+              <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">Friday, End of Week Results</span>
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2" style={{ letterSpacing: '-0.01em' }}>
               Impact Dashboard

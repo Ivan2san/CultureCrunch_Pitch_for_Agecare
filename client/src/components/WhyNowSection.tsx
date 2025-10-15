@@ -68,10 +68,10 @@ const bulletColors = {
 
 export default function WhyNowSection() {
   return (
-    <section id="why-now" className="relative isolate bg-corporate-gradient px-6 py-24 sm:py-32 flex-wrap">
+    <section id="why-now" className="relative isolate bg-corporate-gradient px-6 py-32 flex-wrap">
       {/* Heading */}
-      <div className="mx-auto max-w-7xl text-center">
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground" style={{ letterSpacing: '-0.01em' }}>
+      <div className="mx-auto max-w-7xl text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16" style={{ letterSpacing: '-0.01em' }}>
           WHY NOW: <span className="text-blue-600 dark:text-blue-400">Three forces converge</span>
         </h2>
         <p className="mt-4 text-base md:text-lg text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>
