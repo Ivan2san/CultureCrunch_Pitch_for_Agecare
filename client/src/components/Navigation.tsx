@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 const sections = [
   { id: "vision", label: "Vision" },
@@ -92,13 +91,10 @@ export default function Navigation() {
                   </button>
                 ))}
               </div>
-
-              <ThemeToggle />
             </div>
 
-            {/* Mobile Menu Button & Theme Toggle */}
+            {/* Mobile Menu Button */}
             <div className="flex items-center gap-2 md:hidden">
-              <ThemeToggle />
               <Button
                 variant="ghost"
                 size="icon"
