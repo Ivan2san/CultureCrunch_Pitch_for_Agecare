@@ -1,0 +1,287 @@
+6-Week Sprint Deliverables
+Week 1: Foundations & Baseline
+What the client gets:
+
+Red/Green Culture Mapping Session (90 mins with leadership team)
+
+Identify 3-5 priority psychosocial hazards specific to their facility
+Map current behaviours (Red) vs. desired behaviours (Green)
+Prioritise focus areas for the sprint
+
+
+Psychosocial Safety Compliance Audit
+
+Gap analysis against WHS psychosocial requirements (17 hazards)
+Aged Care Quality Standards alignment (Standards 2 & 7)
+Risk register template populated with their context
+
+
+Baseline Pulse Survey (first team pulse)
+
+3 rotating questions: Clarity, Recognition, Workload/Safety
+Anonymous, takes team 2 minutes
+Establishes starting metrics
+
+
+
+Deliverable artifacts:
+
+Red/Green Behaviour Map (visual, 1-page)
+Compliance Gap Report (2-3 pages)
+Baseline Culture Metrics Dashboard
+
+
+Weeks 2-5: Active Sprint
+What the client gets:
+Weekly AI-Generated Leader Briefs (every Monday, 7am)
+
+120-150 word pulse snapshot
+One key insight from data (what's working/needs attention)
+One Red→Green behaviour focus for the week
+One specific micro-action (from your library) tailored to their context
+Takes manager 3 minutes to read
+
+Weekly Pulse Surveys (every Friday)
+
+2-3 rotating questions focused on psychosocial safety indicators
+Results auto-flow to dashboard
+Anonymous, secure, mobile-friendly
+
+3 x Live Team Sessions (30-45 mins each)
+
+Session 1 (Week 2): Trust & Psychological Safety kickoff
+
+Run by Campbell/Ivan or trained associate
+Introduce micro-action approach
+First behaviour experiment (e.g., "kill 2 recurring meetings")
+
+
+Session 2 (Week 4): Recognition & Values in Action
+
+Shout-out round facilitation
+Connect to aged care values (care, respect, safety)
+Build recognition habit
+
+
+Session 3 (Week 6): Sustaining the Shift
+
+Review progress data
+Embed habits into existing rhythms (huddles, handovers)
+Transition to 12-month sustain phase
+
+
+
+Manager Support & Coaching
+
+10-minute weekly check-in calls (Weeks 2-5)
+Conversation scripts for each micro-action
+Objection handling support
+Access to Campbell/Ivan via Slack/email for questions
+
+Deliverable artifacts:
+
+4 x Weekly Leader Briefs (personalized AI summaries)
+4 x Pulse Survey Results (trend data)
+Session facilitation guides (for internal reuse)
+Micro-action log (what was tried, what happened)
+
+
+Week 6: ROI Snapshot & Handover
+What the client gets:
+Culture Impact Report (8-10 pages)
+
+Before/After metrics:
+
+Pulse score trends (Clarity, Recognition, Workload)
+Recognition event frequency
+Meeting load changes (if tracked)
+Micro-actions completed and outcomes
+
+
+Psychosocial Safety Compliance Evidence:
+
+Documented risk controls implemented
+Consultation records (pulse surveys, team sessions)
+Behaviour change evidence for audits
+Aligned to Standards 2 & 7
+
+
+ROI Projection:
+
+Turnover risk reduction estimate (based on pulse improvements)
+Projected cost savings (using $40k-$49k replacement cost per departure)
+Compliance risk mitigation value
+
+
+
+12-Month Sustain Plan
+
+Recommended cadence (pulse frequency, brief schedule)
+Behaviour focus areas for next quarter
+Benchmarking data access setup
+Transition to self-serve dashboard
+
+Final Handover Call (60 mins)
+
+Review ROI snapshot together
+Answer questions on 12-month license
+Set up ongoing access and training
+Collect testimonial and case study permissions
+
+Deliverable artifacts:
+
+Culture Impact Report (PDF + presentation)
+12-Month Roadmap (1-page)
+Access credentials to ongoing platform
+
+
+12-Month License: "Culture Sustain"
+What's included in $5-$10 per person per month:
+1. AI Leader Briefs (Ongoing)
+
+Monthly or fortnightly AI-generated briefs (client chooses cadence)
+Continues pulse → insight → action loop
+Evolves focus based on progress and sector trends
+Delivered via email + dashboard
+
+2. Continuous Pulse Surveys
+
+Rotating psychosocial questions (broader library than sprint)
+Covers all 17 WHS psychosocial hazards over 12 months
+Anonymous, secure, compliant with privacy requirements
+Real-time dashboard access for managers
+
+3. ThriveGuide Dashboard (Manager Portal)
+Web-based or Teams/Webex embedded app with:
+
+Current sprint status: Week tracker, focus behaviours
+Pulse metrics: Live scores + trend lines (6-month view)
+Recognition log: Team shout-outs and values in action
+Micro-action library: Browse and select from 40+ proven actions
+Action log: Submit outcomes, track completion
+Analytics: Red→Green behaviour index, Triple Goal proxy metrics
+
+4. Recognition System
+
+Simple logging tool (web form, Slack/Webex integration, or email)
+Managers and staff can submit recognition events
+Tracks frequency and values alignment
+Feeds into briefs and dashboards
+Public feed option (if client wants team visibility)
+
+5. Sector Benchmarking (Added value as you scale)
+
+Compare your facility to sector averages:
+
+Pulse scores (clarity, recognition, workload)
+Recognition frequency
+Meeting load metrics
+Turnover risk indicators
+
+
+De-identified, aggregated data from all Culture Crunch clients
+Updated quarterly
+
+6. Micro-Action Library (Expanded)
+
+40+ Red→Green micro-actions specific to aged care
+Categorised by psychosocial hazard and behaviour focus
+Includes:
+
+Scripts for conversations
+Implementation tips
+Success indicators
+Time estimates (all ≤15 mins)
+
+
+Continually updated based on client outcomes
+
+7. Compliance Documentation Support
+
+Auto-generated compliance artifacts:
+
+Quarterly psychosocial risk review reports
+Consultation evidence logs (pulse survey records)
+Control measure effectiveness reviews
+Audit-ready summaries for Quality Standards 2 & 7
+
+
+Regulatory updates:
+
+Alerts when WHS or Aged Care Standards change
+Updated compliance checklists
+Guidance notes for new requirements
+
+
+
+8. Quarterly Check-In Calls (30 mins)
+
+Review progress with Campbell/Ivan or trained associate
+Troubleshoot challenges
+Refine focus areas for next quarter
+Share sector insights and emerging trends
+
+9. Community & Learning
+
+Access to Culture Crunch Community:
+
+Quarterly webinars with aged care culture leaders
+Peer learning sessions (anonymised case sharing)
+Early access to new features and research
+
+
+Resource library:
+
+Psychosocial safety guides
+Conversation scripts
+Session facilitation templates
+ISO 45003 and Quality Standards resources
+
+
+
+10. Technical Support & Updates
+
+Email support (response within 24 hours)
+Platform updates and new features automatically included
+Data export capabilities (for internal reporting)
+Integration support (if client wants to connect to existing systems)
+
+
+Optional Add-Ons (12-Month Phase)
+Advanced Analytics Package (+$2k/year)
+
+Power BI or Looker Studio custom dashboards
+Predictive turnover risk modeling
+Advanced behavioural indices
+Executive reporting templates
+
+Train-the-Trainer Program (+$5k one-time)
+
+Certify internal champions to facilitate sessions
+License to use Culture Crunch methodology
+Quarterly coach calls for internal facilitators
+Access to facilitator resource library
+
+Multi-Site Enterprise License (Custom pricing)
+
+Consolidated dashboard across multiple facilities
+Cross-site benchmarking
+Regional manager access
+Dedicated account manager
+
+
+Total Package Value Recap
+6-Week Sprint Investment: $12,000-$20,000
+
+Delivers: Baseline to behaviour shift in 6 weeks
+ROI breakeven: Preventing 0.24-0.5 staff departures ($40k-$49k per departure)
+Compliance value: Audit-ready documentation + risk mitigation
+
+12-Month License Investment: $5-$10 per person per month
+
+Example: 150-person facility = $750-$1,500/month = $9k-$18k/year
+Delivers: Sustained culture improvement + ongoing compliance + sector benchmarking
+ROI: Continued turnover reduction (2-5% drop = $80k-$200k savings)
+
+Total 18-Month Investment: $21,000-$38,000
+Projected 18-Month Benefit: $150,000-$300,000 (based on turnover prevention alone)
