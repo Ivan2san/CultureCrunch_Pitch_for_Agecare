@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import ProcessFlowAnimation from "@/components/ProcessFlowAnimation";
 import OORADemo from "@/components/OORADemo";
 import SprintTimeline from "@/components/SprintTimeline";
+import DeliverablesSection from "@/components/DeliverablesSection";
 
 export default function HowItWorksSection() {
   const [expandedLayer, setExpandedLayer] = useState<number | null>(null);
@@ -219,6 +220,11 @@ export default function HowItWorksSection() {
         {/* 6-Week Sprint Timeline */}
         <div className="mb-16">
           <SprintTimeline />
+        </div>
+
+        {/* What You Get - Deliverables */}
+        <div className="mb-16">
+          <DeliverablesSection />
         </div>
 
         {/* OORA Conversation Framework Demo */}
