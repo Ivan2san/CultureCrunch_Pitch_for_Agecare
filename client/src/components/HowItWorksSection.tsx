@@ -514,27 +514,6 @@ export default function HowItWorksSection() {
             )}
           </Card>
         </div>
-
-        {/* Why Metadata Works - Key Insight */}
-        <Card className="p-8 border-2 border-indigo-500">
-          <div className="flex items-start gap-4">
-            <div className="bg-muted p-4 rounded-md">
-              <Network className="w-10 h-10 text-indigo-600" />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-3" style={{ letterSpacing: '-0.01em' }}>Why Metadata Works</h3>
-              <p className="text-lg text-foreground mb-2" style={{ letterSpacing: '-0.005em' }}>
-                Research shows <span className="font-bold text-indigo-600">87% of psychosocial risk signals</span> are detectable through behavioral patterns alone—without ever reading a single message.
-              </p>
-              <p className="text-base text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>
-                Our AI learns <em>how</em> teams work, not <em>what</em> they say.
-              </p>
-              <p className="text-sm mt-3 text-muted-foreground italic" style={{ letterSpacing: '-0.005em' }}>
-                Source: MIT Sloan study on organizational network analysis
-              </p>
-            </div>
-          </div>
-        </Card>
       </div>
     </section>
   );

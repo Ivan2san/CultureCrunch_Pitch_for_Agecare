@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { ArrowRight, AlertTriangle } from "lucide-react";
 
 export default function ProblemSection() {
   return (
@@ -65,6 +66,71 @@ export default function ProblemSection() {
             <p className="text-xs text-muted-foreground mt-4 pt-3 border-t border-border/50 w-full">
               Source: Safe Work Australia 2020-21; Health & Social Care Sector Data
             </p>
+          </Card>
+        </div>
+
+        {/* Vicious Cycle Section */}
+        <div className="mt-16 mb-12">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
+              The Self-Reinforcing Crisis
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              High turnover creates a vicious cycle that traditional surveys detect too late to prevent
+            </p>
+          </div>
+
+          <Card className="p-8 md:p-12 bg-card/40 backdrop-blur-sm">
+            {/* Vicious Cycle Flow */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
+              <div className="flex flex-col md:flex-row items-center gap-4 flex-wrap justify-center">
+                <div className="bg-purple-50 border-2 border-purple-300 rounded-lg px-6 py-4 text-center min-w-[180px]">
+                  <p className="font-bold text-purple-700">High Turnover</p>
+                </div>
+                <ArrowRight className="w-6 h-6 text-purple-600 transform md:transform-none rotate-90 md:rotate-0" />
+                <div className="bg-purple-50 border-2 border-purple-300 rounded-lg px-6 py-4 text-center min-w-[180px]">
+                  <p className="font-bold text-purple-700">Understaffing</p>
+                </div>
+                <ArrowRight className="w-6 h-6 text-purple-600 transform md:transform-none rotate-90 md:rotate-0" />
+                <div className="bg-indigo-50 border-2 border-indigo-300 rounded-lg px-6 py-4 text-center min-w-[180px]">
+                  <p className="font-bold text-indigo-700">Increased Workload</p>
+                </div>
+                <ArrowRight className="w-6 h-6 text-indigo-600 transform md:transform-none rotate-90 md:rotate-0" />
+                <div className="bg-indigo-50 border-2 border-indigo-300 rounded-lg px-6 py-4 text-center min-w-[180px]">
+                  <p className="font-bold text-indigo-700">More Stress</p>
+                </div>
+                <ArrowRight className="w-6 h-6 text-indigo-600 transform md:transform-none rotate-90 md:rotate-0" />
+                <div className="bg-purple-50 border-2 border-purple-300 rounded-lg px-6 py-4 text-center min-w-[180px]">
+                  <p className="font-bold text-purple-700">More Departures</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Quote */}
+            <div className="bg-muted/50 rounded-lg p-6 border-l-4 border-purple-500">
+              <p className="text-muted-foreground italic mb-2">
+                "High turnover leads to understaffing, which directly increases the workload and stress on remaining staff, exacerbating psychosocial risks like fatigue, moral distress, and emotional labor."
+              </p>
+              <p className="text-sm text-muted-foreground">
+                — The precarious resilience of aged care employees (2024)
+              </p>
+            </div>
+
+            {/* Management Impact */}
+            <div className="mt-6 bg-purple-50 rounded-lg p-6 border-l-4 border-purple-600">
+              <div className="flex items-start gap-3">
+                <AlertTriangle className="w-6 h-6 text-purple-600 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-bold text-purple-700 mb-2">Management Is Affected Too</p>
+                  <p className="text-muted-foreground text-sm">
+                    "Psychosocial hazards are common for workers in the aged care sector, and this extends to management." The people trying to solve this crisis are drowning in it themselves.
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-2">
+                    — Safe Work Australia, Psychosocial Hazards in Aged Care (2024)
+                  </p>
+                </div>
+              </div>
+            </div>
           </Card>
         </div>
       </div>
