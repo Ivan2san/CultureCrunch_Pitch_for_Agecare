@@ -7,10 +7,10 @@ export default function ProblemSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
-            The Problem: <span className="text-red-600 dark:text-red-400">Aged Care's Workforce Crisis</span>
+            The Problem: <span className="text-red-600 dark:text-red-400">Aged Care's Compliance & Workforce Crisis</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
-            Aged care providers face a perfect storm: regulatory compliance demands, devastating workforce turnover, and psychosocial hazards driving staff exodus
+            Aged care providers face a perfect storm: 1 in 5 facilities failing compliance audits, 27% staff turnover, and psychosocial hazards driving mass exodus
           </p>
           <p className="text-sm text-muted-foreground mt-4 italic max-w-4xl mx-auto">
             All statistics from Australian aged care research, Safe Work Australia, and sector workforce surveys (2023-2025)
@@ -19,15 +19,15 @@ export default function ProblemSection() {
 
         {/* Main Content Grid - 4 Stylish Stat Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
-          {/* Box 1: Devastating Turnover */}
+          {/* Box 1: Compliance Crisis */}
           <Card className="p-8 bg-card/40 backdrop-blur-sm flex flex-col items-center text-center hover-elevate transition-all">
-            <div className="text-6xl md:text-7xl font-bold text-red-600 dark:text-red-400 mb-4" style={{ letterSpacing: '-0.02em' }}>30%</div>
-            <h4 className="font-bold text-xl text-foreground mb-2">Annual Staff Turnover</h4>
+            <div className="text-6xl md:text-7xl font-bold text-red-600 dark:text-red-400 mb-4" style={{ letterSpacing: '-0.02em' }}>1 in 5</div>
+            <h4 className="font-bold text-xl text-foreground mb-2">Facilities Failing Compliance</h4>
             <p className="text-muted-foreground text-sm max-w-md">
-              Aged care facilities face 25-30% annual turnover, with many staff leaving within their first 12 months
+              Only 82% of residential providers met all Quality Standards in 2023-24. Home care worse at 65%. 255 regulatory actions issued.
             </p>
             <p className="text-xs text-muted-foreground mt-4 pt-3 border-t border-border/50 w-full">
-              Source: Australian Aged Care Workforce Survey 2024
+              Source: Aged Care Quality & Safety Commission Annual Report 2023-24
             </p>
           </Card>
 
@@ -55,15 +55,15 @@ export default function ProblemSection() {
             </p>
           </Card>
 
-          {/* Box 4: Replacement Cost */}
+          {/* Box 4: Mental Health Claims Cost */}
           <Card className="p-8 bg-card/40 backdrop-blur-sm flex flex-col items-center text-center hover-elevate transition-all">
-            <div className="text-6xl md:text-7xl font-bold text-orange-600 dark:text-orange-400 mb-4" style={{ letterSpacing: '-0.02em' }}>$49K</div>
-            <h4 className="font-bold text-xl text-foreground mb-2">Cost Per RN Departure</h4>
+            <div className="text-6xl md:text-7xl font-bold text-orange-600 dark:text-orange-400 mb-4" style={{ letterSpacing: '-0.02em' }}>$58.6K</div>
+            <h4 className="font-bold text-xl text-foreground mb-2">Per Mental Health Claim</h4>
             <p className="text-muted-foreground text-sm max-w-md">
-              Each registered nurse departure costs $49,225 in recruitment, training, and lost productivity
+              Median payout for psychosocial injury claims—4x higher than physical injuries. Aged care accounts for 25%+ of all serious mental health claims.
             </p>
             <p className="text-xs text-muted-foreground mt-4 pt-3 border-t border-border/50 w-full">
-              Source: Roche et al. 2015; Australian Healthcare Industry
+              Source: Safe Work Australia 2020-21; Health & Social Care Sector Data
             </p>
           </Card>
         </div>
