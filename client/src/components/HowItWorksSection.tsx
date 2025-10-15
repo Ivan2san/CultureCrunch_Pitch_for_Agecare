@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import ProcessFlowAnimation from "@/components/ProcessFlowAnimation";
 import OORADemo from "@/components/OORADemo";
+import SprintTimeline from "@/components/SprintTimeline";
 
 export default function HowItWorksSection() {
   const [expandedLayer, setExpandedLayer] = useState<number | null>(null);
@@ -213,6 +214,11 @@ export default function HowItWorksSection() {
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
             Privacy-first AI that turns workplace signals into actionable leadership insights
           </p>
+        </div>
+
+        {/* 6-Week Sprint Timeline */}
+        <div className="mb-16">
+          <SprintTimeline />
         </div>
 
         {/* OORA Conversation Framework Demo */}
