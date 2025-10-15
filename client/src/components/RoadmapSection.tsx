@@ -83,10 +83,10 @@ export default function RoadmapSection() {
         "One board/exec pack delivered",
       ],
       deliverables: [
-        "SafetyShield v1: signals, hazard cards, risk rating, consultation timeline",
-        "ManagerGPT Coach v1: goals, weekly check-ins, \"next best micro-practice\"",
-        "ActionLoop v1: milestones, review pulses, audit export",
-        "Light integrations: M365 calendar + Slack events; Perceptyx import adapter read-only",
+        "Pulse Survey System v1: mobile-friendly delivery, response tracking, aggregation",
+        "Brief Generation Engine v1: rules + AI assistance, micro-action library, delivery automation",
+        "Leader Dashboard v1: trends, actions, compliance exports",
+        "SMS/email delivery infrastructure with scheduling & reminders",
       ],
     },
     {
@@ -105,7 +105,7 @@ export default function RoadmapSection() {
       ],
       deliverables: [
         "Pricing page + contracts",
-        "Integration pack v1 (M365, Slack, HRIS read-only)",
+        "Self-serve onboarding flow",
         "Exec reporting suite",
         "Partner playbook",
       ],

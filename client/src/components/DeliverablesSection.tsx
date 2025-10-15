@@ -105,7 +105,7 @@ export default function DeliverablesSection() {
             "10-minute weekly check-in calls (Weeks 2-5)",
             "Conversation scripts for each micro-action",
             "Objection handling support",
-            "Access to Campbell/Ivan via Slack/email for questions"
+            "Access to Campbell/Ivan via email/phone for questions"
           ]
         }
       ],
@@ -201,7 +201,7 @@ export default function DeliverablesSection() {
         {
           title: "Recognition System",
           details: [
-            "Simple logging tool (web form, Slack/Webex integration, or email)",
+            "Simple logging tool (web form or email)",
             "Leaders and staff can submit recognition events",
             "Tracks frequency and values alignment",
             "Feeds into briefs and dashboards",

@@ -1,86 +1,69 @@
 import {
   Shield,
   Brain,
-  Zap,
   Users,
-  FileText,
   MessageSquare,
   RefreshCcw,
   BarChart3,
-  FileBarChart,
-  Share2,
-  ChevronDown
+  ChevronDown,
+  Calendar,
+  Send
 } from "lucide-react";
 
 export default function ProcessFlowAnimation() {
   const nodes = {
-    Input: [
+    FridayPulse: [
       {
-        title: "Employees",
-        subtitle: "Workplace Signals",
-        points: ["Meeting patterns", "After-hours activity"],
+        title: "Friday 3pm Pulse",
+        subtitle: "2-Minute Staff Check-In",
+        points: ["3 rotating questions", "Plain language scales", "Mobile-friendly", "No logins required"],
         icon: Users,
         color: "blue"
-      },
-      {
-        title: "System Integrations",
-        subtitle: "Data Sources",
-        points: ["Microsoft 365", "Google Workspace", "HRIS", "Slack / Teams"],
-        icon: FileText,
-        color: "blue"
-      },
-      {
-        title: "LGP360 Reports",
-        subtitle: "Leader Insights",
-        points: ["Leadership behaviours", "Engagement drivers", "Psychosocial risk areas", "Team wellbeing metrics"],
-        icon: FileBarChart,
-        color: "blue"
       }
     ],
-    Processing: [
+    DataStore: [
       {
-        title: "Agentic AI",
-        subtitle: "Pattern Detection",
-        points: ["Risk identification", "Anomaly detection", "Hazard mapping", "Pattern detection thresholds", "Ethical Boundaries (Human-in-the-loop)"],
+        title: "Secure Data Store",
+        subtitle: "Aggregated Scores",
+        points: ["De-identified summaries", "Team-level aggregation", "Privacy-minimal storage", "Audit-ready format"],
+        icon: Shield,
+        color: "purple"
+      }
+    ],
+    Intelligence: [
+      {
+        title: "Weekly Intelligence",
+        subtitle: "Brief with 1 Action",
+        points: ["Red→Green index calculation", "Context-aware guidance", "Micro-action selection", "Evidence-based library"],
         icon: Brain,
         color: "purple"
-      },
-      {
-        title: "Generative AI",
-        subtitle: "Nudge Creation",
-        points: ["Context analysis", "Conversation scripts"],
-        icon: Zap,
-        color: "purple"
-      },
-      {
-        title: "Network Analysis (ONA)",
-        subtitle: "Patterns Across Teams",
-        points: ["Graph Modelling", "Centrality Analysis", "Community Detection", "Inclusion Metrics"],
-        icon: Share2,
-        color: "purple"
       }
     ],
-    Output: [
+    MondayBrief: [
       {
-        title: "Leaders",
-        subtitle: "Weekly Briefs",
-        points: ["Risk alerts", "OORA guides"],
+        title: "Monday 6am Brief",
+        subtitle: "Leader Email",
+        points: ["One headline insight", "One behaviour focus", "One micro-action (<15 min)", "Aligned to local time zone"],
+        icon: Send,
+        color: "green"
+      }
+    ],
+    Action: [
+      {
+        title: "Micro-Action",
+        subtitle: "< 15 Minutes",
+        points: ["Leader implements action", "Outcome logged", "Progress tracked", "Fits around rosters"],
         icon: MessageSquare,
         color: "green"
-      },
+      }
+    ],
+    Dashboard: [
       {
-        title: "Compliance System",
-        subtitle: "Evidence & Logs",
-        points: ["Hazard register", "Consultation logs"],
-        icon: Shield,
-        color: "green"
-      },
-      {
-        title: "Executive Dashboard",
-        subtitle: "Key Indicators",
-        points: ["Leader Action Rate (live)", "After-hours ↓ trends", "Trust & Engagement metrics", "Audit-readiness status"],
+        title: "Dashboard Updates",
+        subtitle: "Trends & Actions",
+        points: ["6-week trend views", "Action completion", "Evidence exports", "Gentle reminders if needed"],
         icon: BarChart3,
-        color: "green"
+        color: "indigo"
       }
     ]
   };
@@ -88,37 +71,33 @@ export default function ProcessFlowAnimation() {
   const colorClasses = {
     blue: "text-blue-600 dark:text-blue-400",
     purple: "text-purple-600 dark:text-purple-400",
-    green: "text-green-600 dark:text-green-400"
+    green: "text-green-600 dark:text-green-400",
+    indigo: "text-indigo-600 dark:text-indigo-400"
   };
 
-  const Stage = ({ title, data, color }: { title: string; data: any[]; color: string }) => (
-    <div className="flex flex-col items-center space-y-6 py-4">
-      <h3 
-        className={`text-2xl font-bold ${colorClasses[color as keyof typeof colorClasses]}`} 
-        style={{ letterSpacing: '-0.01em' }}
-        data-testid={`stage-heading-${title.toLowerCase()}`}
-      >
-        {title}
-      </h3>
+  const Stage = ({ data, color }: { data: any[]; color: string }) => (
+    <div className="flex flex-col items-center space-y-4 py-4">
       <div className="flex flex-wrap justify-center gap-4">
         {data.map((item: any) => {
           const Icon = item.icon;
           return (
             <div
               key={item.title}
-              className="w-72 rounded-xl bg-card/90 backdrop-blur border-2 border-border p-6 shadow-md hover:shadow-lg transition-all"
+              className="w-full max-w-md rounded-xl bg-card/90 backdrop-blur border-2 border-border p-6 shadow-md hover:shadow-lg transition-all"
               data-testid={`process-card-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
             >
-              <div className="flex items-center gap-2 mb-3">
-                <Icon className={`h-5 w-5 ${colorClasses[item.color as keyof typeof colorClasses]}`} />
-                <h4 className="text-base font-bold text-foreground" style={{ letterSpacing: '-0.01em' }}>
-                  {item.title}
-                </h4>
+              <div className="flex items-center gap-3 mb-3">
+                <Icon className={`h-6 w-6 ${colorClasses[item.color as keyof typeof colorClasses]}`} />
+                <div>
+                  <h4 className="text-lg font-bold text-foreground" style={{ letterSpacing: '-0.01em' }}>
+                    {item.title}
+                  </h4>
+                  <p className="text-xs font-semibold text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>
+                    {item.subtitle}
+                  </p>
+                </div>
               </div>
-              <p className="text-xs font-semibold text-muted-foreground mb-2" style={{ letterSpacing: '-0.005em' }}>
-                {item.subtitle}
-              </p>
-              <ul className="text-muted-foreground space-y-1 text-xs" style={{ letterSpacing: '-0.005em' }}>
+              <ul className="text-muted-foreground space-y-1 text-sm" style={{ letterSpacing: '-0.005em' }}>
                 {item.points.map((p: string) => (
                   <li key={p} className="flex items-start gap-2">
                     <span className="mt-1.5 size-1.5 rounded-full bg-muted-foreground/50 shrink-0" />
@@ -144,99 +123,114 @@ export default function ProcessFlowAnimation() {
 
   return (
     <div className="w-full bg-corporate-gradient px-6 py-16">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <h2 
           className="text-center text-4xl md:text-5xl font-bold text-foreground mb-4" 
           style={{ letterSpacing: '-0.01em' }}
           data-testid="heading-process-flow"
         >
-          Process Flow
+          Weekly Pulse-to-Action Flow
         </h2>
         <p 
-          className="text-center text-lg text-muted-foreground max-w-2xl mx-auto mb-8" 
+          className="text-center text-lg text-muted-foreground max-w-2xl mx-auto mb-12" 
           style={{ letterSpacing: '-0.005em' }}
           data-testid="text-process-flow-description"
         >
-          How CultureCrunch transforms signals into insight.
+          From Friday pulse to Monday morning action—a predictable weekly rhythm
         </p>
 
         <div className="relative">
-          <Stage title="Input" data={nodes.Input} color="blue" />
+          <Stage data={nodes.FridayPulse} color="blue" />
           
           <FlowArrow 
             gradientClass="bg-gradient-to-b from-blue-500 to-purple-500" 
             iconClass="text-purple-500"
           />
           
-          <Stage title="Processing" data={nodes.Processing} color="purple" />
+          <Stage data={nodes.DataStore} color="purple" />
           
           <FlowArrow 
-            gradientClass="bg-gradient-to-b from-purple-500 to-green-500" 
+            gradientClass="bg-gradient-to-b from-purple-500 to-purple-600" 
+            iconClass="text-purple-600"
+          />
+          
+          <Stage data={nodes.Intelligence} color="purple" />
+          
+          <FlowArrow 
+            gradientClass="bg-gradient-to-b from-purple-600 to-green-500" 
             iconClass="text-green-500"
           />
           
-          <Stage title="Output" data={nodes.Output} color="green" />
+          <Stage data={nodes.MondayBrief} color="green" />
           
           <FlowArrow 
-            gradientClass="bg-gradient-to-b from-green-500 to-indigo-500" 
+            gradientClass="bg-gradient-to-b from-green-500 to-green-600" 
+            iconClass="text-green-600"
+          />
+          
+          <Stage data={nodes.Action} color="green" />
+          
+          <FlowArrow 
+            gradientClass="bg-gradient-to-b from-green-600 to-indigo-500" 
             iconClass="text-indigo-500"
           />
+          
+          <Stage data={nodes.Dashboard} color="indigo" />
         </div>
 
-        {/* Continuous Learning - Feedback Loop Bar */}
-        <div className="mt-4 relative">
+        {/* Low Response Rate Reminder */}
+        <div className="mt-8 relative">
           <div 
-            className="w-full rounded-lg bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 p-5 border border-purple-400/30"
-            data-testid="section-continuous-learning"
+            className="w-full rounded-lg bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 p-5 border border-purple-400/30"
+            data-testid="section-reminders"
           >
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                  <RefreshCcw className="h-5 w-5 text-white" />
+                  <Calendar className="h-5 w-5 text-white" />
                 </div>
                 <div>
                   <h4 
                     className="text-lg font-bold text-white" 
                     style={{ letterSpacing: '-0.01em' }}
-                    data-testid="heading-continuous-learning"
+                    data-testid="heading-reminders"
                   >
-                    Continuous Learning Loop
+                    Gentle Reminders Built-In
                   </h4>
                   <p 
                     className="text-white/90 text-sm" 
                     style={{ letterSpacing: '-0.005em' }}
-                    data-testid="text-continuous-learning-subtitle"
+                    data-testid="text-reminders-subtitle"
                   >
-                    Feedback flows back to improve all stages
+                    If response rates drop, leaders get a polite Thursday nudge
                   </p>
                 </div>
               </div>
               <div className="flex items-center gap-6 text-white/90 text-sm" style={{ letterSpacing: '-0.005em' }}>
                 <div className="flex items-center gap-2">
                   <span className="size-1.5 rounded-full bg-white/80" />
-                  <span>Tracks outcomes</span>
+                  <span>Automatic retries</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="size-1.5 rounded-full bg-white/80" />
-                  <span>Refines AI models</span>
+                  <span>Admin pause controls</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="size-1.5 rounded-full bg-white/80" />
-                  <span>Reduces noise</span>
+                  <span>Delivery tracking</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
         
-        {/* Feedback Loop Indicator - Centered Below */}
-        <div className="flex justify-center mt-6" data-testid="feedback-loop-indicator">
-          <div className="flex items-center gap-3 flex-wrap justify-center">
-            <RefreshCcw className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
-            <span className="text-sm font-semibold text-muted-foreground" style={{ letterSpacing: '-0.005em' }} data-testid="text-feedback-loop">
-              Feedback flows back to improve Input stage
+        {/* Feedback Loop Indicator */}
+        <div className="flex justify-center mt-8" data-testid="feedback-loop-indicator">
+          <div className="flex items-center gap-3 flex-wrap justify-center bg-muted/50 px-6 py-3 rounded-lg">
+            <RefreshCcw className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
+            <span className="text-sm font-semibold text-foreground" style={{ letterSpacing: '-0.005em' }} data-testid="text-feedback-loop">
+              Action outcomes flow back to refine next week's brief
             </span>
-            <RefreshCcw className="h-6 w-6 text-blue-600 dark:text-blue-400 scale-x-[-1]" />
           </div>
         </div>
       </div>

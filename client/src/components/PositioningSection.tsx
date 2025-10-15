@@ -43,35 +43,35 @@ export default function PositioningSection() {
     },
     {
       icon: Zap,
-      title: "Action-Oriented AI",
+      title: "Lightweight Pulse-to-Action",
       description:
-        "We don't just identify problems; we give leaders the exact conversations and micro-actions to solve them, right when they need it.",
+        "Simple weekly pulse → smart brief → one micro-action. No complex tech, no overwhelming data. Built for aged care reality.",
       differentiators: [
-        "Agentic AI that autonomously detects + recommends (not just dashboards)",
-        "OORA conversation framework with contextual nudges",
-        "Behaviour-based (Green/Red) instead of generic engagement scores",
+        "3-question pulse (2 min) vs 50-item surveys",
+        "One actionable brief vs 20-page analytics reports",
+        "Pulse-driven insights vs surveillance-based metadata",
       ],
       details: {
-        overview: "Most platforms stop at showing you problems. CultureCrunch AI is your action engine—providing leaders with specific, contextual guidance on what to do, how to do it, and when to do it.",
+        overview: "Aged care doesn't need more complexity. CultureCrunch delivers simplicity at scale: a predictable weekly rhythm from pulse to action, designed for time-poor leaders managing frontline teams.",
         keyFeatures: [
           {
-            title: "Agentic AI Detection",
-            description: "Our AI doesn't wait for manual analysis. It autonomously identifies patterns, detects risks, and recommends specific interventions based on 30+ years of validated research."
+            title: "Minimal Staff Burden",
+            description: "3 rotating questions, 2 minutes, Friday afternoon—aligned to shift patterns. No logins, no complex rating scales. Works on any phone."
           },
           {
-            title: "OORA Conversation Framework",
-            description: "Leaders receive scripted conversation starters using the proven OORA method (Observe, Offer, Request, Agree) tailored to their team's specific situation."
+            title: "Smart Brief Generation",
+            description: "Rules-based system with AI assistance synthesizes pulse data into one headline insight and one micro-action (<15 min). Human-reviewed before delivery. Leaders act, not analyze."
           },
           {
-            title: "Behaviour-Based Insights",
-            description: "Instead of vague 'engagement scores', leaders see clear Green (protective behaviours) and Red (risk indicators) signals with specific actions to reinforce or address each."
+            title: "Behaviour-Based Focus",
+            description: "Red→Green index (0-100) shows protective vs risk behaviours. Clear, actionable, evidence-based—no vague engagement scores."
           },
           {
-            title: "Just-in-Time Nudges",
-            description: "Contextual prompts delivered when leaders can act on them—not buried in weekly reports they'll never read."
+            title: "Privacy by Minimalism",
+            description: "No email scraping, no chat monitoring, no calendar analysis. Only what staff voluntarily share in the pulse—nothing more."
           }
         ],
-        impact: "Leaders report 10-minute weekly time investment vs traditional 2-hour training sessions, with 3x higher action completion rates due to specific, timely guidance."
+        impact: "Lightweight systems achieve 80%+ pulse response rates in aged care (vs 30% for complex surveys) and 90% leader action completion (vs 15% for lengthy reports)."
       }
     },
     {
@@ -109,39 +109,39 @@ export default function PositioningSection() {
     },
     {
       icon: Lock,
-      title: "Privacy-First Architecture",
+      title: "Privacy by Minimalism",
       description:
-        "Metadata only. No content. No surveillance. Australian data residency. Opt-in participation. Trust built in.",
+        "No workplace surveillance. No metadata scraping. Only what staff voluntarily share in 3 weekly questions. Trust through transparency.",
       differentiators: [
-        "Zero message content ingestion (activity patterns only)",
-        "Aggregate reporting (min cohort size enforced)",
-        "Transparent AI: leaders see the 'why' behind every nudge",
+        "Zero workplace data collection (no email/chat/calendar)",
+        "De-identified pulse aggregation (team-level only)",
+        "Transparent briefs: leaders see the 'why' behind actions",
       ],
       details: {
-        overview: "Privacy isn't a feature we added—it's our architecture. From day one, CultureCrunch AI was designed to deliver insights without surveillance, building trust with employees and leaders alike.",
+        overview: "Most 'AI workplace analytics' platforms monitor emails, chats, and calendars. CultureCrunch collects nothing except voluntary pulse responses—no workplace surveillance, no hidden monitoring, complete transparency.",
         keyFeatures: [
           {
-            title: "Metadata-Only Analysis",
-            description: "We never see message content, emails, or private communications. Analysis uses only metadata: meeting frequency, response times, collaboration patterns. Your sensitive information stays private."
+            title: "Voluntary Data Only",
+            description: "Staff choose to answer 3 simple questions weekly. No email scraping, no chat analysis, no calendar monitoring. If they don't respond, we have no data—and that's by design."
           },
           {
-            title: "Aggregated Intelligence",
-            description: "Minimum cohort sizes enforced (typically 8+ employees). Individual patterns never exposed. Leaders see team trends, never individual tracking data."
+            title: "Team-Level Aggregation",
+            description: "Individual responses never shown. Minimum team size enforced (typically 5+ staff). Leaders see trends, never individual tracking."
           },
           {
-            title: "Transparent AI Reasoning",
-            description: "Every recommendation shows the 'why'. Leaders and employees understand the patterns that triggered suggestions, building trust in the system."
+            title: "Transparent AI Briefs",
+            description: "Every recommendation shows the evidence: 'Your team's workload score dropped 15 points' → here's why we're suggesting this action. No black-box algorithms."
           },
           {
-            title: "Australian Data Sovereignty",
-            description: "All data stored in Australian data centres. Full GDPR and Privacy Act compliance. No overseas data transfers without explicit consent."
+            title: "Australian Data Residency",
+            description: "All data stored in Australian data centres. Privacy Act compliant. No overseas transfers. Facility-level data segregation built-in."
           },
           {
-            title: "Opt-In Participation",
-            description: "Employees choose to participate. Clear consent processes. Ability to withdraw data at any time. Privacy controls in employee hands."
+            title: "No Hidden Monitoring",
+            description: "We don't integrate with Microsoft 365, Slack, or HRIS systems for 'passive data'. If it's not in the pulse, we don't have it. Simple."
           }
         ],
-        impact: "Privacy-first platforms achieve 87% employee opt-in rates vs 34% for surveillance-perceived tools, and maintain 4x higher ongoing participation."
+        impact: "Privacy-minimal platforms achieve 85%+ pulse participation in aged care (vs 40% for surveillance-perceived tools) and maintain trust even during workforce pressures."
       }
     },
   ];

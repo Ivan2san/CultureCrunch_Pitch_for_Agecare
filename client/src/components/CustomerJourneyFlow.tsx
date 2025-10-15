@@ -11,10 +11,10 @@ export default function CustomerJourneyFlow() {
       color: "indigo",
       summary: "Quick configuration and team alignment",
       keyPoints: [
-        "Leader + team complete Triple Goal Survey",
-        "Define target behaviors (red/green zones)",
-        "Configure AI system for your organization",
-        "First pulse survey + baseline ONA"
+        "Define organisational structure & teams",
+        "Map Red→Green target behaviours",
+        "Configure pulse survey delivery times",
+        "First Friday pulse survey launched"
       ]
     },
     {
@@ -23,13 +23,13 @@ export default function CustomerJourneyFlow() {
       duration: "Weeks 3-6",
       icon: Rocket,
       color: "purple",
-      summary: "Weekly AI briefs, OORA conversations, micro-actions",
+      summary: "Weekly pulse-to-brief rhythm with micro-actions",
       keyPoints: [
-        "AI-generated Leader Brief every Monday @ 7am",
-        "10-min OORA conversation ritual with team",
-        "One micro-action per week (e.g., kill 2 meetings)",
-        "Real-time tracking: overtime, recognition, risk trends",
-        "Leader 360 debrief + Team Review (Week 5-6)"
+        "Monday 6am AI Brief with one micro-action",
+        "Leaders implement 15-min actions weekly",
+        "Dashboard tracks pulse trends + outcomes",
+        "OORA conversations as needed",
+        "Mid-sprint calibration (Week 4)"
       ]
     },
     {
@@ -40,11 +40,11 @@ export default function CustomerJourneyFlow() {
       color: "green",
       summary: "Sustained habits, ongoing insights, continuous improvement",
       keyPoints: [
-        "Weekly Leader Briefs continue automatically",
-        "Dashboard tracks culture shifts & compliance",
-        "Quarterly pulse + ONA refresh",
-        "Hazard register auto-maintained",
-        "ROI reporting for audit readiness"
+        "Weekly pulse + brief cycle continues",
+        "Dashboard tracks 6-week trends",
+        "Evidence exports for compliance",
+        "Quarterly action reviews",
+        "System adjustments as needed"
       ]
     }
   ];

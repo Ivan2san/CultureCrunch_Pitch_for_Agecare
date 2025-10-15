@@ -118,10 +118,10 @@ export default function LOIPreview({ open, onOpenChange }: LOIPreviewProps) {
                 </ul>
               </li>
               <li className="text-foreground">
-                <strong>Data Integration & Privacy Controls</strong>
+                <strong>Pulse Survey & Privacy Controls</strong>
                 <ul className="list-disc list-inside ml-6 mt-1 text-muted-foreground text-sm">
-                  <li>Secure integration with [specify systems: e.g., Microsoft 365, Slack]</li>
-                  <li>Privacy-first architecture (metadata only)</li>
+                  <li>Weekly 3-question pulse survey (mobile-friendly, no logins)</li>
+                  <li>Privacy-minimal architecture (voluntary responses only)</li>
                   <li>Compliance with Australian Privacy Principles</li>
                 </ul>
               </li>
@@ -130,7 +130,7 @@ export default function LOIPreview({ open, onOpenChange }: LOIPreviewProps) {
                 <ul className="list-disc list-inside ml-6 mt-1 text-muted-foreground text-sm">
                   <li>Initial onboarding session (2 hours)</li>
                   <li>Weekly office hours</li>
-                  <li>Direct support via Slack/Teams/Email</li>
+                  <li>Direct support via email/phone</li>
                 </ul>
               </li>
               <li className="text-foreground">
