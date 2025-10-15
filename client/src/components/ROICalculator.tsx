@@ -70,7 +70,7 @@ export default function ROICalculator() {
             <h2 className="text-4xl font-bold text-foreground">Aged Care ROI Calculator</h2>
           </div>
           <p className="text-xl text-muted-foreground">
-            Calculate the financial impact of reducing psychosocial risk in your aged care facility
+            Calculate the financial impact of reducing psychosocial risk in your aged care service
           </p>
         </div>
 
@@ -80,12 +80,12 @@ export default function ROICalculator() {
             <Card className="p-6 sticky top-24 bg-card">
               <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
                 <Users className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                Your Aged Care Facility
+                Your Aged Care Service
               </h3>
 
               <div className="space-y-6">
                 <div>
-                  <Label htmlFor="employee-count">Total Staff (e.g., 65 for 80-bed facility)</Label>
+                  <Label htmlFor="employee-count">Total Staff (e.g., 65 for residential, 15 for home care)</Label>
                   <Input
                     id="employee-count"
                     type="number"

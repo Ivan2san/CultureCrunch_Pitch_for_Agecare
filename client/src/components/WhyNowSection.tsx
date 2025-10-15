@@ -196,7 +196,7 @@ export default function WhyNowSection() {
       {/* Footer caption */}
       <div className="mx-auto mt-12 lg:mt-40 max-w-4xl text-center">
         <p className="text-lg md:text-xl font-semibold text-foreground" style={{ letterSpacing: '-0.005em' }}>
-          <span className="font-bold text-blue-600 dark:text-blue-400">2025:</span> Aged care facilities can now transform{" "}
+          <span className="font-bold text-blue-600 dark:text-blue-400">2025:</span> Aged care providers can now transform{" "}
           psychosocial compliance into a workforce retention strategy.
         </p>
       </div>
