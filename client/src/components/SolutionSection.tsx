@@ -59,13 +59,6 @@ export default function SolutionSection() {
     },
   ];
 
-  const stats = [
-    { value: "≤ 30 days", label: "Time to Audit-Ready" },
-    { value: "75%+", label: "Leader Action Rate" },
-    { value: "25-35%", label: "After-hours ↓ in 4 wks" },
-    { value: "1-click", label: "Evidence Generation" },
-  ];
-
   return (
     <section id="solution" className="min-h-screen bg-corporate-gradient px-6 py-32">
       <div className="max-w-7xl mx-auto">
@@ -77,16 +70,6 @@ export default function SolutionSection() {
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
             Turn psychosocial compliance into auditable action and better leadership, automatically
           </p>
-        </div>
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-          {stats.map((stat, index) => (
-            <Card key={index} className="p-6 text-center bg-card/60 border border-border" data-testid={`solution-stat-${index}`}>
-              <div className="text-3xl font-bold text-foreground mb-1">{stat.value}</div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
-            </Card>
-          ))}
         </div>
 
         {/* Multi-Level Leader Support Architecture */}
