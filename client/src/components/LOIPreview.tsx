@@ -155,8 +155,8 @@ export default function LOIPreview({ open, onOpenChange }: LOIPreviewProps) {
             <h2 className="text-xl font-bold text-foreground mt-6 mb-3">5. FOUNDING PARTNER BENEFITS</h2>
             <p className="text-muted-foreground mb-3">As a Founding Partner, [Client Organisation] will receive:</p>
             <div className="space-y-3">
-              <div className="bg-green-50 p-4 rounded-lg">
-                <p className="font-bold text-green-600 mb-2">1. Locked-In Pricing</p>
+              <div className="bg-indigo-50 p-4 rounded-lg">
+                <p className="font-bold text-indigo-600 mb-2">1. Locked-In Pricing</p>
                 <ul className="list-disc list-inside ml-4 text-muted-foreground text-sm">
                   <li>Pilot price of $25,000 AUD (will not be offered after launch)</li>
                   <li>Post-pilot subscription pricing at 30% below standard rates</li>

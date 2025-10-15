@@ -97,22 +97,22 @@ export default function MethodologyDialog({ open, onOpenChange }: MethodologyDia
             {/* Protected Content - No Select, No Copy */}
             <div className="select-none" onContextMenu={(e) => e.preventDefault()}>
               {/* Confidentiality Notice */}
-              <div className="bg-red-50 border-2 border-red-200 rounded-lg p-6 mb-8">
-                <h3 className="text-lg font-bold text-red-900 mb-3">CONFIDENTIAL AND PROPRIETARY</h3>
-                <p className="text-sm text-red-800 mb-2">
+              <div className="bg-purple-50 border-2 border-purple-200 rounded-lg p-6 mb-8">
+                <h3 className="text-lg font-bold text-purple-900 mb-3">CONFIDENTIAL AND PROPRIETARY</h3>
+                <p className="text-sm text-purple-800 mb-2">
                   <strong>© 2025 Culture Crunch Pty Ltd. All Rights Reserved.</strong>
                 </p>
-                <p className="text-sm text-red-700 mb-3">
+                <p className="text-sm text-purple-700 mb-3">
                   This document contains confidential and proprietary information belonging to Culture Crunch Pty Ltd. 
                   This material is provided solely for the use of the intended recipient and may not be copied, distributed, 
                   published, or disclosed to third parties without the express written consent of Culture Crunch Pty Ltd.
                 </p>
-                <p className="text-xs text-red-600 mb-2">
+                <p className="text-xs text-purple-600 mb-2">
                   <strong>Restriction on Use:</strong> The methodologies, calculations, research compilations, and business 
                   intelligence contained herein constitute valuable trade secrets and proprietary business information of 
                   Culture Crunch Pty Ltd. Unauthorised use, reproduction, or distribution may result in civil and criminal penalties.
                 </p>
-                <p className="text-xs text-red-600">
+                <p className="text-xs text-purple-600">
                   <strong>Contact:</strong> Campbell McGlynn | campbell@culturecrunch.io
                 </p>
               </div>
@@ -253,8 +253,8 @@ export default function MethodologyDialog({ open, onOpenChange }: MethodologyDia
                 <h2 className="text-2xl font-bold text-foreground mb-4">5. Expected Improvement Rates (Aged Care Sector)</h2>
 
                 <div className="space-y-4">
-                  <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                    <h3 className="font-bold text-green-900 mb-2">Mental Health Claims Reduction: 40%</h3>
+                  <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
+                    <h3 className="font-bold text-indigo-900 mb-2">Mental Health Claims Reduction: 40%</h3>
                     <p className="text-sm text-muted-foreground mb-2">
                       Early intervention programs typically show 30-50% reduction. Conservative 40% applied to aged care context.
                     </p>
@@ -264,8 +264,8 @@ export default function MethodologyDialog({ open, onOpenChange }: MethodologyDia
                     </p>
                   </div>
 
-                  <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                    <h3 className="font-bold text-green-900 mb-2">Turnover Reduction: 25%</h3>
+                  <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
+                    <h3 className="font-bold text-indigo-900 mb-2">Turnover Reduction: 25%</h3>
                     <p className="text-sm text-muted-foreground mb-2">
                       Conservative 25% reduction applied to aged care workforce crisis (27% turnover, 84,900 staff exits)
                     </p>
@@ -275,8 +275,8 @@ export default function MethodologyDialog({ open, onOpenChange }: MethodologyDia
                     </p>
                   </div>
 
-                  <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                    <h3 className="font-bold text-green-900 mb-2">Productivity Gains: 30%</h3>
+                  <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
+                    <h3 className="font-bold text-indigo-900 mb-2">Productivity Gains: 30%</h3>
                     <p className="text-sm text-muted-foreground mb-2">
                       Engagement interventions show 30% productivity recovery when addressing disengagement
                     </p>
@@ -286,8 +286,8 @@ export default function MethodologyDialog({ open, onOpenChange }: MethodologyDia
                     </p>
                   </div>
 
-                  <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                    <h3 className="font-bold text-green-900 mb-2">Absenteeism Reduction: 20%</h3>
+                  <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
+                    <h3 className="font-bold text-indigo-900 mb-2">Absenteeism Reduction: 20%</h3>
                     <p className="text-sm text-muted-foreground mb-2">
                       Very conservative 20% given aged care mental health claims (34 weeks median time off, 4× other injuries)
                     </p>

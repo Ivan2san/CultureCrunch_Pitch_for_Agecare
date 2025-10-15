@@ -216,8 +216,8 @@ const scenarios: Scenario[] = [
 const phaseColors = {
   observe: { bg: "bg-blue-50", border: "border-blue-200", text: "text-blue-700", accent: "bg-blue-500" },
   orient: { bg: "bg-purple-50", border: "border-purple-200", text: "text-purple-700", accent: "bg-purple-500" },
-  respond: { bg: "bg-green-50", border: "border-green-200", text: "text-green-700", accent: "bg-green-500" },
-  assess: { bg: "bg-orange-50", border: "border-orange-200", text: "text-orange-700", accent: "bg-orange-500" },
+  respond: { bg: "bg-indigo-50", border: "border-indigo-200", text: "text-indigo-700", accent: "bg-indigo-500" },
+  assess: { bg: "bg-indigo-50", border: "border-indigo-200", text: "text-indigo-700", accent: "bg-indigo-500" },
 };
 
 export default function OORADemo() {

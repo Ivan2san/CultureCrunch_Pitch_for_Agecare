@@ -17,8 +17,8 @@ export default function RoadmapSection() {
       border: "border-purple-400",
     },
     green: {
-      icon: "text-green-600",
-      border: "border-green-400",
+      icon: "text-indigo-600",
+      border: "border-indigo-400",
     },
     indigo: {
       icon: "text-indigo-600",

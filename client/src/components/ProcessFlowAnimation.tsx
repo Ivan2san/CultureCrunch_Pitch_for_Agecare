@@ -71,7 +71,7 @@ export default function ProcessFlowAnimation() {
   const colorClasses = {
     blue: "text-blue-600",
     purple: "text-purple-600",
-    green: "text-green-600",
+    green: "text-indigo-600",
     indigo: "text-indigo-600"
   };
 
@@ -157,21 +157,21 @@ export default function ProcessFlowAnimation() {
           <Stage data={nodes.Intelligence} color="purple" />
           
           <FlowArrow 
-            gradientClass="bg-gradient-to-b from-purple-600 to-green-500" 
-            iconClass="text-green-500"
+            gradientClass="bg-gradient-to-b from-purple-600 to-indigo-500" 
+            iconClass="text-indigo-500"
           />
           
           <Stage data={nodes.MondayBrief} color="green" />
           
           <FlowArrow 
-            gradientClass="bg-gradient-to-b from-green-500 to-green-600" 
-            iconClass="text-green-600"
+            gradientClass="bg-gradient-to-b from-indigo-500 to-indigo-600" 
+            iconClass="text-indigo-600"
           />
           
           <Stage data={nodes.Action} color="green" />
           
           <FlowArrow 
-            gradientClass="bg-gradient-to-b from-green-600 to-indigo-500" 
+            gradientClass="bg-gradient-to-b from-indigo-600 to-indigo-500" 
             iconClass="text-indigo-500"
           />
           

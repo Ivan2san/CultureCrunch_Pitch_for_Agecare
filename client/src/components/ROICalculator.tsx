@@ -394,32 +394,32 @@ export default function ROICalculator() {
                   <div>
                     <h4 className="text-xl font-bold text-foreground mb-4">Expected Savings (Research-Backed Reduction Rates)</h4>
                     <div className="space-y-4">
-                      <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                        <h5 className="font-bold text-green-800 mb-2">Mental Health Claims: 40% Reduction</h5>
+                      <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
+                        <h5 className="font-bold text-indigo-800 mb-2">Mental Health Claims: 40% Reduction</h5>
                         <p className="text-sm text-muted-foreground">
                           Early intervention crucial for aged care: 82% residential compliance, 65% home care, 255 regulatory 
                           actions (2023-24), proactive hazard management reduces claims
                         </p>
                       </div>
 
-                      <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                        <h5 className="font-bold text-green-800 mb-2">Turnover: 25% Reduction</h5>
+                      <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
+                        <h5 className="font-bold text-indigo-800 mb-2">Turnover: 25% Reduction</h5>
                         <p className="text-sm text-muted-foreground">
                           Critical for aged care workforce crisis: 84,900 staff exits (27% turnover), leadership support 
                           programs reduce voluntary departures and improve retention
                         </p>
                       </div>
 
-                      <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                        <h5 className="font-bold text-green-800 mb-2">Productivity: 30% Improvement</h5>
+                      <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
+                        <h5 className="font-bold text-indigo-800 mb-2">Productivity: 30% Improvement</h5>
                         <p className="text-sm text-muted-foreground">
                           Engagement interventions address aged care stress factors (resident aggression, dementia care, 
                           family complaints) through targeted leadership support
                         </p>
                       </div>
 
-                      <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                        <h5 className="font-bold text-green-800 mb-2">Absenteeism: 20% Reduction</h5>
+                      <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
+                        <h5 className="font-bold text-indigo-800 mb-2">Absenteeism: 20% Reduction</h5>
                         <p className="text-sm text-muted-foreground">
                           Preventive support reduces aged care absenteeism: 25% increase in NSW inspector visits, 
                           Victoria psychological health regulations (Dec 2025) driving focus on prevention

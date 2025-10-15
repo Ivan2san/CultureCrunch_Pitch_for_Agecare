@@ -63,10 +63,10 @@ export default function CustomerJourneyFlow() {
       text: "text-purple-600"
     },
     green: {
-      bg: "bg-green-50",
-      border: "border-green-200",
-      icon: "text-green-600",
-      text: "text-green-600"
+      bg: "bg-indigo-50",
+      border: "border-indigo-200",
+      icon: "text-indigo-600",
+      text: "text-indigo-600"
     }
   };
 

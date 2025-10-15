@@ -277,11 +277,11 @@ export default function DeliverablesSection() {
       accent: "bg-purple-100"
     },
     green: {
-      bg: "bg-green-50",
-      border: "border-green-200",
-      icon: "text-green-600",
-      hover: "hover:border-green-300",
-      accent: "bg-green-100"
+      bg: "bg-indigo-50",
+      border: "border-indigo-200",
+      icon: "text-indigo-600",
+      hover: "hover:border-indigo-300",
+      accent: "bg-indigo-100"
     },
     blue: {
       bg: "bg-blue-50",

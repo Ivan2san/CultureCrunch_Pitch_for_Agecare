@@ -220,14 +220,14 @@ export default function HowItWorksSection() {
             {techLayers.map((layer, index) => {
               const Icon = layer.icon;
               const isExpanded = expandedLayer === index;
-              const colorClass = layer.color === "green" ? "green" : layer.color === "purple" ? "purple" : "blue";
+              const colorClass = layer.color === "green" ? "indigo" : layer.color === "purple" ? "purple" : "blue";
 
               return (
                 <Card
                   key={index}
                   className={`p-6 border-t-4 transition-all ${
-                    colorClass === "green"
-                      ? "border-t-green-500"
+                    colorClass === "indigo"
+                      ? "border-t-indigo-500"
                       : colorClass === "purple"
                       ? "border-t-purple-500"
                       : "border-t-blue-500"
@@ -237,7 +237,7 @@ export default function HowItWorksSection() {
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-3 rounded-md bg-muted">
                       <Icon className={`w-8 h-8 ${
-                        colorClass === "green" ? "text-green-600" :
+                        colorClass === "indigo" ? "text-indigo-600" :
                         colorClass === "purple" ? "text-purple-600" :
                         "text-blue-600"
                       }`} />
@@ -312,13 +312,13 @@ export default function HowItWorksSection() {
 
                       {layer.callout && (
                         <div className={`p-4 rounded-md bg-card border-2 ${
-                          colorClass === "green" ? "border-green-500" :
+                          colorClass === "indigo" ? "border-indigo-500" :
                           colorClass === "purple" ? "border-purple-500" :
                           "border-blue-500"
                         }`}>
                           <div className="flex items-start gap-2">
                             <Lock className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
-                              colorClass === "green" ? "text-green-600" :
+                              colorClass === "indigo" ? "text-indigo-600" :
                               colorClass === "purple" ? "text-purple-600" :
                               "text-blue-600"
                             }`} />

@@ -31,7 +31,7 @@ export default function SolutionSection() {
             {outcomes.map((outcome, index) => (
               <Card key={index} className="p-6 hover-elevate" data-testid={`card-outcome-${index}`}>
                 <div className="flex flex-col items-center text-center gap-4">
-                  <CheckCircle className="w-12 h-12 text-green-600 flex-shrink-0" />
+                  <CheckCircle className="w-12 h-12 text-indigo-600 flex-shrink-0" />
                   <p className="text-lg md:text-xl font-medium text-foreground" style={{ letterSpacing: '-0.005em' }}>
                     {outcome}
                   </p>
