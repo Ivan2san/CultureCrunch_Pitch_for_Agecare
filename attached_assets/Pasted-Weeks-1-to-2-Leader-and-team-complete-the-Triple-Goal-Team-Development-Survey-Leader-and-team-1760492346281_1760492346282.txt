@@ -1,0 +1,31 @@
+Weeks 1 to 2: 
+
+Leader and team complete the Triple Goal Team Development Survey.
+Leader and team trained in Triple Goal methodology including Accountable Conversations.
+Leader and team define target state for high performance psychosocial safety using Triple Goal methodology (results in clear set of prioritised red and green zone behaviours). 
+Leader and team align on the weekly or fortnightly sprint cycle. Tthis and the actions above are conducted in a single workshop. 
+Culture Crunch app is configured for client org (LLM + app wrapper with nudge engine).
+Dashboard is configured for client. 
+CC app is tested ready for deployment.
+Leader onboards self into CC app - uploads all relevant team static data and information (doc / data upload into app). This includes TG Team Development survey report + priorities red and green zone behaviours for the team.  
+Initiate LGP360 feedback assessment for leader
+First pulse survey conducted Friday or week 2 (3 questions, 2 minutes, anonymous).
+First round of ONA conducted and fed into CC app (if relevant...??).
+
+Weeks 3-4:
+
+First AI-generated Leader Brief delivered Monday, week 3 @ 7am.
+Leader runs first 10-min OORA conversation ritual and team picks one micro-practice or action for the week. Recommended day is Monday, PM.
+AI tracks: meeting load, shifts, rosters, overtime. recognition patterns, psychosocial trends (not sure how this will work in the MVP consulting model).
+Micro-action / practice is implemented and tracked: "Kill 2 recurring meetings", "5-min recognition round". 
+Process is replicated for week 4. 
+Dashboard shows real-time culture shifts at the end of week 4. 
+
+Weeks 5-6: Embed + Report
+
+Leader LGP360 debrief and action planning.
+Leader conducts Team Review with direct reports and confirms One Big Practice. 
+Weeks 5 + 6 continue the weekly psychosocial sprints.
+Teem sees behaviours changes and actions being implemented.
+Final ROI snapshot for compliance audits
+12-month sustain licence - AI Leader Co-pilot access.

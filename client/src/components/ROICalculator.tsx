@@ -344,22 +344,22 @@ export default function ROICalculator() {
                       <div className="bg-muted p-4 rounded-lg">
                         <h5 className="font-bold text-foreground mb-2">1. Mental Health Claims Cost</h5>
                         <p className="text-sm text-muted-foreground mb-2">
-                          <strong>Formula:</strong> Claims × $290,000
+                          <strong>Formula:</strong> Claims × $58,600
                         </p>
                         <p className="text-sm text-muted-foreground">
-                          <strong>Source:</strong> $290,000 per claim is the average total cost of a mental health workers' 
-                          compensation claim in Australia (SafeWork Australia research)
+                          <strong>Source:</strong> $58,600 median payout for aged care mental health claims with 34 weeks median time off 
+                          (4× longer than other injuries) - Safe Work Australia 2020-21 aged care sector data
                         </p>
                       </div>
 
                       <div className="bg-muted p-4 rounded-lg">
                         <h5 className="font-bold text-foreground mb-2">2. Turnover Costs</h5>
                         <p className="text-sm text-muted-foreground mb-2">
-                          <strong>Formula:</strong> (Employee Count × Turnover Rate %) × Salary × 1.5
+                          <strong>Formula:</strong> (Employee Count × Turnover Rate %) × Salary × 0.7
                         </p>
                         <p className="text-sm text-muted-foreground">
-                          <strong>Source:</strong> 150% of salary is the standard replacement cost including recruitment, 
-                          onboarding, and lost productivity (SHRM/Deloitte benchmarks)
+                          <strong>Source:</strong> 70% of salary replacement cost for aged care sector (27% national turnover rate, 
+                          43,000 vacancies nationwide) - Aged Care Provider Workforce Survey 2023
                         </p>
                       </div>
 
@@ -372,8 +372,8 @@ export default function ROICalculator() {
                           <strong>Calculation:</strong> Disengaged = Total × (1 - Engagement Score ÷ 100)
                         </p>
                         <p className="text-sm text-muted-foreground">
-                          <strong>Source:</strong> 18% productivity loss from disengaged employees (Gallup State of the 
-                          Global Workplace research)
+                          <strong>Context:</strong> 18% productivity loss amplified in aged care by workforce stress - only 49% report 
+                          manageable workloads (Aged Care Provider Workforce Survey 2023)
                         </p>
                       </div>
 
@@ -383,7 +383,8 @@ export default function ROICalculator() {
                           <strong>Formula:</strong> Employee Count × $3,500
                         </p>
                         <p className="text-sm text-muted-foreground">
-                          <strong>Source:</strong> $3,500 per employee annual absenteeism cost (Australian HR Institute data)
+                          <strong>Context:</strong> $3,500 per employee amplified by aged care hazards (resident aggression, 
+                          dementia behaviors, family complaints) - Safe Work Australia aged care sector data
                         </p>
                       </div>
                     </div>
@@ -396,31 +397,32 @@ export default function ROICalculator() {
                       <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                         <h5 className="font-bold text-green-800 mb-2">Mental Health Claims: 40% Reduction</h5>
                         <p className="text-sm text-muted-foreground">
-                          Evidence from early intervention programs in psychological safety shows significant reduction in 
-                          mental health claims when proactive support is provided
+                          Early intervention crucial for aged care: 82% residential compliance, 65% home care, 255 regulatory 
+                          actions (2023-24), proactive hazard management reduces claims
                         </p>
                       </div>
 
                       <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                         <h5 className="font-bold text-green-800 mb-2">Turnover: 25% Reduction</h5>
                         <p className="text-sm text-muted-foreground">
-                          Leader support programs demonstrate measurable impact on employee retention and reduced voluntary turnover
+                          Critical for aged care workforce crisis: 84,900 staff exits (27% turnover), leadership support 
+                          programs reduce voluntary departures and improve retention
                         </p>
                       </div>
 
                       <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                         <h5 className="font-bold text-green-800 mb-2">Productivity: 30% Improvement</h5>
                         <p className="text-sm text-muted-foreground">
-                          Engagement intervention effectiveness studies show substantial productivity gains when disengagement 
-                          is addressed through targeted leadership support
+                          Engagement interventions address aged care stress factors (resident aggression, dementia care, 
+                          family complaints) through targeted leadership support
                         </p>
                       </div>
 
                       <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                         <h5 className="font-bold text-green-800 mb-2">Absenteeism: 20% Reduction</h5>
                         <p className="text-sm text-muted-foreground">
-                          Wellbeing program outcomes data demonstrates consistent reduction in absence rates when preventive 
-                          measures are implemented
+                          Preventive support reduces aged care absenteeism: 25% increase in NSW inspector visits, 
+                          Victoria psychological health regulations (Dec 2025) driving focus on prevention
                         </p>
                       </div>
                     </div>
