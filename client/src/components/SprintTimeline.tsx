@@ -77,10 +77,10 @@ export default function SprintTimeline() {
       hover: "hover:border-purple-300"
     },
     green: {
-      bg: "bg-green-50",
-      border: "border-green-200",
-      icon: "text-green-600",
-      hover: "hover:border-green-300"
+      bg: "bg-blue-50",
+      border: "border-blue-200",
+      icon: "text-blue-600",
+      hover: "hover:border-blue-300"
     }
   };
 

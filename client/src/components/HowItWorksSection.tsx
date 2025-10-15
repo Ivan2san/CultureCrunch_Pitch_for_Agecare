@@ -377,28 +377,28 @@ export default function HowItWorksSection() {
             <h4 className="text-xl font-bold text-foreground mb-4">Built-In Safeguards</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex items-start gap-3">
-                <Shield className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <Shield className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-foreground mb-1">Security by Design</p>
                   <p className="text-sm text-muted-foreground">Least-privilege access, facility-level segregation, audit logs for key actions</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-foreground mb-1">Compliance Support</p>
                   <p className="text-sm text-muted-foreground">Exportable evidence: pulse cadence, actions taken, trends—suitable for psychosocial safety audits</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <RefreshCw className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <RefreshCw className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-foreground mb-1">Continuity Built-In</p>
                   <p className="text-sm text-muted-foreground">Automatic retries for sends, delivery success monitoring, admin controls to pause/adjust timing</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <AlertCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <AlertCircle className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-foreground mb-1">Change Fatigue Mitigation</p>
                   <p className="text-sm text-muted-foreground">Micro-actions capped at 15 min, cadence aligned to rosters, ability to pause during high-pressure periods</p>
@@ -412,13 +412,14 @@ export default function HowItWorksSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           {/* Architecture Principles */}
           <Card className="p-6">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-2xl font-bold text-foreground" style={{ letterSpacing: '-0.01em' }}>Architecture Principles</h3>
+            <div className="flex items-center justify-between gap-4 mb-4">
+              <h3 className="text-2xl font-bold text-foreground flex-1" style={{ letterSpacing: '-0.01em' }}>Architecture Principles</h3>
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => setExpandedPrinciples(!expandedPrinciples)}
                 data-testid="button-toggle-principles"
+                className="shrink-0"
               >
                 {expandedPrinciples ? "Hide" : "Show"}
               </Button>
@@ -426,8 +427,8 @@ export default function HowItWorksSection() {
             
             {expandedPrinciples && (
               <div className="grid grid-cols-2 gap-4 animate-fade-in-up">
-                <div className="text-center p-4 bg-card border border-green-500 rounded-md">
-                  <Lock className="w-10 h-10 text-green-600 mx-auto mb-3" />
+                <div className="text-center p-4 bg-card border border-indigo-500 rounded-md">
+                  <Lock className="w-10 h-10 text-indigo-600 mx-auto mb-3" />
                   <p className="font-bold text-foreground mb-1" style={{ letterSpacing: '-0.01em' }}>Security-First</p>
                   <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>SOC 2 Type II in progress, quarterly pentests</p>
                 </div>
@@ -444,8 +445,8 @@ export default function HowItWorksSection() {
                   <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>DPIA complete, bias audits, human oversight</p>
                 </div>
 
-                <div className="text-center p-4 bg-card border border-orange-500 rounded-md">
-                  <Database className="w-10 h-10 text-orange-600 mx-auto mb-3" />
+                <div className="text-center p-4 bg-card border border-indigo-500 rounded-md">
+                  <Database className="w-10 h-10 text-indigo-600 mx-auto mb-3" />
                   <p className="font-bold text-foreground mb-1" style={{ letterSpacing: '-0.01em' }}>API-First Design</p>
                   <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>Extensible webhooks, customer data ownership</p>
                 </div>
@@ -455,13 +456,14 @@ export default function HowItWorksSection() {
 
           {/* Technical Validation */}
           <Card className="p-6">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-2xl font-bold text-foreground" style={{ letterSpacing: '-0.01em' }}>Technical Validation</h3>
+            <div className="flex items-center justify-between gap-4 mb-4">
+              <h3 className="text-2xl font-bold text-foreground flex-1" style={{ letterSpacing: '-0.01em' }}>Technical Validation</h3>
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => setExpandedValidation(!expandedValidation)}
                 data-testid="button-toggle-validation"
+                className="shrink-0"
               >
                 {expandedValidation ? "Hide" : "Show"}
               </Button>

@@ -215,37 +215,37 @@ export default function ROICalculator() {
           <div className="lg:col-span-2 space-y-6">
             {/* Current Costs */}
             <Card className="p-6 bg-card">
-              <h3 className="text-2xl font-bold text-red-600 mb-4 flex items-center gap-2">
+              <h3 className="text-2xl font-bold text-purple-600 mb-4 flex items-center gap-2">
                 <AlertTriangle className="w-6 h-6" />
                 Current Annual Costs
               </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-mental-health">
+                <div className="bg-purple-50 p-4 rounded-lg border border-purple-200" data-testid="cost-mental-health">
                   <p className="text-sm text-muted-foreground mb-1">Mental Health Claims</p>
-                  <p className="text-2xl font-bold text-red-700">{formatCurrency(annualMentalHealthClaimsCost)}</p>
+                  <p className="text-2xl font-bold text-purple-700">{formatCurrency(annualMentalHealthClaimsCost)}</p>
                   <p className="text-xs text-muted-foreground mt-1">{currentMentalHealthClaims} claims × $58.6K each</p>
                 </div>
 
-                <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-turnover">
+                <div className="bg-purple-50 p-4 rounded-lg border border-purple-200" data-testid="cost-turnover">
                   <p className="text-sm text-muted-foreground mb-1">Staff Replacement Costs</p>
-                  <p className="text-2xl font-bold text-red-700">{formatCurrency(annualTurnoverCost)}</p>
+                  <p className="text-2xl font-bold text-purple-700">{formatCurrency(annualTurnoverCost)}</p>
                   <p className="text-xs text-muted-foreground mt-1">{turnoverCount} departures × 70% avg salary</p>
                 </div>
 
-                <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-productivity">
+                <div className="bg-purple-50 p-4 rounded-lg border border-purple-200" data-testid="cost-productivity">
                   <p className="text-sm text-muted-foreground mb-1">Productivity Loss</p>
-                  <p className="text-2xl font-bold text-red-700">{formatCurrency(annualProductivityLoss)}</p>
+                  <p className="text-2xl font-bold text-purple-700">{formatCurrency(annualProductivityLoss)}</p>
                   <p className="text-xs text-muted-foreground mt-1">{disengagedEmployees} disengaged × 18% loss</p>
                 </div>
 
-                <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-absenteeism">
+                <div className="bg-purple-50 p-4 rounded-lg border border-purple-200" data-testid="cost-absenteeism">
                   <p className="text-sm text-muted-foreground mb-1">Absenteeism</p>
-                  <p className="text-2xl font-bold text-red-700">{formatCurrency(annualAbsenteeismCost)}</p>
+                  <p className="text-2xl font-bold text-purple-700">{formatCurrency(annualAbsenteeismCost)}</p>
                   <p className="text-xs text-muted-foreground mt-1">$3,500 per employee</p>
                 </div>
 
-                <div className="bg-red-600 p-4 rounded-lg text-white md:col-span-2" data-testid="cost-total">
+                <div className="bg-purple-600 p-4 rounded-lg text-white md:col-span-2" data-testid="cost-total">
                   <p className="text-sm mb-1">TOTAL ANNUAL COST</p>
                   <p className="text-3xl font-bold">{formatCurrency(totalAnnualCost)}</p>
                   <p className="text-xs mt-1 opacity-90">Status quo impact</p>
@@ -255,33 +255,33 @@ export default function ROICalculator() {
 
             {/* Savings */}
             <Card className="p-6 bg-card">
-              <h3 className="text-2xl font-bold text-green-600 mb-4 flex items-center gap-2">
+              <h3 className="text-2xl font-bold text-indigo-600 mb-4 flex items-center gap-2">
                 <TrendingUp className="w-6 h-6" />
                 Expected Annual Savings
               </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+                <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
                   <p className="text-sm text-muted-foreground mb-1">Claims Reduction (40%)</p>
-                  <p className="text-2xl font-bold text-green-700">{formatCurrency(claimsSavings)}</p>
+                  <p className="text-2xl font-bold text-indigo-700">{formatCurrency(claimsSavings)}</p>
                 </div>
 
-                <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+                <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
                   <p className="text-sm text-muted-foreground mb-1">Turnover Reduction (25%)</p>
-                  <p className="text-2xl font-bold text-green-700">{formatCurrency(turnoverSavings)}</p>
+                  <p className="text-2xl font-bold text-indigo-700">{formatCurrency(turnoverSavings)}</p>
                 </div>
 
-                <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+                <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
                   <p className="text-sm text-muted-foreground mb-1">Productivity Gains (30%)</p>
-                  <p className="text-2xl font-bold text-green-700">{formatCurrency(productivityGains)}</p>
+                  <p className="text-2xl font-bold text-indigo-700">{formatCurrency(productivityGains)}</p>
                 </div>
 
-                <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+                <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
                   <p className="text-sm text-muted-foreground mb-1">Absenteeism Reduction (20%)</p>
-                  <p className="text-2xl font-bold text-green-700">{formatCurrency(absenteeismSavings)}</p>
+                  <p className="text-2xl font-bold text-indigo-700">{formatCurrency(absenteeismSavings)}</p>
                 </div>
 
-                <div className="bg-green-600 p-4 rounded-lg text-white md:col-span-2">
+                <div className="bg-indigo-600 p-4 rounded-lg text-white md:col-span-2">
                   <p className="text-sm mb-1">TOTAL ANNUAL SAVINGS</p>
                   <p className="text-3xl font-bold">{formatCurrency(totalAnnualSavings)}</p>
                 </div>
