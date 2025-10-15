@@ -151,7 +151,7 @@ Covers all 17 WHS psychosocial hazards over 12 months
 Anonymous, secure, compliant with privacy requirements
 Real-time dashboard access for managers
 
-3. ThriveGuide Dashboard (Manager Portal)
+3. CultureCrunch Dashboard (Manager Portal)
 Web-based or Teams/Webex embedded app with:
 
 Current sprint status: Week tracker, focus behaviours
