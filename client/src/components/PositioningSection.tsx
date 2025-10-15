@@ -19,7 +19,7 @@ export default function PositioningSection() {
         "Hazard register auto-maintained with consultation trails",
       ],
       details: {
-        overview: "Unlike engagement tools that bolt on compliance features, ThriveGuide AI is architected from the ground up to meet Australian WHS psychosocial safety regulations. Every feature maps directly to your legal obligations.",
+        overview: "Unlike engagement tools that bolt on compliance features, CultureCrunch AI is architected from the ground up to meet Australian WHS psychosocial safety regulations. Every feature maps directly to your legal obligations.",
         keyFeatures: [
           {
             title: "Automated Evidence Generation",
@@ -52,7 +52,7 @@ export default function PositioningSection() {
         "Behaviour-based (Green/Red) instead of generic engagement scores",
       ],
       details: {
-        overview: "Most platforms stop at showing you problems. ThriveGuide AI is your action engine—providing leaders with specific, contextual guidance on what to do, how to do it, and when to do it.",
+        overview: "Most platforms stop at showing you problems. CultureCrunch AI is your action engine—providing leaders with specific, contextual guidance on what to do, how to do it, and when to do it.",
         keyFeatures: [
           {
             title: "Agentic AI Detection",
@@ -118,7 +118,7 @@ export default function PositioningSection() {
         "Transparent AI: leaders see the 'why' behind every nudge",
       ],
       details: {
-        overview: "Privacy isn't a feature we added—it's our architecture. From day one, ThriveGuide AI was designed to deliver insights without surveillance, building trust with employees and leaders alike.",
+        overview: "Privacy isn't a feature we added—it's our architecture. From day one, CultureCrunch AI was designed to deliver insights without surveillance, building trust with employees and leaders alike.",
         keyFeatures: [
           {
             title: "Metadata-Only Analysis",

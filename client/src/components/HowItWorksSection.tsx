@@ -234,7 +234,7 @@ export default function HowItWorksSection() {
               <h3 className="text-3xl font-bold text-foreground">Experience Monday Morning as a Care Manager</h3>
             </div>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Step into the role of an aged care leader. See how ThriveGuide AI transforms psychosocial risk detection into a 15-minute weekly ritual—from AI Brief to measurable results.
+              Step into the role of an aged care leader. See how CultureCrunch AI transforms psychosocial risk detection into a 15-minute weekly ritual—from AI Brief to measurable results.
             </p>
           </div>
 

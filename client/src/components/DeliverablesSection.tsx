@@ -188,7 +188,7 @@ export default function DeliverablesSection() {
           ]
         },
         {
-          title: "ThriveGuide Dashboard (Leader Portal)",
+          title: "CultureCrunch Dashboard (Leader Portal)",
           details: [
             "Current sprint status: Week tracker, focus behaviours",
             "Pulse metrics: Live scores + trend lines (6-month view)",

@@ -165,7 +165,7 @@ export default function LeaderDashboardDemo() {
               Your AI Leader Brief Has Arrived
             </h3>
             <p className="text-lg text-muted-foreground">
-              ThriveGuide AI detected 3 psychosocial risks requiring your attention this week
+              CultureCrunch AI detected 3 psychosocial risks requiring your attention this week
             </p>
           </div>
 
@@ -220,7 +220,7 @@ export default function LeaderDashboardDemo() {
               {selectedRisk.title}
             </h3>
             <p className="text-lg text-muted-foreground">
-              ThriveGuide AI has generated your conversation script
+              CultureCrunch AI has generated your conversation script
             </p>
           </div>
 

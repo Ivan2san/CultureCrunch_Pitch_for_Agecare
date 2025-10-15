@@ -380,7 +380,7 @@ export default function OORADemo() {
                     : "bg-white border-2 border-gray-200 text-gray-900"
                 )}>
                   <div className="text-xs font-bold mb-1 opacity-70">
-                    {isLeader ? "Leader" : "ThriveGuide AI"}
+                    {isLeader ? "Leader" : "CultureCrunch AI"}
                   </div>
                   <div className="text-sm leading-relaxed">{message.content}</div>
                 </div>

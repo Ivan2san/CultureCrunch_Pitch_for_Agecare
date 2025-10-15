@@ -72,7 +72,7 @@ export default function MethodologyDialog({ open, onOpenChange }: MethodologyDia
               </DialogTitle>
             </div>
             <DialogDescription className="sr-only">
-              Comprehensive research documentation and calculation methodology for the ThriveGuide AI ROI Calculator
+              Comprehensive research documentation and calculation methodology for the CultureCrunch AI ROI Calculator
             </DialogDescription>
             <Button
               variant="ghost"

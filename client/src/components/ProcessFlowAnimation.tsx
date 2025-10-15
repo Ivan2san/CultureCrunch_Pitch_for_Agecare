@@ -157,7 +157,7 @@ export default function ProcessFlowAnimation() {
           style={{ letterSpacing: '-0.005em' }}
           data-testid="text-process-flow-description"
         >
-          How ThriveGuide transforms signals into insight.
+          How CultureCrunch transforms signals into insight.
         </p>
 
         <div className="relative">
