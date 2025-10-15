@@ -3,14 +3,13 @@ import { Brain, Database, Zap, Cpu, Network, CheckCircle, GitBranch, RefreshCw, 
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import CustomerJourneyFlow from "@/components/CustomerJourneyFlow";
-import OORADemo from "@/components/OORADemo";
+import LeaderDashboardDemo from "@/components/LeaderDashboardDemo";
 import SprintTimeline from "@/components/SprintTimeline";
 import DeliverablesSection from "@/components/DeliverablesSection";
 
 export default function HowItWorksSection() {
   const [expandedLayer, setExpandedLayer] = useState<number | null>(null);
   const [expandedAIComponent, setExpandedAIComponent] = useState<number | null>(null);
-  const [showOORADemo, setShowOORADemo] = useState(false);
   const [expandedPrinciples, setExpandedPrinciples] = useState(false);
   const [expandedValidation, setExpandedValidation] = useState(false);
 
@@ -227,34 +226,19 @@ export default function HowItWorksSection() {
           <DeliverablesSection />
         </div>
 
-        {/* OORA Conversation Framework Demo */}
+        {/* Interactive Leader Dashboard Demo */}
         <Card className="p-8 mb-16 border-2 border-indigo-500 dark:border-indigo-400">
-          <div className="text-center mb-6">
+          <div className="text-center mb-8">
             <div className="flex items-center justify-center gap-3 mb-4">
               <MessageSquare className="w-10 h-10 text-indigo-600 dark:text-indigo-400" />
-              <h3 className="text-3xl font-bold text-foreground">Interactive ThriveGuide AI-Copilot Leader Issue Resolution</h3>
+              <h3 className="text-3xl font-bold text-foreground">Experience Monday Morning as a Care Manager</h3>
             </div>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
-              Experience how ThriveGuide AI guides leaders through psych safety identification, risk assessment and mitigation.
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Step into the role of an aged care leader. See how ThriveGuide AI transforms psychosocial risk detection into a 15-minute weekly ritual—from AI Brief to measurable results.
             </p>
-            
-            {!showOORADemo && (
-              <Button
-                onClick={() => setShowOORADemo(true)}
-                variant="default"
-                size="lg"
-                data-testid="button-toggle-oora-demo"
-              >
-                Try Interactive Demo
-              </Button>
-            )}
           </div>
 
-          {showOORADemo && (
-            <div className="mt-8 animate-fade-in-up">
-              <OORADemo />
-            </div>
-          )}
+          <LeaderDashboardDemo />
         </Card>
 
         {/* Customer Journey Flow */}
