@@ -263,41 +263,41 @@ export default function DeliverablesSection() {
 
   const colorMap: Record<string, { bg: string; border: string; icon: string; hover: string; accent: string }> = {
     indigo: {
-      bg: "bg-indigo-50 dark:bg-indigo-950",
-      border: "border-indigo-200 dark:border-indigo-800",
-      icon: "text-indigo-600 dark:text-indigo-400",
-      hover: "hover:border-indigo-300 dark:hover:border-indigo-700",
-      accent: "bg-indigo-100 dark:bg-indigo-900"
+      bg: "bg-indigo-50",
+      border: "border-indigo-200",
+      icon: "text-indigo-600",
+      hover: "hover:border-indigo-300",
+      accent: "bg-indigo-100"
     },
     purple: {
-      bg: "bg-purple-50 dark:bg-purple-950",
-      border: "border-purple-200 dark:border-purple-800",
-      icon: "text-purple-600 dark:text-purple-400",
-      hover: "hover:border-purple-300 dark:hover:border-purple-700",
-      accent: "bg-purple-100 dark:bg-purple-900"
+      bg: "bg-purple-50",
+      border: "border-purple-200",
+      icon: "text-purple-600",
+      hover: "hover:border-purple-300",
+      accent: "bg-purple-100"
     },
     green: {
-      bg: "bg-green-50 dark:bg-green-950",
-      border: "border-green-200 dark:border-green-800",
-      icon: "text-green-600 dark:text-green-400",
-      hover: "hover:border-green-300 dark:hover:border-green-700",
-      accent: "bg-green-100 dark:bg-green-900"
+      bg: "bg-green-50",
+      border: "border-green-200",
+      icon: "text-green-600",
+      hover: "hover:border-green-300",
+      accent: "bg-green-100"
     },
     blue: {
-      bg: "bg-blue-50 dark:bg-blue-950",
-      border: "border-blue-200 dark:border-blue-800",
-      icon: "text-blue-600 dark:text-blue-400",
-      hover: "hover:border-blue-300 dark:hover:border-blue-700",
-      accent: "bg-blue-100 dark:bg-blue-900"
+      bg: "bg-blue-50",
+      border: "border-blue-200",
+      icon: "text-blue-600",
+      hover: "hover:border-blue-300",
+      accent: "bg-blue-100"
     }
   };
 
   return (
     <div className="space-y-8">
       <div className="text-center mb-8">
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 dark:bg-indigo-950 rounded-full mb-4">
-          <Package className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
-          <span className="text-sm font-semibold text-indigo-600 dark:text-indigo-400" style={{ letterSpacing: '-0.005em' }}>
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 rounded-full mb-4">
+          <Package className="w-4 h-4 text-indigo-600" />
+          <span className="text-sm font-semibold text-indigo-600" style={{ letterSpacing: '-0.005em' }}>
             Comprehensive Deliverables
           </span>
         </div>

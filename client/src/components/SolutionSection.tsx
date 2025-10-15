@@ -14,7 +14,7 @@ export default function SolutionSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16" style={{ letterSpacing: '-0.01em' }}>
-            The Solution: <span className="text-indigo-600 dark:text-indigo-400">Psychosocial Safety Installed, Not Workshopped</span>
+            The Solution: <span className="text-indigo-600">Psychosocial Safety Installed, Not Workshopped</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
             Culture Crunch is a 6-week sprint that meets compliance, reduces turnover, and takes just 15 minutes per week
@@ -31,7 +31,7 @@ export default function SolutionSection() {
             {outcomes.map((outcome, index) => (
               <Card key={index} className="p-6 hover-elevate" data-testid={`card-outcome-${index}`}>
                 <div className="flex flex-col items-center text-center gap-4">
-                  <CheckCircle className="w-12 h-12 text-green-600 dark:text-green-400 flex-shrink-0" />
+                  <CheckCircle className="w-12 h-12 text-green-600 flex-shrink-0" />
                   <p className="text-lg md:text-xl font-medium text-foreground" style={{ letterSpacing: '-0.005em' }}>
                     {outcome}
                   </p>
@@ -47,7 +47,7 @@ export default function SolutionSection() {
             Not consulting. An installable operating rhythm.
           </p>
           
-          <div className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-500 dark:to-purple-500 px-8 py-4 rounded-lg">
+          <div className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-lg">
             <p className="text-2xl md:text-3xl font-bold text-white" style={{ letterSpacing: '-0.01em' }}>
               "We don't run workshops; we install habits."
             </p>

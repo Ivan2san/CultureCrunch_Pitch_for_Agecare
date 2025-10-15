@@ -123,13 +123,13 @@ export default function LeaderDashboardDemo() {
   };
 
   const severityColors = {
-    high: "border-red-500 dark:border-red-400 bg-red-50 dark:bg-red-950",
-    medium: "border-orange-500 dark:border-orange-400 bg-orange-50 dark:bg-orange-950"
+    high: "border-red-500 bg-red-50",
+    medium: "border-orange-500 bg-orange-50"
   };
 
   const severityTextColors = {
-    high: "text-red-700 dark:text-red-300",
-    medium: "text-orange-700 dark:text-orange-300"
+    high: "text-red-700",
+    medium: "text-orange-700"
   };
 
   return (
@@ -141,9 +141,9 @@ export default function LeaderDashboardDemo() {
             <div className={cn(
               "w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold transition-colors",
               step === s 
-                ? "bg-indigo-600 dark:bg-indigo-500 text-white" 
+                ? "bg-indigo-600 text-white" 
                 : idx < ["brief", "scenario", "action", "results"].indexOf(step)
-                  ? "bg-green-600 dark:bg-green-500 text-white"
+                  ? "bg-green-600 text-white"
                   : "bg-muted text-muted-foreground"
             )}>
               {idx + 1}
@@ -157,9 +157,9 @@ export default function LeaderDashboardDemo() {
       {step === "brief" && (
         <div className="space-y-6 animate-fade-in-up">
           <div className="text-center mb-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 dark:bg-indigo-950 rounded-full mb-4">
-              <Calendar className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
-              <span className="text-sm font-semibold text-indigo-900 dark:text-indigo-100">Monday, 7:00 AM</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 rounded-full mb-4">
+              <Calendar className="w-4 h-4 text-indigo-600" />
+              <span className="text-sm font-semibold text-indigo-900">Monday, 7:00 AM</span>
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2" style={{ letterSpacing: '-0.01em' }}>
               Your AI Leader Brief Has Arrived
@@ -212,9 +212,9 @@ export default function LeaderDashboardDemo() {
       {step === "scenario" && selectedRisk && (
         <div className="space-y-6 animate-fade-in-up">
           <div className="text-center mb-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-50 dark:bg-purple-950 rounded-full mb-4">
-              <Clock className="w-4 h-4 text-purple-600 dark:text-purple-400" />
-              <span className="text-sm font-semibold text-purple-600 dark:text-purple-400">10-Minute OORA Conversation</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-50 rounded-full mb-4">
+              <Clock className="w-4 h-4 text-purple-600" />
+              <span className="text-sm font-semibold text-purple-600">10-Minute OORA Conversation</span>
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2" style={{ letterSpacing: '-0.01em' }}>
               {selectedRisk.title}
@@ -224,7 +224,7 @@ export default function LeaderDashboardDemo() {
             </p>
           </div>
 
-          <Card className="p-6 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950 dark:to-purple-950">
+          <Card className="p-6 bg-gradient-to-br from-indigo-50 to-purple-50">
             <div className="space-y-4">
               <div>
                 <h4 className="text-sm font-bold text-muted-foreground uppercase mb-2">AI Insight</h4>
@@ -261,9 +261,9 @@ export default function LeaderDashboardDemo() {
       {step === "action" && selectedRisk && (
         <div className="space-y-6 animate-fade-in-up">
           <div className="text-center mb-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 dark:bg-green-950 rounded-full mb-4">
-              <Users className="w-4 h-4 text-green-600 dark:text-green-400" />
-              <span className="text-sm font-semibold text-green-600 dark:text-green-400">Team Micro-Action</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 rounded-full mb-4">
+              <Users className="w-4 h-4 text-green-600" />
+              <span className="text-sm font-semibold text-green-600">Team Micro-Action</span>
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2" style={{ letterSpacing: '-0.01em' }}>
               This Week's Action
@@ -273,10 +273,10 @@ export default function LeaderDashboardDemo() {
             </p>
           </div>
 
-          <Card className="p-6 border-2 border-green-500 dark:border-green-400">
+          <Card className="p-6 border-2 border-green-500">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 rounded-lg bg-green-100 dark:bg-green-900">
-                <Shield className="w-6 h-6 text-green-600 dark:text-green-400" />
+              <div className="p-3 rounded-lg bg-green-100">
+                <Shield className="w-6 h-6 text-green-600" />
               </div>
               <h4 className="text-xl font-bold text-foreground" style={{ letterSpacing: '-0.01em' }}>
                 {selectedRisk.microAction}
@@ -287,7 +287,7 @@ export default function LeaderDashboardDemo() {
               <ul className="space-y-2">
                 {selectedRisk.weeklyTracking.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2 text-foreground">
-                    <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -319,9 +319,9 @@ export default function LeaderDashboardDemo() {
       {step === "results" && selectedRisk && (
         <div className="space-y-6 animate-fade-in-up">
           <div className="text-center mb-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-950 rounded-full mb-4">
-              <BarChart3 className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-              <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">Friday, End of Week Results</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full mb-4">
+              <BarChart3 className="w-4 h-4 text-blue-600" />
+              <span className="text-sm font-semibold text-blue-600">Friday, End of Week Results</span>
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2" style={{ letterSpacing: '-0.01em' }}>
               Impact Dashboard
@@ -331,7 +331,7 @@ export default function LeaderDashboardDemo() {
             </p>
           </div>
 
-          <Card className="p-6 bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-950 dark:to-blue-950">
+          <Card className="p-6 bg-gradient-to-br from-green-50 to-blue-50">
             <div className="mb-6">
               <h4 className="text-sm font-bold text-muted-foreground uppercase mb-3">Outcome</h4>
               <p className="text-lg text-foreground">{selectedRisk.fridayResults.outcome}</p>
@@ -343,8 +343,8 @@ export default function LeaderDashboardDemo() {
                   <div className="text-xs font-bold text-muted-foreground uppercase mb-1">{metric.label}</div>
                   <div className="flex items-center gap-2">
                     <span className="text-lg font-bold text-foreground">{metric.value}</span>
-                    {metric.trend === "down" && <TrendingDown className="w-5 h-5 text-green-600 dark:text-green-400" />}
-                    {metric.trend === "up" && <TrendingUp className="w-5 h-5 text-green-600 dark:text-green-400" />}
+                    {metric.trend === "down" && <TrendingDown className="w-5 h-5 text-green-600" />}
+                    {metric.trend === "up" && <TrendingUp className="w-5 h-5 text-green-600" />}
                   </div>
                 </div>
               ))}
@@ -355,10 +355,10 @@ export default function LeaderDashboardDemo() {
                 <h4 className="text-sm font-bold text-muted-foreground uppercase mb-2">Compliance Evidence</h4>
                 <p className="text-foreground">{selectedRisk.fridayResults.compliance}</p>
               </div>
-              <div className="p-4 bg-indigo-100 dark:bg-indigo-900 rounded-lg">
+              <div className="p-4 bg-indigo-100 rounded-lg">
                 <div className="flex items-center gap-2">
-                  <Clock className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-                  <span className="font-bold text-indigo-900 dark:text-indigo-100">
+                  <Clock className="w-5 h-5 text-indigo-600" />
+                  <span className="font-bold text-indigo-900">
                     {selectedRisk.fridayResults.timeInvested}
                   </span>
                 </div>

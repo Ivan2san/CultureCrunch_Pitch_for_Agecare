@@ -87,7 +87,7 @@ export default function ROICalculator() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Calculator className="w-12 h-12 text-purple-600 dark:text-purple-400" />
+            <Calculator className="w-12 h-12 text-purple-600" />
             <h2 className="text-4xl font-bold text-foreground">Aged Care ROI Calculator</h2>
           </div>
           <p className="text-xl text-muted-foreground">
@@ -100,7 +100,7 @@ export default function ROICalculator() {
           <div className="lg:col-span-1">
             <Card className="p-6 sticky top-24 bg-card">
               <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-                <Users className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+                <Users className="w-6 h-6 text-purple-600" />
                 Your Aged Care Service
               </h3>
 
@@ -325,7 +325,7 @@ export default function ROICalculator() {
                 data-testid="button-toggle-methodology"
               >
                 <div className="flex items-center gap-3">
-                  <Info className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+                  <Info className="w-5 h-5 text-purple-600" />
                   <span className="text-lg font-bold text-foreground">How the Calculator Works</span>
                 </div>
                 <ChevronDown
@@ -458,7 +458,7 @@ export default function ROICalculator() {
             <Card className="p-6 bg-gradient-to-r from-indigo-50 to-purple-50 border-2 border-indigo-200 mt-6">
               <div className="flex items-center justify-between gap-4 flex-wrap">
                 <div className="flex items-center gap-3">
-                  <FileText className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
+                  <FileText className="w-6 h-6 text-indigo-600" />
                   <div>
                     <h4 className="font-bold text-foreground">Complete Research Documentation</h4>
                     <p className="text-sm text-muted-foreground">View full methodology with all sources and citations</p>

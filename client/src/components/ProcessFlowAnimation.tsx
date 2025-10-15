@@ -69,10 +69,10 @@ export default function ProcessFlowAnimation() {
   };
 
   const colorClasses = {
-    blue: "text-blue-600 dark:text-blue-400",
-    purple: "text-purple-600 dark:text-purple-400",
-    green: "text-green-600 dark:text-green-400",
-    indigo: "text-indigo-600 dark:text-indigo-400"
+    blue: "text-blue-600",
+    purple: "text-purple-600",
+    green: "text-green-600",
+    indigo: "text-indigo-600"
   };
 
   const Stage = ({ data, color }: { data: any[]; color: string }) => (
@@ -227,7 +227,7 @@ export default function ProcessFlowAnimation() {
         {/* Feedback Loop Indicator */}
         <div className="flex justify-center mt-8" data-testid="feedback-loop-indicator">
           <div className="flex items-center gap-3 flex-wrap justify-center bg-muted/50 px-6 py-3 rounded-lg">
-            <RefreshCcw className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
+            <RefreshCcw className="h-5 w-5 text-indigo-600" />
             <span className="text-sm font-semibold text-foreground" style={{ letterSpacing: '-0.005em' }} data-testid="text-feedback-loop">
               Action outcomes flow back to refine next week's brief
             </span>

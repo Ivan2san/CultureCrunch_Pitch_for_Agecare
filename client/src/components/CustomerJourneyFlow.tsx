@@ -51,22 +51,22 @@ export default function CustomerJourneyFlow() {
 
   const colorMap: Record<string, { bg: string; border: string; icon: string; text: string }> = {
     indigo: {
-      bg: "bg-indigo-50 dark:bg-indigo-950",
-      border: "border-indigo-200 dark:border-indigo-800",
-      icon: "text-indigo-600 dark:text-indigo-400",
-      text: "text-indigo-600 dark:text-indigo-400"
+      bg: "bg-indigo-50",
+      border: "border-indigo-200",
+      icon: "text-indigo-600",
+      text: "text-indigo-600"
     },
     purple: {
-      bg: "bg-purple-50 dark:bg-purple-950",
-      border: "border-purple-200 dark:border-purple-800",
-      icon: "text-purple-600 dark:text-purple-400",
-      text: "text-purple-600 dark:text-purple-400"
+      bg: "bg-purple-50",
+      border: "border-purple-200",
+      icon: "text-purple-600",
+      text: "text-purple-600"
     },
     green: {
-      bg: "bg-green-50 dark:bg-green-950",
-      border: "border-green-200 dark:border-green-800",
-      icon: "text-green-600 dark:text-green-400",
-      text: "text-green-600 dark:text-green-400"
+      bg: "bg-green-50",
+      border: "border-green-200",
+      icon: "text-green-600",
+      text: "text-green-600"
     }
   };
 
@@ -139,7 +139,7 @@ export default function CustomerJourneyFlow() {
       </div>
 
       {/* Bottom CTA */}
-      <div className="text-center mt-12 p-6 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950 dark:to-purple-950 rounded-xl">
+      <div className="text-center mt-12 p-6 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl">
         <p className="text-lg font-semibold text-foreground mb-2" style={{ letterSpacing: '-0.01em' }}>
           6 weeks to compliance + culture shift
         </p>

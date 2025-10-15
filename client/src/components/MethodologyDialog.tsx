@@ -66,7 +66,7 @@ export default function MethodologyDialog({ open, onOpenChange }: MethodologyDia
         <DialogHeader className="px-6 pt-6 pb-4 border-b bg-card">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Shield className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+              <Shield className="w-6 h-6 text-purple-600" />
               <DialogTitle className="text-2xl font-bold text-foreground">
                 ROI Methodology & Research Sources
               </DialogTitle>
@@ -97,22 +97,22 @@ export default function MethodologyDialog({ open, onOpenChange }: MethodologyDia
             {/* Protected Content - No Select, No Copy */}
             <div className="select-none" onContextMenu={(e) => e.preventDefault()}>
               {/* Confidentiality Notice */}
-              <div className="bg-red-50 dark:bg-red-950 border-2 border-red-200 dark:border-red-800 rounded-lg p-6 mb-8">
-                <h3 className="text-lg font-bold text-red-900 dark:text-red-100 mb-3">CONFIDENTIAL AND PROPRIETARY</h3>
-                <p className="text-sm text-red-800 dark:text-red-200 mb-2">
+              <div className="bg-red-50 border-2 border-red-200 rounded-lg p-6 mb-8">
+                <h3 className="text-lg font-bold text-red-900 mb-3">CONFIDENTIAL AND PROPRIETARY</h3>
+                <p className="text-sm text-red-800 mb-2">
                   <strong>© 2025 Culture Crunch Pty Ltd. All Rights Reserved.</strong>
                 </p>
-                <p className="text-sm text-red-700 dark:text-red-300 mb-3">
+                <p className="text-sm text-red-700 mb-3">
                   This document contains confidential and proprietary information belonging to Culture Crunch Pty Ltd. 
                   This material is provided solely for the use of the intended recipient and may not be copied, distributed, 
                   published, or disclosed to third parties without the express written consent of Culture Crunch Pty Ltd.
                 </p>
-                <p className="text-xs text-red-600 dark:text-red-400 mb-2">
+                <p className="text-xs text-red-600 mb-2">
                   <strong>Restriction on Use:</strong> The methodologies, calculations, research compilations, and business 
                   intelligence contained herein constitute valuable trade secrets and proprietary business information of 
                   Culture Crunch Pty Ltd. Unauthorised use, reproduction, or distribution may result in civil and criminal penalties.
                 </p>
-                <p className="text-xs text-red-600 dark:text-red-400">
+                <p className="text-xs text-red-600">
                   <strong>Contact:</strong> Campbell McGlynn | campbell@culturecrunch.io
                 </p>
               </div>

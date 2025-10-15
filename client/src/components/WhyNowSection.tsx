@@ -49,21 +49,21 @@ const FORCES: Force[] = [
 ];
 
 const toneStyles = {
-  blue: "border-2 border-blue-400 dark:border-blue-600 hover:border-blue-500 dark:hover:border-blue-500 focus:ring-blue-300/40",
-  red: "border-2 border-red-400 dark:border-red-600 hover:border-red-500 dark:hover:border-red-500 focus:ring-red-300/40",
-  green: "border-2 border-green-400 dark:border-green-600 hover:border-green-500 dark:hover:border-green-500 focus:ring-green-300/40",
+  blue: "border-2 border-blue-400 hover:border-blue-500 focus:ring-blue-300/40",
+  red: "border-2 border-red-400 hover:border-red-500 focus:ring-red-300/40",
+  green: "border-2 border-green-400 hover:border-green-500 focus:ring-green-300/40",
 };
 
 const iconColors = {
-  blue: "text-blue-600 dark:text-blue-400",
-  red: "text-red-600 dark:text-red-400",
-  green: "text-green-600 dark:text-green-400",
+  blue: "text-blue-600",
+  red: "text-red-600",
+  green: "text-green-600",
 };
 
 const bulletColors = {
-  blue: "bg-blue-400/70 dark:bg-blue-500/70",
-  red: "bg-red-400/70 dark:bg-red-500/70",
-  green: "bg-green-400/70 dark:bg-green-500/70",
+  blue: "bg-blue-400/70",
+  red: "bg-red-400/70",
+  green: "bg-green-400/70",
 };
 
 export default function WhyNowSection() {
@@ -72,7 +72,7 @@ export default function WhyNowSection() {
       {/* Heading */}
       <div className="mx-auto max-w-7xl text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16" style={{ letterSpacing: '-0.01em' }}>
-          WHY NOW: <span className="text-blue-600 dark:text-blue-400">Three forces converge</span>
+          WHY NOW: <span className="text-blue-600">Three forces converge</span>
         </h2>
         <p className="mt-4 text-base md:text-lg text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>
           Clear lanes show regulatory pressure, leaders under strain from external forces, and
@@ -196,14 +196,14 @@ export default function WhyNowSection() {
       {/* Footer caption */}
       <div className="mx-auto mt-12 lg:mt-40 max-w-4xl text-center">
         <p className="text-lg md:text-xl font-semibold text-foreground" style={{ letterSpacing: '-0.005em' }}>
-          <span className="font-bold text-blue-600 dark:text-blue-400">2025:</span> Aged care providers can now transform{" "}
+          <span className="font-bold text-blue-600">2025:</span> Aged care providers can now transform{" "}
           psychosocial compliance into a workforce retention strategy.
         </p>
       </div>
 
       {/* Performance Gap - The Business Case */}
       <div className="mx-auto mt-16 max-w-7xl">
-        <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 rounded-2xl p-10 border-2 border-green-300 dark:border-green-700">
+        <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-10 border-2 border-green-300">
           <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-3 text-center">
             The ROI of Psychosocial Safety: Direct Impact on Profit & Productivity
           </h3>
@@ -217,15 +217,15 @@ export default function WhyNowSection() {
               { value: "59%", label: "Lower Turnover", desc: "Reduced hiring costs" },
               { value: "70%", label: "Fewer Safety Incidents", desc: "Lower risk exposure" },
             ].map((item, index) => (
-              <div key={index} className="text-center p-5 bg-white dark:bg-background rounded-xl border-2 border-green-400 dark:border-green-600 hover-elevate transition-all">
-                <div className="text-4xl md:text-5xl font-bold text-green-700 dark:text-green-400 mb-2" style={{ letterSpacing: '-0.01em' }}>{item.value}</div>
+              <div key={index} className="text-center p-5 bg-white rounded-xl border-2 border-green-400 hover-elevate transition-all">
+                <div className="text-4xl md:text-5xl font-bold text-green-700 mb-2" style={{ letterSpacing: '-0.01em' }}>{item.value}</div>
                 <div className="text-base font-bold text-foreground mb-1" style={{ letterSpacing: '-0.005em' }}>{item.label}</div>
                 <div className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>{item.desc}</div>
               </div>
             ))}
           </div>
-          <div className="mt-8 pt-6 border-t-2 border-green-300 dark:border-green-700">
-            <p className="text-center text-base font-semibold text-green-700 dark:text-green-400 mb-2">
+          <div className="mt-8 pt-6 border-t-2 border-green-300">
+            <p className="text-center text-base font-semibold text-green-700 mb-2">
               → Leaders who address psychosocial risks unlock measurable business performance
             </p>
             <p className="text-center text-sm text-muted-foreground">

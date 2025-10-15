@@ -65,31 +65,31 @@ export default function SprintTimeline() {
 
   const colorMap: Record<string, { bg: string; border: string; icon: string; hover: string }> = {
     indigo: {
-      bg: "bg-indigo-50 dark:bg-indigo-950",
-      border: "border-indigo-200 dark:border-indigo-800",
-      icon: "text-indigo-600 dark:text-indigo-400",
-      hover: "hover:border-indigo-300 dark:hover:border-indigo-700"
+      bg: "bg-indigo-50",
+      border: "border-indigo-200",
+      icon: "text-indigo-600",
+      hover: "hover:border-indigo-300"
     },
     purple: {
-      bg: "bg-purple-50 dark:bg-purple-950",
-      border: "border-purple-200 dark:border-purple-800",
-      icon: "text-purple-600 dark:text-purple-400",
-      hover: "hover:border-purple-300 dark:hover:border-purple-700"
+      bg: "bg-purple-50",
+      border: "border-purple-200",
+      icon: "text-purple-600",
+      hover: "hover:border-purple-300"
     },
     green: {
-      bg: "bg-green-50 dark:bg-green-950",
-      border: "border-green-200 dark:border-green-800",
-      icon: "text-green-600 dark:text-green-400",
-      hover: "hover:border-green-300 dark:hover:border-green-700"
+      bg: "bg-green-50",
+      border: "border-green-200",
+      icon: "text-green-600",
+      hover: "hover:border-green-300"
     }
   };
 
   return (
     <div className="space-y-8">
       <div className="text-center mb-8">
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-50 dark:bg-purple-950 rounded-full mb-4">
-          <Calendar className="w-4 h-4 text-purple-600 dark:text-purple-400" />
-          <span className="text-sm font-semibold text-purple-600 dark:text-purple-400">6-Week Sprint Program</span>
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-50 rounded-full mb-4">
+          <Calendar className="w-4 h-4 text-purple-600" />
+          <span className="text-sm font-semibold text-purple-600">6-Week Sprint Program</span>
         </div>
         <p className="text-muted-foreground max-w-3xl mx-auto">
           Structured implementation pathway from setup to sustained adoption, designed for aged care leadership teams
@@ -138,7 +138,7 @@ export default function SprintTimeline() {
       </Accordion>
 
       {/* 12-Month Sustain License - Highlighted Separately */}
-      <Card className="border-2 border-purple-300 dark:border-purple-700 bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 dark:from-purple-950 dark:via-indigo-950 dark:to-blue-950 overflow-hidden relative">
+      <Card className="border-2 border-purple-300 bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 overflow-hidden relative">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-indigo-500/5 pointer-events-none" />
         <div className="relative px-6 py-6">
           <div className="flex items-start gap-4">
@@ -147,14 +147,14 @@ export default function SprintTimeline() {
             </div>
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-2">
-                <Trophy className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+                <Trophy className="w-5 h-5 text-purple-600" />
                 <h3 className="text-xl font-bold text-foreground">12-Month Sustain License</h3>
               </div>
               <p className="text-muted-foreground mb-4">
                 Following the 6-week sprint program, founding partners receive ongoing AI Leader Co-pilot access 
                 to sustain momentum and continue psychosocial safety improvements across their aged care teams.
               </p>
-              <div className="flex items-center gap-2 text-sm font-semibold text-purple-700 dark:text-purple-300">
+              <div className="flex items-center gap-2 text-sm font-semibold text-purple-700">
                 <CheckCircle className="w-4 h-4" />
                 <span>Included with Founding Partner Program</span>
               </div>

@@ -7,7 +7,7 @@ export default function ProblemSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16" style={{ letterSpacing: '-0.01em' }}>
-            The Problem: <span className="text-red-600 dark:text-red-400">Aged Care's Compliance & Workforce Crisis</span>
+            The Problem: <span className="text-red-600">Aged Care's Compliance & Workforce Crisis</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
             Aged care providers face a perfect storm: 1 in 5 facilities failing compliance audits, 27% staff turnover, and psychosocial hazards driving mass exodus
@@ -21,7 +21,7 @@ export default function ProblemSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
           {/* Box 1: Compliance Crisis */}
           <Card className="p-8 bg-card/40 backdrop-blur-sm flex flex-col items-center text-center hover-elevate transition-all">
-            <div className="text-6xl md:text-7xl font-bold text-red-600 dark:text-red-400 mb-4" style={{ letterSpacing: '-0.02em' }}>1 in 5</div>
+            <div className="text-6xl md:text-7xl font-bold text-red-600 mb-4" style={{ letterSpacing: '-0.02em' }}>1 in 5</div>
             <h4 className="font-bold text-xl text-foreground mb-2">Facilities Failing Compliance</h4>
             <p className="text-muted-foreground text-sm max-w-md">
               Only 82% of residential providers met all Quality Standards in 2023-24. Home care worse at 65%. 255 regulatory actions issued.
@@ -33,7 +33,7 @@ export default function ProblemSection() {
 
           {/* Box 2: Burnout Crisis */}
           <Card className="p-8 bg-card/40 backdrop-blur-sm flex flex-col items-center text-center hover-elevate transition-all">
-            <div className="text-6xl md:text-7xl font-bold text-orange-600 dark:text-orange-400 mb-4" style={{ letterSpacing: '-0.02em' }}>65%</div>
+            <div className="text-6xl md:text-7xl font-bold text-orange-600 mb-4" style={{ letterSpacing: '-0.02em' }}>65%</div>
             <h4 className="font-bold text-xl text-foreground mb-2">Nurses Experiencing Burnout</h4>
             <p className="text-muted-foreground text-sm max-w-md">
               65% of aged care nurses report moderate to severe emotional exhaustion, with 41% of all workers burnt out
@@ -45,7 +45,7 @@ export default function ProblemSection() {
 
           {/* Box 3: Psychosocial Drivers */}
           <Card className="p-8 bg-card/40 backdrop-blur-sm flex flex-col items-center text-center hover-elevate transition-all">
-            <div className="text-6xl md:text-7xl font-bold text-red-600 dark:text-red-400 mb-4" style={{ letterSpacing: '-0.02em' }}>48%</div>
+            <div className="text-6xl md:text-7xl font-bold text-red-600 mb-4" style={{ letterSpacing: '-0.02em' }}>48%</div>
             <h4 className="font-bold text-xl text-foreground mb-2">Staff Feeling Burnt Out</h4>
             <p className="text-muted-foreground text-sm max-w-md">
               Top reasons for leaving: burnout (48%), lack of support (46%), stress (45%), frustration (42%)—all psychosocial factors
@@ -57,7 +57,7 @@ export default function ProblemSection() {
 
           {/* Box 4: Mental Health Claims Cost */}
           <Card className="p-8 bg-card/40 backdrop-blur-sm flex flex-col items-center text-center hover-elevate transition-all">
-            <div className="text-6xl md:text-7xl font-bold text-orange-600 dark:text-orange-400 mb-4" style={{ letterSpacing: '-0.02em' }}>$58.6K</div>
+            <div className="text-6xl md:text-7xl font-bold text-orange-600 mb-4" style={{ letterSpacing: '-0.02em' }}>$58.6K</div>
             <h4 className="font-bold text-xl text-foreground mb-2">Per Mental Health Claim</h4>
             <p className="text-muted-foreground text-sm max-w-md">
               Median payout for psychosocial injury claims—4x higher than physical injuries. Aged care accounts for 25%+ of all serious mental health claims.

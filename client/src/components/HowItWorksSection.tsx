@@ -185,10 +185,10 @@ export default function HowItWorksSection() {
         </div>
 
         {/* Interactive Leader Dashboard Demo */}
-        <Card className="p-8 mb-16 border-2 border-indigo-500 dark:border-indigo-400">
+        <Card className="p-8 mb-16 border-2 border-indigo-500">
           <div className="text-center mb-8">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <MessageSquare className="w-10 h-10 text-indigo-600 dark:text-indigo-400" />
+              <MessageSquare className="w-10 h-10 text-indigo-600" />
               <h3 className="text-3xl font-bold text-foreground">Experience Monday Morning as a Care Manager</h3>
             </div>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -208,7 +208,7 @@ export default function HowItWorksSection() {
         <div className="bg-card rounded-xl p-8 mb-16 border border-border">
           <div className="text-center mb-8">
             <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
-              Technical Architecture: <span className="text-indigo-600 dark:text-indigo-400">Simple & Secure</span>
+              Technical Architecture: <span className="text-indigo-600">Simple & Secure</span>
             </h3>
             <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto" style={{ letterSpacing: '-0.005em' }}>
               From weekly pulse to Monday morning action—designed for aged care reality
@@ -227,19 +227,19 @@ export default function HowItWorksSection() {
                   key={index}
                   className={`p-6 border-t-4 transition-all ${
                     colorClass === "green"
-                      ? "border-t-green-500 dark:border-t-green-400"
+                      ? "border-t-green-500"
                       : colorClass === "purple"
-                      ? "border-t-purple-500 dark:border-t-purple-400"
-                      : "border-t-blue-500 dark:border-t-blue-400"
+                      ? "border-t-purple-500"
+                      : "border-t-blue-500"
                   }`}
                   data-testid={`tech-layer-${index}`}
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-3 rounded-md bg-muted">
                       <Icon className={`w-8 h-8 ${
-                        colorClass === "green" ? "text-green-600 dark:text-green-400" :
-                        colorClass === "purple" ? "text-purple-600 dark:text-purple-400" :
-                        "text-blue-600 dark:text-blue-400"
+                        colorClass === "green" ? "text-green-600" :
+                        colorClass === "purple" ? "text-purple-600" :
+                        "text-blue-600"
                       }`} />
                     </div>
                     <div>
@@ -280,9 +280,9 @@ export default function HowItWorksSection() {
                       ))}
 
                       {layer.pipeline && layer.pipeline.map((stage, i) => (
-                        <div key={i} className="p-4 rounded-md bg-card border-l-4 border-purple-500 dark:border-purple-400">
+                        <div key={i} className="p-4 rounded-md bg-card border-l-4 border-purple-500">
                           <div className="flex items-center gap-2 mb-2">
-                            <div className="bg-muted text-purple-600 dark:text-purple-400 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">{stage.step}</div>
+                            <div className="bg-muted text-purple-600 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">{stage.step}</div>
                             <p className="font-bold text-foreground" style={{ letterSpacing: '-0.01em' }}>{stage.title}</p>
                           </div>
                           <p className="text-sm text-muted-foreground mb-2" style={{ letterSpacing: '-0.005em' }}>{stage.type}</p>
@@ -301,7 +301,7 @@ export default function HowItWorksSection() {
                             {layer.differentiators.map((diff, i) => (
                               <div key={i} className="flex items-start gap-2">
                                 <CheckCircle className={`w-4 h-4 flex-shrink-0 mt-0.5 ${
-                                  colorClass === "purple" ? "text-purple-600 dark:text-purple-400" : "text-blue-600 dark:text-blue-400"
+                                  colorClass === "purple" ? "text-purple-600" : "text-blue-600"
                                 }`} />
                                 <p className="text-xs text-muted-foreground"><strong>{diff.label}:</strong> {diff.desc}</p>
                               </div>
@@ -312,15 +312,15 @@ export default function HowItWorksSection() {
 
                       {layer.callout && (
                         <div className={`p-4 rounded-md bg-card border-2 ${
-                          colorClass === "green" ? "border-green-500 dark:border-green-400" :
-                          colorClass === "purple" ? "border-purple-500 dark:border-purple-400" :
-                          "border-blue-500 dark:border-blue-400"
+                          colorClass === "green" ? "border-green-500" :
+                          colorClass === "purple" ? "border-purple-500" :
+                          "border-blue-500"
                         }`}>
                           <div className="flex items-start gap-2">
                             <Lock className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
-                              colorClass === "green" ? "text-green-600 dark:text-green-400" :
-                              colorClass === "purple" ? "text-purple-600 dark:text-purple-400" :
-                              "text-blue-600 dark:text-blue-400"
+                              colorClass === "green" ? "text-green-600" :
+                              colorClass === "purple" ? "text-purple-600" :
+                              "text-blue-600"
                             }`} />
                             <p className="text-sm font-semibold text-foreground">{layer.callout}</p>
                           </div>
@@ -347,10 +347,10 @@ export default function HowItWorksSection() {
                   key={index}
                   className={`p-6 border-2 ${
                     level.color === "blue"
-                      ? "border-blue-500 dark:border-blue-400"
+                      ? "border-blue-500"
                       : level.color === "purple"
-                      ? "border-purple-500 dark:border-purple-400"
-                      : "border-indigo-500 dark:border-indigo-400"
+                      ? "border-purple-500"
+                      : "border-indigo-500"
                   }`}
                   data-testid={`service-level-${index}`}
                 >
@@ -358,10 +358,10 @@ export default function HowItWorksSection() {
                     <Icon
                       className={`w-8 h-8 ${
                         level.color === "blue"
-                          ? "text-blue-600 dark:text-blue-400"
+                          ? "text-blue-600"
                           : level.color === "purple"
-                          ? "text-purple-600 dark:text-purple-400"
-                          : "text-indigo-600 dark:text-indigo-400"
+                          ? "text-purple-600"
+                          : "text-indigo-600"
                       }`}
                     />
                     <h4 className="text-lg font-bold text-foreground">{level.title}</h4>
@@ -377,28 +377,28 @@ export default function HowItWorksSection() {
             <h4 className="text-xl font-bold text-foreground mb-4">Built-In Safeguards</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex items-start gap-3">
-                <Shield className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
+                <Shield className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-foreground mb-1">Security by Design</p>
                   <p className="text-sm text-muted-foreground">Least-privilege access, facility-level segregation, audit logs for key actions</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-foreground mb-1">Compliance Support</p>
                   <p className="text-sm text-muted-foreground">Exportable evidence: pulse cadence, actions taken, trends—suitable for psychosocial safety audits</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <RefreshCw className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
+                <RefreshCw className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-foreground mb-1">Continuity Built-In</p>
                   <p className="text-sm text-muted-foreground">Automatic retries for sends, delivery success monitoring, admin controls to pause/adjust timing</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <AlertCircle className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
+                <AlertCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-foreground mb-1">Change Fatigue Mitigation</p>
                   <p className="text-sm text-muted-foreground">Micro-actions capped at 15 min, cadence aligned to rosters, ability to pause during high-pressure periods</p>
@@ -426,26 +426,26 @@ export default function HowItWorksSection() {
             
             {expandedPrinciples && (
               <div className="grid grid-cols-2 gap-4 animate-fade-in-up">
-                <div className="text-center p-4 bg-card border border-green-500 dark:border-green-400 rounded-md">
-                  <Lock className="w-10 h-10 text-green-600 dark:text-green-400 mx-auto mb-3" />
+                <div className="text-center p-4 bg-card border border-green-500 rounded-md">
+                  <Lock className="w-10 h-10 text-green-600 mx-auto mb-3" />
                   <p className="font-bold text-foreground mb-1" style={{ letterSpacing: '-0.01em' }}>Security-First</p>
                   <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>SOC 2 Type II in progress, quarterly pentests</p>
                 </div>
 
-                <div className="text-center p-4 bg-card border border-blue-500 dark:border-blue-400 rounded-md">
-                  <Zap className="w-10 h-10 text-blue-600 dark:text-blue-400 mx-auto mb-3" />
+                <div className="text-center p-4 bg-card border border-blue-500 rounded-md">
+                  <Zap className="w-10 h-10 text-blue-600 mx-auto mb-3" />
                   <p className="font-bold text-foreground mb-1" style={{ letterSpacing: '-0.01em' }}>Enterprise-Ready</p>
                   <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>99.9% uptime SLA, multi-region failover</p>
                 </div>
 
-                <div className="text-center p-4 bg-card border border-purple-500 dark:border-purple-400 rounded-md">
-                  <Brain className="w-10 h-10 text-purple-600 dark:text-purple-400 mx-auto mb-3" />
+                <div className="text-center p-4 bg-card border border-purple-500 rounded-md">
+                  <Brain className="w-10 h-10 text-purple-600 mx-auto mb-3" />
                   <p className="font-bold text-foreground mb-1" style={{ letterSpacing: '-0.01em' }}>Responsible AI</p>
                   <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>DPIA complete, bias audits, human oversight</p>
                 </div>
 
-                <div className="text-center p-4 bg-card border border-orange-500 dark:border-orange-400 rounded-md">
-                  <Database className="w-10 h-10 text-orange-600 dark:text-orange-400 mx-auto mb-3" />
+                <div className="text-center p-4 bg-card border border-orange-500 rounded-md">
+                  <Database className="w-10 h-10 text-orange-600 mx-auto mb-3" />
                   <p className="font-bold text-foreground mb-1" style={{ letterSpacing: '-0.01em' }}>API-First Design</p>
                   <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>Extensible webhooks, customer data ownership</p>
                 </div>
@@ -469,41 +469,41 @@ export default function HowItWorksSection() {
             
             {expandedValidation && (
               <div className="space-y-4 animate-fade-in-up">
-                <div className="bg-card p-4 rounded-md border-l-4 border-indigo-500 dark:border-indigo-400">
+                <div className="bg-card p-4 rounded-md border-l-4 border-indigo-500">
                   <p className="font-bold text-foreground mb-2" style={{ letterSpacing: '-0.01em' }}>Proof Points</p>
                   <div className="space-y-2 text-sm text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>
                     <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
                       <p><strong>Pilot Partners:</strong> 3 orgs (200-500 employees) testing live</p>
                     </div>
                     <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
                       <p><strong>Academic Partnership:</strong> Validating Triple Goal model</p>
                     </div>
                     <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
                       <p><strong>Advisor Network:</strong> Former CTOs, AI ethics leads, WHS experts</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-card p-4 rounded-md border-l-4 border-purple-500 dark:border-purple-400">
+                <div className="bg-card p-4 rounded-md border-l-4 border-purple-500">
                   <p className="font-bold text-foreground mb-2" style={{ letterSpacing: '-0.01em' }}>Technical Milestones</p>
                   <div className="grid grid-cols-2 gap-3">
                     <div className="text-center p-3 bg-muted rounded-md">
-                      <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">50K+</p>
+                      <p className="text-2xl font-bold text-purple-600">50K+</p>
                       <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>Metadata events/day</p>
                     </div>
                     <div className="text-center p-3 bg-muted rounded-md">
-                      <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">&lt;500ms</p>
+                      <p className="text-2xl font-bold text-purple-600">&lt;500ms</p>
                       <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>Latency for nudges</p>
                     </div>
                     <div className="text-center p-3 bg-muted rounded-md">
-                      <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">94%</p>
+                      <p className="text-2xl font-bold text-purple-600">94%</p>
                       <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>Leader engagement</p>
                     </div>
                     <div className="text-center p-3 bg-muted rounded-md">
-                      <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">AWS</p>
+                      <p className="text-2xl font-bold text-purple-600">AWS</p>
                       <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>Sydney region</p>
                     </div>
                   </div>
@@ -514,15 +514,15 @@ export default function HowItWorksSection() {
         </div>
 
         {/* Why Metadata Works - Key Insight */}
-        <Card className="p-8 border-2 border-indigo-500 dark:border-indigo-400">
+        <Card className="p-8 border-2 border-indigo-500">
           <div className="flex items-start gap-4">
             <div className="bg-muted p-4 rounded-md">
-              <Network className="w-10 h-10 text-indigo-600 dark:text-indigo-400" />
+              <Network className="w-10 h-10 text-indigo-600" />
             </div>
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-3" style={{ letterSpacing: '-0.01em' }}>Why Metadata Works</h3>
               <p className="text-lg text-foreground mb-2" style={{ letterSpacing: '-0.005em' }}>
-                Research shows <span className="font-bold text-indigo-600 dark:text-indigo-400">87% of psychosocial risk signals</span> are detectable through behavioral patterns alone—without ever reading a single message.
+                Research shows <span className="font-bold text-indigo-600">87% of psychosocial risk signals</span> are detectable through behavioral patterns alone—without ever reading a single message.
               </p>
               <p className="text-base text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>
                 Our AI learns <em>how</em> teams work, not <em>what</em> they say.
