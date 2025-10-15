@@ -12,35 +12,38 @@ type Force = {
 const FORCES: Force[] = [
   {
     id: "reg",
-    title: "Regulatory Compliance",
-    period: "(2022–2024)",
+    title: "Aged Care Regulatory Tsunami",
+    period: "(2023–2025)",
     icon: Scale,
     tone: "blue",
     bullets: [
-      "Psychosocial hazard regs active across Australia",
-      "SafeWork NSW checks for 200+ employee orgs (2024)",
+      "WHS psychosocial regs (April 2023): Manage 17 specific hazards",
+      "Strengthened Quality Standards (Nov 2025): Psychologically safe workplace mandatory",
+      "Civil penalties up to $1.5M per breach; avg WHS fine $117K",
     ],
   },
   {
     id: "burnout",
-    title: "Business Pressure & Leader Anxiety",
+    title: "Workforce Crisis & Burnout",
     period: "(2023–2025)",
     icon: HeartCrack,
     tone: "red",
     bullets: [
-      "60% of leaders report high stress from external pressures (McKinsey)",
-      "Leaders drive 70% of team outcomes yet lack support",
+      "110,000 worker shortage projected by 2030",
+      "48% cite burnout as reason for leaving; 46% lack of support",
+      "Facilities operating below 50% capacity due to staff shortages",
     ],
   },
   {
     id: "ai",
-    title: "AI Maturity",
+    title: "AI Maturity for Aged Care",
     period: "(2024–2025)",
     icon: BrainCircuit,
     tone: "green",
     bullets: [
-      "Agentic AI interprets behavioural signals",
-      "Privacy-preserving (metadata-only) analysis at scale",
+      "Agentic AI can now detect burnout patterns in real-time",
+      "Privacy-preserving analysis suitable for aged care compliance",
+      "Transforms reactive incident response into proactive risk management",
     ],
   },
 ];
@@ -87,11 +90,11 @@ export default function WhyNowSection() {
               data-testid={`force-card-${f.id}`}
               className={`col-span-4 group rounded-xl bg-card/90 backdrop-blur p-6 shadow-md transition-all hover:shadow-lg focus-within:ring-2 h-full flex flex-col ${toneStyles[f.tone]}`}
             >
-              <div className="flex items-center gap-3 flex-wrap">
+              <div className="flex items-start gap-3">
                 <div className="size-12 rounded-full bg-muted grid place-items-center shrink-0">
                   <Icon className={`size-7 ${iconColors[f.tone]}`} aria-hidden />
                 </div>
-                <div className="text-left">
+                <div className="text-left flex-1">
                   <h3 className="text-xl font-bold leading-tight text-foreground" style={{ letterSpacing: '-0.01em' }}>
                     {f.title}
                   </h3>
@@ -131,9 +134,9 @@ export default function WhyNowSection() {
               >
                 <h4 className="text-white text-2xl font-bold" style={{ letterSpacing: '-0.01em' }}>The Convergence Point</h4>
                 <p className="mt-2 text-white/95" style={{ letterSpacing: '-0.005em' }}>
-                  Regulatory urgency × Leader pressure × AI capability →{" "}
+                  Aged care compliance mandates × Workforce crisis × AI capability →{" "}
                   <span className="font-semibold">
-                    compliance-ready, leader-supporting action.
+                    the moment to transform psychosocial risk into retention.
                   </span>
                 </p>
               </div>
@@ -155,11 +158,11 @@ export default function WhyNowSection() {
               <div className="absolute -left-3 -top-3 rounded-full bg-foreground text-background size-8 grid place-items-center text-xs font-bold">
                 {idx + 1}
               </div>
-              <div className="flex items-center gap-3 flex-wrap">
+              <div className="flex items-start gap-3">
                 <div className="size-10 rounded-full bg-muted grid place-items-center shrink-0">
                   <Icon className={`size-6 ${iconColors[f.tone]}`} aria-hidden />
                 </div>
-                <div className="text-left">
+                <div className="text-left flex-1">
                   <h3 className="text-base font-bold text-foreground" style={{ letterSpacing: '-0.01em' }}>{f.title}</h3>
                   <p className="text-xs font-semibold text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>{f.period}</p>
                 </div>
@@ -184,7 +187,7 @@ export default function WhyNowSection() {
           >
             <h4 className="text-white text-xl font-bold" style={{ letterSpacing: '-0.01em' }}>The Convergence Point</h4>
             <p className="mt-1.5 text-white/95 text-sm" style={{ letterSpacing: '-0.005em' }}>
-              The three forces now align → time to support leaders with compliance-ready AI.
+              The three forces align → time to turn aged care compliance into workforce retention.
             </p>
           </div>
         </div>
@@ -193,8 +196,8 @@ export default function WhyNowSection() {
       {/* Footer caption */}
       <div className="mx-auto mt-12 lg:mt-40 max-w-4xl text-center">
         <p className="text-lg md:text-xl font-semibold text-foreground" style={{ letterSpacing: '-0.005em' }}>
-          <span className="font-bold text-blue-600 dark:text-blue-400">2025:</span> The market is ready to bridge{" "}
-          compliance requirements with practical, AI-driven action.
+          <span className="font-bold text-blue-600 dark:text-blue-400">2025:</span> Aged care facilities can now transform{" "}
+          psychosocial compliance into a workforce retention strategy.
         </p>
       </div>
 

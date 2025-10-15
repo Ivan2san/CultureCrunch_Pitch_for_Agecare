@@ -85,7 +85,7 @@ export default function PositioningSection() {
         "Micro-actions proven to work (from 30+ years research)",
       ],
       details: {
-        overview: "Research shows leaders drive 70% of engagement variance, yet most tools overwhelm them with dashboards and generic training. We built an AI co-pilot that makes leadership development effortless and effective.",
+        overview: "Research shows leaders drive 70% of engagement variance, yet most tools overwhelm aged care managers with dashboards and generic training during workforce crises. We built an AI co-pilot that makes leadership development effortless and effective.",
         keyFeatures: [
           {
             title: "Minimal Time Investment",

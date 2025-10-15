@@ -20,14 +20,13 @@ export default function VisionSection() {
           <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-[1.1]" style={{ letterSpacing: '-0.02em' }}>
             AI That Transforms<br />
             <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
-              Compliance into Performance
+              Compliance into Retention
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            We're entering an era of abundance, where AI doesn't replace human connection, 
-            but amplifies it. CultureCrunch empowers leaders with insight, 
-            turning workplace data into moments of genuine support.
+            In aged care, every staff member matters. CultureCrunch empowers care managers with AI insight, 
+            turning psychosocial compliance into proactive support that keeps your team thriving.
           </p>
         </div>
 
@@ -39,15 +38,15 @@ export default function VisionSection() {
           
           <div className="bg-gradient-to-br from-card/60 to-card/40 backdrop-blur-md rounded-3xl p-10 md:p-14 border border-border/50">
             <p className="text-2xl md:text-3xl text-foreground leading-relaxed font-medium" style={{ letterSpacing: '-0.01em' }}>
-              A world where every leader has an{" "}
+              A world where every aged care manager has an{" "}
               <span className="text-primary font-bold">AI co-pilot</span>{" "}
-              that helps them see what surveys can't show, understand what their team truly needs, 
-              and act with confidence every single week.
+              that detects burnout before it leads to resignation, spots resident aggression patterns, 
+              and provides the exact support conversation needed—every single week.
             </p>
             
             <div className="mt-8 pt-8 border-t border-border/50">
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Where compliance isn't a burden, but a catalyst for creating workplaces where people genuinely thrive.
+                Where psychosocial compliance isn't a burden, but a catalyst for retaining your care team and delivering quality resident care.
               </p>
             </div>
           </div>

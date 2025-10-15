@@ -7,21 +7,21 @@ import { Button } from "@/components/ui/button";
 import MethodologyDialog from "@/components/MethodologyDialog";
 
 export default function ROICalculator() {
-  const [employeeCount, setEmployeeCount] = useState(250);
-  const [managerCount, setManagerCount] = useState(25);
+  const [employeeCount, setEmployeeCount] = useState(65);
+  const [managerCount, setManagerCount] = useState(8);
   const [currentMentalHealthClaims, setCurrentMentalHealthClaims] = useState(2);
-  const [avgTurnoverRate, setAvgTurnoverRate] = useState(15);
-  const [avgSalary, setAvgSalary] = useState(80000);
-  const [currentEngagementScore, setCurrentEngagementScore] = useState(45);
+  const [avgTurnoverRate, setAvgTurnoverRate] = useState(30);
+  const [avgSalary, setAvgSalary] = useState(70000);
+  const [currentEngagementScore, setCurrentEngagementScore] = useState(40);
   const [showMethodology, setShowMethodology] = useState(false);
   const [showFullMethodology, setShowFullMethodology] = useState(false);
 
-  // Constants
-  const MENTAL_HEALTH_CLAIM_COST = 290000;
-  const TURNOVER_COST_MULTIPLIER = 1.5;
+  // Constants - Aged Care Sector Specific
+  const MENTAL_HEALTH_CLAIM_COST = 45900;
+  const TURNOVER_COST_MULTIPLIER = 0.7;
   const PRODUCTIVITY_LOSS_DISENGAGED = 0.18;
   const ABSENTEEISM_COST_PER_EMPLOYEE = 3500;
-  const FOUNDING_PARTNER_ANNUAL_COST = 25000;
+  const FOUNDING_PARTNER_ANNUAL_COST = 15000;
   const EXPECTED_CLAIM_REDUCTION = 0.4;
   const EXPECTED_TURNOVER_REDUCTION = 0.25;
   const EXPECTED_ENGAGEMENT_IMPROVEMENT = 0.3;
@@ -67,10 +67,10 @@ export default function ROICalculator() {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Calculator className="w-12 h-12 text-purple-600 dark:text-purple-400" />
-            <h2 className="text-4xl font-bold text-foreground">CultureCrunch ROI Calculator</h2>
+            <h2 className="text-4xl font-bold text-foreground">Aged Care ROI Calculator</h2>
           </div>
           <p className="text-xl text-muted-foreground">
-            Calculate the financial impact of reducing psychosocial risk in your organisation
+            Calculate the financial impact of reducing psychosocial risk in your aged care facility
           </p>
         </div>
 
@@ -80,32 +80,32 @@ export default function ROICalculator() {
             <Card className="p-6 sticky top-24 bg-card">
               <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
                 <Users className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                Your Organisation
+                Your Aged Care Facility
               </h3>
 
               <div className="space-y-6">
                 <div>
-                  <Label htmlFor="employee-count">Total Employees</Label>
+                  <Label htmlFor="employee-count">Total Staff (e.g., 65 for 80-bed facility)</Label>
                   <Input
                     id="employee-count"
                     type="number"
                     value={employeeCount}
                     onChange={(e) => setEmployeeCount(Number(e.target.value))}
-                    min="50"
-                    max="10000"
+                    min="20"
+                    max="500"
                     data-testid="input-employee-count"
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="leader-count">Number of Leaders</Label>
+                  <Label htmlFor="leader-count">Number of Care Managers/Team Leaders</Label>
                   <Input
                     id="leader-count"
                     type="number"
                     value={managerCount}
                     onChange={(e) => setManagerCount(Number(e.target.value))}
-                    min="5"
-                    max="500"
+                    min="2"
+                    max="50"
                     data-testid="input-leader-count"
                   />
                 </div>
@@ -179,13 +179,13 @@ export default function ROICalculator() {
                 <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-mental-health">
                   <p className="text-sm text-muted-foreground mb-1">Mental Health Claims</p>
                   <p className="text-2xl font-bold text-red-700">{formatCurrency(annualMentalHealthClaimsCost)}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{currentMentalHealthClaims} claims × $290K each</p>
+                  <p className="text-xs text-muted-foreground mt-1">{currentMentalHealthClaims} claims × $45.9K each</p>
                 </div>
 
                 <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-turnover">
-                  <p className="text-sm text-muted-foreground mb-1">Turnover Costs</p>
+                  <p className="text-sm text-muted-foreground mb-1">Staff Replacement Costs</p>
                   <p className="text-2xl font-bold text-red-700">{formatCurrency(annualTurnoverCost)}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{turnoverCount} employees × 150% salary</p>
+                  <p className="text-xs text-muted-foreground mt-1">{turnoverCount} departures × 70% avg salary</p>
                 </div>
 
                 <div className="bg-red-50 p-4 rounded-lg border border-red-200" data-testid="cost-productivity">

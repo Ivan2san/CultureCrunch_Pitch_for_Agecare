@@ -20,194 +20,194 @@ interface Scenario {
 
 const scenarios: Scenario[] = [
   {
-    id: "team-conflict",
-    title: "Team Conflict",
-    description: "Tension between team members affecting productivity",
-    concern: "I've noticed Sarah and Tom have been avoiding each other in meetings, and their collaboration has dropped significantly.",
+    id: "resident-aggression",
+    title: "Resident Aggression",
+    description: "Care worker experiencing repeated aggression from resident with dementia",
+    concern: "Maria has been hit twice this week by Mr. Chen during morning care. She's becoming anxious about her shifts.",
     messages: [
       {
         role: "system",
-        content: "Phase 1: Observe - Identifying Collaboration Breakdown Signals",
+        content: "Phase 1: Observe - Identifying Violence & Aggression Patterns",
         phase: "observe"
       },
       {
         role: "leader",
-        content: "I've noticed Sarah and Tom have been avoiding each other in meetings, and their collaboration has dropped significantly.",
+        content: "Maria has been hit twice this week by Mr. Chen during morning care. She's becoming anxious about her shifts.",
       },
       {
         role: "ai",
-        content: "I've analysed recent patterns. Here's what I'm observing: Sarah and Tom's 1:1 meetings dropped from 2x/week to zero over the past 3 weeks. Their shared project updates decreased by 78%. Both are working extended hours (Sarah +6hrs/week, Tom +4hrs/week). Would you like to explore what might be contributing to this pattern?",
+        content: "I've analysed the incident patterns: Mr. Chen has had 5 responsive behaviours in past 2 weeks (up from 0-1/month baseline). All incidents occurred 7-8am during personal care. Maria was involved in 3 of 5 incidents. Her shift sign-in shows increased time (avg +12 mins delay) before entering Mr. Chen's room. This indicates 'workplace violence' psychosocial hazard requiring immediate controls.",
       },
       {
         role: "system",
-        content: "Phase 2: Orient - Assessing Interpersonal Risk Severity",
+        content: "Phase 2: Orient - Assessing Violence Risk & Duty of Care",
         phase: "orient"
       },
       {
         role: "ai",
-        content: "Based on the patterns, this could indicate interpersonal conflict (psychosocial hazard). The extended hours suggest they're working around each other rather than together. Risk assessment: Medium-High. The duration (3 weeks) and intensity (78% collaboration drop) warrant attention. This aligns with 'poor workplace relationships' under the Code of Practice.",
+        content: "Risk assessment: High. Repeated physical aggression to same staff member indicates inadequate controls. This violates WHS duty of care and Quality Standard 3 (Personal care and clinical care). Maria's avoidance behaviour suggests psychological harm. Immediate action required: 1) Remove Maria from solo care duties with Mr. Chen, 2) Clinical review of Mr. Chen's care plan, 3) Support for Maria.",
       },
       {
         role: "system",
-        content: "Phase 3: Respond - Implementing Conflict Resolution Controls",
+        content: "Phase 3: Respond - Implementing Violence Prevention Controls",
         phase: "respond"
       },
       {
         role: "ai",
-        content: "Recommended approach using the hierarchy of controls: First, speak with each privately to understand their perspective. Here's a conversation starter: 'I've noticed some changes in how the team is collaborating. I wanted to check in with you about how things are going with the project and your working relationships.' Would you like me to prepare specific questions for each conversation?",
+        content: "Hierarchy of controls applied: 1) IMMEDIATE: Paired care for Mr. Chen (elimination of solo exposure), 2) Clinical review scheduled (11am today with RN), 3) Behaviour support assessment requested, 4) Maria referred to EAP and offered alternative duties. I've also identified morning sundowning pattern—recommend care routine adjustment. Would you like me to brief the clinical team?",
       },
       {
         role: "leader",
-        content: "Yes, that would help. I want to make sure I handle this sensitively.",
+        content: "Yes, and what about the other PCAs? They need to know how to stay safe too.",
       },
       {
         role: "ai",
-        content: "Great. I've prepared two conversation guides with open-ended questions, active listening prompts, and escalation indicators. I've also scheduled 30-minute 1:1s with Sarah (tomorrow 2pm) and Tom (tomorrow 3:30pm) based on their calendar availability. After you meet with them, I'll help you determine if mediation or team restructuring is needed.",
+        content: "Agreed. I've: 1) Created safety briefing for all morning shift staff (flagged in handover notes), 2) Updated Mr. Chen's care plan with triggers and de-escalation techniques, 3) Scheduled de-escalation training refresh for team (next week), 4) Set up daily behaviour monitoring for Mr. Chen. All incidents logged in hazard register with controls documented per Code of Practice.",
       },
       {
         role: "system",
-        content: "Phase 4: Assess - Tracking Relationship Recovery Metrics",
+        content: "Phase 4: Assess - Monitoring Violence Reduction & Staff Safety",
         phase: "assess"
       },
       {
         role: "ai",
-        content: "I'll track: 1) Collaboration frequency (targeting return to 2x/week within 2 weeks), 2) Working hours normalisation (back to standard within 3 weeks), 3) Meeting participation patterns. I've set a review point for 2 weeks from now. You'll receive an alert if patterns don't improve or worsen. All actions are logged for compliance documentation.",
+        content: "Monitoring: Mr. Chen's responsive behaviours (target: <2/month within 4 weeks), staff incident reports (target: zero physical contact within 2 weeks), Maria's wellbeing check-ins (weekly for 4 weeks). Clinical team will review behaviour triggers and adjust care approach. I'll alert you if any staff report feeling unsafe. All Quality Standards compliance documented.",
       },
       {
         role: "leader",
-        content: "[Two weeks later] The 1:1s helped. They had a miscommunication about project ownership. How are things looking now?",
+        content: "[Three weeks later] The behaviour support team adjusted his care routine and Maria feels safe again. What's the outcome?",
       },
       {
         role: "ai",
-        content: "Excellent progress! Collaboration has recovered to 90% of baseline. Sarah and Tom have resumed weekly 1:1s, working hours are back to normal, and their joint project deliverables are on track. I've documented this successful intervention in your hazard register. The control measures (facilitated conversations) were effective. Case closed with positive outcome.",
+        content: "Excellent result! Mr. Chen's responsive behaviours decreased to 1 in past 3 weeks (within acceptable range). Zero physical contact incidents. Maria completed EAP sessions and returned to Mr. Chen's care (with paired support). Team trained in trauma-informed dementia care. Successful violence hazard control—documented in register with ongoing monitoring.",
       },
     ],
   },
   {
-    id: "workload-stress",
-    title: "Workload Stress",
-    description: "Employee showing signs of excessive workload and burnout",
-    concern: "Alex has been working late every night and seems increasingly withdrawn during team meetings.",
+    id: "caregiver-burnout",
+    title: "Caregiver Burnout",
+    description: "Personal care assistant showing signs of exhaustion and emotional fatigue",
+    concern: "Jenny has called in sick 3 times this month. When she's here, she seems emotionally exhausted and withdrawn from residents.",
     messages: [
       {
         role: "system",
-        content: "Phase 1: Observe - Detecting Overwork & Withdrawal Patterns",
+        content: "Phase 1: Observe - Detecting Burnout & Fatigue Patterns",
         phase: "observe"
       },
       {
         role: "leader",
-        content: "Alex has been working late every night and seems increasingly withdrawn during team meetings.",
+        content: "Jenny has called in sick 3 times this month. When she's here, she seems emotionally exhausted and withdrawn from residents.",
       },
       {
         role: "ai",
-        content: "Here's what the data shows: Alex logged 62 hours last week (22 hours over standard). After-hours work: 89% of evenings, 3 weekend logins. Meeting participation decreased: 40% fewer contributions in team meetings over 2 weeks. Slack responsiveness down 55% during business hours but up 200% after 7pm. These are clear behavioural signals.",
+        content: "Here's what I'm observing: Jenny has worked 14 consecutive days (no days off in 2 weeks), averaging 9.2 hours/day. Sick leave: 3 days this month vs 0.5/month baseline. Resident interaction time decreased 35% (from care documentation timestamps). She's been assigned to high-care dementia wing 89% of shifts without rotation. This indicates 'high job demands' and 'inadequate recovery time' psychosocial hazards.",
       },
       {
         role: "system",
-        content: "Phase 2: Orient - Identifying Burnout Risk & Job Demand Hazards",
+        content: "Phase 2: Orient - Assessing Burnout Risk & Workforce Sustainability",
         phase: "orient"
       },
       {
         role: "ai",
-        content: "Risk assessment: High. This pattern indicates 'high job demands' and potential burnout (psychosocial hazards under the Code). The evening/weekend work combined with daytime withdrawal suggests Alex is struggling to manage workload during normal hours. Duration: 2+ weeks indicates this isn't a temporary spike. The lack of recovery time (no days off) elevates the risk.",
+        content: "Risk assessment: High. Pattern indicates burnout trajectory per aged care workforce research (41% sector burnout rate). Emotional exhaustion + physical fatigue + inadequate rest = high turnover risk. This violates Quality Standard 7 (psychological safety) and WHS fatigue hazard requirements. Immediate intervention needed—typical aged care turnover costs $40-49K per PCA replacement.",
       },
       {
         role: "system",
-        content: "Phase 3: Respond - Applying Workload Reduction Controls",
+        content: "Phase 3: Respond - Implementing Fatigue & Workload Controls",
         phase: "respond"
       },
       {
         role: "ai",
-        content: "Immediate action recommended (hierarchy of controls - elimination first): 1) Have a supportive conversation today about workload, 2) Review and redistribute current tasks, 3) Set clear boundaries on after-hours work. Here's your conversation approach: 'Alex, I've noticed you've been putting in very long hours. I'm concerned about your wellbeing. Can we talk about your current workload and how I can support you?'",
+        content: "Hierarchy of controls: 1) IMMEDIATE: 3 consecutive days off (rostered from tomorrow), 2) Roster review to ensure maximum 5 consecutive days, 3) Wing rotation implemented (alternate high-care/low-care), 4) Supportive check-in conversation. Here's your approach: 'Jenny, I've noticed you've been working really hard without breaks. I'm concerned about your wellbeing. Let's talk about how we can better support you.'",
       },
       {
         role: "leader",
-        content: "Should I be worried about the weekend work? That's not normal for our team.",
+        content: "We're already short-staffed. How can I give her 3 days off?",
       },
       {
         role: "ai",
-        content: "Yes, weekend work combined with high after-hours activity is a strong burnout indicator. Recommended immediate actions: 1) Meet with Alex today (I've found a 30-min slot at 3pm based on their calendar), 2) Audit their current task load (I've prepared a list of their active projects: 7 ongoing, 3 overdue), 3) Consider temporary task redistribution. I can help you identify which tasks could be reassigned to reduce immediate pressure.",
+        content: "I understand the constraint. However, burnout-driven turnover costs $40-49K replacement + 87 days to fill role. I've identified: 1) Agency coverage available for 2 of 3 days ($384 cost vs $49K turnover), 2) Shift swaps possible with 2 staff willing to trade, 3) If Jenny leaves, you'll face 3+ months shortage. Short-term agency cost prevents long-term crisis. I can coordinate the roster changes now.",
       },
       {
         role: "system",
-        content: "Phase 4: Assess - Monitoring Recovery & Workload Normalisation",
+        content: "Phase 4: Assess - Monitoring Recovery & Retention",
         phase: "assess"
       },
       {
         role: "ai",
-        content: "Monitoring plan: Weekly hours target: ≤42 hours within 2 weeks. After-hours work target: <10% of total hours within 3 weeks. Meeting participation: return to baseline within 3 weeks. I'll send you a progress update next week and alert you if working hours exceed 50 hours. All control measures and consultation with Alex are documented for your psychosocial risk register.",
+        content: "Recovery monitoring: Days off compliance (min 2 per 7 days), shift duration (target <8.5 hours average), sick leave trend (target ≤1/month), resident interaction quality (via care notes). EAP referral provided. I'll alert you if fatigue patterns re-emerge. All controls documented per Quality Standards and WHS Code. Monthly check-ins scheduled for 3 months.",
       },
       {
         role: "leader",
-        content: "[Three weeks later] We redistributed 3 projects and set clear boundaries. What's the outcome?",
+        content: "[Six weeks later] Jenny took the break, we fixed the roster rotation, and she seems like her old self again. What's the status?",
       },
       {
         role: "ai",
-        content: "Successful recovery! Alex's hours decreased to 41 hours/week average. After-hours work dropped to 5%, weekend logins eliminated. Meeting participation restored to 95% of baseline. Alex reported feeling supported and in control again. Your intervention prevented potential burnout and workers' comp claim. Documented as 'control effective' in hazard register.",
+        content: "Excellent outcome! Jenny's sick leave normalized (0 days in 4 weeks), resident interaction time restored to baseline, she's engaged in team handovers again. Roster now includes proper recovery time and wing rotation. Burnout risk reduced from High to Low. Successful retention—saved $40-49K replacement cost. Documented as effective psychosocial control in hazard register.",
       },
     ],
   },
   {
-    id: "bullying-concern",
-    title: "Bullying Concern",
-    description: "Reports of aggressive behaviour from a senior team member",
-    concern: "Multiple people have mentioned that Jordan's behaviour in meetings has become aggressive and dismissive.",
+    id: "family-complaint",
+    title: "Family Complaint Stress",
+    description: "Staff experiencing distress from aggressive family interactions",
+    concern: "Mrs. Thompson's daughter has been verbally abusive to night shift staff, accusing them of neglect. The team is stressed.",
     messages: [
       {
         role: "system",
-        content: "Phase 1: Observe - Documenting Bullying & Harassment Indicators",
+        content: "Phase 1: Observe - Identifying External Aggression & Role Conflict",
         phase: "observe"
       },
       {
         role: "leader",
-        content: "Multiple people have mentioned that Jordan's behaviour in meetings has become aggressive and dismissive.",
+        content: "Mrs. Thompson's daughter has been verbally abusive to night shift staff, accusing them of neglect. The team is stressed.",
       },
       {
         role: "ai",
-        content: "I've analysed the patterns: 3 separate team members flagged concerns (via anonymous pulse, direct reports, and peer feedback). Meeting analysis shows Jordan's speaking time increased 340% in last month while others decreased 45%. Video analysis detected 7 interruptions per meeting (up from 1-2 baseline). Post-meeting Slack shows 2 team members consistently going silent after Jordan speaks. This requires immediate attention.",
+        content: "I've documented the pattern: 4 incidents in past week, all between 8-10pm (daughter's visit time). 3 different night staff involved. Incident reports show accusations of 'not answering call bell fast enough' and 'poor care'. Staff rostering data shows 2 staff have requested shift changes to avoid the family. This indicates 'external violence' and 'role conflict' psychosocial hazards under WHS Code and Quality Standard 1 (Consumer dignity and choice).",
       },
       {
         role: "system",
-        content: "Phase 2: Orient - Determining Legal Risk & Severity Classification",
+        content: "Phase 2: Orient - Assessing Complaint Validity & Staff Wellbeing Risk",
         phase: "orient"
       },
       {
         role: "ai",
-        content: "Risk classification: High. This pattern suggests 'workplace bullying and harassment' under psychosocial hazards. Multiple independent reports increase credibility. The silencing effect on other team members indicates psychological harm is occurring. This has legal and duty of care implications. Immediate intervention is required within 48 hours per Code of Practice guidance.",
+        content: "Risk assessment: Medium-High. Analysis shows: Call bell response times for Mrs. Thompson averaged 3.2 minutes (within 5-min standard). Care documentation complete and timely. No clinical concerns. However, verbal aggression toward staff violates 'freedom from violence' principle. Staff avoidance behaviour indicates psychological harm. This requires both family support intervention AND staff protection per duty of care.",
       },
       {
         role: "system",
-        content: "Phase 3: Respond - Activating Formal Intervention Protocols",
+        content: "Phase 3: Respond - Balancing Family Support & Staff Protection",
         phase: "respond"
       },
       {
         role: "ai",
-        content: "This requires formal process (hierarchy of controls - elimination/substitution): 1) Private conversation with Jordan about behaviour impact (today), 2) Document specific incidents with witnesses, 3) Consider temporary meeting facilitation changes, 4) Provide support to affected team members. I've prepared: incident documentation template, conversation script for Jordan, and support resources for the team.",
+        content: "Dual approach (hierarchy of controls): FOR STAFF: 1) Immediate support meeting with night team, 2) Clear reporting protocol for aggression, 3) Buddy system when interacting with this family. FOR FAMILY: 1) Compassionate family meeting to understand concerns (I've identified daughter is caregiver burnout risk), 2) Provide care transparency (activity logs, care plan review), 3) Set respectful communication expectations. Shall I schedule the family meeting for tomorrow?",
       },
       {
         role: "leader",
-        content: "This feels serious. Do I need to involve HR?",
+        content: "Yes, but I'm worried this will escalate. How do I handle it if she becomes aggressive in the meeting?",
       },
       {
         role: "ai",
-        content: "Yes. Given multiple reports and the severity, HR consultation is essential. I've: 1) Created a confidential incident summary with timestamps and observable behaviours (no names in initial report per privacy), 2) Flagged this as 'bullying/harassment - requires HR involvement', 3) Prepared documentation showing you've met 'reasonable steps' requirement. Would you like me to schedule a meeting with HR today? I can also arrange immediate support for affected team members through EAP.",
+        content: "Safety plan prepared: 1) Meeting held in office (private, safe exit available), 2) Two staff present (you + Clinical Manager for credibility), 3) De-escalation phrases scripted: 'I can see you're concerned about your mum's care. Let's look at the care records together.' 4) If aggression continues: meeting paused, offer cooling-off period, document behaviour. I've also flagged potential caregiver support services for the daughter. Zero tolerance for abuse—staff safety is non-negotiable.",
       },
       {
         role: "system",
-        content: "Phase 4: Assess - Verifying Behaviour Change & Team Safety",
+        content: "Phase 4: Assess - Monitoring Resolution & Team Recovery",
         phase: "assess"
       },
       {
         role: "ai",
-        content: "Post-intervention monitoring (required for compliance): 1) Meeting behaviour analysis (weekly for 6 weeks), 2) Team member check-ins (I'll prompt you before each), 3) Anonymous pulse questions on psychological safety (bi-weekly), 4) HSR consultation logged. If behaviour doesn't improve within 2 weeks, escalation protocols will automatically trigger. All actions documented in hazard register with review dates.",
+        content: "Tracking: Incident reports involving this family (target: zero verbal aggression within 2 weeks), staff shift change requests (monitoring for avoidance), family satisfaction indicators, Mrs. Thompson's care quality metrics. I'll prompt weekly check-ins with night staff for 4 weeks. If aggression continues, escalation to family meeting with external mediator. All documented per Quality Standards consumer/workforce safety requirements.",
       },
       {
         role: "leader",
-        content: "[Six weeks later] We had HR mediation and set clear behaviour expectations. What's the result?",
+        content: "[Three weeks later] The family meeting helped. The daughter was dealing with grief and guilt. She apologized and staff feel safe again. Outcome?",
       },
       {
         role: "ai",
-        content: "Positive resolution achieved. Jordan's interruptions decreased to baseline (1-2 per meeting), speaking time normalized, and team participation recovered. Anonymous pulse shows 85% feel psychologically safe (up from 40%). No new complaints filed. All team members received EAP support. Intervention documented as successful with ongoing 3-month monitoring to ensure sustained improvement.",
+        content: "Excellent resolution! Zero aggression incidents in 3 weeks. Daughter connected with grief counseling and caregiver support group. Night staff no longer requesting shift changes—psychological safety restored. Mrs. Thompson's care quality maintained throughout. Family relationship repaired. Successful management of external violence hazard with compassionate approach. Documented in hazard register with lessons learned for future family distress situations.",
       },
     ],
   },

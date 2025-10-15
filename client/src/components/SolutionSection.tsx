@@ -12,9 +12,9 @@ export default function SolutionSection() {
       icon: AlertTriangle,
       color: "yellow",
       items: [
-        "Signals: after-hours, 1:1 gaps, meeting load",
-        "Worker/HSR pulse capture",
-        "Hazard entry created",
+        "Signals: shift patterns, care minutes, incident logs",
+        "Staff/HSR pulse & behaviour reports",
+        "Hazard entry auto-created",
       ],
     },
     {
@@ -23,8 +23,8 @@ export default function SolutionSection() {
       color: "blue",
       items: [
         "Likelihood × severity × duration",
-        "Compounding hazards escalate",
-        "Risk rating rationale",
+        "Compounding hazards (fatigue + violence)",
+        "Risk rating per Quality Standards",
       ],
     },
     {
@@ -32,9 +32,9 @@ export default function SolutionSection() {
       icon: CheckCircle,
       color: "green",
       items: [
-        "Hierarchy-biased chooser",
-        "ManagerGPT scripts",
-        "Controls implemented",
+        "Hierarchy-based controls (roster changes, pairing)",
+        "Care-specific conversation scripts",
+        "Controls logged & assigned",
       ],
     },
     {
@@ -42,9 +42,9 @@ export default function SolutionSection() {
       icon: Clock,
       color: "indigo",
       items: [
-        "Pre/post metrics",
-        '"Still effective?" checks',
-        "Review log + versioning",
+        "Pre/post care quality metrics",
+        '"Still effective?" compliance checks',
+        "Review log + audit trail",
       ],
     },
     {
@@ -52,9 +52,9 @@ export default function SolutionSection() {
       icon: Users,
       color: "purple",
       items: [
-        "Worker input & HSR co-sign",
-        "Consultation timeline",
-        "Participation evidence",
+        "Care worker input & HSR sign-off",
+        "Consultation timeline tracked",
+        "Participation evidence logged",
       ],
     },
   ];
@@ -106,7 +106,7 @@ export default function SolutionSection() {
                 <h4 className="text-xl font-bold text-foreground">Team-Level: Leader Action Dashboard</h4>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                Frontline leaders (team leads, middle managers) receive:
+                Frontline leaders (care managers, team leaders, clinical managers) receive:
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">

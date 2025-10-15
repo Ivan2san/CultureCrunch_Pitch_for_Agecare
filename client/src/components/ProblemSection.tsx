@@ -7,64 +7,63 @@ export default function ProblemSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
-            The Problem: <span className="text-red-600 dark:text-red-400">The Leadership Pressure Cascade</span>
+            The Problem: <span className="text-red-600 dark:text-red-400">Aged Care's Workforce Crisis</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
-            External business pressures create anxious leaders who lack the capability to act—
-            cascading into team psychosocial risks and a $8.9 trillion productivity crisis
+            Aged care providers face a perfect storm: regulatory compliance demands, devastating workforce turnover, and psychosocial hazards driving staff exodus
           </p>
           <p className="text-sm text-muted-foreground mt-4 italic max-w-4xl mx-auto">
-            All statistics sourced from peer-reviewed research, government reports, and major industry studies published 2023-2025
+            All statistics from Australian aged care research, Safe Work Australia, and sector workforce surveys (2023-2025)
           </p>
         </div>
 
         {/* Main Content Grid - 4 Stylish Stat Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
-          {/* Box 1: Action Gap */}
+          {/* Box 1: Devastating Turnover */}
           <Card className="p-8 bg-card/40 backdrop-blur-sm flex flex-col items-center text-center hover-elevate transition-all">
-            <div className="text-6xl md:text-7xl font-bold text-red-600 dark:text-red-400 mb-4" style={{ letterSpacing: '-0.02em' }}>58%</div>
-            <h4 className="font-bold text-xl text-foreground mb-2">Organisations Fail to Act</h4>
+            <div className="text-6xl md:text-7xl font-bold text-red-600 dark:text-red-400 mb-4" style={{ letterSpacing: '-0.02em' }}>30%</div>
+            <h4 className="font-bold text-xl text-foreground mb-2">Annual Staff Turnover</h4>
             <p className="text-muted-foreground text-sm max-w-md">
-              Only 58% of organisations take action after receiving employee feedback
+              Aged care facilities face 25-30% annual turnover, with many staff leaving within their first 12 months
             </p>
             <p className="text-xs text-muted-foreground mt-4 pt-3 border-t border-border/50 w-full">
-              Source: Harvard Business Review; Quantum Workplace 2023
+              Source: Australian Aged Care Workforce Survey 2024
             </p>
           </Card>
 
-          {/* Box 2: Leader Under Pressure */}
+          {/* Box 2: Burnout Crisis */}
           <Card className="p-8 bg-card/40 backdrop-blur-sm flex flex-col items-center text-center hover-elevate transition-all">
-            <div className="text-6xl md:text-7xl font-bold text-orange-600 dark:text-orange-400 mb-4" style={{ letterSpacing: '-0.02em' }}>70%</div>
-            <h4 className="font-bold text-xl text-foreground mb-2">Leaders Drive Team Outcomes</h4>
+            <div className="text-6xl md:text-7xl font-bold text-orange-600 dark:text-orange-400 mb-4" style={{ letterSpacing: '-0.02em' }}>65%</div>
+            <h4 className="font-bold text-xl text-foreground mb-2">Nurses Experiencing Burnout</h4>
             <p className="text-muted-foreground text-sm max-w-md">
-              70% of team engagement explained by leader behavior, yet business pressures leave them unsupported
+              65% of aged care nurses report moderate to severe emotional exhaustion, with 41% of all workers burnt out
             </p>
             <p className="text-xs text-muted-foreground mt-4 pt-3 border-t border-border/50 w-full">
-              Source: Gallup 2024-2025
+              Source: Palliative Care Australia; Aged Care Worker Survey 2024
             </p>
           </Card>
 
-          {/* Box 3: Trust Collapse */}
+          {/* Box 3: Psychosocial Drivers */}
           <Card className="p-8 bg-card/40 backdrop-blur-sm flex flex-col items-center text-center hover-elevate transition-all">
-            <div className="text-6xl md:text-7xl font-bold text-red-600 dark:text-red-400 mb-4" style={{ letterSpacing: '-0.02em' }}>82%</div>
-            <h4 className="font-bold text-xl text-foreground mb-2">Trust Collapse</h4>
+            <div className="text-6xl md:text-7xl font-bold text-red-600 dark:text-red-400 mb-4" style={{ letterSpacing: '-0.02em' }}>48%</div>
+            <h4 className="font-bold text-xl text-foreground mb-2">Staff Feeling Burnt Out</h4>
             <p className="text-muted-foreground text-sm max-w-md">
-              82% of employees don't trust their leader to tell the truth
+              Top reasons for leaving: burnout (48%), lack of support (46%), stress (45%), frustration (42%)—all psychosocial factors
             </p>
             <p className="text-xs text-muted-foreground mt-4 pt-3 border-t border-border/50 w-full">
-              Source: People Insight 2024
+              Source: Aged Care Worker Survey 2024 (n=21,197)
             </p>
           </Card>
 
-          {/* Box 4: ROI Failure */}
+          {/* Box 4: Replacement Cost */}
           <Card className="p-8 bg-card/40 backdrop-blur-sm flex flex-col items-center text-center hover-elevate transition-all">
-            <div className="text-6xl md:text-7xl font-bold text-orange-600 dark:text-orange-400 mb-4" style={{ letterSpacing: '-0.02em' }}>44%</div>
-            <h4 className="font-bold text-xl text-foreground mb-2">Zero ROI</h4>
+            <div className="text-6xl md:text-7xl font-bold text-orange-600 dark:text-orange-400 mb-4" style={{ letterSpacing: '-0.02em' }}>$49K</div>
+            <h4 className="font-bold text-xl text-foreground mb-2">Cost Per RN Departure</h4>
             <p className="text-muted-foreground text-sm max-w-md">
-              44% see zero return from engagement investments
+              Each registered nurse departure costs $49,225 in recruitment, training, and lost productivity
             </p>
             <p className="text-xs text-muted-foreground mt-4 pt-3 border-t border-border/50 w-full">
-              Source: Harvard Business Review; Workbuzz 2023/24
+              Source: Roche et al. 2015; Australian Healthcare Industry
             </p>
           </Card>
         </div>
