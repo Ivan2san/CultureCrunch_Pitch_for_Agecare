@@ -253,6 +253,98 @@ export default function PositioningSection() {
           })}
         </div>
 
+        {/* Competitive Landscape */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-foreground text-center mb-8" style={{ letterSpacing: '-0.01em' }}>
+            Why Existing Solutions Fail in Aged Care
+          </h3>
+          <p className="text-lg text-muted-foreground text-center mb-12 max-w-4xl mx-auto">
+            Research confirms: "There are virtually no psychosocial safety software solutions tailored specifically for aged care." Here's why the alternatives don't work:
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <Card className="p-6 bg-card border-2 border-purple-200">
+              <h4 className="text-lg font-bold text-purple-700 mb-3">FlourishDx & Generic Tools</h4>
+              <p className="text-sm text-muted-foreground mb-4">Generic workplace mental health platforms</p>
+              <div className="space-y-2">
+                <div className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-1.5 flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground">Require digital maturity aged care doesn't have</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-1.5 flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground">Complex analytics perceived as adding administrative burden</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-1.5 flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground">Miss sector-specific hazards: resident deaths, violence, moral distress</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 bg-card border-2 border-indigo-200">
+              <h4 className="text-lg font-bold text-indigo-700 mb-3">Rely & Incident Systems</h4>
+              <p className="text-sm text-muted-foreground mb-4">Reactive SIRS reporting platforms</p>
+              <div className="space-y-2">
+                <div className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 mt-1.5 flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground">Reactive only — capture incidents after they happen</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 mt-1.5 flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground">No proactive prevention or early warning</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 mt-1.5 flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground">"Too late to prevent staff departure"</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 bg-card border-2 border-blue-200">
+              <h4 className="text-lg font-bold text-blue-700 mb-3">People at Work Survey</h4>
+              <p className="text-sm text-muted-foreground mb-4">Government free tool</p>
+              <div className="space-y-2">
+                <div className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground">One-size-fits-all questionnaire</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground">Not calibrated to aged care's unique stressors</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground">No actionable insights or continuous monitoring</p>
+                </div>
+              </div>
+            </Card>
+          </div>
+
+          <Card className="p-8 bg-gradient-to-r from-purple-50 to-indigo-50 border-2 border-purple-300">
+            <div className="text-center">
+              <h4 className="text-2xl font-bold text-purple-700 mb-4">→ CultureCrunch's Advantage</h4>
+              <p className="text-lg text-muted-foreground mb-6">
+                The only platform purpose-built for aged care's reality: paper-based workflows, digital skepticism, fragmented systems, and sector-specific psychosocial hazards.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div className="bg-white/50 rounded-lg p-4">
+                  <p className="font-bold text-purple-700 mb-1">No Integration Needed</p>
+                  <p className="text-muted-foreground">Works with fragmented/paper-based reality</p>
+                </div>
+                <div className="bg-white/50 rounded-lg p-4">
+                  <p className="font-bold text-indigo-700 mb-1">Proactive Detection</p>
+                  <p className="text-muted-foreground">Weekly pulse prevents the vicious cycle</p>
+                </div>
+                <div className="bg-white/50 rounded-lg p-4">
+                  <p className="font-bold text-blue-700 mb-1">Aged Care Specific</p>
+                  <p className="text-muted-foreground">17 WHS + sector-unique hazards</p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+
         {/* Competitive Moat */}
         <div className="bg-card rounded-2xl p-8 border border-border">
           <h3 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-8" style={{ letterSpacing: '-0.01em' }}>Our Competitive Moat</h3>
