@@ -17,9 +17,9 @@ const FORCES: Force[] = [
     icon: Scale,
     tone: "blue",
     bullets: [
-      "WHS psychosocial regs (April 2023): Manage 17 specific hazards",
-      "NSW inspector visits up 25%; Victoria detailed regs Dec 2025",
-      "255 regulatory actions in 2023-24; penalties up to $1.5M per breach",
+      "Standards 7 & 2 effective Nov 1, 2025: 'satisfied and psychologically safe workplace' now mandatory",
+      "17 specific WHS psychosocial hazards to identify, assess, control—proactive risk management required",
+      "Personal liability for directors/executives failing due diligence + penalties up to $1.5M per breach",
     ],
   },
   {
