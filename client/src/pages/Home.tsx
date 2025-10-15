@@ -16,10 +16,10 @@ export default function Home() {
       <VisionSection />
       <ProblemSection />
       <WhyNowSection />
+      <PositioningSection />
       <SolutionSection />
       <HowItWorksSection />
       <ROICalculator />
-      <PositioningSection />
       <RoadmapSection />
       <TheAskSection />
     </div>
