@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Brain, Database, Zap, Cpu, Network, CheckCircle, GitBranch, RefreshCw, MessageSquare, Shield, Lock, Users, AlertCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import ProcessFlowAnimation from "@/components/ProcessFlowAnimation";
+import CustomerJourneyFlow from "@/components/CustomerJourneyFlow";
 import OORADemo from "@/components/OORADemo";
 import SprintTimeline from "@/components/SprintTimeline";
 import DeliverablesSection from "@/components/DeliverablesSection";
@@ -257,9 +257,9 @@ export default function HowItWorksSection() {
           )}
         </Card>
 
-        {/* Animated Process Flow */}
+        {/* Customer Journey Flow */}
         <div className="mb-16">
-          <ProcessFlowAnimation />
+          <CustomerJourneyFlow />
         </div>
 
         {/* Technical Architecture: Privacy-First AI Stack */}
