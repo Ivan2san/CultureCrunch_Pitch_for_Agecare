@@ -18,8 +18,8 @@ const FORCES: Force[] = [
     tone: "blue",
     bullets: [
       "WHS psychosocial regs (April 2023): Manage 17 specific hazards",
-      "Strengthened Quality Standards (Nov 2025): Psychologically safe workplace mandatory",
-      "Civil penalties up to $1.5M per breach; avg WHS fine $117K",
+      "NSW inspector visits up 25%; Victoria detailed regs Dec 2025",
+      "255 regulatory actions in 2023-24; penalties up to $1.5M per breach",
     ],
   },
   {
@@ -29,9 +29,9 @@ const FORCES: Force[] = [
     icon: HeartCrack,
     tone: "red",
     bullets: [
-      "110,000 worker shortage projected by 2030",
-      "48% cite burnout as reason for leaving; 46% lack of support",
-      "Facilities operating below 50% capacity due to staff shortages",
+      "43,000 vacancies now; 84,900 staff left in 12 months (27% turnover)",
+      "Mental health claims: $58.6K median, 34 weeks off (4x other injuries)",
+      "Only 49% of workers say workload is manageable",
     ],
   },
   {
