@@ -4,11 +4,24 @@
 
 CultureCrunch is a B2B SaaS platform that transforms workplace psychosocial compliance into actionable leadership insights using AI. The application is a pitch/marketing web app designed to attract founding partners for a pilot program. It presents the company's vision, problem analysis, solution architecture, ROI calculations, and partnership opportunities through an interactive single-page application.
 
-**Core Purpose**: Convert prospective enterprise clients into founding partners by demonstrating how AI can turn psychosocial hazard compliance requirements into proactive leader support tools.
+**Core Purpose**: Convert prospective aged care providers into founding partners by demonstrating how AI can turn psychosocial hazard compliance requirements into proactive workforce retention tools.
 
-**Target Audience**: Australian enterprise organizations (200+ employees) facing psychosocial safety compliance requirements, particularly HR leaders and executives concerned with workplace mental health, engagement, and regulatory compliance.
+**Target Audience**: Australian aged care providers (residential facilities and home care services) facing psychosocial safety compliance requirements, particularly care managers, clinical leaders, and executives concerned with workforce retention, mental health claims, and regulatory compliance.
 
 ## Recent Changes
+
+- **Aged Care Sector Customization (January 2025)**:
+  - Completely tailored webapp for Australian aged care sector based on validated research data
+  - Updated Problem Section with compliance crisis statistics: 82% residential compliance (1 in 5 failing audits), 65% home care compliance, 255 regulatory actions in 2023-24
+  - Enhanced mental health claims data: $58.6K median payout (up from $45.9K), 34 weeks median time off (4x other injuries)
+  - Updated Why Now Section with enforcement data: 25% increase in NSW psychosocial inspector visits, Victoria detailed regulations December 2025
+  - Workforce crisis statistics: 43,000 vacancies nationwide, 84,900 staff left in 12 months (27% confirmed turnover), only 49% say workload manageable
+  - Broadened language from "facility/facilities" to "aged care providers" to include both residential and home care services
+  - ROI Calculator enhancements: Added provider type selector (Residential vs Home Care) with context-appropriate defaults
+    - Residential defaults: 65 staff, 8 managers, 30% turnover, $70K avg salary
+    - Home care defaults: 15 staff, 3 managers, 35% turnover, $65K avg salary
+  - Created 3 aged care-specific OORA demo scenarios: resident aggression/dementia behaviors, caregiver burnout, family complaint stress
+  - All statistics sourced from: Aged Care Quality & Safety Commission Annual Report 2023-24, Safe Work Australia 2020-21, Aged Care Provider Workforce Survey 2023
 
 - **Complete Terminology Standardization (October 2025)**:
   - Replaced all Manager/Management references with Leader/Leadership across 11+ components
