@@ -74,13 +74,6 @@ export default function SolutionSection() {
 
         {/* Multi-Level Leader Support Architecture */}
         <div className="bg-card rounded-xl p-8 mb-16 border border-border">
-          <h3 className="text-3xl font-bold text-foreground mb-6 text-center">
-            Multi-Level Leader Support: From Frontline to Boardroom
-          </h3>
-          <p className="text-lg text-muted-foreground text-center max-w-4xl mx-auto mb-8">
-            One platform serving leaders at every level—team leads get actionable insights while executives track compliance and business impact
-          </p>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Team-Level Insights */}
             <Card className="p-6 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950 dark:to-purple-950 border-2 border-indigo-300 dark:border-indigo-700">
