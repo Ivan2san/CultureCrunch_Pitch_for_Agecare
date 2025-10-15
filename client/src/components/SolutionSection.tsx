@@ -8,20 +8,20 @@ export default function SolutionSection() {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-corporate-gradient px-6 py-32">
-      <div className="max-w-5xl mx-auto text-center">
+    <section id="solution" className="min-h-screen bg-corporate-gradient px-6 py-32">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-muted-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
-            The Solution
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
+            The Solution: <span className="text-indigo-600 dark:text-indigo-400">Psychosocial Safety Installed, Not Workshopped</span>
           </h2>
-          <h3 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8" style={{ letterSpacing: '-0.01em' }}>
-            Culture Crunch: <span className="text-indigo-600 dark:text-indigo-400">Psychosocial Safety Installed, Not Workshopped</span>
-          </h3>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
+            Culture Crunch is a 6-week sprint that meets compliance, reduces turnover, and takes just 15 minutes per week
+          </p>
         </div>
 
         {/* 6-Week Sprint Description */}
-        <div className="mb-12">
+        <div className="mb-12 text-center">
           <p className="text-2xl md:text-3xl font-semibold text-foreground mb-8" style={{ letterSpacing: '-0.01em' }}>
             A 6-Week Sprint That:
           </p>
@@ -39,7 +39,7 @@ export default function SolutionSection() {
         </div>
 
         {/* Positioning Statements */}
-        <div className="space-y-6">
+        <div className="space-y-6 text-center">
           <p className="text-2xl md:text-3xl font-bold text-foreground" style={{ letterSpacing: '-0.01em' }}>
             Not consulting. An installable operating rhythm.
           </p>

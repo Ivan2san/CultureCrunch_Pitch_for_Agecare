@@ -16,9 +16,9 @@ export default function Home() {
       <VisionSection />
       <ProblemSection />
       <WhyNowSection />
-      <PositioningSection />
       <SolutionSection />
       <HowItWorksSection />
+      <PositioningSection />
       <ROICalculator />
       <RoadmapSection />
       <TheAskSection />
