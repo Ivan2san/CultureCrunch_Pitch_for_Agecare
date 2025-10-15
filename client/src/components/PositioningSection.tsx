@@ -81,11 +81,12 @@ export default function PositioningSection() {
         "Simple weekly pulse → smart brief → one micro-action. No complex tech, no overwhelming data. Built for aged care reality.",
       differentiators: [
         "3-question pulse (2 min) vs 50-item surveys",
+        "Built for paper-based workflows and digital skepticism, not complex analytics",
         "One actionable brief vs 20-page analytics reports",
         "Pulse-driven insights vs surveillance-based metadata",
       ],
       details: {
-        overview: "Aged care doesn't need more complexity. CultureCrunch delivers simplicity at scale: a predictable weekly rhythm from pulse to action, designed for time-poor leaders managing frontline teams.",
+        overview: "Research shows aged care has 'deeply ingrained reliance on manual processes and skepticism towards digital solutions perceived as adding administrative burden.' CultureCrunch works WITH this reality—3-question pulse, zero training, works on any phone. No digital maturity required.",
         keyFeatures: [
           {
             title: "Minimal Staff Burden",
@@ -146,12 +147,13 @@ export default function PositioningSection() {
       description:
         "No workplace surveillance. No metadata scraping. Only what staff voluntarily share in 3 weekly questions. Trust through transparency.",
       differentiators: [
+        "No system integration required (works with fragmented/paper-based reality)",
+        "No rostering/HR/clinical data needed—zero data integration",
         "Zero workplace data collection (no email/chat/calendar)",
         "De-identified pulse aggregation (team-level only)",
-        "Transparent briefs: leaders see the 'why' behind actions",
       ],
       details: {
-        overview: "Most 'AI workplace analytics' platforms monitor emails, chats, and calendars. CultureCrunch collects nothing except voluntary pulse responses—no workplace surveillance, no hidden monitoring, complete transparency.",
+        overview: "Research shows aged care facilities have 'paper-based records and fragmented digital systems'—making unified data integration a nightmare. CultureCrunch requires NO integration. No rostering data, no HR systems, no clinical notes. Just voluntary pulse responses. This isn't a limitation—it's our competitive advantage.",
         keyFeatures: [
           {
             title: "Voluntary Data Only",
