@@ -153,7 +153,14 @@ export default function TechnicalDeepDiveSection() {
       icon: Zap,
       color: "indigo",
       value: "< 2 sec load times",
-      description: "Scheduled to local time zones, automatic retries, delivery success monitoring, continuity built-in",
+      description: "Fast dashboard loads, scheduled delivery to local time zones, enterprise-grade infrastructure",
+    },
+    {
+      title: "Continuity Assurance",
+      icon: RefreshCw,
+      color: "green",
+      value: "Built-In Resilience",
+      description: "Automatic retries for sends, delivery success monitoring, admin controls to pause/adjust timing",
     },
   ];
 
@@ -332,11 +339,11 @@ export default function TechnicalDeepDiveSection() {
             </div>
           </div>
 
-          {/* Service Levels & Safeguards */}
+          {/* Service Levels */}
           <div className="bg-card rounded-xl p-8 border border-border">
-            <h4 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center" style={{ letterSpacing: '-0.01em' }}>Service Levels & Safeguards</h4>
+            <h4 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center" style={{ letterSpacing: '-0.01em' }}>Service Levels</h4>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {servicelevels.map((level, index) => {
                 const Icon = level.icon;
 
@@ -348,6 +355,8 @@ export default function TechnicalDeepDiveSection() {
                         ? "border-blue-500"
                         : level.color === "purple"
                         ? "border-purple-500"
+                        : level.color === "green"
+                        ? "border-green-500"
                         : "border-indigo-500"
                     }`}
                     data-testid={`service-level-${index}`}
@@ -359,6 +368,8 @@ export default function TechnicalDeepDiveSection() {
                             ? "text-blue-600"
                             : level.color === "purple"
                             ? "text-purple-600"
+                            : level.color === "green"
+                            ? "text-green-600"
                             : "text-indigo-600"
                         }`}
                       />
@@ -369,40 +380,6 @@ export default function TechnicalDeepDiveSection() {
                   </Card>
                 );
               })}
-            </div>
-
-            <div className="bg-muted/50 rounded-lg p-6">
-              <h5 className="text-xl font-bold text-foreground mb-4">Built-In Safeguards</h5>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="flex items-start gap-3">
-                  <Shield className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground mb-1">Security by Design</p>
-                    <p className="text-sm text-muted-foreground">Least-privilege access, facility-level segregation, audit logs for key actions</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground mb-1">Compliance Support</p>
-                    <p className="text-sm text-muted-foreground">Exportable evidence: pulse cadence, actions taken, trends—suitable for psychosocial safety audits</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <RefreshCw className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground mb-1">Continuity Built-In</p>
-                    <p className="text-sm text-muted-foreground">Automatic retries for sends, delivery success monitoring, admin controls to pause/adjust timing</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <AlertCircle className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground mb-1">Change Fatigue Mitigation</p>
-                    <p className="text-sm text-muted-foreground">Micro-actions capped at 15 min, cadence aligned to rosters, ability to pause during high-pressure periods</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
