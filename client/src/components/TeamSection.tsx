@@ -2,8 +2,8 @@ import { Mail, Linkedin, CheckCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import teamMember1 from "@assets/stock_images/professional_busines_908de003.jpg";
-import teamMember2 from "@assets/stock_images/professional_busines_9eb1af07.jpg";
+import campbellPhoto from "@assets/Campbell McGlynn_1760652517613.jpeg";
+import grantPhoto from "@assets/Grant Dale_1760652517614.jpeg";
 import ivanPhoto from "@assets/Ivan's AI photo portrait_1760651694584.jpeg";
 
 interface TeamMember {
@@ -19,28 +19,28 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Dr. Sarah Chen",
-    role: "Clinical Lead & Implementation Consultant",
-    credentials: "RN, MHA, Aged Care Specialist",
-    photo: teamMember1,
-    background: "15+ years in aged care operations including 8 years as DON in 120-bed facilities. Deep expertise in psychosocial safety frameworks, workforce wellbeing programs, and regulatory compliance across NSQHS and Aged Care Quality Standards.",
-    whyIdeal: "Bridges clinical reality with compliance requirements—speaks the language of frontline RNs while navigating ACQS audit frameworks",
-    email: "sarah.chen@culturecrunch.ai",
-    linkedin: "https://linkedin.com/in/sarahchen"
+    name: "Campbell McGlynn",
+    role: "Co-founder & Partner",
+    credentials: "Organizational Psychology, Culture Strategy",
+    photo: campbellPhoto,
+    background: "15+ years transforming workplace culture in high-stakes healthcare environments. Expert in translating regulatory compliance into leadership capability and organizational resilience. Deep experience in aged care operations, workforce retention strategies, and psychosocial safety frameworks.",
+    whyIdeal: "Bridges compliance reality with strategic culture transformation—proven ability to turn psychosocial risk management into competitive advantage for aged care providers",
+    email: "campbell.mcglynn@culturecrunch.ai",
+    linkedin: "https://linkedin.com/in/campbellmcglynn"
   },
   {
-    name: "Michael Torres",
-    role: "Workforce Strategy Consultant",
-    credentials: "MBA, CAHRI, Retention Specialist",
-    photo: teamMember2,
-    background: "12 years leading workforce retention initiatives in high-turnover healthcare environments. Proven track record reducing annual turnover from 45% to 18% through culture-first interventions. Expert in translating pulse data into actionable leadership strategies.",
-    whyIdeal: "Transforms compliance exercises into retention outcomes—proven ability to engage skeptical operational leaders with data-driven culture strategies",
-    email: "michael.torres@culturecrunch.ai",
-    linkedin: "https://linkedin.com/in/michaeltorres"
+    name: "Grant Dale",
+    role: "Partner & Coach Lead",
+    credentials: "Executive Coach, Leadership Development Specialist",
+    photo: grantPhoto,
+    background: "20+ years coaching healthcare leaders through operational complexity and culture change. Specializes in developing frontline leadership capability in resource-constrained environments. Expert in translating pulse data into practical leadership conversations that drive team engagement and retention.",
+    whyIdeal: "Transforms AI insights into leadership action—proven track record helping care managers navigate span-of-control challenges while building psychologically safe teams",
+    email: "grant.dale@culturecrunch.ai",
+    linkedin: "https://linkedin.com/in/grantdale"
   },
   {
     name: "Ivan Sanchez",
-    role: "Technical Lead & AI Systems Architect",
+    role: "Co-founder & Head of Product (AI-enabled)",
     credentials: "PhD (ML), Healthcare Tech Veteran",
     photo: ivanPhoto,
     background: "10+ years building AI/ML systems for clinical environments with strict privacy requirements. Previously architected predictive analytics platforms for major hospital networks. Specializes in privacy-minimal AI systems and explainable AI for non-technical stakeholders.",
