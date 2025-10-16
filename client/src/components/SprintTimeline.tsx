@@ -10,55 +10,94 @@ import { Card } from "@/components/ui/card";
 export default function SprintTimeline() {
   const phases = [
     {
-      id: "phase1",
-      weeks: "Weeks 1-2",
-      title: "Setup & Align",
+      id: "week1",
+      weeks: "Week 1",
+      title: "Foundations & Baseline",
       icon: Target,
       color: "indigo",
-      summary: "Leader and team alignment, system configuration, baseline assessment",
+      summary: "Team alignment, system setup, leadership development kickoff",
       items: [
-        "Leader and team complete the Triple Goal Team Development Survey",
-        "Leader and team trained in Triple Goal methodology including Accountable Conversations",
-        "Leader and team define target state for high performance psychosocial safety using Triple Goal methodology (results in clear set of prioritised red and green zone behaviours)",
-        "Leader and team align on the weekly or fortnightly sprint cycle (conducted in a single workshop)",
-        "CultureCrunch app is configured for client organisation (LLM + app wrapper with nudge engine)",
-        "Dashboard is configured for client",
-        "CC app is tested ready for deployment",
-        "Leader onboards self into CC app - uploads all relevant team static data and information (doc/data upload into app). This includes TG Team Development survey report + priorities red and green zone behaviours for the team",
-        "Initiate LGP360 feedback assessment for leader",
-        "First pulse survey conducted Friday of week 2 (3 questions, 2 minutes, anonymous)",
-        "First round of ONA conducted and fed into CC app (if relevant)"
+        "Four-Hour Red/Green Mapping Team Session:",
+        "  • Inputs include the Triple Goal Team Development Survey",
+        "  • Define target link between strategy, performance, and psychosocial safety",
+        "  • Prioritise focus areas for the first 3 weekly team sprints",
+        "  • Results in clear set of prioritised red and green zone behaviours",
+        "Kick off the Leadership Growth Profile 360 (LGP360) for the leader and potentially all leadership team members",
+        "CultureCrunch app configured for client organisation",
+        "Leader onboards into app - uploads team data and TG Team Development survey priorities",
+        "Baseline Pulse Survey (3 questions, 2 minutes, anonymous) - questions based on team's focus areas, not static"
       ]
     },
     {
-      id: "phase2",
-      weeks: "Weeks 3-4",
-      title: "Run & Track",
+      id: "week2",
+      weeks: "Week 2",
+      title: "Leadership Development",
+      icon: Target,
+      color: "indigo",
+      summary: "Accountable Conversations foundation and system readiness",
+      items: [
+        "Module 1: Accountable Conversations (Mindset) - 2.5 hours virtual instructor-led for leadership team",
+        "Dashboard configured for client",
+        "App tested and ready for deployment",
+        "First round of ONA conducted and fed into app (if relevant)"
+      ]
+    },
+    {
+      id: "week3",
+      weeks: "Week 3",
+      title: "Sprint Launch",
       icon: Rocket,
       color: "purple",
-      summary: "AI-powered sprint cycles, micro-actions, real-time tracking",
+      summary: "First Intelligence-powered sprint cycle begins",
       items: [
-        "First AI-generated Leader Brief delivered Monday, week 3 @ 7am",
-        "Leader runs first 10-min OORA conversation ritual and team picks one micro-practice or action for the week. Recommended day is Monday, PM",
-        "AI tracks: meeting load, shifts, rosters, overtime, recognition patterns, psychosocial trends",
-        "Micro-action / practice is implemented and tracked: 'Kill 2 recurring meetings', '5-min recognition round'",
-        "Process is replicated for week 4",
-        "Dashboard shows real-time culture shifts at the end of week 4"
+        "Module 2: Accountable Conversations (Skillset) - 2.5 hours virtual instructor-led for leadership team",
+        "First Intelligence-generated Leader Brief delivered Monday @ 7am",
+        "Leader runs first 10-min OORA conversation ritual",
+        "Team picks one micro-practice or action for the week",
+        "Intelligence tracks: meeting load, shifts, rosters, overtime, recognition patterns, psychosocial trends",
+        "Micro-action implemented: 'Kill 2 recurring meetings', '5-min recognition round', etc."
       ]
     },
     {
-      id: "phase3",
-      weeks: "Weeks 5-6",
-      title: "Embed & Report",
+      id: "week4",
+      weeks: "Week 4",
+      title: "Momentum & Insight",
+      icon: Rocket,
+      color: "purple",
+      summary: "Sprint cycle continues, leader receives 360 feedback",
+      items: [
+        "Leader LGP360 debrief (60-90 mins) with Grant or Campbell",
+        "Weekly sprint cycle continues with Intelligence brief and OORA ritual",
+        "Team implements and tracks micro-actions",
+        "Dashboard shows real-time culture shifts"
+      ]
+    },
+    {
+      id: "week5",
+      weeks: "Week 5",
+      title: "Embed & Refine",
       icon: CheckCircle,
       color: "green",
-      summary: "360 debrief, team review, ROI snapshot, sustained access",
+      summary: "Team review and sustained practice selection",
       items: [
-        "Leader LGP360 debrief and action planning",
-        "Leader conducts Team Review with direct reports and confirms One Big Practice",
-        "Weeks 5 + 6 continue the weekly psychosocial sprints",
-        "Team sees behaviour changes and actions being implemented",
-        "Final ROI snapshot for compliance audits"
+        "Leader conducts Team Review with direct reports",
+        "Team confirms One Big Practice for sustained adoption",
+        "Weekly psychosocial sprint continues",
+        "Team observes behaviour changes and action implementation"
+      ]
+    },
+    {
+      id: "week6",
+      weeks: "Week 6",
+      title: "Impact & Transition",
+      icon: CheckCircle,
+      color: "green",
+      summary: "Culture impact assessment and sustained access begins",
+      items: [
+        "Culture Impact Report delivered with Net Gains in Selected Focus Areas metrics",
+        "Final compliance audit documentation provided",
+        "Team completes final sprint cycle",
+        "Transition to 12-month sustain license"
       ]
     }
   ];
@@ -151,7 +190,7 @@ export default function SprintTimeline() {
                 <h3 className="text-xl font-bold text-foreground">12-Month Sustain License</h3>
               </div>
               <p className="text-muted-foreground mb-4">
-                Following the 6-week sprint program, founding partners receive ongoing AI Leader Co-pilot access 
+                Following the 6-week sprint program, founding partners receive ongoing Intelligence Leader Co-pilot access 
                 to sustain momentum and continue psychosocial safety improvements across their aged care teams.
               </p>
               <div className="flex items-center gap-2 text-sm font-semibold text-purple-700">
