@@ -1,7 +1,11 @@
-import { CheckCircle } from "lucide-react";
+import { useState } from "react";
+import { CheckCircle, ChevronDown, ChevronUp } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export default function SolutionSection() {
+  const [showResearch, setShowResearch] = useState(false);
+  
   const outcomes = [
     "Installs the foundations for psychosocial safety",
     "Builds readiness for high performance",
@@ -47,37 +51,47 @@ export default function SolutionSection() {
             <h3 className="text-2xl md:text-3xl font-bold text-purple-700 mb-4" style={{ letterSpacing: '-0.01em' }}>
               Built for Leaders Drowning in the Same Storm
             </h3>
-            <p className="text-lg text-muted-foreground mb-6">
-              Research shows: "Psychosocial hazards do not just affect frontline workers; they extend to management and administration staff." 
-              Burnt-out leaders don't have hours for workshops or complex dashboards.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-              <div className="bg-white/70 rounded-lg p-5 border border-purple-200">
-                <p className="font-bold text-purple-700 mb-2">15-Minute Monday Ritual</p>
-                <p className="text-sm text-muted-foreground">
-                  Brief delivered at 8am Monday. One micro-action. No login required. No analytics to interpret. Leaders under stress can't absorb complexity.
-                </p>
-              </div>
-              <div className="bg-white/70 rounded-lg p-5 border border-indigo-200">
-                <p className="font-bold text-indigo-700 mb-2">AI Does the Heavy Lifting</p>
-                <p className="text-sm text-muted-foreground">
-                  AI analyzes pulse trends, identifies risks, and recommends one simple action. Leaders execute, don't analyze. Built for leaders who are themselves experiencing psychosocial hazards.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+            
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setShowResearch(!showResearch)}
+              className="mb-4"
+              data-testid="button-toggle-research"
+            >
+              {showResearch ? (
+                <>
+                  Hide Research <ChevronUp className="ml-2 w-4 h-4" />
+                </>
+              ) : (
+                <>
+                  Show Research <ChevronDown className="ml-2 w-4 h-4" />
+                </>
+              )}
+            </Button>
 
-        {/* Positioning Statements */}
-        <div className="space-y-6 text-center">
-          <p className="text-2xl md:text-3xl font-bold text-foreground" style={{ letterSpacing: '-0.01em' }}>
-            Not consulting. An installable operating rhythm.
-          </p>
-          
-          <div className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-lg">
-            <p className="text-2xl md:text-3xl font-bold text-white" style={{ letterSpacing: '-0.01em' }}>
-              "We don't run workshops; we install habits."
-            </p>
+            {showResearch && (
+              <div className="animate-fade-in-up">
+                <p className="text-lg text-muted-foreground mb-6">
+                  Research shows: "Psychosocial hazards do not just affect frontline workers; they extend to management and administration staff." 
+                  Burnt-out leaders don't have hours for workshops or complex dashboards.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                  <div className="bg-white/70 rounded-lg p-5 border border-purple-200">
+                    <p className="font-bold text-purple-700 mb-2">15-Minute Monday Ritual</p>
+                    <p className="text-sm text-muted-foreground">
+                      Brief delivered at 8am Monday. One micro-action. No login required. No analytics to interpret. Leaders under stress can't absorb complexity.
+                    </p>
+                  </div>
+                  <div className="bg-white/70 rounded-lg p-5 border border-indigo-200">
+                    <p className="font-bold text-indigo-700 mb-2">AI Does the Heavy Lifting</p>
+                    <p className="text-sm text-muted-foreground">
+                      AI analyzes pulse trends, identifies risks, and recommends one simple action. Leaders execute, don't analyze. Built for leaders who are themselves experiencing psychosocial hazards.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
