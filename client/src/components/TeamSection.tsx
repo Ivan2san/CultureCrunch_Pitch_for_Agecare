@@ -43,8 +43,8 @@ const teamMembers: TeamMember[] = [
     role: "Technical Lead & AI Systems Architect",
     credentials: "PhD (ML), Healthcare Tech Veteran",
     photo: teamMember3,
-    background: "10+ years building AI/ML systems for clinical environments with strict privacy requirements. Previously architected predictive analytics platforms for major hospital networks. Specializes in privacy-minimal intelligence systems and explainable AI for non-technical stakeholders.",
-    whyIdeal: "Delivers enterprise-grade intelligence with pilot-friendly simplicity—no IT infrastructure burden, seamless magic-link deployment, human-readable insights",
+    background: "10+ years building AI/ML systems for clinical environments with strict privacy requirements. Previously architected predictive analytics platforms for major hospital networks. Specializes in privacy-minimal AI systems and explainable AI for non-technical stakeholders.",
+    whyIdeal: "Delivers enterprise-grade AI with pilot-friendly simplicity—no IT infrastructure burden, seamless magic-link deployment, human-readable insights",
     email: "alex.patel@culturecrunch.ai",
     linkedin: "https://linkedin.com/in/alexpatel"
   }

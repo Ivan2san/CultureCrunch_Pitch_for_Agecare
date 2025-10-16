@@ -47,7 +47,7 @@ export default function TechnicalDeepDiveSection() {
       callout: "Built for frontline reality: quick, mobile-first, minimal cognitive load",
     },
     {
-      title: "Intelligence Layer",
+      title: "AI Layer",
       subtitle: "Smart Brief Generation",
       icon: Brain,
       color: "purple",
@@ -204,7 +204,7 @@ export default function TechnicalDeepDiveSection() {
                 </div>
                 <div className="p-4 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-lg border-2 border-purple-300">
                   <h4 className="text-lg font-bold text-purple-700 mb-2">Leadership Impact</h4>
-                  <p className="text-sm text-muted-foreground">6-week transformation with <span className="font-semibold text-purple-700">expert coaching and Intelligence-powered insights</span></p>
+                  <p className="text-sm text-muted-foreground">6-week transformation with <span className="font-semibold text-purple-700">expert coaching and AI-powered insights</span></p>
                 </div>
               </div>
               <h4 className="text-2xl md:text-3xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>

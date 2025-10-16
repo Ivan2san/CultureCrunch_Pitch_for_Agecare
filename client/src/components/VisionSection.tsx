@@ -18,14 +18,14 @@ export default function VisionSection() {
           </div>
           
           <h1 className="text-4xl md:text-5xl font-bold text-foreground leading-[1.1]" style={{ letterSpacing: '-0.01em' }}>
-            Intelligence That Transforms<br />
+            AI That Transforms<br />
             <span className="bg-gradient-to-r from-primary via-chart-2 to-primary bg-clip-text text-transparent">
               Psychosocial Compliance into Culture
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            In aged care, every team member matters. CultureCrunch empowers aged care leaders with Intelligence insight, 
+            In aged care, every team member matters. CultureCrunch empowers aged care leaders with AI insight, 
             turning psychosocial compliance into proactive support that keeps your team thriving.
           </p>
         </div>
@@ -39,7 +39,7 @@ export default function VisionSection() {
           <div className="bg-gradient-to-br from-card/60 to-card/40 backdrop-blur-md rounded-3xl p-10 md:p-14 border border-border/50">
             <p className="text-2xl md:text-3xl text-foreground leading-relaxed font-medium" style={{ letterSpacing: '-0.01em' }}>
               A world where every aged care leader has an{" "}
-              <span className="text-primary font-bold">Intelligence co-pilot</span>{" "}
+              <span className="text-primary font-bold">AI co-pilot</span>{" "}
               that detects burnout before it leads to resignation, identifies exposure to violence and aggression, 
               and provides the exact support conversation needed—every single week.
             </p>

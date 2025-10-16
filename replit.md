@@ -8,6 +8,10 @@ CultureCrunch is a B2B SaaS platform designed to transform workplace psychosocia
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes
+
+**October 16, 2025**: Strategic terminology shift from "Intelligence" to "AI" throughout the platform messaging, reflecting more direct and recognizable positioning in the market.
+
 ## System Architecture
 
 ### Frontend Architecture

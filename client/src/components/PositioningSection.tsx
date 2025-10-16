@@ -10,7 +10,7 @@ export default function PositioningSection() {
   const advantages = [
     {
       icon: Activity,
-      title: "Aged Care-Specific Intelligence",
+      title: "Aged Care-Specific AI",
       description:
         "Purpose-built to detect hazards generic tools miss. The research is clear: there are virtually no aged care-specific psychosocial platforms.",
       differentiators: [
