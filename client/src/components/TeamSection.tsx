@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import teamMember1 from "@assets/stock_images/professional_busines_908de003.jpg";
 import teamMember2 from "@assets/stock_images/professional_busines_9eb1af07.jpg";
-import teamMember3 from "@assets/stock_images/professional_technic_96617aa8.jpg";
+import ivanPhoto from "@assets/Ivan's AI photo portrait_1760651694584.jpeg";
 
 interface TeamMember {
   name: string;
@@ -39,14 +39,14 @@ const teamMembers: TeamMember[] = [
     linkedin: "https://linkedin.com/in/michaeltorres"
   },
   {
-    name: "Alex Patel",
+    name: "Ivan Sanchez",
     role: "Technical Lead & AI Systems Architect",
     credentials: "PhD (ML), Healthcare Tech Veteran",
-    photo: teamMember3,
+    photo: ivanPhoto,
     background: "10+ years building AI/ML systems for clinical environments with strict privacy requirements. Previously architected predictive analytics platforms for major hospital networks. Specializes in privacy-minimal AI systems and explainable AI for non-technical stakeholders.",
     whyIdeal: "Delivers enterprise-grade AI with pilot-friendly simplicity—no IT infrastructure burden, seamless magic-link deployment, human-readable insights",
-    email: "alex.patel@culturecrunch.ai",
-    linkedin: "https://linkedin.com/in/alexpatel"
+    email: "ivan.sanchez@culturecrunch.ai",
+    linkedin: "https://linkedin.com/in/ivansanchez"
   }
 ];
 
