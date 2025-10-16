@@ -1,6 +1,220 @@
 import { Card } from "@/components/ui/card";
 import { ArrowRight, AlertTriangle, RotateCw } from "lucide-react";
 
+const cycleStages = [
+  { id: 1, label: "High Turnover", color: "purple" },
+  { id: 2, label: "Understaffing", color: "purple" },
+  { id: 3, label: "Increased Workload", color: "indigo" },
+  { id: 4, label: "More Stress", color: "indigo" },
+  { id: 5, label: "More Departures", color: "purple" },
+];
+
+function SvgViciousCycle() {
+  const centerX = 200;
+  const centerY = 200;
+  const radius = 130;
+  const numStages = cycleStages.length;
+  
+  const angleStep = (2 * Math.PI) / numStages;
+  const startAngle = -Math.PI / 2;
+  
+  const stagePositions = cycleStages.map((stage, i) => {
+    const angle = startAngle + i * angleStep;
+    return {
+      ...stage,
+      x: centerX + radius * Math.cos(angle),
+      y: centerY + radius * Math.sin(angle),
+    };
+  });
+
+  const getRectangleEdgePoint = (centerX: number, centerY: number, angle: number) => {
+    const boxWidth = 140;
+    const boxHeight = 40;
+    const halfWidth = boxWidth / 2;
+    const halfHeight = boxHeight / 2;
+    
+    const cos = Math.cos(angle);
+    const sin = Math.sin(angle);
+    
+    const tan = Math.tan(angle);
+    
+    let edgeX, edgeY;
+    
+    if (Math.abs(tan * halfWidth) <= halfHeight) {
+      edgeX = halfWidth * Math.sign(cos);
+      edgeY = edgeX * tan;
+    } else {
+      edgeY = halfHeight * Math.sign(sin);
+      edgeX = edgeY / tan;
+    }
+    
+    return {
+      x: centerX + edgeX,
+      y: centerY + edgeY
+    };
+  };
+
+  const createCurvedPath = (from: { x: number; y: number }, to: { x: number; y: number }) => {
+    const angle = Math.atan2(to.y - from.y, to.x - from.x);
+    const startEdge = getRectangleEdgePoint(from.x, from.y, angle);
+    const endEdge = getRectangleEdgePoint(to.x, to.y, angle + Math.PI);
+    
+    const midX = (startEdge.x + endEdge.x) / 2;
+    const midY = (startEdge.y + endEdge.y) / 2;
+    const dx = endEdge.x - startEdge.x;
+    const dy = endEdge.y - startEdge.y;
+    const offsetX = -dy * 0.15;
+    const offsetY = dx * 0.15;
+    const controlX = midX + offsetX;
+    const controlY = midY + offsetY;
+    
+    return `M ${startEdge.x} ${startEdge.y} Q ${controlX} ${controlY} ${endEdge.x} ${endEdge.y}`;
+  };
+
+  return (
+    <svg viewBox="0 0 400 400" className="w-full max-w-2xl mx-auto">
+      <defs>
+        <marker
+          id="arrowhead-purple"
+          markerWidth="8"
+          markerHeight="8"
+          refX="7"
+          refY="4"
+          orient="auto"
+        >
+          <polygon points="0 0, 8 4, 0 8" fill="#9333ea" />
+        </marker>
+        <marker
+          id="arrowhead-indigo"
+          markerWidth="8"
+          markerHeight="8"
+          refX="7"
+          refY="4"
+          orient="auto"
+        >
+          <polygon points="0 0, 8 4, 0 8" fill="#6366f1" />
+        </marker>
+      </defs>
+
+      {/* Dashed circle guide */}
+      <circle
+        cx={centerX}
+        cy={centerY}
+        r={radius}
+        fill="none"
+        stroke="#e9d5ff"
+        strokeWidth="1"
+        strokeDasharray="5,5"
+      />
+
+      {/* Center icon */}
+      <g transform={`translate(${centerX - 20}, ${centerY - 20})`}>
+        <circle cx="20" cy="20" r="20" fill="#faf5ff" opacity="0.8" />
+        <text x="20" y="26" textAnchor="middle" fontSize="24" fill="#9333ea">↻</text>
+      </g>
+
+      {/* Curved connector paths with arrows */}
+      {stagePositions.map((stage, i) => {
+        const nextStage = stagePositions[(i + 1) % numStages];
+        const markerColor = stage.color === "indigo" || nextStage.color === "indigo" ? "indigo" : "purple";
+        const strokeColor = markerColor === "indigo" ? "#6366f1" : "#9333ea";
+        
+        return (
+          <path
+            key={`path-${i}`}
+            d={createCurvedPath(stage, nextStage)}
+            fill="none"
+            stroke={strokeColor}
+            strokeWidth="2.5"
+            markerEnd={`url(#arrowhead-${markerColor})`}
+          />
+        );
+      })}
+
+      {/* Stage boxes */}
+      {stagePositions.map((stage) => {
+        const bgColor = stage.color === "indigo" ? "#eef2ff" : "#faf5ff";
+        const borderColor = stage.id === 1 ? "#a855f7" : stage.color === "indigo" ? "#a5b4fc" : "#d8b4fe";
+        const textColor = stage.color === "indigo" ? "#4338ca" : "#7e22ce";
+        
+        return (
+          <g key={stage.id} transform={`translate(${stage.x}, ${stage.y})`}>
+            <rect
+              x="-70"
+              y="-20"
+              width="140"
+              height="40"
+              rx="6"
+              fill={bgColor}
+              stroke={borderColor}
+              strokeWidth="2"
+            />
+            <text
+              x="0"
+              y="5"
+              textAnchor="middle"
+              fontSize="13"
+              fontWeight="bold"
+              fill={textColor}
+            >
+              {stage.label}
+            </text>
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
+function MobileViciousCycle() {
+  return (
+    <div className="relative">
+      <div className="flex flex-col items-center gap-3 w-full max-w-xs mx-auto">
+        {cycleStages.map((stage, i) => (
+          <div key={stage.id}>
+            <div className={`${
+              stage.color === "indigo" ? "bg-indigo-50 border-indigo-300" : "bg-purple-50 border-purple-300"
+            } ${stage.id === 1 ? "border-purple-400" : ""} border-2 rounded-lg px-6 py-3 text-center w-full shadow-sm`}>
+              <p className={`font-bold ${
+                stage.color === "indigo" ? "text-indigo-700" : "text-purple-700"
+              }`}>{stage.label}</p>
+            </div>
+            {i < cycleStages.length - 1 && (
+              <ArrowRight className={`mx-auto w-6 h-6 ${
+                stage.color === "indigo" ? "text-indigo-600" : "text-purple-600"
+              } rotate-90 my-1`} />
+            )}
+          </div>
+        ))}
+      </div>
+      
+      {/* Loop-back curved arrow */}
+      <svg className="absolute -left-4 top-0 w-12 h-full" viewBox="0 0 50 300">
+        <defs>
+          <marker
+            id="mobile-arrow"
+            markerWidth="8"
+            markerHeight="8"
+            refX="7"
+            refY="4"
+            orient="auto"
+          >
+            <polygon points="0 0, 8 4, 0 8" fill="#9333ea" />
+          </marker>
+        </defs>
+        <path
+          d="M 45 280 Q 10 250, 10 150 Q 10 50, 45 20"
+          fill="none"
+          stroke="#9333ea"
+          strokeWidth="3"
+          strokeDasharray="6,4"
+          markerEnd="url(#mobile-arrow)"
+        />
+      </svg>
+    </div>
+  );
+}
+
 export default function ProblemSection() {
   return (
     <section id="problem" className="min-h-screen bg-corporate-gradient px-6 py-32">
@@ -81,59 +295,21 @@ export default function ProblemSection() {
           </div>
 
           <Card className="p-8 md:p-12 bg-card/40 backdrop-blur-sm">
-            {/* Vicious Cycle Flow - Circular with clear loop indicator */}
-            <div className="flex flex-col items-center justify-center gap-6 mb-8">
-              <div className="flex items-center gap-2 mb-2">
+            {/* Vicious Cycle - SVG Circular Diagram */}
+            <div className="flex flex-col items-center gap-6 mb-8">
+              <div className="flex items-center gap-2">
                 <RotateCw className="w-6 h-6 text-purple-600" />
                 <p className="text-lg font-bold text-foreground">The Vicious Cycle</p>
               </div>
 
-              {/* Circular flow diagram */}
-              <div className="grid grid-cols-1 md:grid-cols-5 gap-3 md:gap-4 items-center w-full max-w-5xl">
-                <div className="relative">
-                  <div className="bg-purple-50 border-2 border-purple-400 rounded-lg px-4 py-3 text-center shadow-sm">
-                    <p className="font-bold text-purple-700">High Turnover</p>
-                  </div>
-                  <ArrowRight className="hidden md:block absolute -right-5 top-1/2 transform -translate-y-1/2 w-6 h-6 text-purple-600" />
-                </div>
-                <ArrowRight className="md:hidden mx-auto w-6 h-6 text-purple-600 rotate-90" />
-                
-                <div className="relative">
-                  <div className="bg-purple-50 border-2 border-purple-300 rounded-lg px-4 py-3 text-center shadow-sm">
-                    <p className="font-bold text-purple-700">Understaffing</p>
-                  </div>
-                  <ArrowRight className="hidden md:block absolute -right-5 top-1/2 transform -translate-y-1/2 w-6 h-6 text-purple-600" />
-                </div>
-                <ArrowRight className="md:hidden mx-auto w-6 h-6 text-purple-600 rotate-90" />
-                
-                <div className="relative">
-                  <div className="bg-indigo-50 border-2 border-indigo-300 rounded-lg px-4 py-3 text-center shadow-sm">
-                    <p className="font-bold text-indigo-700">Increased Workload</p>
-                  </div>
-                  <ArrowRight className="hidden md:block absolute -right-5 top-1/2 transform -translate-y-1/2 w-6 h-6 text-indigo-600" />
-                </div>
-                <ArrowRight className="md:hidden mx-auto w-6 h-6 text-indigo-600 rotate-90" />
-                
-                <div className="relative">
-                  <div className="bg-indigo-50 border-2 border-indigo-300 rounded-lg px-4 py-3 text-center shadow-sm">
-                    <p className="font-bold text-indigo-700">More Stress</p>
-                  </div>
-                  <ArrowRight className="hidden md:block absolute -right-5 top-1/2 transform -translate-y-1/2 w-6 h-6 text-purple-600" />
-                </div>
-                <ArrowRight className="md:hidden mx-auto w-6 h-6 text-purple-600 rotate-90" />
-                
-                <div className="bg-purple-50 border-2 border-purple-300 rounded-lg px-4 py-3 text-center shadow-sm">
-                  <p className="font-bold text-purple-700">More Departures</p>
-                </div>
+              {/* Desktop: Circular SVG diagram */}
+              <div className="hidden md:block w-full">
+                <SvgViciousCycle />
               </div>
 
-              {/* Clear cycle indicator */}
-              <div className="flex items-center gap-3 bg-purple-100 dark:bg-purple-950/30 rounded-full px-6 py-3 border-2 border-purple-400">
-                <RotateCw className="w-5 h-5 text-purple-600" />
-                <p className="text-sm font-bold text-purple-700 dark:text-purple-300">
-                  Cycle repeats: More Departures → Back to High Turnover
-                </p>
-                <RotateCw className="w-5 h-5 text-purple-600" />
+              {/* Mobile: Vertical stack with loop-back arrow */}
+              <div className="md:hidden w-full">
+                <MobileViciousCycle />
               </div>
             </div>
 
