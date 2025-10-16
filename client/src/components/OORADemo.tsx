@@ -20,10 +20,10 @@ interface Scenario {
 
 const scenarios: Scenario[] = [
   {
-    id: "resident-aggression",
-    title: "Resident Aggression",
-    description: "Care worker experiencing repeated aggression from resident with dementia",
-    concern: "Maria has been hit twice this week by Mr. Chen during morning care. She's becoming anxious about her shifts.",
+    id: "workplace-violence-exposure",
+    title: "Exposure to Violence & Aggression",
+    description: "Care worker experiencing workplace violence psychosocial hazard from responsive behaviours",
+    concern: "Maria has been exposed to physical aggression twice this week during morning care. She's becoming anxious about her shifts.",
     messages: [
       {
         role: "system",
@@ -32,7 +32,7 @@ const scenarios: Scenario[] = [
       },
       {
         role: "leader",
-        content: "Maria has been hit twice this week by Mr. Chen during morning care. She's becoming anxious about her shifts.",
+        content: "Maria has been exposed to physical aggression twice this week during morning care. She's becoming anxious about her shifts.",
       },
       {
         role: "ai",

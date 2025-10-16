@@ -47,7 +47,7 @@ export default function VisionSection() {
             <div className="mt-8 pt-8 border-t border-border/50">
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                 Where psychosocial compliance becomes not just a requirement, but a catalyst for engagement—
-                retaining your care team and delivering quality resident care.
+                unlocking discretionary effort, retention, and elevated resident outcomes.
               </p>
             </div>
           </div>

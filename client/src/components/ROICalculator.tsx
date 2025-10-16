@@ -10,9 +10,9 @@ type ProviderType = "residential" | "home_care";
 
 export default function ROICalculator() {
   const [providerType, setProviderType] = useState<ProviderType>("residential");
-  const [employeeCount, setEmployeeCount] = useState(65);
-  const [managerCount, setManagerCount] = useState(8);
-  const [currentMentalHealthClaims, setCurrentMentalHealthClaims] = useState(2);
+  const [employeeCount, setEmployeeCount] = useState(150);
+  const [managerCount, setManagerCount] = useState(12);
+  const [currentMentalHealthClaims, setCurrentMentalHealthClaims] = useState(4);
   const [avgTurnoverRate, setAvgTurnoverRate] = useState(30);
   const [avgSalary, setAvgSalary] = useState(70000);
   const [currentEngagementScore, setCurrentEngagementScore] = useState(40);
@@ -22,9 +22,10 @@ export default function ROICalculator() {
   const handleProviderTypeChange = (type: ProviderType) => {
     setProviderType(type);
     if (type === "residential") {
-      setEmployeeCount(65);
-      setManagerCount(8);
-      setCurrentMentalHealthClaims(2);
+      // Large residential care centre: 100-200 staff (typical RN span-of-control reality)
+      setEmployeeCount(150);
+      setManagerCount(12);
+      setCurrentMentalHealthClaims(4);
       setAvgTurnoverRate(30);
       setAvgSalary(70000);
     } else {
@@ -130,7 +131,7 @@ export default function ROICalculator() {
 
               <div className="space-y-6">
                 <div>
-                  <Label htmlFor="employee-count">Total Staff (e.g., 65 for residential, 15 for home care)</Label>
+                  <Label htmlFor="employee-count">Total Staff (e.g., 100-200 for large residential centres, 15 for home care)</Label>
                   <Input
                     id="employee-count"
                     type="number"
