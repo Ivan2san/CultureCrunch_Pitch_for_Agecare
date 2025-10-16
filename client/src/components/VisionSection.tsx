@@ -40,7 +40,7 @@ export default function VisionSection() {
             <p className="text-2xl md:text-3xl text-foreground leading-relaxed font-medium" style={{ letterSpacing: '-0.01em' }}>
               A world where every aged care leader has an{" "}
               <span className="text-primary font-bold">AI co-pilot</span>{" "}
-              that detects burnout before it leads to resignation, identifies exposure to violence and aggression, 
+              that detects psychosocial hazards before they lead to issues, 
               and provides the exact support conversation needed—every single week.
             </p>
             
