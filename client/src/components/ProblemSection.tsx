@@ -121,7 +121,7 @@ export default function ProblemSection() {
               <div className="flex items-start gap-3">
                 <AlertTriangle className="w-6 h-6 text-purple-600 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-bold text-purple-700 mb-2">Management Is Affected Too</p>
+                  <p className="font-bold text-purple-700 mb-2">Leaders Are Affected Too</p>
                   <p className="text-muted-foreground text-sm">
                     "Psychosocial hazards are common for workers in the aged care sector, and this extends to management." The people trying to solve this crisis are drowning in it themselves.
                   </p>
