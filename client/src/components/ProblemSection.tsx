@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { ArrowRight, AlertTriangle } from "lucide-react";
+import { ArrowRight, AlertTriangle, RotateCw } from "lucide-react";
 
 export default function ProblemSection() {
   return (
@@ -81,28 +81,59 @@ export default function ProblemSection() {
           </div>
 
           <Card className="p-8 md:p-12 bg-card/40 backdrop-blur-sm">
-            {/* Vicious Cycle Flow */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
-              <div className="flex flex-col md:flex-row items-center gap-4 flex-wrap justify-center">
-                <div className="bg-purple-50 border-2 border-purple-300 rounded-lg px-6 py-4 text-center min-w-[180px]">
-                  <p className="font-bold text-purple-700">High Turnover</p>
+            {/* Vicious Cycle Flow - Circular with clear loop indicator */}
+            <div className="flex flex-col items-center justify-center gap-6 mb-8">
+              <div className="flex items-center gap-2 mb-2">
+                <RotateCw className="w-6 h-6 text-purple-600" />
+                <p className="text-lg font-bold text-foreground">The Vicious Cycle</p>
+              </div>
+
+              {/* Circular flow diagram */}
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-3 md:gap-4 items-center w-full max-w-5xl">
+                <div className="relative">
+                  <div className="bg-purple-50 border-2 border-purple-400 rounded-lg px-4 py-3 text-center shadow-sm">
+                    <p className="font-bold text-purple-700">High Turnover</p>
+                  </div>
+                  <ArrowRight className="hidden md:block absolute -right-5 top-1/2 transform -translate-y-1/2 w-6 h-6 text-purple-600" />
                 </div>
-                <ArrowRight className="w-6 h-6 text-purple-600 transform md:transform-none rotate-90 md:rotate-0" />
-                <div className="bg-purple-50 border-2 border-purple-300 rounded-lg px-6 py-4 text-center min-w-[180px]">
-                  <p className="font-bold text-purple-700">Understaffing</p>
+                <ArrowRight className="md:hidden mx-auto w-6 h-6 text-purple-600 rotate-90" />
+                
+                <div className="relative">
+                  <div className="bg-purple-50 border-2 border-purple-300 rounded-lg px-4 py-3 text-center shadow-sm">
+                    <p className="font-bold text-purple-700">Understaffing</p>
+                  </div>
+                  <ArrowRight className="hidden md:block absolute -right-5 top-1/2 transform -translate-y-1/2 w-6 h-6 text-purple-600" />
                 </div>
-                <ArrowRight className="w-6 h-6 text-purple-600 transform md:transform-none rotate-90 md:rotate-0" />
-                <div className="bg-indigo-50 border-2 border-indigo-300 rounded-lg px-6 py-4 text-center min-w-[180px]">
-                  <p className="font-bold text-indigo-700">Increased Workload</p>
+                <ArrowRight className="md:hidden mx-auto w-6 h-6 text-purple-600 rotate-90" />
+                
+                <div className="relative">
+                  <div className="bg-indigo-50 border-2 border-indigo-300 rounded-lg px-4 py-3 text-center shadow-sm">
+                    <p className="font-bold text-indigo-700">Increased Workload</p>
+                  </div>
+                  <ArrowRight className="hidden md:block absolute -right-5 top-1/2 transform -translate-y-1/2 w-6 h-6 text-indigo-600" />
                 </div>
-                <ArrowRight className="w-6 h-6 text-indigo-600 transform md:transform-none rotate-90 md:rotate-0" />
-                <div className="bg-indigo-50 border-2 border-indigo-300 rounded-lg px-6 py-4 text-center min-w-[180px]">
-                  <p className="font-bold text-indigo-700">More Stress</p>
+                <ArrowRight className="md:hidden mx-auto w-6 h-6 text-indigo-600 rotate-90" />
+                
+                <div className="relative">
+                  <div className="bg-indigo-50 border-2 border-indigo-300 rounded-lg px-4 py-3 text-center shadow-sm">
+                    <p className="font-bold text-indigo-700">More Stress</p>
+                  </div>
+                  <ArrowRight className="hidden md:block absolute -right-5 top-1/2 transform -translate-y-1/2 w-6 h-6 text-purple-600" />
                 </div>
-                <ArrowRight className="w-6 h-6 text-indigo-600 transform md:transform-none rotate-90 md:rotate-0" />
-                <div className="bg-purple-50 border-2 border-purple-300 rounded-lg px-6 py-4 text-center min-w-[180px]">
+                <ArrowRight className="md:hidden mx-auto w-6 h-6 text-purple-600 rotate-90" />
+                
+                <div className="bg-purple-50 border-2 border-purple-300 rounded-lg px-4 py-3 text-center shadow-sm">
                   <p className="font-bold text-purple-700">More Departures</p>
                 </div>
+              </div>
+
+              {/* Clear cycle indicator */}
+              <div className="flex items-center gap-3 bg-purple-100 dark:bg-purple-950/30 rounded-full px-6 py-3 border-2 border-purple-400">
+                <RotateCw className="w-5 h-5 text-purple-600" />
+                <p className="text-sm font-bold text-purple-700 dark:text-purple-300">
+                  Cycle repeats: More Departures → Back to High Turnover
+                </p>
+                <RotateCw className="w-5 h-5 text-purple-600" />
               </div>
             </div>
 
