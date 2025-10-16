@@ -170,7 +170,7 @@ export default function HowItWorksSection() {
             How It Works
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
-            A lightweight pulse-to-action system built for aged care teams
+            A lightweight pulse-to-action system, co-designed for aged-care teams and grounded in proven behavioural science.
           </p>
         </div>
 

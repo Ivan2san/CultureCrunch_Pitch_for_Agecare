@@ -3,9 +3,9 @@ import { Card } from "@/components/ui/card";
 
 export default function SolutionSection() {
   const outcomes = [
-    "Meets compliance requirements (WHS + Aged Care Quality Standards)",
-    "Reduces turnover by addressing root causes (burnout, lack of support, stress)",
-    "Takes 15 minutes/week from leaders—designed for managers drowning in the same hazards"
+    "Installs the foundations for psychosocial safety",
+    "Builds readiness for high performance",
+    "Fits real leadership life"
   ];
 
   return (
@@ -17,7 +17,7 @@ export default function SolutionSection() {
             The Solution: <span className="text-indigo-600">Psychosocial Safety Installed, Not Workshopped</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
-            Culture Crunch is a 6-week sprint that meets compliance, reduces turnover, and takes just 15 minutes per week
+            Culture Crunch is a 6-week sprint that levels up leaders and installs weekly habits proven to drive psychosocial safety, engagement, and high performance—beyond compliance.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export default function SolutionSection() {
             </h3>
             <p className="text-lg text-muted-foreground mb-6">
               Research shows: "Psychosocial hazards do not just affect frontline workers; they extend to management and administration staff." 
-              Burnt-out managers don't have hours for workshops or complex dashboards.
+              Burnt-out leaders don't have hours for workshops or complex dashboards.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
               <div className="bg-white/70 rounded-lg p-5 border border-purple-200">
@@ -61,7 +61,7 @@ export default function SolutionSection() {
               <div className="bg-white/70 rounded-lg p-5 border border-indigo-200">
                 <p className="font-bold text-indigo-700 mb-2">AI Does the Heavy Lifting</p>
                 <p className="text-sm text-muted-foreground">
-                  AI analyzes pulse trends, identifies risks, and recommends one simple action. Leaders execute, don't analyze. Built for managers who are themselves experiencing psychosocial hazards.
+                  AI analyzes pulse trends, identifies risks, and recommends one simple action. Leaders execute, don't analyze. Built for leaders who are themselves experiencing psychosocial hazards.
                 </p>
               </div>
             </div>

@@ -3,6 +3,7 @@ import VisionSection from "@/components/VisionSection";
 import ProblemSection from "@/components/ProblemSection";
 import WhyNowSection from "@/components/WhyNowSection";
 import SolutionSection from "@/components/SolutionSection";
+import ProductFlowSection from "@/components/ProductFlowSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import ROICalculator from "@/components/ROICalculator";
 import PositioningSection from "@/components/PositioningSection";
@@ -17,6 +18,7 @@ export default function Home() {
       <ProblemSection />
       <WhyNowSection />
       <SolutionSection />
+      <ProductFlowSection />
       <HowItWorksSection />
       <PositioningSection />
       <ROICalculator />
