@@ -17,6 +17,7 @@ export default function SolutionSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
+          <p className="text-sm font-semibold text-indigo-600 uppercase tracking-wider mb-4">Solution</p>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16" style={{ letterSpacing: '-0.01em' }}>
             Installing the <span className="text-indigo-600">Next Generation of Psychosocial Leadership</span>
           </h2>
