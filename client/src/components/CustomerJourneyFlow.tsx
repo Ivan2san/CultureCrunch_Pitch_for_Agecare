@@ -137,16 +137,6 @@ export default function CustomerJourneyFlow() {
           );
         })}
       </div>
-
-      {/* Bottom CTA */}
-      <div className="text-center mt-12 p-6 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl">
-        <p className="text-lg font-semibold text-foreground mb-2" style={{ letterSpacing: '-0.01em' }}>
-          6 weeks to compliance + culture shift
-        </p>
-        <p className="text-muted-foreground">
-          Then 12 months of AI-powered operating rhythm that sustains the habits
-        </p>
-      </div>
     </div>
   );
 }
