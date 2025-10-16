@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Brain, Database, Zap, Cpu, Network, CheckCircle, GitBranch, RefreshCw, MessageSquare, Shield, Lock, Users, AlertCircle } from "lucide-react";
+import { Brain, Database, Zap, Cpu, Network, CheckCircle, GitBranch, RefreshCw, MessageSquare, Shield, Lock, Users, AlertCircle, ChevronDown, ChevronUp } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import CustomerJourneyFlow from "@/components/CustomerJourneyFlow";
@@ -10,6 +10,7 @@ import CompliancePrivacyDiagram from "@/components/CompliancePrivacyDiagram";
 
 export default function HowItWorksSection() {
   const [expandedLayer, setExpandedLayer] = useState<number | null>(null);
+  const [showMarketGap, setShowMarketGap] = useState(false);
 
   const techLayers = [
     {
@@ -175,37 +176,58 @@ export default function HowItWorksSection() {
 
         {/* Market Gap Positioning */}
         <div className="mb-16 bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-8 border-2 border-purple-300">
-          <div className="max-w-5xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold text-purple-700 mb-4 text-center" style={{ letterSpacing: '-0.01em' }}>
+          <div className="max-w-5xl mx-auto text-center">
+            <h3 className="text-2xl md:text-3xl font-bold text-purple-700 mb-4" style={{ letterSpacing: '-0.01em' }}>
               Filling the Massive Market Gap
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card className="p-6 bg-white/70 border-2 border-purple-200">
-                <div className="flex items-start gap-3 mb-3">
-                  <AlertCircle className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-bold text-purple-700 mb-2">Market Reality</p>
-                    <p className="text-sm text-muted-foreground">
-                      "There are <span className="font-semibold text-purple-700">virtually no psychosocial safety software solutions tailored specifically for aged care.</span>" 
-                      — Market Research 2024
-                    </p>
+            
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setShowMarketGap(!showMarketGap)}
+              className="mb-4"
+              data-testid="button-toggle-market-gap"
+            >
+              {showMarketGap ? (
+                <>
+                  Hide Research <ChevronUp className="ml-2 w-4 h-4" />
+                </>
+              ) : (
+                <>
+                  Show Research <ChevronDown className="ml-2 w-4 h-4" />
+                </>
+              )}
+            </Button>
+
+            {showMarketGap && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-up">
+                <Card className="p-6 bg-white/70 border-2 border-purple-200">
+                  <div className="flex items-start gap-3 mb-3">
+                    <AlertCircle className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="font-bold text-purple-700 mb-2">Market Reality</p>
+                      <p className="text-sm text-muted-foreground">
+                        "There are <span className="font-semibold text-purple-700">virtually no psychosocial safety software solutions tailored specifically for aged care.</span>" 
+                        — Market Research 2024
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </Card>
-              
-              <Card className="p-6 bg-white/70 border-2 border-indigo-200">
-                <div className="flex items-start gap-3 mb-3">
-                  <Zap className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-bold text-indigo-700 mb-2">Why Proactive Matters</p>
-                    <p className="text-sm text-muted-foreground">
-                      Traditional surveys "<span className="font-semibold text-indigo-700">provide retrospective insights too late to prevent staff departure.</span>" 
-                      Weekly pulse breaks the vicious cycle <span className="font-semibold">before</span> high turnover creates more stress.
-                    </p>
+                </Card>
+                
+                <Card className="p-6 bg-white/70 border-2 border-indigo-200">
+                  <div className="flex items-start gap-3 mb-3">
+                    <Zap className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="font-bold text-indigo-700 mb-2">Why Proactive Matters</p>
+                      <p className="text-sm text-muted-foreground">
+                        Traditional surveys "<span className="font-semibold text-indigo-700">provide retrospective insights too late to prevent staff departure.</span>" 
+                        Weekly pulse breaks the vicious cycle <span className="font-semibold">before</span> high turnover creates more stress.
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </Card>
-            </div>
+                </Card>
+              </div>
+            )}
           </div>
         </div>
 
