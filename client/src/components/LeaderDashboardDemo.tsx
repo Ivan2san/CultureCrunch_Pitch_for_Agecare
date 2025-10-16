@@ -174,7 +174,7 @@ export default function LeaderDashboardDemo() {
               <Card 
                 key={risk.id}
                 className={cn(
-                  "p-6 border-2 hover-elevate cursor-pointer transition-all",
+                  "p-6 border-2 hover-elevate cursor-pointer transition-all flex flex-col",
                   severityColors[risk.severity]
                 )}
                 onClick={() => handleRiskSelect(risk)}
@@ -191,7 +191,7 @@ export default function LeaderDashboardDemo() {
                     </h4>
                   </div>
                 </div>
-                <p className="text-sm text-foreground mb-4">
+                <p className="text-sm text-foreground mb-4 flex-1">
                   {risk.concern}
                 </p>
                 <Button 
