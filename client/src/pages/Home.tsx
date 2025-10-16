@@ -20,8 +20,8 @@ export default function Home() {
       <SolutionSection />
       <ProductFlowSection />
       <HowItWorksSection />
-      <PositioningSection />
       <ROICalculator />
+      <PositioningSection />
       <RoadmapSection />
       <TheAskSection />
     </div>
