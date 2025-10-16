@@ -11,6 +11,7 @@ const sections = [
   { id: "roi", label: "ROI Calculator" },
   { id: "positioning", label: "Positioning" },
   { id: "roadmap", label: "Roadmap" },
+  { id: "team", label: "The Team" },
   { id: "ask", label: "The Ask" },
 ];
 
