@@ -6,6 +6,7 @@ import CustomerJourneyFlow from "@/components/CustomerJourneyFlow";
 import LeaderDashboardDemo from "@/components/LeaderDashboardDemo";
 import SprintTimeline from "@/components/SprintTimeline";
 import DeliverablesSection from "@/components/DeliverablesSection";
+import CompliancePrivacyDiagram from "@/components/CompliancePrivacyDiagram";
 
 export default function HowItWorksSection() {
   const [expandedLayer, setExpandedLayer] = useState<number | null>(null);
@@ -367,6 +368,11 @@ export default function HowItWorksSection() {
                 </Card>
               );
             })}
+          </div>
+
+          {/* Compliance & Privacy Architecture Diagram */}
+          <div className="mt-12">
+            <CompliancePrivacyDiagram />
           </div>
         </div>
 
