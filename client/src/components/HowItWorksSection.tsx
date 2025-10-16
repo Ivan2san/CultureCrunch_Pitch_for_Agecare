@@ -243,7 +243,7 @@ export default function HowItWorksSection() {
         <div className="bg-card rounded-xl p-8 mb-16 border border-border">
           <div className="text-center mb-8">
             <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
-              Technical Architecture: <span className="text-indigo-600">Simple & Secure</span>
+              Envisioned Technical Architecture: <span className="text-indigo-600">Simple & Secure</span>
             </h3>
             <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto" style={{ letterSpacing: '-0.005em' }}>
               From weekly pulse to Monday morning action—designed for aged care reality
