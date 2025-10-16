@@ -10,8 +10,6 @@ import CompliancePrivacyDiagram from "@/components/CompliancePrivacyDiagram";
 
 export default function HowItWorksSection() {
   const [expandedLayer, setExpandedLayer] = useState<number | null>(null);
-  const [expandedPrinciples, setExpandedPrinciples] = useState(false);
-  const [expandedValidation, setExpandedValidation] = useState(false);
 
   const techLayers = [
     {
@@ -448,113 +446,6 @@ export default function HowItWorksSection() {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Architecture Principles & Technical Validation */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          {/* Architecture Principles */}
-          <Card className="p-6">
-            <div className="flex items-center justify-between gap-4 mb-4">
-              <h3 className="text-2xl font-bold text-foreground flex-1" style={{ letterSpacing: '-0.01em' }}>Architecture Principles</h3>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setExpandedPrinciples(!expandedPrinciples)}
-                data-testid="button-toggle-principles"
-                className="shrink-0"
-              >
-                {expandedPrinciples ? "Hide" : "Show"}
-              </Button>
-            </div>
-            
-            {expandedPrinciples && (
-              <div className="grid grid-cols-2 gap-4 animate-fade-in-up">
-                <div className="text-center p-4 bg-card border border-indigo-500 rounded-md">
-                  <Lock className="w-10 h-10 text-indigo-600 mx-auto mb-3" />
-                  <p className="font-bold text-foreground mb-1" style={{ letterSpacing: '-0.01em' }}>Security-First</p>
-                  <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>SOC 2 Type II in progress, quarterly pentests</p>
-                </div>
-
-                <div className="text-center p-4 bg-card border border-blue-500 rounded-md">
-                  <Zap className="w-10 h-10 text-blue-600 mx-auto mb-3" />
-                  <p className="font-bold text-foreground mb-1" style={{ letterSpacing: '-0.01em' }}>Enterprise-Ready</p>
-                  <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>99.9% uptime SLA, multi-region failover</p>
-                </div>
-
-                <div className="text-center p-4 bg-card border border-purple-500 rounded-md">
-                  <Brain className="w-10 h-10 text-purple-600 mx-auto mb-3" />
-                  <p className="font-bold text-foreground mb-1" style={{ letterSpacing: '-0.01em' }}>Responsible AI</p>
-                  <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>DPIA complete, bias audits, human oversight</p>
-                </div>
-
-                <div className="text-center p-4 bg-card border border-indigo-500 rounded-md">
-                  <Database className="w-10 h-10 text-indigo-600 mx-auto mb-3" />
-                  <p className="font-bold text-foreground mb-1" style={{ letterSpacing: '-0.01em' }}>API-First Design</p>
-                  <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>Extensible webhooks, customer data ownership</p>
-                </div>
-              </div>
-            )}
-          </Card>
-
-          {/* Technical Validation */}
-          <Card className="p-6">
-            <div className="flex items-center justify-between gap-4 mb-4">
-              <h3 className="text-2xl font-bold text-foreground flex-1" style={{ letterSpacing: '-0.01em' }}>Technical Validation</h3>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setExpandedValidation(!expandedValidation)}
-                data-testid="button-toggle-validation"
-                className="shrink-0"
-              >
-                {expandedValidation ? "Hide" : "Show"}
-              </Button>
-            </div>
-            
-            {expandedValidation && (
-              <div className="space-y-4 animate-fade-in-up">
-                <div className="bg-card p-4 rounded-md border-l-4 border-indigo-500">
-                  <p className="font-bold text-foreground mb-2" style={{ letterSpacing: '-0.01em' }}>Proof Points</p>
-                  <div className="space-y-2 text-sm text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>
-                    <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                      <p><strong>Pilot Partners:</strong> 3 orgs (200-500 employees) testing live</p>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                      <p><strong>Academic Partnership:</strong> Validating Triple Goal model</p>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
-                      <p><strong>Advisor Network:</strong> Former CTOs, AI ethics leads, WHS experts</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-card p-4 rounded-md border-l-4 border-purple-500">
-                  <p className="font-bold text-foreground mb-2" style={{ letterSpacing: '-0.01em' }}>Technical Milestones</p>
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="text-center p-3 bg-muted rounded-md">
-                      <p className="text-2xl font-bold text-purple-600">50K+</p>
-                      <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>Metadata events/day</p>
-                    </div>
-                    <div className="text-center p-3 bg-muted rounded-md">
-                      <p className="text-2xl font-bold text-purple-600">&lt;500ms</p>
-                      <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>Latency for nudges</p>
-                    </div>
-                    <div className="text-center p-3 bg-muted rounded-md">
-                      <p className="text-2xl font-bold text-purple-600">94%</p>
-                      <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>Leader engagement</p>
-                    </div>
-                    <div className="text-center p-3 bg-muted rounded-md">
-                      <p className="text-2xl font-bold text-purple-600">AWS</p>
-                      <p className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>Sydney region</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-          </Card>
         </div>
       </div>
     </section>
