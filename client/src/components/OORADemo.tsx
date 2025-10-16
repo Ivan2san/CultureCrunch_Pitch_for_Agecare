@@ -45,7 +45,7 @@ const scenarios: Scenario[] = [
       },
       {
         role: "ai",
-        content: "Risk assessment: High. Repeated physical aggression to same staff member indicates inadequate controls. This violates WHS duty of care and Quality Standard 3 (Personal care and clinical care). Maria's avoidance behaviour suggests psychological harm. Immediate action required: 1) Remove Maria from solo care duties with Mr. Chen, 2) Clinical review of Mr. Chen's care plan, 3) Support for Maria.",
+        content: "Risk assessment: High. Repeated physical aggression to same team member indicates inadequate controls. This violates WHS duty of care and Quality Standard 3 (Personal care and clinical care). Maria's avoidance behaviour suggests psychological harm. Immediate action required: 1) Remove Maria from solo care duties with Mr. Chen, 2) Clinical review of Mr. Chen's care plan, 3) Support for Maria.",
       },
       {
         role: "system",
