@@ -210,6 +210,11 @@ export default function HowItWorksSection() {
           </div>
         </div>
 
+        {/* Customer Journey Flow */}
+        <div className="mb-16">
+          <CustomerJourneyFlow />
+        </div>
+
         {/* 6-Week Sprint Timeline */}
         <div className="mb-16">
           <SprintTimeline />
@@ -234,11 +239,6 @@ export default function HowItWorksSection() {
 
           <LeaderDashboardDemo />
         </Card>
-
-        {/* Customer Journey Flow */}
-        <div className="mb-16">
-          <CustomerJourneyFlow />
-        </div>
 
         {/* Technical Architecture: Privacy-First AI Stack */}
         <div className="bg-card rounded-xl p-8 mb-16 border border-border">
