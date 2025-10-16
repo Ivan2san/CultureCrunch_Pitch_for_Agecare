@@ -14,10 +14,10 @@ export default function SolutionSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16" style={{ letterSpacing: '-0.01em' }}>
-            The Solution: <span className="text-indigo-600">Psychosocial Safety Installed, Not Workshopped</span>
+            Installing the <span className="text-indigo-600">Next Generation of Psychosocial Leadership</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
-            Culture Crunch is a 6-week sprint that levels up leaders and installs weekly habits proven to drive psychosocial safety, engagement, and high performance—beyond compliance.
+            A 6-week, AI-enabled sprint that equips leaders and teams with the mindset, skill set, and rhythm for safe, high-performance work.
           </p>
         </div>
 
