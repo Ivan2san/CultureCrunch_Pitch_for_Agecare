@@ -110,30 +110,33 @@ export default function SolutionSection() {
             <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-6" style={{ letterSpacing: '-0.01em' }}>
               See It In Action: <span className="text-indigo-600">From Pulse to Insight</span>
             </h3>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-12">
               Experience the complete weekly rhythm—3 questions on Friday, AI-powered insights by Monday
             </p>
           </div>
 
-          {/* Weekly Rhythm Timeline - Always Visible */}
-          <div className="mb-12 flex flex-col md:flex-row items-center justify-center gap-8 max-w-5xl mx-auto">
-            <div className="flex items-center gap-3 bg-purple-50 dark:bg-purple-950/20 px-6 py-4 rounded-lg border-2 border-purple-300">
-              <Calendar className="w-8 h-8 text-purple-600" />
-              <div>
-                <p className="font-bold text-purple-700 dark:text-purple-400">Friday 3:00 PM</p>
-                <p className="text-sm text-muted-foreground">Weekly Pulse Survey</p>
+          {/* Visual Hook - Single Q1 Preview */}
+          <div className="max-w-md mx-auto mb-8">
+            <Card className="p-6 hover-elevate">
+              <div className="mb-4">
+                <span className="bg-purple-100 dark:bg-purple-950/40 text-purple-700 dark:text-purple-400 px-3 py-1 rounded-full text-sm font-semibold">
+                  Preview: Question 1 of 3
+                </span>
               </div>
-            </div>
-            
-            <ArrowRight className="w-8 h-8 text-indigo-600 transform rotate-90 md:rotate-0" />
-            
-            <div className="flex items-center gap-3 bg-indigo-50 dark:bg-indigo-950/20 px-6 py-4 rounded-lg border-2 border-indigo-300">
-              <Sparkles className="w-8 h-8 text-indigo-600" />
-              <div>
-                <p className="font-bold text-indigo-700 dark:text-indigo-400">Monday 6:00 AM</p>
-                <p className="text-sm text-muted-foreground">AI Brief + Actions</p>
-              </div>
-            </div>
+              <img 
+                src={Q1Image} 
+                alt="Question 1: How satisfied are you with team collaboration this week?" 
+                className="rounded-lg w-full border border-border"
+                data-testid="img-pulse-preview"
+              />
+            </Card>
+          </div>
+
+          {/* Value Statement */}
+          <div className="text-center mb-12">
+            <p className="text-xl md:text-2xl text-foreground font-semibold max-w-3xl mx-auto">
+              2 minutes for teams. 5 minutes for leaders. Weekly insights that drive action.
+            </p>
           </div>
 
           {/* Expand/Collapse Button */}
@@ -161,6 +164,27 @@ export default function SolutionSection() {
           {/* Expandable Content */}
           {isExpanded && (
             <div className="animate-fade-in-up">
+              {/* Weekly Rhythm Timeline */}
+              <div className="mb-16 flex flex-col md:flex-row items-center justify-center gap-8 max-w-5xl mx-auto">
+                <div className="flex items-center gap-3 bg-purple-50 dark:bg-purple-950/20 px-6 py-4 rounded-lg border-2 border-purple-300">
+                  <Calendar className="w-8 h-8 text-purple-600" />
+                  <div>
+                    <p className="font-bold text-purple-700 dark:text-purple-400">Friday 3:00 PM</p>
+                    <p className="text-sm text-muted-foreground">Weekly Pulse Survey</p>
+                  </div>
+                </div>
+                
+                <ArrowRight className="w-8 h-8 text-indigo-600 transform rotate-90 md:rotate-0" />
+                
+                <div className="flex items-center gap-3 bg-indigo-50 dark:bg-indigo-950/20 px-6 py-4 rounded-lg border-2 border-indigo-300">
+                  <Sparkles className="w-8 h-8 text-indigo-600" />
+                  <div>
+                    <p className="font-bold text-indigo-700 dark:text-indigo-400">Monday 6:00 AM</p>
+                    <p className="text-sm text-muted-foreground">AI Brief + Actions</p>
+                  </div>
+                </div>
+              </div>
+
               {/* Step 1: Pulse Survey (3 Questions) */}
               <div className="mb-16">
                 <div className="text-center mb-8">
