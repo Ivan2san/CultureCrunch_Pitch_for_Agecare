@@ -5,6 +5,7 @@ import WhyNowSection from "@/components/WhyNowSection";
 import SolutionSection from "@/components/SolutionSection";
 import ProductFlowSection from "@/components/ProductFlowSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
+import ResponsiveShowcase from "@/components/ResponsiveShowcase";
 import ROICalculator from "@/components/ROICalculator";
 import PositioningSection from "@/components/PositioningSection";
 import RoadmapSection from "@/components/RoadmapSection";
@@ -22,6 +23,7 @@ export default function Home() {
       <SolutionSection />
       <ProductFlowSection />
       <HowItWorksSection />
+      <ResponsiveShowcase />
       <ROICalculator />
       <PositioningSection />
       <RoadmapSection />
