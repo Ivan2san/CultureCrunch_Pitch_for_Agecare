@@ -324,15 +324,15 @@ export default function ProblemSection() {
             </div>
 
             {/* Management Impact */}
-            <div className="mt-6 bg-purple-50 rounded-lg p-6 border-l-4 border-purple-600">
+            <div className="mt-6 bg-purple-50 rounded-lg p-8 md:p-10 border-l-4 border-purple-600">
               <div className="flex items-start gap-3">
-                <AlertTriangle className="w-6 h-6 text-purple-600 flex-shrink-0 mt-0.5" />
+                <AlertTriangle className="w-7 h-7 text-purple-600 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-bold text-purple-700 mb-2">Leaders Are Affected Too</p>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="font-bold text-purple-700 mb-3 text-lg">Leaders Are Affected Too</p>
+                  <p className="text-muted-foreground font-semibold">
                     "Psychosocial hazards are common for workers in the aged care sector, and this extends to management." The people trying to solve this crisis are drowning in it themselves.
                   </p>
-                  <p className="text-xs text-muted-foreground mt-2">
+                  <p className="text-xs text-muted-foreground mt-3 font-medium">
                     — Safe Work Australia, Psychosocial Hazards in Aged Care (2024)
                   </p>
                 </div>
