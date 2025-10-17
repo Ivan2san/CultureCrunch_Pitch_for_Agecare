@@ -4,13 +4,17 @@ import LeaderDashboardDemo from "@/components/LeaderDashboardDemo";
 import SimpleStorySection from "@/components/SimpleStorySection";
 import ImplementationJourneySection from "@/components/ImplementationJourneySection";
 import TechnicalDeepDiveSection from "@/components/TechnicalDeepDiveSection";
+import { useParallax } from "@/hooks/useParallax";
 
 export default function HowItWorksSection() {
+  const headerParallax = useParallax({ speed: -0.2 });
+  const demoParallax = useParallax({ speed: 0.15 });
+
   return (
     <section id="how-it-works" className="min-h-screen bg-corporate-gradient px-6 py-32">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div ref={headerParallax.ref} style={headerParallax.style} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16" style={{ letterSpacing: '-0.01em' }}>
             How It Works
           </h2>
@@ -23,7 +27,7 @@ export default function HowItWorksSection() {
         <SimpleStorySection />
 
         {/* Interactive Leader Dashboard Demo */}
-        <Card className="p-8 mb-16 border-2 border-indigo-500">
+        <Card ref={demoParallax.ref} style={demoParallax.style} className="p-8 mb-16 border-2 border-indigo-500">
           <div className="text-center mb-8">
             <div className="flex items-center justify-center gap-3 mb-4">
               <MessageSquare className="w-10 h-10 text-indigo-600" />

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CheckCircle, ChevronDown, ChevronUp, ArrowRight, Calendar, Clock, Sparkles } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useParallax } from "@/hooks/useParallax";
 
 // Screenshot paths from public folder
 const Q1Image = "/product-flow/Q1_1760596819943.PNG";
@@ -14,6 +15,9 @@ export default function SolutionSection() {
   const [showResearch, setShowResearch] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   
+  const headerParallax = useParallax({ speed: -0.2 });
+  const outcomesParallax = useParallax({ speed: 0.15 });
+  
   const outcomes = [
     "Installs the foundations for psychosocial safety",
     "Builds readiness for high performance",
@@ -24,7 +28,7 @@ export default function SolutionSection() {
     <section id="solution" className="min-h-screen bg-corporate-gradient px-6 py-32">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div ref={headerParallax.ref} style={headerParallax.style} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16" style={{ letterSpacing: '-0.01em' }}>
             Solution: <span className="text-indigo-600">Installing the Next Generation of Psychosocial Leadership</span>
           </h2>
@@ -34,7 +38,7 @@ export default function SolutionSection() {
         </div>
 
         {/* 6-Week Sprint Description */}
-        <div className="mb-12 text-center">
+        <div ref={outcomesParallax.ref} style={outcomesParallax.style} className="mb-12 text-center">
           <p className="text-2xl md:text-3xl font-semibold text-foreground mb-8" style={{ letterSpacing: '-0.01em' }}>
             A 6-Week Sprint That:
           </p>
