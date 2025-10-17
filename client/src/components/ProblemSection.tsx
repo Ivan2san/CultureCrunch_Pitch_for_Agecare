@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { ArrowRight, AlertTriangle, RotateCw } from "lucide-react";
+import { useParallax } from "@/hooks/useParallax";
 
 const cycleStages = [
   { id: 1, label: "High Turnover", color: "purple" },
@@ -216,11 +217,14 @@ function MobileViciousCycle() {
 }
 
 export default function ProblemSection() {
+  const headerParallax = useParallax({ speed: -0.2 });
+  const diagramParallax = useParallax({ speed: 0.15 });
+
   return (
     <section id="problem" className="min-h-screen bg-corporate-gradient px-6 py-32">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div ref={headerParallax.ref} style={headerParallax.style} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16" style={{ letterSpacing: '-0.01em' }}>
             The Problem: <span className="text-purple-600">Aged Care's Compliance & Workforce Crisis</span>
           </h2>
@@ -296,7 +300,7 @@ export default function ProblemSection() {
 
           <Card className="p-8 md:p-12 bg-card/40 backdrop-blur-sm">
             {/* Vicious Cycle - SVG Circular Diagram */}
-            <div className="flex flex-col items-center gap-6 mb-8">
+            <div ref={diagramParallax.ref} style={diagramParallax.style} className="flex flex-col items-center gap-6 mb-8">
               <div className="flex items-center gap-2">
                 <RotateCw className="w-6 h-6 text-purple-600" />
                 <p className="text-lg font-bold text-foreground">The Vicious Cycle</p>
