@@ -60,7 +60,7 @@ function SvgViciousCycle() {
   const labelRadius = radius + 40;
 
   return (
-    <svg viewBox="0 0 300 300" className="w-full max-w-lg mx-auto">
+    <svg viewBox="0 0 340 340" className="w-full max-w-lg mx-auto">
       <defs>
         <filter id="glow">
           <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
@@ -69,10 +69,55 @@ function SvgViciousCycle() {
             <feMergeNode in="SourceGraphic"/>
           </feMerge>
         </filter>
+        <marker
+          id="circle-arrow"
+          markerWidth="10"
+          markerHeight="10"
+          refX="5"
+          refY="5"
+          orient="auto"
+        >
+          <path d="M 2 2 L 8 5 L 2 8 z" fill="#8b5cf6" opacity="0.6" />
+        </marker>
       </defs>
 
+      {/* Dashed circular guideline - drawn first to appear in background */}
+      <circle
+        cx={170}
+        cy={170}
+        r={labelRadius}
+        fill="none"
+        stroke="#c7d2fe"
+        strokeWidth="2"
+        strokeDasharray="6,8"
+        opacity="0.5"
+      />
+
+      {/* Clockwise direction arrows on the circle */}
+      {stagePositions.map((stage, i) => {
+        const nextLabelAngle = startAngle + ((i + 0.5) * angleStep);
+        const arrowX1 = 170 + (labelRadius - 5) * Math.cos(nextLabelAngle - 0.05);
+        const arrowY1 = 170 + (labelRadius - 5) * Math.sin(nextLabelAngle - 0.05);
+        const arrowX2 = 170 + (labelRadius - 5) * Math.cos(nextLabelAngle + 0.05);
+        const arrowY2 = 170 + (labelRadius - 5) * Math.sin(nextLabelAngle + 0.05);
+        
+        return (
+          <line
+            key={`circle-arrow-${i}`}
+            x1={arrowX1}
+            y1={arrowY1}
+            x2={arrowX2}
+            y2={arrowY2}
+            stroke="#8b5cf6"
+            strokeWidth="2"
+            markerEnd="url(#circle-arrow)"
+            opacity="0.4"
+          />
+        );
+      })}
+
       {/* Center icon with subtle glow */}
-      <g transform={`translate(${centerX - 16}, ${centerY - 16})`}>
+      <g transform={`translate(${170 - 16}, ${170 - 16})`}>
         <circle cx="16" cy="16" r="16" fill="#f5f3ff" opacity="0.9" />
         <circle cx="16" cy="16" r="14" fill="none" stroke="#8b5cf6" strokeWidth="1.5" opacity="0.3" />
         <text x="16" y="21" textAnchor="middle" fontSize="20" fill="#6366f1" fontWeight="600">↻</text>
@@ -81,7 +126,9 @@ function SvgViciousCycle() {
       {/* Arrow paths and heads */}
       {stagePositions.map((stage, i) => {
         const nextStage = stagePositions[(i + 1) % numStages];
-        const { path, arrowHead } = createArrowPath(stage, nextStage, stage.color);
+        const adjustedStage = { ...stage, x: stage.x + 20, y: stage.y + 20 };
+        const adjustedNextStage = { ...nextStage, x: nextStage.x + 20, y: nextStage.y + 20 };
+        const { path, arrowHead } = createArrowPath(adjustedStage, adjustedNextStage, stage.color);
         
         return (
           <g key={`arrow-${i}`}>
@@ -105,8 +152,8 @@ function SvgViciousCycle() {
       {/* Stage labels with clean styling */}
       {stagePositions.map((stage, i) => {
         const labelAngle = startAngle + i * angleStep;
-        const labelX = centerX + labelRadius * Math.cos(labelAngle);
-        const labelY = centerY + labelRadius * Math.sin(labelAngle);
+        const labelX = 170 + labelRadius * Math.cos(labelAngle);
+        const labelY = 170 + labelRadius * Math.sin(labelAngle);
         
         return (
           <g key={`label-${stage.id}`}>
@@ -134,18 +181,6 @@ function SvgViciousCycle() {
           </g>
         );
       })}
-
-      {/* Dashed circular guideline through label boxes - drawn last to appear on top */}
-      <circle
-        cx={centerX}
-        cy={centerY}
-        r={labelRadius}
-        fill="none"
-        stroke="#8b5cf6"
-        strokeWidth="2"
-        strokeDasharray="6,8"
-        opacity="0.4"
-      />
     </svg>
   );
 }
