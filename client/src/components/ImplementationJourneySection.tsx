@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import GenosEIDiagram from "@/components/GenosEIDiagram";
 import CustomerJourneyFlow from "@/components/CustomerJourneyFlow";
 import SprintTimeline from "@/components/SprintTimeline";
 import DeliverablesSection from "@/components/DeliverablesSection";
@@ -10,6 +11,9 @@ export default function ImplementationJourneySection() {
 
   return (
     <div className="mb-16">
+      {/* Genos EI Framework Diagram */}
+      <GenosEIDiagram />
+
       <div className="text-center mb-6">
         <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
           Your 6-Week Implementation Journey
