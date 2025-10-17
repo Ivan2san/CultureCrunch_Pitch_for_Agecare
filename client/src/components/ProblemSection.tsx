@@ -10,9 +10,9 @@ const cycleStages = [
 ];
 
 function SvgViciousCycle() {
-  const centerX = 200;
-  const centerY = 200;
-  const radius = 130;
+  const centerX = 175;
+  const centerY = 175;
+  const radius = 110;
   const numStages = cycleStages.length;
   
   const angleStep = (2 * Math.PI) / numStages;
@@ -28,8 +28,8 @@ function SvgViciousCycle() {
   });
 
   const getRectangleEdgePoint = (centerX: number, centerY: number, angle: number) => {
-    const boxWidth = 140;
-    const boxHeight = 40;
+    const boxWidth = 120;
+    const boxHeight = 36;
     const halfWidth = boxWidth / 2;
     const halfHeight = boxHeight / 2;
     
@@ -63,8 +63,8 @@ function SvgViciousCycle() {
     const midY = (startEdge.y + endEdge.y) / 2;
     const dx = endEdge.x - startEdge.x;
     const dy = endEdge.y - startEdge.y;
-    const offsetX = -dy * 0.15;
-    const offsetY = dx * 0.15;
+    const offsetX = -dy * 0.2;
+    const offsetY = dx * 0.2;
     const controlX = midX + offsetX;
     const controlY = midY + offsetY;
     
@@ -72,7 +72,7 @@ function SvgViciousCycle() {
   };
 
   return (
-    <svg viewBox="0 0 400 400" className="w-full max-w-2xl mx-auto">
+    <svg viewBox="0 0 350 350" className="w-full max-w-xl mx-auto">
       <defs>
         <marker
           id="arrowhead-purple"
@@ -108,9 +108,9 @@ function SvgViciousCycle() {
       />
 
       {/* Center icon */}
-      <g transform={`translate(${centerX - 20}, ${centerY - 20})`}>
-        <circle cx="20" cy="20" r="20" fill="#faf5ff" opacity="0.8" />
-        <text x="20" y="26" textAnchor="middle" fontSize="24" fill="#9333ea">↻</text>
+      <g transform={`translate(${centerX - 16}, ${centerY - 16})`}>
+        <circle cx="16" cy="16" r="16" fill="#faf5ff" opacity="0.8" />
+        <text x="16" y="21" textAnchor="middle" fontSize="20" fill="#9333ea">↻</text>
       </g>
 
       {/* Curved connector paths with arrows */}
@@ -140,10 +140,10 @@ function SvgViciousCycle() {
         return (
           <g key={stage.id} transform={`translate(${stage.x}, ${stage.y})`}>
             <rect
-              x="-70"
-              y="-20"
-              width="140"
-              height="40"
+              x="-60"
+              y="-18"
+              width="120"
+              height="36"
               rx="6"
               fill={bgColor}
               stroke={borderColor}
@@ -151,9 +151,9 @@ function SvgViciousCycle() {
             />
             <text
               x="0"
-              y="5"
+              y="4"
               textAnchor="middle"
-              fontSize="13"
+              fontSize="12"
               fontWeight="bold"
               fill={textColor}
             >
