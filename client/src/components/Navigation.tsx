@@ -12,6 +12,7 @@ const sections = [
   { id: "positioning", label: "Positioning" },
   { id: "roadmap", label: "Roadmap" },
   { id: "team", label: "The Team" },
+  { id: "advisors", label: "Advisors" },
   { id: "ask", label: "The Ask" },
 ];
 

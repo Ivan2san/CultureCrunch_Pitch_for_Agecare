@@ -9,6 +9,7 @@ import ROICalculator from "@/components/ROICalculator";
 import PositioningSection from "@/components/PositioningSection";
 import RoadmapSection from "@/components/RoadmapSection";
 import TeamSection from "@/components/TeamSection";
+import AdvisorsSection from "@/components/AdvisorsSection";
 import TheAskSection from "@/components/TheAskSection";
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       <PositioningSection />
       <RoadmapSection />
       <TeamSection />
+      <AdvisorsSection />
       <TheAskSection />
     </div>
   );

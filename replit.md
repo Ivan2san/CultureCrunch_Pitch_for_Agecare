@@ -10,6 +10,8 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+**October 17, 2025**: Added Advisors section featuring strategic advisors (Ben Palmer - CEO of Genos International, Gourab Rout - Enterprise Architect, and placeholder for Psychosocial Safety specialist). Section follows Team structure with purple-themed cards positioned between Team and Ask sections.
+
 **October 16, 2025**: Strategic terminology shift from "Intelligence" to "AI" throughout the platform messaging, reflecting more direct and recognizable positioning in the market.
 
 ## System Architecture
