@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Users, MessageSquare, TrendingUp, ChevronDown, ChevronUp, CheckCircle } from "lucide-react";
+import { Users, MessageSquare, Users2, TrendingUp, ChevronDown, ChevronUp, CheckCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -39,11 +39,21 @@ export default function SimpleStorySection() {
     },
     {
       number: 3,
+      title: "Team Accountability Conversations",
+      subtitle: "Workshop with Leader",
+      time: "20 min",
+      icon: Users2,
+      color: "indigo",
+      summary: "Session to recommend the skillset and mindset necessary to establish accountable conversations with staff members",
+      details: [],
+    },
+    {
+      number: 4,
       title: "Measurable Change",
       subtitle: "Track results over 6 weeks",
       time: "Weekly tracking",
       icon: TrendingUp,
-      color: "indigo",
+      color: "green",
       summary: "Simple dashboard shows team trends, action completion, and compliance evidence—built for aged care reality",
       details: [
         "6-week trend views by team and facility",
@@ -57,17 +67,17 @@ export default function SimpleStorySection() {
   return (
     <div className="mb-16">
       <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center" style={{ letterSpacing: '-0.01em' }}>
-        The Simple Story: 3 Steps to Culture Change
+        The Simple Story: 4 Steps to Culture Change
       </h3>
       <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
         From pulse to action to results—designed for the operational reality of aged care teams
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {steps.map((step) => {
           const Icon = step.icon;
           const isExpanded = expandedStep === step.number;
-          const colorClass = step.color === "indigo" ? "indigo" : step.color === "purple" ? "purple" : "blue";
+          const colorClass = step.color === "indigo" ? "indigo" : step.color === "purple" ? "purple" : step.color === "green" ? "green" : "blue";
 
           return (
             <Card
@@ -77,6 +87,8 @@ export default function SimpleStorySection() {
                   ? "border-t-indigo-500"
                   : colorClass === "purple"
                   ? "border-t-purple-500"
+                  : colorClass === "green"
+                  ? "border-t-green-500"
                   : "border-t-blue-500"
               }`}
               data-testid={`simple-story-step-${step.number}`}
@@ -85,11 +97,13 @@ export default function SimpleStorySection() {
                 <div className={`p-4 rounded-full ${
                   colorClass === "indigo" ? "bg-indigo-100" :
                   colorClass === "purple" ? "bg-purple-100" :
+                  colorClass === "green" ? "bg-green-100" :
                   "bg-blue-100"
                 }`}>
                   <Icon className={`w-12 h-12 ${
                     colorClass === "indigo" ? "text-indigo-600" :
                     colorClass === "purple" ? "text-purple-600" :
+                    colorClass === "green" ? "text-green-600" :
                     "text-blue-600"
                   }`} />
                 </div>
@@ -99,6 +113,7 @@ export default function SimpleStorySection() {
                 <div className={`inline-block px-3 py-1 rounded-full text-sm font-bold mb-2 ${
                   colorClass === "indigo" ? "bg-indigo-100 text-indigo-700" :
                   colorClass === "purple" ? "bg-purple-100 text-purple-700" :
+                  colorClass === "green" ? "bg-green-100 text-green-700" :
                   "bg-blue-100 text-blue-700"
                 }`}>
                   Step {step.number}
@@ -112,6 +127,7 @@ export default function SimpleStorySection() {
                 <p className={`text-lg font-bold ${
                   colorClass === "indigo" ? "text-indigo-600" :
                   colorClass === "purple" ? "text-purple-600" :
+                  colorClass === "green" ? "text-green-600" :
                   "text-blue-600"
                 }`}>
                   {step.time}
@@ -122,25 +138,39 @@ export default function SimpleStorySection() {
                 {step.summary}
               </p>
 
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setExpandedStep(isExpanded ? null : step.number)}
-                className="w-full"
-                data-testid={`button-expand-step-${step.number}`}
-              >
-                {isExpanded ? (
-                  <>
-                    Show Less <ChevronUp className="ml-2 w-4 h-4" />
-                  </>
-                ) : (
-                  <>
-                    Learn More <ChevronDown className="ml-2 w-4 h-4" />
-                  </>
-                )}
-              </Button>
+              {step.details.length > 0 && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setExpandedStep(isExpanded ? null : step.number)}
+                  className="w-full"
+                  data-testid={`button-expand-step-${step.number}`}
+                >
+                  {isExpanded ? (
+                    <>
+                      Show Less <ChevronUp className="ml-2 w-4 h-4" />
+                    </>
+                  ) : (
+                    <>
+                      Learn More <ChevronDown className="ml-2 w-4 h-4" />
+                    </>
+                  )}
+                </Button>
+              )}
 
-              {isExpanded && (
+              {step.details.length === 0 && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  disabled
+                  className="w-full"
+                  data-testid={`button-expand-step-${step.number}`}
+                >
+                  Learn More <ChevronDown className="ml-2 w-4 h-4" />
+                </Button>
+              )}
+
+              {isExpanded && step.details.length > 0 && (
                 <div className="mt-4 p-4 bg-muted/50 rounded-lg animate-fade-in-up">
                   <div className="space-y-2">
                     {step.details.map((detail, i) => (
@@ -148,6 +178,7 @@ export default function SimpleStorySection() {
                         <CheckCircle className={`w-4 h-4 flex-shrink-0 mt-0.5 ${
                           colorClass === "indigo" ? "text-indigo-600" :
                           colorClass === "purple" ? "text-purple-600" :
+                          colorClass === "green" ? "text-green-600" :
                           "text-blue-600"
                         }`} />
                         <p className="text-sm text-muted-foreground">{detail}</p>
