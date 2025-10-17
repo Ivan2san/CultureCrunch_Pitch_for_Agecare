@@ -22,7 +22,7 @@ const advisors: Advisor[] = [
     background: "Global leader in emotional intelligence research and application. Over 20 years pioneering evidence-based EI assessment and development tools used by organizations worldwide. Expert in translating psychological research into practical workplace interventions that drive measurable performance improvements.",
     whyIdeal: "Brings world-class expertise in measuring and developing people capabilities—validates our AI-powered approach to workforce insights with proven assessment methodology",
     email: "ben.palmer@genosinternational.com",
-    linkedin: "https://linkedin.com/in/benpalmer"
+    linkedin: "https://www.linkedin.com/in/benjamin-palmer-genosei/"
   },
   {
     name: "Gourab Rout",
