@@ -11,9 +11,9 @@ const cycleStages = [
 ];
 
 function SvgViciousCycle() {
-  const centerX = 175;
-  const centerY = 175;
-  const radius = 115;
+  const centerX = 150;
+  const centerY = 150;
+  const radius = 75;
   const numStages = cycleStages.length;
   
   const angleStep = (2 * Math.PI) / numStages;
@@ -41,7 +41,7 @@ function SvgViciousCycle() {
     const controlX = midX + offsetX;
     const controlY = midY + offsetY;
     
-    const arrowSize = 10;
+    const arrowSize = 8;
     const arrowAngle = Math.atan2(to.y - controlY, to.x - controlX);
     const arrowX = to.x - arrowSize * 1.5 * Math.cos(arrowAngle);
     const arrowY = to.y - arrowSize * 1.5 * Math.sin(arrowAngle);
@@ -57,8 +57,10 @@ function SvgViciousCycle() {
     };
   };
 
+  const labelRadius = radius + 40;
+
   return (
-    <svg viewBox="0 0 350 350" className="w-full max-w-xl mx-auto">
+    <svg viewBox="0 0 300 300" className="w-full max-w-lg mx-auto">
       <defs>
         <filter id="glow">
           <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
@@ -69,23 +71,11 @@ function SvgViciousCycle() {
         </filter>
       </defs>
 
-      {/* Subtle circular guide */}
-      <circle
-        cx={centerX}
-        cy={centerY}
-        r={radius}
-        fill="none"
-        stroke="#e0e7ff"
-        strokeWidth="1"
-        strokeDasharray="4,6"
-        opacity="0.4"
-      />
-
       {/* Center icon with subtle glow */}
-      <g transform={`translate(${centerX - 18}, ${centerY - 18})`}>
-        <circle cx="18" cy="18" r="18" fill="#f5f3ff" opacity="0.9" />
-        <circle cx="18" cy="18" r="16" fill="none" stroke="#8b5cf6" strokeWidth="1.5" opacity="0.3" />
-        <text x="18" y="24" textAnchor="middle" fontSize="22" fill="#6366f1" fontWeight="600">↻</text>
+      <g transform={`translate(${centerX - 16}, ${centerY - 16})`}>
+        <circle cx="16" cy="16" r="16" fill="#f5f3ff" opacity="0.9" />
+        <circle cx="16" cy="16" r="14" fill="none" stroke="#8b5cf6" strokeWidth="1.5" opacity="0.3" />
+        <text x="16" y="21" textAnchor="middle" fontSize="20" fill="#6366f1" fontWeight="600">↻</text>
       </g>
 
       {/* Arrow paths and heads */}
@@ -114,7 +104,6 @@ function SvgViciousCycle() {
 
       {/* Stage labels with clean styling */}
       {stagePositions.map((stage, i) => {
-        const labelRadius = radius + 50;
         const labelAngle = startAngle + i * angleStep;
         const labelX = centerX + labelRadius * Math.cos(labelAngle);
         const labelY = centerY + labelRadius * Math.sin(labelAngle);
@@ -122,11 +111,11 @@ function SvgViciousCycle() {
         return (
           <g key={`label-${stage.id}`}>
             <rect
-              x={labelX - 55}
-              y={labelY - 14}
-              width="110"
-              height="28"
-              rx="14"
+              x={labelX - 50}
+              y={labelY - 12}
+              width="100"
+              height="24"
+              rx="12"
               fill="white"
               opacity="0.95"
               stroke={stage.color}
@@ -134,9 +123,9 @@ function SvgViciousCycle() {
             />
             <text
               x={labelX}
-              y={labelY + 4}
+              y={labelY + 3}
               textAnchor="middle"
-              fontSize="11"
+              fontSize="10"
               fontWeight="600"
               fill={stage.color}
             >
@@ -145,6 +134,18 @@ function SvgViciousCycle() {
           </g>
         );
       })}
+
+      {/* Dashed circular guideline through label boxes - drawn last to appear on top */}
+      <circle
+        cx={centerX}
+        cy={centerY}
+        r={labelRadius}
+        fill="none"
+        stroke="#8b5cf6"
+        strokeWidth="2"
+        strokeDasharray="6,8"
+        opacity="0.4"
+      />
     </svg>
   );
 }
