@@ -1,4 +1,4 @@
-import { Sparkles, Quote } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { useParallax } from "@/hooks/useParallax";
 
 export default function VisionSection() {
@@ -32,10 +32,6 @@ export default function VisionSection() {
 
         {/* Vision Statement - Transformed into impactful quote centerpiece */}
         <div ref={visionParallax.ref} style={visionParallax.style} className="relative max-w-5xl mx-auto mt-24">
-          <div className="absolute -top-6 -left-4 md:-left-8">
-            <Quote className="w-16 h-16 md:w-20 md:h-20 text-primary/20" />
-          </div>
-          
           <div className="bg-gradient-to-br from-card/60 to-card/40 backdrop-blur-md rounded-3xl p-10 md:p-14 border border-border/50">
             <p className="text-2xl md:text-3xl text-foreground leading-relaxed font-medium" style={{ letterSpacing: '-0.01em' }}>
               A world where every aged care leader has an{" "}
