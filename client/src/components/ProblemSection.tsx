@@ -215,7 +215,7 @@ export default function ProblemSection() {
   const diagramParallax = useParallax({ speed: 0.15 });
 
   return (
-    <section id="the-problem" className="min-h-screen bg-corporate-gradient px-6 py-32">
+    <section id="problem" className="min-h-screen bg-corporate-gradient px-6 py-32">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div ref={headerParallax.ref} style={headerParallax.style} className="text-center mb-16">
