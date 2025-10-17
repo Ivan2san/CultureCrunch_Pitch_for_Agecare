@@ -54,8 +54,8 @@ export default function GenosEIDiagram() {
           6 Core Emotional Intelligence Skills
         </h3>
         <p className="text-base text-muted-foreground max-w-2xl mx-auto" data-testid="text-genos-description">
-          Ben Palmer's Genos framework measures the emotional intelligence capabilities 
-          that drive wellbeing and performance—validating our AI-powered culture insights
+          The Genos framework is the core methodology powering our 6-week sprint—measuring the emotional intelligence 
+          capabilities that drive team wellbeing, performance, and culture transformation
         </p>
       </div>
 
