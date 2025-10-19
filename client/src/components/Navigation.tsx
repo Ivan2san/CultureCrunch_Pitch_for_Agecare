@@ -9,11 +9,12 @@ const sections = [
   { id: "solution", label: "Solution" },
   { id: "how-it-works", label: "How It Works" },
   { id: "roi", label: "ROI Calculator" },
-  { id: "positioning", label: "Positioning" },
-  { id: "roadmap", label: "Roadmap" },
-  { id: "team", label: "The Team" },
-  { id: "advisors", label: "Advisors" },
-  { id: "ask", label: "The Ask" },
+  // Temporarily hidden sections - focusing on Vision to ROI Calculator narrative
+  // { id: "positioning", label: "Positioning" },
+  // { id: "roadmap", label: "Roadmap" },
+  // { id: "team", label: "The Team" },
+  // { id: "advisors", label: "Advisors" },
+  // { id: "ask", label: "The Ask" },
 ];
 
 export default function Navigation() {

@@ -7,11 +7,6 @@ import ProductFlowSection from "@/components/ProductFlowSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import ResponsiveShowcase from "@/components/ResponsiveShowcase";
 import ROICalculator from "@/components/ROICalculator";
-import PositioningSection from "@/components/PositioningSection";
-import RoadmapSection from "@/components/RoadmapSection";
-import TeamSection from "@/components/TeamSection";
-import AdvisorsSection from "@/components/AdvisorsSection";
-import TheAskSection from "@/components/TheAskSection";
 
 export default function Home() {
   return (
@@ -25,11 +20,12 @@ export default function Home() {
       <HowItWorksSection />
       <ResponsiveShowcase />
       <ROICalculator />
-      <PositioningSection />
-      <RoadmapSection />
-      <TeamSection />
-      <AdvisorsSection />
-      <TheAskSection />
+      {/* Temporarily hidden sections - focusing on Vision to ROI Calculator narrative */}
+      {/* <PositioningSection /> */}
+      {/* <RoadmapSection /> */}
+      {/* <TeamSection /> */}
+      {/* <AdvisorsSection /> */}
+      {/* <TheAskSection /> */}
     </div>
   );
 }
