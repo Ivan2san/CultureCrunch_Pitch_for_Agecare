@@ -1,4 +1,5 @@
 import { Scale, HeartCrack, BrainCircuit, ArrowRight } from "lucide-react";
+import { useParallax } from "@/hooks/useParallax";
 
 type Force = {
   id: "reg" | "burnout" | "ai";
@@ -67,10 +68,13 @@ const bulletColors = {
 };
 
 export default function WhyNowSection() {
+  const headerParallax = useParallax({ speed: -0.08 });
+  const cardsParallax = useParallax({ speed: 0.05 });
+
   return (
     <section id="why-now" className="relative isolate bg-corporate-gradient px-6 py-32 flex-wrap">
       {/* Heading */}
-      <div className="mx-auto max-w-7xl text-center mb-16">
+      <div ref={headerParallax.ref} style={headerParallax.style} className="mx-auto max-w-7xl text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16" style={{ letterSpacing: '-0.01em' }}>
           WHY NOW: <span className="text-indigo-600">Three forces converge</span>
         </h2>
@@ -81,7 +85,7 @@ export default function WhyNowSection() {
       </div>
 
       {/* Desktop: 3 lanes -> convergence bar */}
-      <div className="mx-auto mt-14 hidden max-w-7xl lg:grid lg:grid-cols-12 lg:gap-6 lg:items-stretch">
+      <div ref={cardsParallax.ref} style={cardsParallax.style} className="mx-auto mt-14 hidden max-w-7xl lg:grid lg:grid-cols-12 lg:gap-6 lg:items-stretch">
         {FORCES.map((f, i) => {
           const Icon = f.icon;
           return (

@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/select";
 import { Smartphone, Tablet, Monitor, Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { useParallax } from "@/hooks/useParallax";
 
 interface Device {
   id: string;
@@ -46,6 +47,8 @@ const responsiveFeatures = [
 
 export default function ResponsiveShowcase() {
   const [selectedDevice, setSelectedDevice] = useState<Device>(devices[0]);
+  const headerParallax = useParallax({ speed: -0.1 });
+  const deviceParallax = useParallax({ speed: 0.08 });
 
   const handleDeviceChange = (deviceId: string) => {
     const device = devices.find(d => d.id === deviceId);
@@ -64,7 +67,7 @@ export default function ResponsiveShowcase() {
   return (
     <div id="responsive" className="py-20 px-6 bg-gradient-to-b from-muted/20 to-background">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+        <div ref={headerParallax.ref} style={headerParallax.style} className="text-center mb-12">
           <Badge variant="outline" className="mb-4" data-testid="badge-responsive-section">
             Responsive Design
           </Badge>
@@ -93,7 +96,7 @@ export default function ResponsiveShowcase() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="flex justify-center">
+          <div ref={deviceParallax.ref} style={deviceParallax.style} className="flex justify-center">
             <Card 
               className="relative overflow-hidden bg-gray-900 shadow-2xl p-3"
               style={{

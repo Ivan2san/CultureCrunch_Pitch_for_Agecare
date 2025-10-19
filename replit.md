@@ -15,6 +15,7 @@ Preferred communication style: Simple, everyday language.
 - Current flow focuses on Vision → Problem → Why Now → Solution → Product Flow → How It Works → Device Showcase → ROI Calculator
 - Removed LeaderDashboardDemo and GenosEIDiagram components to simplify user journey
 - Added expandable details to "Team Check In Conversations" step with four bullet points emphasizing clarity, recognition, balance, and trust-building
+- Implemented subtle parallax scrolling effects across Vision, Problem, Why Now, Solution, How It Works, Responsive Showcase, and ROI sections with gentle speeds (±0.05-0.1) on decorative elements only to maintain interactive content functionality
 
 **October 17, 2025**: Added Advisors section featuring strategic advisors (Ben Palmer - CEO of Genos International, Gourab Rout - Enterprise Architect, and placeholder for Psychosocial Safety specialist). Section follows Team structure with purple-themed cards positioned between Team and Ask sections.
 
