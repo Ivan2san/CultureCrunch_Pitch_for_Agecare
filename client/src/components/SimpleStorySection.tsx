@@ -39,7 +39,7 @@ export default function SimpleStorySection() {
     },
     {
       number: 3,
-      title: "Team Accountability Conversations",
+      title: "Team Check In Conversations",
       subtitle: "Workshop with Leader",
       time: "20 min",
       icon: Users2,
