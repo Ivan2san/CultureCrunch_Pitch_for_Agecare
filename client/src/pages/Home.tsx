@@ -5,7 +5,6 @@ import WhyNowSection from "@/components/WhyNowSection";
 import SolutionSection from "@/components/SolutionSection";
 import ProductFlowSection from "@/components/ProductFlowSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
-import ResponsiveShowcase from "@/components/ResponsiveShowcase";
 import ROICalculator from "@/components/ROICalculator";
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
       <SolutionSection />
       <ProductFlowSection />
       <HowItWorksSection />
-      <ResponsiveShowcase />
       <ROICalculator />
       {/* Temporarily hidden sections - focusing on Vision to ROI Calculator narrative */}
       {/* <PositioningSection /> */}
