@@ -15,9 +15,9 @@ const loopSteps = [
   },
   {
     icon: MessageSquare,
-    title: "OORA Conversation",
+    title: "Accountability Conversation",
     subtitle: "20 minutes",
-    description: "Run one OORA, pick one micro-practice (e.g., kill two meetings, 5-min recognition).",
+    description: "Run one Accountability Conversation, pick one micro-practice (e.g., kill two meetings, 5-min recognition).",
     color: "indigo"
   },
   {

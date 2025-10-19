@@ -75,7 +75,7 @@ export default function SolutionSection() {
         <div className="mb-20">
           <Card className="p-8 md:p-12 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-950/20 dark:to-indigo-950/20 border-2 border-purple-200 dark:border-purple-800">
             <p className="text-2xl md:text-3xl font-semibold text-foreground text-center leading-relaxed" style={{ letterSpacing: '-0.01em' }} data-testid="text-hero-statement">
-              A lightweight weekly system that helps aged-care leaders run safer, steadier teams by focusing on one meaningful shift per week. Each Monday, leaders receive a plain-English AI Brief, run a 20-minute OORA conversation, choose one micro-action, and watch evidence build through the week.
+              A lightweight weekly system that helps aged-care leaders run safer, steadier teams by focusing on one meaningful shift per week. Each Monday, leaders receive a plain-English AI Brief, run a 20-minute Accountability Conversation, choose one micro-action, and watch evidence build through the week.
             </p>
           </Card>
         </div>
