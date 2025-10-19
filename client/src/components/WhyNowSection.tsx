@@ -205,7 +205,7 @@ export default function WhyNowSection() {
       <div className="mx-auto mt-16 max-w-7xl">
         <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-10 border-2 border-indigo-300">
           <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-3 text-center">
-            The ROI of Psychosocial Safety: Direct Impact on Profit & Productivity
+            Beyond Psychosocial Safety: The ROI of Engaged Teams
           </h3>
           <p className="text-lg md:text-xl text-muted-foreground text-center max-w-4xl mx-auto mb-8">
             Psychosocial safety isn't a "nice to have"—it's a competitive advantage. Engaged teams dramatically outperform disengaged ones:
