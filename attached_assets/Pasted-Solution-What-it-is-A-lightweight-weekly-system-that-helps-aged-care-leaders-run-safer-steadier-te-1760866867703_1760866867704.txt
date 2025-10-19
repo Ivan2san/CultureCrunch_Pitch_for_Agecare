@@ -1,0 +1,134 @@
+Solution
+
+What it is
+A lightweight weekly system that helps aged-care leaders run safer, steadier teams by focusing on one meaningful shift per week. Each Monday, leaders receive a plain-English AI Brief, run a 20-minute OORA conversation, choose one micro-action, and watch evidence build through the week. 
+
+Culture_Sprint_by_Week
+
+What changes for you
+
+Conversations become clear and accountable; actions are small and finished. 
+
+Culture_Sprint_by_Week
+
+Team rhythm improves as micro-practices remove friction and add recognition. 
+
+Culture_Sprint_by_Week
+
+A simple dashboard surfaces shifts in workload, trust and recognition. 
+
+Culture_Sprint_by_Week
+
+What you get in 6 weeks
+
+Week 1: Baselines (Triple Goal), leadership workshop, LGP360 launch, app setup, baseline pulse. 
+
+Culture_Sprint_by_Week
+
+ 
+
+Culture_Sprint_by_Week
+
+Week 2: Install the mindset for safe, accountable dialogue; dashboard finalised; optional ONA. 
+
+Culture_Sprint_by_Week
+
+ 
+
+Culture_Sprint_by_Week
+
+Week 3: First AI Brief 7 a.m. Monday; first OORA; one micro-practice; tracking on. 
+
+Culture_Sprint_by_Week
+
+ 
+
+Culture_Sprint_by_Week
+
+Week 4: Momentum; LGP360 debrief; ongoing loop; live shifts visible. 
+
+Culture_Sprint_by_Week
+
+ 
+
+Culture_Sprint_by_Week
+
+Week 5: Team Review; confirm One Big Practice; behavioural impact logged. 
+
+Culture_Sprint_by_Week
+
+ 
+
+Culture_Sprint_by_Week
+
+Week 6: Impact Report plus compliance pack aligned to WHS and Aged Care Quality Standards; transition to a 12-month sustain licence. 
+
+Culture_Sprint_by_Week
+
+ 
+
+Culture_Sprint_by_Week
+
+How it works
+The weekly rhythm (leader view)
+flowchart LR
+  B[AI Brief (Mon 7 a.m.)] --> O[OORA conversation (20 min)]
+  O --> M[Choose one micro-action]
+  M --> T[System tracks: meetings, rosters, overtime, recognition, psychosocial]
+  T --> E[Evidence visible on dashboard]
+  E -.feeds next week .-> B
+
+
+Brief lands Monday 7 a.m. with the 1–2 focus areas for the week. 
+
+Culture_Sprint_by_Week
+
+Run one OORA, pick one micro-practice (e.g., kill two meetings, 5-min recognition). 
+
+Culture_Sprint_by_Week
+
+Tracking runs in the background; leaders see live shifts during the week. 
+
+Culture_Sprint_by_Week
+
+ 
+
+Culture_Sprint_by_Week
+
+The 6-week install (org view)
+
+Foundations: Establish baselines and priorities; launch LGP360; configure the app. 
+
+Culture_Sprint_by_Week
+
+Mindset: Install accountable-conversation psychology; ready the dashboard; optional ONA. 
+
+Culture_Sprint_by_Week
+
+Skillset & Launch: Practise dialogue techniques; ship first Brief; run first loop. 
+
+Culture_Sprint_by_Week
+
+Momentum: Keep the loop; leaders complete LGP360 debriefs; dashboard shows emerging shifts. 
+
+Culture_Sprint_by_Week
+
+ 
+
+Culture_Sprint_by_Week
+
+Embed: Team Review; confirm One Big Practice; log behavioural impact. 
+
+Culture_Sprint_by_Week
+
+ 
+
+Culture_Sprint_by_Week
+
+Impact & Transition: Deliver the Impact Report and standards-aligned compliance documentation; shift to sustain. 
+
+Culture_Sprint_by_Week
+
+ 
+
+Culture_Sprint_by_Week
