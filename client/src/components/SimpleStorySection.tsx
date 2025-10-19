@@ -45,7 +45,12 @@ export default function SimpleStorySection() {
       icon: Users2,
       color: "indigo",
       summary: "Session to recommend the skillset and mindset necessary to establish accountable conversations with staff members",
-      details: [],
+      details: [
+        "Three questions that drive clarity, recognition, and balance: Do I know what's expected? Does my effort get seen? Is the workload fair?",
+        "Works in any setting - quick, practical, and human.",
+        "Builds alignment fast through honest, values-based dialogue.",
+        "Turns everyday check-ins into accountability and trust",
+      ],
     },
     {
       number: 4,
