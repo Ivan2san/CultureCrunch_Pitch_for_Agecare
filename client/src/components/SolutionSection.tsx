@@ -1,4 +1,5 @@
-import { MessageSquare, Repeat, TrendingUp, CheckCircle } from "lucide-react";
+import { useState } from "react";
+import { MessageSquare, Repeat, TrendingUp, CheckCircle, ChevronDown } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useParallax } from "@/hooks/useParallax";
@@ -55,8 +56,13 @@ const weeklyTimeline = [
 ];
 
 export default function SolutionSection() {
+  const [expandedWeek, setExpandedWeek] = useState<number | null>(null);
   const headerParallax = useParallax({ speed: -0.08 });
   const benefitsParallax = useParallax({ speed: 0.05 });
+  
+  const toggleWeek = (week: number) => {
+    setExpandedWeek(expandedWeek === week ? null : week);
+  };
   
   return (
     <section id="solution" className="min-h-screen bg-corporate-gradient px-6 py-32">
@@ -104,7 +110,7 @@ export default function SolutionSection() {
           </div>
         </div>
 
-        {/* What You Get in 6 Weeks */}
+        {/* What You Get in 6 Weeks - Accordion */}
         <div className="mb-12">
           <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center" style={{ letterSpacing: '-0.01em' }}>
             What You Get in 6 Weeks
@@ -116,36 +122,67 @@ export default function SolutionSection() {
             
             {/* Timeline items */}
             <div className="space-y-8">
-              {weeklyTimeline.map((item, index) => (
-                <div 
-                  key={index} 
-                  className={`relative flex items-center gap-6 ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
-                  data-testid={`timeline-week-${item.week}`}
-                >
-                  {/* Content */}
-                  <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                    <Card className="p-6 hover-elevate inline-block w-full md:w-auto md:max-w-md">
-                      <div className={`flex items-center gap-3 mb-3 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
-                        <Badge variant="secondary" className="font-bold">
-                          Week {item.week}
-                        </Badge>
-                      </div>
-                      <h4 className="text-xl font-bold text-foreground mb-2">{item.title}</h4>
-                      <p className="text-muted-foreground text-sm">{item.description}</p>
-                    </Card>
+              {weeklyTimeline.map((item, index) => {
+                const isExpanded = expandedWeek === item.week;
+                return (
+                  <div 
+                    key={index} 
+                    className={`relative flex items-center gap-6 ${
+                      index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                    }`}
+                    data-testid={`timeline-week-${item.week}`}
+                  >
+                    {/* Content */}
+                    <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                      <Card 
+                        className={`inline-block w-full md:w-auto md:max-w-md cursor-pointer transition-all ${
+                          isExpanded 
+                            ? 'bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-950/40 dark:to-indigo-950/40 border-2 border-purple-400 dark:border-purple-600 shadow-lg' 
+                            : 'hover-elevate'
+                        }`}
+                        onClick={() => toggleWeek(item.week)}
+                        data-testid={`timeline-card-${item.week}`}
+                      >
+                        {/* Collapsed View - Week Badge and Title */}
+                        <div className="p-6">
+                          <div className={`flex items-center justify-between gap-3 ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+                            <div className={`flex items-center gap-3 ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+                              <Badge variant={isExpanded ? "default" : "secondary"} className="font-bold">
+                                Week {item.week}
+                              </Badge>
+                              <h4 className="text-xl font-bold text-foreground">{item.title}</h4>
+                            </div>
+                            <ChevronDown 
+                              className={`w-5 h-5 text-muted-foreground transition-transform ${
+                                isExpanded ? 'rotate-180' : ''
+                              }`}
+                            />
+                          </div>
+                          
+                          {/* Expanded View - Description */}
+                          {isExpanded && (
+                            <div className="mt-4 pt-4 border-t border-purple-200 dark:border-purple-800 animate-fade-in-up">
+                              <p className="text-muted-foreground">{item.description}</p>
+                            </div>
+                          )}
+                        </div>
+                      </Card>
+                    </div>
+                    
+                    {/* Center dot */}
+                    <div className={`hidden md:flex absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full ${
+                      isExpanded 
+                        ? 'bg-gradient-to-br from-purple-600 to-indigo-600 scale-125' 
+                        : 'bg-gradient-to-br from-purple-600 to-indigo-600'
+                    } border-4 border-background items-center justify-center z-10 transition-transform`}>
+                      <CheckCircle className="w-4 h-4 text-white" />
+                    </div>
+                    
+                    {/* Spacer */}
+                    <div className="hidden md:block flex-1" />
                   </div>
-                  
-                  {/* Center dot */}
-                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 border-4 border-background items-center justify-center z-10">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                  
-                  {/* Spacer */}
-                  <div className="hidden md:block flex-1" />
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
