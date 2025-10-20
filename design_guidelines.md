@@ -34,6 +34,44 @@
 - Info: `199 89% 48%` (Cyan for informational callouts)
 
 ### Gradient Overlays
+
+**Soft Wash Radial Gradients** (Background Ambience):
+- **Purpose**: Create elegant depth and visual interest across all major sections without overwhelming content
+- **Implementation Pattern**:
+  - Absolute positioning with low z-index (background layer)
+  - Content wrapped in relative z-10 container
+  - Use `blur-3xl` for soft, diffused edges
+  - Overlap 2-3 gradient circles per section for richer depth
+  
+- **Sizing**: Large gradient blobs (600-800px width/height) for gentle color wash effect
+- **Opacity**: 25-40% opacity for noticeable but professional aesthetic
+  - Primary blobs: 30-35% opacity
+  - Secondary blobs: 20-28% opacity  
+  - Tertiary blobs: 18-25% opacity
+
+- **Color Palette**:
+  - Purple tones: `from-purple-400/35 via-purple-400/18`
+  - Pink tones: `from-pink-400/30 via-pink-400/20`
+  - Indigo tones: `from-indigo-400/32 via-indigo-400/20`
+  - Rose tones: `from-rose-400/30 via-rose-400/18`
+  - Blue tones: `from-blue-400/20 via-blue-400/10`
+
+- **Example Implementation**:
+  ```tsx
+  <section className="relative overflow-hidden">
+    {/* Gradient backgrounds - absolute positioned behind content */}
+    <div className="absolute top-20 left-10 w-[700px] h-[700px] bg-gradient-radial from-purple-400/35 via-pink-400/20 to-transparent rounded-full blur-3xl" />
+    <div className="absolute bottom-20 right-10 w-[800px] h-[800px] bg-gradient-radial from-indigo-400/30 via-purple-400/15 to-transparent rounded-full blur-3xl" />
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-pink-400/25 via-transparent to-transparent rounded-full blur-3xl" />
+    
+    {/* Content layer - relative z-10 to sit above gradients */}
+    <div className="max-w-7xl mx-auto relative z-10">
+      {/* Your content here */}
+    </div>
+  </section>
+  ```
+
+**Linear Gradients** (Specific Use Cases):
 - Hero Gradient: `linear-gradient(135deg, 250 85% 60% → 220 90% 56%)`
 - Section Dividers: `linear-gradient(90deg, 250 70% 55% → transparent)`
 - Data Visualization: Multi-step gradients using primary + secondary at varying opacity
