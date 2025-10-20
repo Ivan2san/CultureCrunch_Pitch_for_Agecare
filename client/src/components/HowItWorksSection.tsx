@@ -14,9 +14,9 @@ export default function HowItWorksSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div ref={headerParallax.ref} style={headerParallax.style} className="text-center mb-16">
-          <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8" style={{ letterSpacing: '-0.01em' }}>
             How It Works
-          </h3>
+          </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-4">
             A lightweight pulse-to-action system that builds sustainable culture change
           </p>

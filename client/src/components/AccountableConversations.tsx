@@ -127,9 +127,9 @@ export default function AccountableConversations() {
         transition={{ duration: 0.6 }}
         className="text-center mb-12"
       >
-        <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
+        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8" style={{ letterSpacing: '-0.01em' }}>
           Accountable Conversations
-        </h3>
+        </h2>
         <h4 className="text-xl md:text-2xl font-semibold text-indigo-600 mb-6">
           Building Psych Safety Through Human Dialogue
         </h4>
