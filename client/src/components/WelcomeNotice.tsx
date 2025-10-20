@@ -14,10 +14,10 @@ export default function WelcomeNotice() {
 
   return (
     <div 
-      className="relative bg-gradient-to-r from-purple-50 to-indigo-50 border-b border-purple-200"
+      className="fixed top-[73px] left-0 right-0 bg-gradient-to-r from-purple-50 to-indigo-50 border-b border-purple-200 z-40"
       data-testid="welcome-notice"
     >
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-6 py-3">
         <div className="flex items-start gap-4">
           <Info className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
           
@@ -31,7 +31,7 @@ export default function WelcomeNotice() {
             variant="ghost"
             size="icon"
             onClick={handleDismiss}
-            className="flex-shrink-0 h-8 w-8 text-purple-600 hover:text-purple-700 hover:bg-purple-100"
+            className="flex-shrink-0 h-8 w-8 text-purple-600 hover:text-purple-700 hover:bg-purple-100 no-default-hover-elevate no-default-active-elevate"
             data-testid="button-dismiss-notice"
             aria-label="Dismiss notice"
           >
