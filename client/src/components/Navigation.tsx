@@ -172,8 +172,8 @@ export default function Navigation() {
         </div>
       )}
 
-      {/* Navigation Arrows (Bottom Right) */}
-      <div className="fixed bottom-8 right-8 flex flex-col gap-2 z-40" data-testid="nav-arrows">
+      {/* Navigation Arrows (Bottom Right) - Hidden on mobile */}
+      <div className="hidden md:flex fixed bottom-8 right-8 flex-col gap-2 z-40" data-testid="nav-arrows">
         <Button
           variant="default"
           size="icon"
