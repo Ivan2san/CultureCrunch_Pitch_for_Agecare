@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { DollarSign, TrendingUp, Users, AlertTriangle, Calculator, ChevronDown, Info, FileText } from "lucide-react";
+import { DollarSign, TrendingUp, Users, AlertTriangle, Calculator, ChevronDown, Info, FileText, Download } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import MethodologyDialog from "@/components/MethodologyDialog";
 import { useParallax } from "@/hooks/useParallax";
+import { generateMarkdownFile } from "@/utils/generateMarkdown";
 
 type ProviderType = "residential" | "home_care";
 
@@ -479,6 +480,20 @@ export default function ROICalculator() {
               </div>
             </Card>
           </div>
+        </div>
+
+        {/* Subtle Download Button - Bottom Right */}
+        <div className="fixed bottom-8 right-8 z-30">
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={generateMarkdownFile}
+            className="shadow-lg bg-background/80 backdrop-blur-sm border-muted-foreground/20 hover:border-muted-foreground/40"
+            title="Download pitch as Markdown"
+            data-testid="button-download-markdown"
+          >
+            <Download className="w-4 h-4 text-muted-foreground" />
+          </Button>
         </div>
 
         {/* Methodology Dialog */}
