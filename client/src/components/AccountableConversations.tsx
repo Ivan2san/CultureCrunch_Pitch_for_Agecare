@@ -38,7 +38,7 @@ const sections = [
     content: [
       {
         label: "Ownership",
-        text: "Start with your part. Lead from integrity, not blame."
+        text: "Always ask yourself: \"What's My Part In This\", then \"Is there an unmet need in the other I can acknowledge\". Start the conversation here. Request - Be clear and specific. Be sure of understanding. Agreement - Align on clear next steps, outcomes, and shared responsibility."
       },
       {
         label: "Observation + Impact",
