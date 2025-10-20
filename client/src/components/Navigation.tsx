@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { ChevronDown, ChevronUp, Menu, X, MessageSquare, Sparkles, Download } from "lucide-react";
+import { ChevronDown, ChevronUp, Menu, X, MessageSquare, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FeedbackDialog from "@/components/FeedbackDialog";
-import { generateWhitepaperPDF } from "@/utils/generateWhitepaperPDF";
 
 const sections = [
   { id: "vision", label: "Vision" },
@@ -105,16 +104,6 @@ export default function Navigation() {
                 ))}
               </div>
               <Button
-                variant="default"
-                size="sm"
-                onClick={() => generateWhitepaperPDF()}
-                className="gap-2"
-                data-testid="button-download-whitepaper"
-              >
-                <Download className="w-4 h-4" />
-                Whitepaper
-              </Button>
-              <Button
                 variant="outline"
                 size="sm"
                 onClick={() => setFeedbackOpen(true)}
@@ -168,20 +157,8 @@ export default function Navigation() {
               </button>
             ))}
             <Button
-              variant="default"
-              className="w-full gap-2 mt-4"
-              onClick={() => {
-                generateWhitepaperPDF();
-                setMobileMenuOpen(false);
-              }}
-              data-testid="button-download-whitepaper-mobile"
-            >
-              <Download className="w-4 h-4" />
-              Download Whitepaper
-            </Button>
-            <Button
               variant="outline"
-              className="w-full gap-2 mt-2"
+              className="w-full gap-2 mt-4"
               onClick={() => {
                 setFeedbackOpen(true);
                 setMobileMenuOpen(false);
