@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { PDFGenerator } from "@/components/PDFGenerator";
 
 const sections = [
   { id: "vision", label: "Vision" },
@@ -95,10 +96,12 @@ export default function Navigation() {
                   </button>
                 ))}
               </div>
+              <PDFGenerator />
             </div>
 
             {/* Mobile Menu Button */}
             <div className="flex items-center gap-2 md:hidden">
+              <PDFGenerator />
               <Button
                 variant="ghost"
                 size="icon"
