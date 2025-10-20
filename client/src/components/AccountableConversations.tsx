@@ -68,7 +68,7 @@ const sections = [
       },
       {
         label: "The LGP 360 Framework",
-        text: "A developmental map showing how self-awareness and self-regulation transform Red Zone reactivity into Green Zone leadership. Built off 30 years of research and practice based on Neuroscience of Psychological Safety."
+        text: "A developmental map showing how self-awareness and self-regulation transform Red Zone reactivity into Green Zone leadership. Built off 30 years of research and practice."
       },
       {
         label: "Neuroscience of Safety",
