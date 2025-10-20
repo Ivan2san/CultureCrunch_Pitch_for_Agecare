@@ -71,7 +71,7 @@ const sections = [
         text: "A developmental map showing how self-awareness and self-regulation transform Red Zone reactivity into Green Zone leadership. Built off 30 years of research and practice."
       },
       {
-        label: "Neuroscience of Safety",
+        label: "Neuroscience of Psychological Safety",
         text: "Calm, connected presence opens the brain for trust and learning."
       },
       {
