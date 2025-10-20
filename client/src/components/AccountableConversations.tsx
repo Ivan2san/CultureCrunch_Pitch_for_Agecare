@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Brain, Wrench, BookOpen, Lightbulb, ChevronDown } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import SectionFeedbackButton from "@/components/SectionFeedbackButton";
 
 const sections = [
@@ -128,6 +129,9 @@ export default function AccountableConversations() {
         transition={{ duration: 0.6 }}
         className="text-center mb-12"
       >
+        <Badge variant="outline" className="mb-6" data-testid="badge-methodology">
+          Methodology
+        </Badge>
         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8" style={{ letterSpacing: '-0.01em' }}>
           Accountable Conversations
         </h2>
