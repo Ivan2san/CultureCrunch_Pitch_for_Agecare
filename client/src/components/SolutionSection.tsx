@@ -82,7 +82,7 @@ export default function SolutionSection() {
         <div className="mb-20">
           <Card className="p-8 md:p-12 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-950/20 dark:to-indigo-950/20 border-2 border-purple-200 dark:border-purple-800">
             <p className="text-2xl md:text-3xl font-semibold text-foreground text-center leading-relaxed" style={{ letterSpacing: '-0.01em' }} data-testid="text-hero-statement">
-              A lightweight weekly system that helps operational aged-care leaders run safer, more engaged teams by focusing on one meaningful shift each week. Every Monday, leaders receive a plain-English AI Brief, run a 20-minute Team Check-In, and choose one micro-action to embed. As teams act, data is securely aggregated and rolled up into organisation-level dashboards, providing clear evidence for psychosocial safety, WHS, and Aged Care Quality Standard reporting — without adding extra admin.
+              A lightweight weekly system that helps operational aged care leaders run safer, more engaged teams by focusing on one meaningful shift each week. Every Monday, leaders receive a plain-English AI Brief, run a 20-minute Team Check-In, and choose one micro-action to embed. As teams act, data is securely aggregated and rolled up into organisation-level dashboards, providing clear evidence for psychosocial safety, WHS, and Aged Care Quality Standard reporting — without adding extra admin.
             </p>
           </Card>
         </div>
