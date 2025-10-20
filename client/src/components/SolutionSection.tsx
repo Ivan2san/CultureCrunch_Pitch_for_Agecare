@@ -3,7 +3,6 @@ import { MessageSquare, Repeat, TrendingUp, CheckCircle, ChevronDown } from "luc
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useParallax } from "@/hooks/useParallax";
-import AccountableConversations from "@/components/AccountableConversations";
 
 const benefitCards = [
   {
@@ -86,9 +85,6 @@ export default function SolutionSection() {
             </p>
           </Card>
         </div>
-
-        {/* Accountable Conversations */}
-        <AccountableConversations />
 
         {/* What Changes For You */}
         <div ref={benefitsParallax.ref} style={benefitsParallax.style} className="mb-20">
