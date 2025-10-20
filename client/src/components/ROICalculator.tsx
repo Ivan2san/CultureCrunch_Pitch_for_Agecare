@@ -256,10 +256,10 @@ export default function ROICalculator() {
                   <p className="text-xs text-muted-foreground mt-1">$3,500 per employee</p>
                 </div>
 
-                <div className="bg-purple-600 p-4 rounded-lg text-white md:col-span-2" data-testid="cost-total">
-                  <p className="text-sm mb-1">TOTAL ANNUAL COST</p>
-                  <p className="text-3xl font-bold">{formatCurrency(totalAnnualCost)}</p>
-                  <p className="text-xs mt-1 opacity-90">Status quo impact</p>
+                <div className="bg-purple-100 p-4 rounded-lg border-2 border-purple-300 md:col-span-2" data-testid="cost-total">
+                  <p className="text-sm mb-1 text-purple-800 font-semibold">TOTAL ANNUAL COST</p>
+                  <p className="text-3xl font-bold text-purple-900">{formatCurrency(totalAnnualCost)}</p>
+                  <p className="text-xs mt-1 text-purple-700">Status quo impact</p>
                 </div>
               </div>
             </Card>
@@ -292,37 +292,37 @@ export default function ROICalculator() {
                   <p className="text-2xl font-bold text-indigo-700">{formatCurrency(absenteeismSavings)}</p>
                 </div>
 
-                <div className="bg-indigo-600 p-4 rounded-lg text-white md:col-span-2">
-                  <p className="text-sm mb-1">TOTAL ANNUAL SAVINGS</p>
-                  <p className="text-3xl font-bold">{formatCurrency(totalAnnualSavings)}</p>
+                <div className="bg-indigo-100 p-4 rounded-lg border-2 border-indigo-300 md:col-span-2">
+                  <p className="text-sm mb-1 text-indigo-800 font-semibold">TOTAL ANNUAL SAVINGS</p>
+                  <p className="text-3xl font-bold text-indigo-900">{formatCurrency(totalAnnualSavings)}</p>
                 </div>
               </div>
             </Card>
 
             {/* ROI Summary */}
-            <Card className="p-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-              <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <Card className="p-6 bg-gradient-to-r from-purple-100 to-indigo-100 border-2 border-purple-300">
+              <h3 className="text-2xl font-bold mb-4 flex items-center gap-2 text-purple-900">
                 <DollarSign className="w-6 h-6" />
                 Your ROI with CultureCrunch
               </h3>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <div className="text-center sm:text-left">
-                  <p className="text-sm opacity-90 mb-1">Annual Investment</p>
-                  <p className="text-3xl font-bold">{formatCurrency(annualSubscriptionCost)}</p>
-                  <p className="text-xs opacity-75 mt-1">Founding partner rate</p>
+                  <p className="text-sm mb-1 text-purple-800 font-semibold">Annual Investment</p>
+                  <p className="text-3xl font-bold text-purple-900">{formatCurrency(annualSubscriptionCost)}</p>
+                  <p className="text-xs mt-1 text-purple-700">Founding partner rate</p>
                 </div>
 
                 <div className="text-center sm:text-left">
-                  <p className="text-sm opacity-90 mb-1">Net Annual ROI</p>
-                  <p className="text-3xl font-bold">{formatCurrency(netAnnualROI)}</p>
-                  <p className="text-xs opacity-75 mt-1">Savings minus investment</p>
+                  <p className="text-sm mb-1 text-indigo-800 font-semibold">Net Annual ROI</p>
+                  <p className="text-3xl font-bold text-indigo-900">{formatCurrency(netAnnualROI)}</p>
+                  <p className="text-xs mt-1 text-indigo-700">Savings minus investment</p>
                 </div>
 
                 <div className="text-center sm:text-left">
-                  <p className="text-sm opacity-90 mb-1">ROI Multiple</p>
-                  <p className="text-3xl font-bold">{roiMultiple}x</p>
-                  <p className="text-xs opacity-75 mt-1">Return on investment</p>
+                  <p className="text-sm mb-1 text-purple-800 font-semibold">ROI Multiple</p>
+                  <p className="text-3xl font-bold text-purple-900">{roiMultiple}x</p>
+                  <p className="text-xs mt-1 text-purple-700">Return on investment</p>
                 </div>
               </div>
             </Card>
