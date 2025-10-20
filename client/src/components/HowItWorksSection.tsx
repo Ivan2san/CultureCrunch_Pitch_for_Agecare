@@ -11,8 +11,12 @@ export default function HowItWorksSection() {
   const [showWeekly, setShowWeekly] = useState(false);
 
   return (
-    <section id="how-it-works" className="min-h-screen bg-corporate-gradient px-6 py-32">
-      <div className="max-w-7xl mx-auto">
+    <section id="how-it-works" className="min-h-screen bg-corporate-gradient px-6 py-32 relative overflow-hidden">
+      {/* Decorative gradient backgrounds */}
+      <div className="absolute top-10 left-20 w-96 h-96 bg-gradient-radial from-indigo-300/18 via-purple-300/10 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-10 right-20 w-[450px] h-[450px] bg-gradient-radial from-pink-300/15 via-indigo-300/10 to-transparent rounded-full blur-3xl" />
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div ref={headerParallax.ref} style={headerParallax.style} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8" style={{ letterSpacing: '-0.01em' }}>
