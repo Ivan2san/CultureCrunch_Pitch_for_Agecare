@@ -7,7 +7,7 @@ const sections = [
   {
     id: "mindset",
     icon: Brain,
-    title: "The Mindset: Presence Before Performance",
+    title: "The Mindset: Installing the Right Mindset for Accountable Conversations",
     intro: "Every accountable conversation begins with intention—not correction. Leaders pause to self-regulate, check their motives, and centre on values before they speak.",
     content: [
       {
