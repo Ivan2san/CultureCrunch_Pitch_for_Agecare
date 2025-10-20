@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import WelcomeNotice from "@/components/WelcomeNotice";
 import VisionSection from "@/components/VisionSection";
 import ProblemSection from "@/components/ProblemSection";
 import WhyNowSection from "@/components/WhyNowSection";
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Navigation />
+      <WelcomeNotice />
       <VisionSection />
       <ProblemSection />
       <WhyNowSection />
