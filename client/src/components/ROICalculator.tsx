@@ -482,8 +482,8 @@ export default function ROICalculator() {
           </div>
         </div>
 
-        {/* Subtle Download Button - Bottom Right of Calculator */}
-        <div className="absolute bottom-8 right-8">
+        {/* Subtle Download Button - Bottom Middle of Calculator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
           <Button
             variant="outline"
             size="icon"
