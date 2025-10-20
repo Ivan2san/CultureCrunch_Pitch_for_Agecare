@@ -9,7 +9,7 @@ const sections = [
   { id: "why-now", label: "Why Now" },
   { id: "solution", label: "Solution" },
   { id: "how-it-works", label: "How It Works" },
-  { id: "accountable-conversations", label: "Accountable Conversations" },
+  { id: "accountable-conversations", label: "Methodology" },
   { id: "roi", label: "ROI Calculator" },
   // Temporarily hidden sections - focusing on Vision to ROI Calculator narrative
   // { id: "positioning", label: "Positioning" },
