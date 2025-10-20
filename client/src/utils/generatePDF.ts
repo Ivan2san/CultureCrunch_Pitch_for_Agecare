@@ -11,33 +11,56 @@
  */
 
 export function generatePitchPDF() {
-  // Find and hide the ROI calculator section (id="roi")
-  const roiSection = document.querySelector('section#roi') as HTMLElement;
+  console.log('🖨️ PDF Generation started...');
   
-  // Find and hide navigation buttons that link to ROI calculator
-  const navButtons = document.querySelectorAll('button[data-testid="nav-link-roi"], button[data-testid="mobile-nav-link-roi"]');
-  
-  if (roiSection) {
-    roiSection.style.display = 'none';
-  }
-  
-  // Hide navigation buttons
-  navButtons.forEach(button => {
-    const element = button as HTMLElement;
-    element.style.display = 'none';
-  });
-  
-  // Trigger print dialog
-  window.print();
-  
-  // Restore visibility after print dialog closes
-  setTimeout(() => {
+  try {
+    // Find and hide the ROI calculator section (id="roi")
+    const roiSection = document.querySelector('section#roi') as HTMLElement;
+    console.log('ROI Section found:', !!roiSection);
+    
+    // Find and hide navigation buttons that link to ROI calculator
+    const navButtons = document.querySelectorAll('button[data-testid="nav-link-roi"], button[data-testid="mobile-nav-link-roi"]');
+    console.log('Navigation buttons found:', navButtons.length);
+    
+    // Hide ROI section if found
     if (roiSection) {
-      roiSection.style.display = '';
+      roiSection.style.display = 'none';
+      console.log('✅ ROI section hidden');
+    } else {
+      console.warn('⚠️ ROI section not found - it may already be hidden or have a different ID');
     }
+    
+    // Hide navigation buttons
     navButtons.forEach(button => {
       const element = button as HTMLElement;
-      element.style.display = '';
+      element.style.display = 'none';
     });
-  }, 1000);
+    
+    if (navButtons.length > 0) {
+      console.log('✅ Navigation buttons hidden');
+    }
+    
+    console.log('🖨️ Opening print dialog...');
+    
+    // Trigger print dialog
+    window.print();
+    
+    console.log('✅ Print dialog triggered');
+    
+    // Restore visibility after print dialog closes
+    setTimeout(() => {
+      if (roiSection) {
+        roiSection.style.display = '';
+      }
+      navButtons.forEach(button => {
+        const element = button as HTMLElement;
+        element.style.display = '';
+      });
+      console.log('✅ Visibility restored');
+    }, 1000);
+    
+  } catch (error) {
+    console.error('❌ Error generating PDF:', error);
+    throw error;
+  }
 }
