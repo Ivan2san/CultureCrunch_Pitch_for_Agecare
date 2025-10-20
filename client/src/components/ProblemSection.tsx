@@ -281,8 +281,9 @@ export default function ProblemSection() {
   return (
     <section id="problem" className="min-h-screen bg-corporate-gradient px-6 py-32 relative overflow-hidden">
       {/* Decorative gradient backgrounds */}
-      <div className="absolute top-40 right-20 w-[400px] h-[400px] bg-gradient-radial from-rose-300/15 via-pink-300/10 to-transparent rounded-full blur-3xl" />
-      <div className="absolute bottom-40 left-20 w-96 h-96 bg-gradient-radial from-purple-300/20 via-indigo-300/10 to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-40 right-20 w-[700px] h-[700px] bg-gradient-radial from-rose-400/30 via-pink-400/18 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-40 left-20 w-[750px] h-[750px] bg-gradient-radial from-purple-400/35 via-indigo-400/20 to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-purple-400/25 via-transparent to-transparent rounded-full blur-3xl" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}

@@ -75,8 +75,9 @@ export default function WhyNowSection() {
   return (
     <section id="why-now" className="relative isolate bg-corporate-gradient px-6 py-32 flex-wrap overflow-hidden">
       {/* Decorative gradient backgrounds */}
-      <div className="absolute top-10 left-10 w-[450px] h-[450px] bg-gradient-radial from-indigo-300/20 via-blue-300/10 to-transparent rounded-full blur-3xl" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-radial from-purple-300/15 via-pink-300/10 to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-10 left-10 w-[750px] h-[750px] bg-gradient-radial from-indigo-400/35 via-blue-400/20 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-10 right-10 w-[700px] h-[700px] bg-gradient-radial from-purple-400/30 via-pink-400/18 to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-1/2 right-1/4 w-[650px] h-[650px] bg-gradient-radial from-indigo-400/28 via-transparent to-transparent rounded-full blur-3xl" />
       
       {/* Heading */}
       <div ref={headerParallax.ref} style={headerParallax.style} className="mx-auto max-w-7xl text-center mb-16 relative z-10">

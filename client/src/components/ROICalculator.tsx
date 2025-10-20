@@ -91,8 +91,9 @@ export default function ROICalculator() {
   return (
     <section id="roi" className="min-h-screen bg-corporate-gradient px-6 py-32 relative overflow-hidden">
       {/* Decorative gradient backgrounds */}
-      <div className="absolute top-20 right-10 w-96 h-96 bg-gradient-radial from-purple-300/20 via-pink-300/12 to-transparent rounded-full blur-3xl" />
-      <div className="absolute bottom-40 left-10 w-[450px] h-[450px] bg-gradient-radial from-indigo-300/15 via-purple-300/10 to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-20 right-10 w-[750px] h-[750px] bg-gradient-radial from-purple-400/35 via-pink-400/20 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-40 left-10 w-[800px] h-[800px] bg-gradient-radial from-indigo-400/32 via-purple-400/18 to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-1/3 right-1/4 w-[650px] h-[650px] bg-gradient-radial from-pink-400/28 via-transparent to-transparent rounded-full blur-3xl" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div ref={headerParallax.ref} style={headerParallax.style} className="text-center mb-12">

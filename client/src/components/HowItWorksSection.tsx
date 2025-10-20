@@ -13,8 +13,9 @@ export default function HowItWorksSection() {
   return (
     <section id="how-it-works" className="min-h-screen bg-corporate-gradient px-6 py-32 relative overflow-hidden">
       {/* Decorative gradient backgrounds */}
-      <div className="absolute top-10 left-20 w-96 h-96 bg-gradient-radial from-indigo-300/18 via-purple-300/10 to-transparent rounded-full blur-3xl" />
-      <div className="absolute bottom-10 right-20 w-[450px] h-[450px] bg-gradient-radial from-pink-300/15 via-indigo-300/10 to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-10 left-20 w-[700px] h-[700px] bg-gradient-radial from-indigo-400/32 via-purple-400/18 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-10 right-20 w-[750px] h-[750px] bg-gradient-radial from-pink-400/28 via-indigo-400/16 to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-purple-400/30 via-transparent to-transparent rounded-full blur-3xl" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
