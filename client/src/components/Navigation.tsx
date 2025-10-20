@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ChevronDown, ChevronUp, Menu, X, MessageSquare } from "lucide-react";
+import { ChevronDown, ChevronUp, Menu, X, MessageSquare, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FeedbackDialog from "@/components/FeedbackDialog";
 
@@ -75,8 +75,14 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div>
-              <span className="font-bold text-xl text-foreground">CultureCrunch</span>
+            <div className="flex items-center gap-2">
+              <div className="relative">
+                <Sparkles className="w-6 h-6 text-purple-600" />
+                <div className="absolute inset-0 bg-purple-600/20 blur-md rounded-full" />
+              </div>
+              <span className="font-bold text-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-700 bg-clip-text text-transparent" style={{ letterSpacing: '-0.02em' }}>
+                CultureCrunch
+              </span>
             </div>
 
             {/* Desktop Navigation */}
