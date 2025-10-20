@@ -467,9 +467,9 @@ export default function ROICalculator() {
 
             {/* Full Methodology Button */}
             <Card className="p-6 bg-gradient-to-r from-indigo-50 to-purple-50 border-2 border-indigo-200 mt-6">
-              <div className="flex items-center justify-between gap-4 flex-wrap">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <FileText className="w-6 h-6 text-indigo-600" />
+                  <FileText className="w-6 h-6 text-indigo-600 flex-shrink-0" />
                   <div>
                     <h4 className="font-bold text-foreground">Complete Research Documentation</h4>
                     <p className="text-sm text-muted-foreground">View full methodology with all sources and citations</p>
@@ -477,11 +477,12 @@ export default function ROICalculator() {
                 </div>
                 <Button
                   onClick={() => setShowFullMethodology(true)}
-                  className="bg-indigo-600 hover:bg-indigo-700"
+                  className="bg-indigo-600 hover:bg-indigo-700 w-full md:w-auto flex-shrink-0"
                   data-testid="button-view-full-methodology"
                 >
                   <FileText className="w-4 h-4 mr-2" />
-                  View Full Methodology & Sources
+                  <span className="hidden sm:inline">View Full Methodology & Sources</span>
+                  <span className="sm:hidden">View Methodology</span>
                 </Button>
               </div>
             </Card>
