@@ -35,7 +35,7 @@ const weeklyTimeline = [
   },
   {
     week: 3,
-    title: "Skill Installation + First Sprint",
+    title: "Skillset Installation + First Sprint",
     description: "First AI Brief 7 a.m. Monday; first Team Check-In; one micro-practice; tracking on."
   },
   {

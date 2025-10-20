@@ -31,7 +31,7 @@ export default function WeekByWeekTimeline() {
     },
     {
       number: 3,
-      title: "Skill Installation + First Sprint",
+      title: "Skillset Installation + First Sprint",
       subtitle: "Skillset in Action",
       icon: Rocket,
       description: "First AI Leader Brief lands Monday 7 a.m. Leaders run their first Team Check-In and pick a single micro-practice. The system tracks meeting load, rosters, overtime, recognition and psychosocial signals through the week.",

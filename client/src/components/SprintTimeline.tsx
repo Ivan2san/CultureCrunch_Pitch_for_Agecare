@@ -45,7 +45,7 @@ export default function SprintTimeline() {
     {
       id: "week3",
       weeks: "Week 3",
-      title: "Skill Installation + First Sprint",
+      title: "Skillset Installation + First Sprint",
       icon: Rocket,
       color: "purple",
       summary: "First AI-powered sprint cycle begins",
