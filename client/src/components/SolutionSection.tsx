@@ -31,12 +31,12 @@ const weeklyTimeline = [
   {
     week: 2,
     title: "Mindset Installation",
-    description: "Install the mindset for safe, accountable dialogue; dashboard finalised; optional ONA."
+    description: "Install the mindset for safe, accountable dialogue; dashboard finalised; optional Organisational Network Analysis."
   },
   {
     week: 3,
-    title: "First Sprint",
-    description: "First AI Brief 7 a.m. Monday; first Accountability Conversation; one micro-practice; tracking on."
+    title: "Skill Installation + First Sprint",
+    description: "First AI Brief 7 a.m. Monday; first Team Check-In; one micro-practice; tracking on."
   },
   {
     week: 4,
@@ -81,7 +81,7 @@ export default function SolutionSection() {
         <div className="mb-20">
           <Card className="p-8 md:p-12 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-950/20 dark:to-indigo-950/20 border-2 border-purple-200 dark:border-purple-800">
             <p className="text-2xl md:text-3xl font-semibold text-foreground text-center leading-relaxed" style={{ letterSpacing: '-0.01em' }} data-testid="text-hero-statement">
-              A lightweight weekly system that helps aged-care leaders run safer, steadier teams by focusing on one meaningful shift per week. Each Monday, leaders receive a plain-English AI Brief, run a 20-minute Accountability Conversation, choose one micro-action, and watch evidence build through the week.
+              A lightweight weekly system that helps aged-care operations leaders run safer, more engaged teams by focusing on one meaningful shift per week. Each Monday, leaders receive a plain-English AI Brief, run a 20-minute Team Check-In, choose one micro-action, and watch evidence build through the week.
             </p>
           </Card>
         </div>

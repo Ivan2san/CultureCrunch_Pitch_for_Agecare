@@ -26,15 +26,15 @@ export default function WeekByWeekTimeline() {
       title: "Mindset Installation",
       subtitle: "Accountable Conversations",
       icon: Brain,
-      description: "Leaders build the inner foundations for safe, accountable dialogue using the Alteva model: intention, empathy and self-regulation. Dashboard is finalised; optional ONA maps trust and inclusion patterns.",
+      description: "Leaders build the inner foundations for safe, accountable dialogue using the Alteva model: intention, empathy and self-regulation. Dashboard is finalised; optional Organisational Network Analysis maps trust and inclusion patterns.",
       color: "purple"
     },
     {
       number: 3,
-      title: "Sprint Launch",
+      title: "Skill Installation + First Sprint",
       subtitle: "Skillset in Action",
       icon: Rocket,
-      description: "First AI Leader Brief lands Monday 7 a.m. Leaders run their first Accountability Conversation and pick a single micro-practice. The system tracks meeting load, rosters, overtime, recognition and psychosocial signals through the week.",
+      description: "First AI Leader Brief lands Monday 7 a.m. Leaders run their first Team Check-In and pick a single micro-practice. The system tracks meeting load, rosters, overtime, recognition and psychosocial signals through the week.",
       color: "blue"
     },
     {

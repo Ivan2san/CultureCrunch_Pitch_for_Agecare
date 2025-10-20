@@ -39,13 +39,13 @@ export default function SprintTimeline() {
         "Module 1: Accountable Conversations (Mindset) - 2.5 hours virtual instructor-led for leadership team",
         "Dashboard configured for client",
         "App tested and ready for deployment",
-        "First round of ONA conducted and fed into app (if relevant)"
+        "First round of Organisational Network Analysis conducted and fed into app (if relevant)"
       ]
     },
     {
       id: "week3",
       weeks: "Week 3",
-      title: "Sprint Launch",
+      title: "Skill Installation + First Sprint",
       icon: Rocket,
       color: "purple",
       summary: "First AI-powered sprint cycle begins",
