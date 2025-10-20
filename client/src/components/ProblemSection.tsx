@@ -279,8 +279,12 @@ export default function ProblemSection() {
   const diagramParallax = useParallax({ speed: 0.15 });
 
   return (
-    <section id="problem" className="min-h-screen bg-corporate-gradient px-6 py-32">
-      <div className="max-w-7xl mx-auto">
+    <section id="problem" className="min-h-screen bg-corporate-gradient px-6 py-32 relative overflow-hidden">
+      {/* Decorative gradient backgrounds */}
+      <div className="absolute top-40 right-20 w-[400px] h-[400px] bg-gradient-radial from-rose-300/15 via-pink-300/10 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-40 left-20 w-96 h-96 bg-gradient-radial from-purple-300/20 via-indigo-300/10 to-transparent rounded-full blur-3xl" />
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div ref={headerParallax.ref} style={headerParallax.style} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6" style={{ letterSpacing: '-0.01em' }}>
