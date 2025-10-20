@@ -134,7 +134,7 @@ export default function AccountableConversations() {
           Building Psych Safety Through Human Dialogue
         </h4>
         <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-          Accountable Conversations are how emotionally intelligent leaders turn clarity, care, and courage into action. They create alignment without blame, and connection without avoidance.
+          While the Culture Crunch system installs weekly structure and insight, Accountable Conversations build the human capability beneath it. This high-EQ leadership model trains leaders to communicate with clarity, care, and courage - creating alignment without blame, and connection without avoidance. It’s a universal conversational practice that strengthens performance, trust, and psychological safety across every level of work. It’s the backbone of the Culture Crunch system.
         </p>
       </motion.div>
 
