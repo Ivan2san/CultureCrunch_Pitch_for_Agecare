@@ -137,7 +137,7 @@ export default function AccountableConversations() {
             Accountable Conversations
           </h3>
         </div>
-        <h4 className="text-xl md:text-2xl font-semibold text-foreground mb-6">
+        <h4 className="text-xl md:text-2xl font-semibold text-indigo-600 mb-6">
           A High EQ Leadership Model for Accountable Conversations
         </h4>
         <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
@@ -160,15 +160,27 @@ export default function AccountableConversations() {
               transition={{ delay: index * 0.1, duration: 0.5 }}
             >
               <Card
-                className="overflow-visible cursor-pointer transition-all hover-elevate"
+                className={`overflow-visible cursor-pointer transition-all ${
+                  isExpanded
+                    ? 'bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-950/40 dark:to-indigo-950/40 border-2 border-purple-400 dark:border-purple-600 shadow-lg'
+                    : 'hover-elevate'
+                }`}
                 onClick={() => toggleSection(section.id)}
                 data-testid={`accountable-conversation-${section.id}`}
               >
                 <div className="p-6">
                   {/* Header */}
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-muted flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-muted-foreground" />
+                    <div className={`flex-shrink-0 w-12 h-12 rounded-full ${
+                      section.color === 'purple'
+                        ? 'bg-purple-100 dark:bg-purple-950/40'
+                        : 'bg-indigo-100 dark:bg-indigo-950/40'
+                    } flex items-center justify-center`}>
+                      <Icon className={`w-6 h-6 ${
+                        section.color === 'purple'
+                          ? 'text-purple-600 dark:text-purple-400'
+                          : 'text-indigo-600 dark:text-indigo-400'
+                      }`} />
                     </div>
                     
                     <div className="flex-1">
@@ -198,12 +210,16 @@ export default function AccountableConversations() {
                         transition={{ duration: 0.3, ease: 'easeInOut' }}
                         className="overflow-hidden"
                       >
-                        <div className="mt-6 pt-6 border-t border-border">
+                        <div className="mt-6 pt-6 border-t border-purple-200 dark:border-purple-800">
                           {section.content.length > 0 && (
                             <div className="space-y-4 mb-4">
                               {section.content.map((item, idx) => (
                                 <div key={idx} className="flex gap-3">
-                                  <div className="flex-shrink-0 w-2 h-2 rounded-full mt-2 bg-muted-foreground" />
+                                  <div className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${
+                                    section.color === 'purple'
+                                      ? 'bg-purple-600'
+                                      : 'bg-indigo-600'
+                                  }`} />
                                   <div className="flex-1">
                                     <span className="font-semibold text-foreground">{item.label}</span>
                                     <span className="text-muted-foreground"> – {item.text}</span>
