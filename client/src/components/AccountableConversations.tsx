@@ -7,7 +7,6 @@ const sections = [
   {
     id: "mindset",
     icon: Brain,
-    emoji: "🌿",
     title: "The Mindset: Presence Before Performance",
     intro: "Every accountable conversation begins with intention—not correction. Leaders pause to self-regulate, check their motives, and centre on values before they speak.",
     content: [
@@ -34,7 +33,6 @@ const sections = [
   {
     id: "skillset",
     icon: Wrench,
-    emoji: "🛠️",
     title: "The Skillset: O.O.R.A. in Action",
     intro: "A simple, high-trust structure keeps conversations clean and accountable:",
     content: [
@@ -61,7 +59,6 @@ const sections = [
   {
     id: "theory",
     icon: BookOpen,
-    emoji: "🦯",
     title: "The Theory",
     intro: "Accountable Conversations are grounded in:",
     content: [
@@ -88,7 +85,6 @@ const sections = [
   {
     id: "practice",
     icon: Lightbulb,
-    emoji: "💡",
     title: "In Practice",
     intro: "In aged care and other human-centred settings, Accountable Conversations protect dignity, restore trust, and keep people connected to purpose.",
     content: [
@@ -131,12 +127,9 @@ export default function AccountableConversations() {
         transition={{ duration: 0.6 }}
         className="text-center mb-12"
       >
-        <div className="inline-flex items-center gap-2 mb-4">
-          <span className="text-4xl">📣</span>
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground" style={{ letterSpacing: '-0.01em' }}>
-            Accountable Conversations
-          </h3>
-        </div>
+        <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4" style={{ letterSpacing: '-0.01em' }}>
+          Accountable Conversations
+        </h3>
         <h4 className="text-xl md:text-2xl font-semibold text-indigo-600 mb-6">
           A High EQ Leadership Model for Accountable Conversations
         </h4>
@@ -184,12 +177,9 @@ export default function AccountableConversations() {
                     </div>
                     
                     <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-2xl">{section.emoji}</span>
-                        <h5 className="text-lg md:text-xl font-bold text-foreground">
-                          {section.title}
-                        </h5>
-                      </div>
+                      <h5 className="text-lg md:text-xl font-bold text-foreground mb-2">
+                        {section.title}
+                      </h5>
                       <p className="text-muted-foreground">{section.intro}</p>
                     </div>
 
