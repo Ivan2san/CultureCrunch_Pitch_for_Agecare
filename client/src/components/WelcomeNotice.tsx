@@ -1,16 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { X, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function WelcomeNotice() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const hasVisited = localStorage.getItem("culturecrunch-visited");
-    if (!hasVisited) {
-      setIsVisible(true);
-    }
-  }, []);
+  const [isVisible, setIsVisible] = useState(true);
 
   const handleDismiss = () => {
     localStorage.setItem("culturecrunch-visited", "true");
