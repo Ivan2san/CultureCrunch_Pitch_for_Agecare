@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Brain, Wrench, BookOpen, Lightbulb, ChevronDown } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import SectionFeedbackButton from "@/components/SectionFeedbackButton";
 
 const sections = [
   {
@@ -234,6 +235,7 @@ export default function AccountableConversations() {
           );
         })}
       </div>
+      <SectionFeedbackButton />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { ArrowRight, AlertTriangle, RotateCw, TrendingDown, DollarSign, Shield, PackageX } from "lucide-react";
 import { useParallax } from "@/hooks/useParallax";
+import SectionFeedbackButton from "@/components/SectionFeedbackButton";
 
 const cycleStages = [
   { id: 1, label: "High Turnover", color: "#6366f1" },
@@ -408,6 +409,7 @@ export default function ProblemSection() {
             </div>
           </div>
         </Card>
+        <SectionFeedbackButton />
       </div>
     </section>
   );

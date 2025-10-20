@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import MethodologyDialog from "@/components/MethodologyDialog";
 import { useParallax } from "@/hooks/useParallax";
 import { generateMarkdownFile } from "@/utils/generateMarkdown";
+import SectionFeedbackButton from "@/components/SectionFeedbackButton";
 
 type ProviderType = "residential" | "home_care";
 
@@ -495,6 +496,9 @@ export default function ROICalculator() {
             <Download className="w-4 h-4 text-muted-foreground" />
           </Button>
         </div>
+
+        {/* Section Feedback */}
+        <SectionFeedbackButton />
 
         {/* Methodology Dialog */}
         <MethodologyDialog 

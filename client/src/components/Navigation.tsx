@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
+import { ChevronDown, ChevronUp, Menu, X, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import FeedbackDialog from "@/components/FeedbackDialog";
 
 const sections = [
   { id: "vision", label: "Vision" },
@@ -21,6 +22,7 @@ const sections = [
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState("vision");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [feedbackOpen, setFeedbackOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,6 +97,16 @@ export default function Navigation() {
                   </button>
                 ))}
               </div>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setFeedbackOpen(true)}
+                className="gap-2"
+                data-testid="button-feedback-nav"
+              >
+                <MessageSquare className="w-4 h-4" />
+                Feedback
+              </Button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -138,6 +150,18 @@ export default function Navigation() {
                 {section.label}
               </button>
             ))}
+            <Button
+              variant="outline"
+              className="w-full gap-2 mt-4"
+              onClick={() => {
+                setFeedbackOpen(true);
+                setMobileMenuOpen(false);
+              }}
+              data-testid="button-feedback-mobile"
+            >
+              <MessageSquare className="w-4 h-4" />
+              Share Feedback
+            </Button>
           </div>
         </div>
       )}
@@ -165,6 +189,9 @@ export default function Navigation() {
           <ChevronDown className="w-5 h-5" />
         </Button>
       </div>
+
+      {/* Feedback Dialog */}
+      <FeedbackDialog open={feedbackOpen} onOpenChange={setFeedbackOpen} />
     </>
   );
 }

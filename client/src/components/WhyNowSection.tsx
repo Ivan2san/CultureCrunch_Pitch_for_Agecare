@@ -1,5 +1,6 @@
 import { Scale, HeartCrack, BrainCircuit, ArrowRight } from "lucide-react";
 import { useParallax } from "@/hooks/useParallax";
+import SectionFeedbackButton from "@/components/SectionFeedbackButton";
 
 type Force = {
   id: "reg" | "burnout" | "ai";
@@ -237,6 +238,7 @@ export default function WhyNowSection() {
             </p>
           </div>
         </div>
+        <SectionFeedbackButton />
       </div>
     </section>
   );

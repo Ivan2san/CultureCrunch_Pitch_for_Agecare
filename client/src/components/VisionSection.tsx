@@ -1,5 +1,6 @@
 import { Sparkles } from "lucide-react";
 import { useParallax } from "@/hooks/useParallax";
+import SectionFeedbackButton from "@/components/SectionFeedbackButton";
 
 export default function VisionSection() {
   const headlineParallax = useParallax({ speed: -0.3 });
@@ -48,6 +49,7 @@ export default function VisionSection() {
             </div>
           </div>
         </div>
+        <SectionFeedbackButton />
       </div>
     </section>
   );

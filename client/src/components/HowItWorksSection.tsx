@@ -4,6 +4,7 @@ import { useParallax } from "@/hooks/useParallax";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import SectionFeedbackButton from "@/components/SectionFeedbackButton";
 
 export default function HowItWorksSection() {
   const headerParallax = useParallax({ speed: -0.08 });
@@ -74,6 +75,7 @@ export default function HowItWorksSection() {
             One loop. One week at a time. Continuous improvement that sticks.
           </p>
         </div>
+        <SectionFeedbackButton />
       </div>
     </section>
   );

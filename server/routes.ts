@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertLeadSchema } from "@shared/schema";
+import { insertLeadSchema, insertFeedbackSchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // put application routes here
@@ -18,6 +18,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Error creating lead:", error);
       res.status(400).json({ error: "Invalid lead data" });
+    }
+  });
+
+  app.post("/api/feedback", async (req, res) => {
+    try {
+      const validatedData = insertFeedbackSchema.parse(req.body);
+      const feedbackRecord = await storage.createFeedback(validatedData);
+      res.json(feedbackRecord);
+    } catch (error) {
+      console.error("Error creating feedback:", error);
+      res.status(400).json({ error: "Invalid feedback data" });
     }
   });
 

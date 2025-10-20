@@ -1,4 +1,4 @@
-import { type User, type InsertUser, type Lead, type InsertLead, leads } from "@shared/schema";
+import { type User, type InsertUser, type Lead, type InsertLead, type Feedback, type InsertFeedback, leads, feedback } from "@shared/schema";
 import { db } from "./db";
 
 // modify the interface with any CRUD methods
@@ -9,6 +9,7 @@ export interface IStorage {
   getUserByUsername(username: string): Promise<User | undefined>;
   createUser(user: InsertUser): Promise<User>;
   createLead(lead: InsertLead): Promise<Lead>;
+  createFeedback(feedbackData: InsertFeedback): Promise<Feedback>;
 }
 
 export class DbStorage implements IStorage {
@@ -30,6 +31,11 @@ export class DbStorage implements IStorage {
   async createLead(insertLead: InsertLead): Promise<Lead> {
     const [lead] = await db.insert(leads).values(insertLead).returning();
     return lead;
+  }
+
+  async createFeedback(insertFeedback: InsertFeedback): Promise<Feedback> {
+    const [feedbackRecord] = await db.insert(feedback).values(insertFeedback).returning();
+    return feedbackRecord;
   }
 }
 

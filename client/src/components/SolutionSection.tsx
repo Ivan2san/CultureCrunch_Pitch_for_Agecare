@@ -3,6 +3,7 @@ import { MessageSquare, Repeat, TrendingUp, CheckCircle, ChevronDown } from "luc
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useParallax } from "@/hooks/useParallax";
+import SectionFeedbackButton from "@/components/SectionFeedbackButton";
 
 const benefitCards = [
   {
@@ -189,6 +190,7 @@ export default function SolutionSection() {
             </div>
           </div>
         </div>
+        <SectionFeedbackButton />
       </div>
     </section>
   );
