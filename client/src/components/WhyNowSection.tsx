@@ -139,11 +139,11 @@ export default function WhyNowSection() {
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-purple-400/40 to-indigo-400/40 blur-xl animate-pulse" />
               {/* card */}
               <div 
-                className="relative rounded-2xl border-2 border-purple-400 bg-gradient-to-br from-purple-600 via-purple-500 to-indigo-600 p-6 text-center shadow-2xl"
+                className="relative rounded-2xl border-2 border-purple-300 bg-gradient-to-br from-purple-100 to-indigo-100 p-6 text-center shadow-2xl"
                 data-testid="convergence-point"
               >
-                <h4 className="text-white text-2xl font-bold" style={{ letterSpacing: '-0.01em' }}>The Convergence Point</h4>
-                <p className="mt-2 text-white/95" style={{ letterSpacing: '-0.005em' }}>
+                <h4 className="text-purple-900 text-2xl font-bold" style={{ letterSpacing: '-0.01em' }}>The Convergence Point</h4>
+                <p className="mt-2 text-purple-800" style={{ letterSpacing: '-0.005em' }}>
                   Aged care compliance mandates × Workforce crisis × AI capability →{" "}
                   <span className="font-semibold">
                     the moment to transform psychosocial risk into retention.
@@ -192,11 +192,11 @@ export default function WhyNowSection() {
         <div className="relative">
           <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-purple-400/30 to-indigo-400/30 blur animate-pulse" />
           <div 
-            className="relative rounded-2xl border-2 border-purple-400 bg-gradient-to-br from-purple-600 via-purple-500 to-indigo-600 p-5 text-center shadow-xl"
+            className="relative rounded-2xl border-2 border-purple-300 bg-gradient-to-br from-purple-100 to-indigo-100 p-5 text-center shadow-xl"
             data-testid="mobile-convergence-point"
           >
-            <h4 className="text-white text-xl font-bold" style={{ letterSpacing: '-0.01em' }}>The Convergence Point</h4>
-            <p className="mt-1.5 text-white/95 text-sm" style={{ letterSpacing: '-0.005em' }}>
+            <h4 className="text-purple-900 text-xl font-bold" style={{ letterSpacing: '-0.01em' }}>The Convergence Point</h4>
+            <p className="mt-1.5 text-purple-800 text-sm" style={{ letterSpacing: '-0.005em' }}>
               The three forces align → time to turn aged care compliance into workforce retention.
             </p>
           </div>
