@@ -11,20 +11,20 @@
  */
 
 export function generatePitchPDF() {
-  // Find and hide the ROI calculator section
-  const roiSection = document.querySelector('section#roi-calculator') as HTMLElement;
-  const roiNavLinks = document.querySelectorAll('a[href="#roi-calculator"]');
+  // Find and hide the ROI calculator section (id="roi")
+  const roiSection = document.querySelector('section#roi') as HTMLElement;
+  
+  // Find and hide navigation buttons that link to ROI calculator
+  const navButtons = document.querySelectorAll('button[data-testid="nav-link-roi"], button[data-testid="mobile-nav-link-roi"]');
   
   if (roiSection) {
     roiSection.style.display = 'none';
   }
   
-  // Hide navigation links to calculator
-  roiNavLinks.forEach(link => {
-    const parent = link.parentElement as HTMLElement;
-    if (parent) {
-      parent.style.display = 'none';
-    }
+  // Hide navigation buttons
+  navButtons.forEach(button => {
+    const element = button as HTMLElement;
+    element.style.display = 'none';
   });
   
   // Trigger print dialog
@@ -35,11 +35,9 @@ export function generatePitchPDF() {
     if (roiSection) {
       roiSection.style.display = '';
     }
-    roiNavLinks.forEach(link => {
-      const parent = link.parentElement as HTMLElement;
-      if (parent) {
-        parent.style.display = '';
-      }
+    navButtons.forEach(button => {
+      const element = button as HTMLElement;
+      element.style.display = '';
     });
   }, 1000);
 }
