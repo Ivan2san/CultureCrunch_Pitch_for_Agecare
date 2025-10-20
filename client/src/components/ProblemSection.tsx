@@ -10,11 +10,34 @@ const cycleStages = [
   { id: 5, label: "More Departures", color: "#6366f1" },
 ];
 
+// Helper function to get color classes
+const getColorClasses = (color: "rose" | "orange" | "blue" | "purple") => {
+  const colorMap = {
+    rose: {
+      icon: "text-rose-600",
+      stat: "text-rose-600"
+    },
+    orange: {
+      icon: "text-orange-600",
+      stat: "text-orange-600"
+    },
+    blue: {
+      icon: "text-blue-600",
+      stat: "text-blue-600"
+    },
+    purple: {
+      icon: "text-purple-600",
+      stat: "text-purple-600"
+    }
+  };
+  return colorMap[color];
+};
+
 const crisisStats = [
   {
     category: "Human Cost",
     icon: TrendingDown,
-    color: "purple",
+    color: "rose" as const,
     stats: [
       { value: "41%", label: "Experiencing burnout", sublabel: "quite often or very often", source: "Palliative Care Australia 2024" },
       { value: "25-30%", label: "Annual turnover rate", sublabel: "industry consensus", source: "Aged Care Workforce Survey 2024" },
@@ -23,7 +46,7 @@ const crisisStats = [
   {
     category: "Financial Impact",
     icon: DollarSign,
-    color: "indigo",
+    color: "orange" as const,
     stats: [
       { value: "$40-49K", label: "Per staff replacement", sublabel: "Australian aged care sector", source: "Roche et al. 2015" },
       { value: "$45.9K", label: "Mental health claim", sublabel: "5x cost of physical injuries", source: "Safe Work Australia 2024" },
@@ -32,7 +55,7 @@ const crisisStats = [
   {
     category: "Compliance Pressure",
     icon: Shield,
-    color: "purple",
+    color: "blue" as const,
     stats: [
       { value: "52%", label: "Feel confident", sublabel: "meeting psychosocial requirements", source: "ACCPA State of Sector 2024" },
       { value: "84%", label: "Expect greater strain", sublabel: "from new requirements", source: "ACCPA State of Sector 2024" },
@@ -41,7 +64,7 @@ const crisisStats = [
   {
     category: "Market Gap",
     icon: PackageX,
-    color: "indigo",
+    color: "purple" as const,
     stats: [
       { value: "Zero", label: "Aged care-specific tools", sublabel: "for psychosocial safety", source: "CultureCrunch Market Scan 2025" },
       { value: "48.2%", label: "Cite burnout", sublabel: "as #1 reason for leaving", source: "Aged Care Worker Survey 2024" },
@@ -273,14 +296,15 @@ export default function ProblemSection() {
             The Crisis in Numbers
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {crisisStats.map((category, catIndex) => {
               const Icon = category.icon;
+              const colorClasses = getColorClasses(category.color);
               return (
                 <div key={catIndex} className="space-y-4">
                   {/* Category Header */}
                   <div className="flex items-center gap-2 mb-4">
-                    <Icon className={`w-6 h-6 text-${category.color}-600`} />
+                    <Icon className={`w-6 h-6 ${colorClasses.icon}`} />
                     <h4 className="text-lg font-bold text-foreground">{category.category}</h4>
                   </div>
                   
@@ -288,7 +312,7 @@ export default function ProblemSection() {
                   <div className="grid grid-cols-1 gap-4">
                     {category.stats.map((stat, statIndex) => (
                       <Card key={statIndex} className="p-6" data-testid={`stat-card-${catIndex}-${statIndex}`}>
-                        <div className={`text-3xl md:text-4xl font-bold text-${category.color}-600 mb-2`} style={{ letterSpacing: '-0.01em' }}>
+                        <div className={`text-3xl md:text-4xl font-bold ${colorClasses.stat} mb-2`} style={{ letterSpacing: '-0.01em' }}>
                           {stat.value}
                         </div>
                         <p className="text-sm font-semibold text-foreground mb-1">
