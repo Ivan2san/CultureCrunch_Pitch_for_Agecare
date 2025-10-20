@@ -60,7 +60,7 @@ const sections = [
     id: "theory",
     icon: BookOpen,
     title: "The Theory",
-    intro: "Accountable Conversations are grounded in:",
+    intro: "Evidenced based emotionally intelligent leadership models driving Accountable Conversations which are grounded in:",
     content: [
       {
         label: "The Triple Goal",
