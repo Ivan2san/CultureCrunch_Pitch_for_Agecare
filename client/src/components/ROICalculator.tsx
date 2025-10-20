@@ -88,7 +88,7 @@ export default function ROICalculator() {
   const headerParallax = useParallax({ speed: -0.1 });
 
   return (
-    <section id="roi" className="min-h-screen bg-corporate-gradient px-6 py-32">
+    <section id="roi" className="min-h-screen bg-corporate-gradient px-6 py-32 relative">
       <div className="max-w-7xl mx-auto">
         <div ref={headerParallax.ref} style={headerParallax.style} className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
@@ -482,8 +482,8 @@ export default function ROICalculator() {
           </div>
         </div>
 
-        {/* Subtle Download Button - Bottom Right */}
-        <div className="fixed bottom-8 right-8 z-30">
+        {/* Subtle Download Button - Bottom Right of Calculator */}
+        <div className="absolute bottom-8 right-8">
           <Button
             variant="outline"
             size="icon"
