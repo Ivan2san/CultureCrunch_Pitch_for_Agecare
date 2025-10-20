@@ -290,4 +290,9 @@
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
   }
+
+  /* Radial gradient utility for soft fading backgrounds */
+  .bg-gradient-radial {
+    background-image: radial-gradient(circle, var(--tw-gradient-stops));
+  }
 }
