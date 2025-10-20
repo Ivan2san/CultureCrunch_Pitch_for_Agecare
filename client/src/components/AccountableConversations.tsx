@@ -118,7 +118,7 @@ export default function AccountableConversations() {
   };
 
   return (
-    <div id="accountable-conversations" className="mb-20">
+    <div className="mb-20">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
