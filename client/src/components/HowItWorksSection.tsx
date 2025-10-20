@@ -1,5 +1,6 @@
 import CircularLoop from "@/components/CircularLoop";
 import WeekByWeekTimeline from "@/components/WeekByWeekTimeline";
+import AccountableConversations from "@/components/AccountableConversations";
 import { useParallax } from "@/hooks/useParallax";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -64,6 +65,9 @@ export default function HowItWorksSection() {
             </div>
           )}
         </div>
+
+        {/* Accountable Conversations */}
+        <AccountableConversations />
 
         {/* Bottom CTA */}
         <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-10 text-white text-center">
