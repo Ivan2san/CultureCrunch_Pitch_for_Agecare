@@ -26,7 +26,7 @@ const weeklyTimeline = [
   {
     week: 1,
     title: "Baselines",
-    description: "Triple Goal, leadership workshop, LGP360 launch, app setup, baseline pulse."
+    description: "Baselines (Triple Goal survey, pulse) and priorities agreed with the leadership team"
   },
   {
     week: 2,
