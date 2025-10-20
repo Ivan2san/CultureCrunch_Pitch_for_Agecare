@@ -10,6 +10,12 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+**October 20, 2025**:
+- Implemented soft wash radial gradient backgrounds across all major sections (Vision, Problem, Why Now, Solution, How It Works, ROI) creating elegant depth and visual interest
+- Gradient specifications: 25-40% opacity, 600-800px blob sizes, three overlapping layers per section using purple-400, pink-400, indigo-400, rose-400, and blue-400 color palette
+- Added comprehensive gradient documentation to design_guidelines.md with implementation patterns, opacity ranges, color palette, and code examples
+- Visual enhancement maintains professional B2B aesthetic while adding noticeable color wash effect behind content
+
 **October 19, 2025**: 
 - Streamlined pitch narrative by temporarily hiding sections from Positioning through The Ask
 - Current flow focuses on Vision → Problem → Why Now → Solution → How It Works → ROI Calculator
