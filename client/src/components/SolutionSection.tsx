@@ -66,8 +66,12 @@ export default function SolutionSection() {
   };
   
   return (
-    <section id="solution" className="min-h-screen bg-corporate-gradient px-6 py-32">
-      <div className="max-w-7xl mx-auto">
+    <section id="solution" className="min-h-screen bg-corporate-gradient px-6 py-32 relative overflow-hidden">
+      {/* Decorative gradient backgrounds */}
+      <div className="absolute top-20 right-10 w-[450px] h-[450px] bg-gradient-radial from-purple-300/20 via-indigo-300/12 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-radial from-pink-300/15 via-purple-300/10 to-transparent rounded-full blur-3xl" />
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div ref={headerParallax.ref} style={headerParallax.style} className="text-center mb-16">
           <Badge variant="outline" className="mb-6" data-testid="badge-solution">

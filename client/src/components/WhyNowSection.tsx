@@ -73,9 +73,13 @@ export default function WhyNowSection() {
   const cardsParallax = useParallax({ speed: 0.05 });
 
   return (
-    <section id="why-now" className="relative isolate bg-corporate-gradient px-6 py-32 flex-wrap">
+    <section id="why-now" className="relative isolate bg-corporate-gradient px-6 py-32 flex-wrap overflow-hidden">
+      {/* Decorative gradient backgrounds */}
+      <div className="absolute top-10 left-10 w-[450px] h-[450px] bg-gradient-radial from-indigo-300/20 via-blue-300/10 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-radial from-purple-300/15 via-pink-300/10 to-transparent rounded-full blur-3xl" />
+      
       {/* Heading */}
-      <div ref={headerParallax.ref} style={headerParallax.style} className="mx-auto max-w-7xl text-center mb-16">
+      <div ref={headerParallax.ref} style={headerParallax.style} className="mx-auto max-w-7xl text-center mb-16 relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16" style={{ letterSpacing: '-0.01em' }}>
           WHY NOW: <span className="text-indigo-600">Three forces converge</span>
         </h2>
@@ -86,7 +90,7 @@ export default function WhyNowSection() {
       </div>
 
       {/* Desktop: 3 lanes -> convergence bar */}
-      <div ref={cardsParallax.ref} style={cardsParallax.style} className="mx-auto mt-14 hidden max-w-7xl lg:grid lg:grid-cols-12 lg:gap-6 lg:items-stretch">
+      <div ref={cardsParallax.ref} style={cardsParallax.style} className="mx-auto mt-14 hidden max-w-7xl lg:grid lg:grid-cols-12 lg:gap-6 lg:items-stretch relative z-10">
         {FORCES.map((f, i) => {
           const Icon = f.icon;
           return (
