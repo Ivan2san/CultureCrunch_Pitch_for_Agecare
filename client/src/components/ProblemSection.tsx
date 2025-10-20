@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { ArrowRight, AlertTriangle, RotateCw } from "lucide-react";
+import { ArrowRight, AlertTriangle, RotateCw, TrendingDown, DollarSign, Shield, PackageX } from "lucide-react";
 import { useParallax } from "@/hooks/useParallax";
 
 const cycleStages = [
@@ -8,6 +8,45 @@ const cycleStages = [
   { id: 3, label: "Increased Workload", color: "#8b5cf6" },
   { id: 4, label: "More Stress", color: "#8b5cf6" },
   { id: 5, label: "More Departures", color: "#6366f1" },
+];
+
+const crisisStats = [
+  {
+    category: "Human Cost",
+    icon: TrendingDown,
+    color: "purple",
+    stats: [
+      { value: "41%", label: "Experiencing burnout", sublabel: "quite often or very often", source: "Palliative Care Australia 2024" },
+      { value: "25-30%", label: "Annual turnover rate", sublabel: "industry consensus", source: "Aged Care Workforce Survey 2024" },
+    ]
+  },
+  {
+    category: "Financial Impact",
+    icon: DollarSign,
+    color: "indigo",
+    stats: [
+      { value: "$40-49K", label: "Per staff replacement", sublabel: "Australian aged care sector", source: "Roche et al. 2015" },
+      { value: "$45.9K", label: "Mental health claim", sublabel: "5x cost of physical injuries", source: "Safe Work Australia 2024" },
+    ]
+  },
+  {
+    category: "Compliance Pressure",
+    icon: Shield,
+    color: "purple",
+    stats: [
+      { value: "52%", label: "Feel confident", sublabel: "meeting psychosocial requirements", source: "ACCPA State of Sector 2024" },
+      { value: "84%", label: "Expect greater strain", sublabel: "from new requirements", source: "ACCPA State of Sector 2024" },
+    ]
+  },
+  {
+    category: "Market Gap",
+    icon: PackageX,
+    color: "indigo",
+    stats: [
+      { value: "Zero", label: "Aged care-specific tools", sublabel: "for psychosocial safety", source: "CultureCrunch Market Scan 2025" },
+      { value: "48.2%", label: "Cite burnout", sublabel: "as #1 reason for leaving", source: "Aged Care Worker Survey 2024" },
+    ]
+  }
 ];
 
 function SvgViciousCycle() {
@@ -211,7 +250,8 @@ function MobileViciousCycle() {
 }
 
 export default function ProblemSection() {
-  const headerParallax = useParallax({ speed: -0.2 });
+  const headerParallax = useParallax({ speed: -0.1 });
+  const statsParallax = useParallax({ speed: 0.05 });
   const diagramParallax = useParallax({ speed: 0.15 });
 
   return (
@@ -220,51 +260,78 @@ export default function ProblemSection() {
         {/* Header */}
         <div ref={headerParallax.ref} style={headerParallax.style} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6" style={{ letterSpacing: '-0.01em' }}>
-            The Challenge in Aged Care
+            A Crisis at the Intersection of Compliance, Workforce, and Care
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
-            Psychosocial hazards create a vicious cycle that impacts staff wellbeing, retention, and ultimately, quality of care.
+            Aged care faces unprecedented regulatory pressure while managing a workforce crisis—with virtually no practical tools to address psychosocial safety.
           </p>
         </div>
 
-        {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <Card className="p-6 text-center">
-            <div className="text-4xl font-bold text-purple-600 mb-2">35%</div>
-            <p className="text-sm text-muted-foreground">
-              Annual turnover rate in aged care
-            </p>
-            <p className="text-xs text-muted-foreground mt-2">
-              — AIHW Workforce Report 2023
-            </p>
-          </Card>
-          <Card className="p-6 text-center">
-            <div className="text-4xl font-bold text-indigo-600 mb-2">2.3x</div>
-            <p className="text-sm text-muted-foreground">
-              Higher risk of mental health claims vs. other industries
-            </p>
-            <p className="text-xs text-muted-foreground mt-2">
-              — Safe Work Australia 2024
-            </p>
-          </Card>
-          <Card className="p-6 text-center">
-            <div className="text-4xl font-bold text-purple-600 mb-2">78%</div>
-            <p className="text-sm text-muted-foreground">
-              Of aged care workers report experiencing psychosocial hazards
-            </p>
-            <p className="text-xs text-muted-foreground mt-2">
-              — HSU Research 2024
-            </p>
-          </Card>
+        {/* Crisis in Numbers - Stat Cards by Category */}
+        <div ref={statsParallax.ref} style={statsParallax.style} className="mb-20">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-12">
+            The Crisis in Numbers
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {crisisStats.map((category, catIndex) => {
+              const Icon = category.icon;
+              return (
+                <div key={catIndex} className="space-y-4">
+                  {/* Category Header */}
+                  <div className="flex items-center gap-2 mb-4">
+                    <Icon className={`w-6 h-6 text-${category.color}-600`} />
+                    <h4 className="text-lg font-bold text-foreground">{category.category}</h4>
+                  </div>
+                  
+                  {/* Stats for this category */}
+                  <div className="grid grid-cols-1 gap-4">
+                    {category.stats.map((stat, statIndex) => (
+                      <Card key={statIndex} className="p-6" data-testid={`stat-card-${catIndex}-${statIndex}`}>
+                        <div className={`text-3xl md:text-4xl font-bold text-${category.color}-600 mb-2`} style={{ letterSpacing: '-0.01em' }}>
+                          {stat.value}
+                        </div>
+                        <p className="text-sm font-semibold text-foreground mb-1">
+                          {stat.label}
+                        </p>
+                        <p className="text-xs text-muted-foreground mb-3">
+                          {stat.sublabel}
+                        </p>
+                        <p className="text-xs text-muted-foreground italic border-t border-border pt-2">
+                          — {stat.source}
+                        </p>
+                      </Card>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
+        {/* Regulatory Pressure Banner */}
+        <Card className="p-6 mb-12 bg-indigo-50 border-l-4 border-indigo-600" data-testid="regulatory-banner">
+          <div className="flex items-start gap-3">
+            <Shield className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
+            <div>
+              <h4 className="font-bold text-indigo-900 mb-2">Dual Compliance Obligations Since 2023</h4>
+              <p className="text-sm text-muted-foreground mb-2">
+                Aged care managers must now comply with <strong>WHS psychosocial safety regulations</strong> (identifying and managing 17 specific hazards) and <strong>strengthened Aged Care Quality Standards</strong> (November 2025), with penalties up to <strong>$1.5 million per breach</strong>.
+              </p>
+              <p className="text-xs text-muted-foreground italic">
+                Average WHS fine: $116,979 | Victorian toxic culture case: ~$380,000
+              </p>
+            </div>
+          </div>
+        </Card>
+
         {/* Vicious Cycle */}
-        <div className="flex flex-col items-center gap-6 mb-8">
+        <div className="flex flex-col items-center gap-6 mb-12">
           <h3 className="text-2xl md:text-3xl font-bold text-foreground text-center">
-            The Vicious Cycle
+            The Self-Perpetuating Cycle
           </h3>
 
-          <Card ref={diagramParallax.ref} style={diagramParallax.style} className="p-8 md:p-12 bg-card/40 backdrop-blur-sm">
+          <Card ref={diagramParallax.ref} style={diagramParallax.style} className="p-8 md:p-12 bg-card/40 backdrop-blur-sm" data-testid="vicious-cycle-card">
             <div className="hidden md:flex flex-col items-center gap-6 mb-8">
               <SvgViciousCycle />
             </div>
@@ -274,33 +341,49 @@ export default function ProblemSection() {
               <MobileViciousCycle />
             </div>
 
-            {/* Quote */}
-            <div className="mt-8 text-center max-w-3xl mx-auto">
-              <p className="text-base md:text-lg text-muted-foreground italic">
-                "Precarious resilience permeates all levels of the workforce. The emotional toll of caring work, combined with systemic understaffing and high turnover, creates a self-perpetuating cycle of stress and burnout."
+            {/* Breaking the Cycle with CultureCrunch */}
+            <div className="mt-8 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-200">
+              <h4 className="font-bold text-indigo-900 mb-3 text-center">How CultureCrunch Breaks the Cycle</h4>
+              <p className="text-sm text-muted-foreground text-center max-w-2xl mx-auto">
+                Weekly <strong>3-question pulse surveys</strong> identify emerging issues early. AI-powered <strong>Monday briefs</strong> give leaders specific, actionable insights. Structured <strong>team check-ins</strong> create psychological safety through honest dialogue—preventing burnout before it drives turnover.
               </p>
-              <p className="text-sm text-muted-foreground">
-                — The precarious resilience of aged care employees (2024)
-              </p>
-            </div>
-
-            {/* Management Impact */}
-            <div className="mt-6 bg-purple-50 rounded-lg p-8 md:p-10 border-l-4 border-purple-600">
-              <div className="flex items-start gap-3">
-                <AlertTriangle className="w-7 h-7 text-purple-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-bold text-purple-700 mb-3 text-lg">Leaders Are Affected Too</p>
-                  <p className="text-muted-foreground font-semibold">
-                    "Psychosocial hazards are common for workers in the aged care sector, and this extends to management." The people trying to solve this crisis are drowning in it themselves.
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-3 font-medium">
-                    — Safe Work Australia, Psychosocial Hazards in Aged Care (2024)
-                  </p>
-                </div>
-              </div>
             </div>
           </Card>
         </div>
+
+        {/* Why Current Tools Fail */}
+        <Card className="p-8 bg-purple-50 border-l-4 border-purple-600" data-testid="market-gap-card">
+          <div className="flex items-start gap-3">
+            <PackageX className="w-7 h-7 text-purple-600 flex-shrink-0 mt-0.5" />
+            <div>
+              <h4 className="font-bold text-purple-900 mb-3 text-lg">Why Current Tools Fail</h4>
+              <p className="text-muted-foreground mb-4">
+                Comprehensive market scan found <strong>zero aged care-specific psychosocial safety platforms</strong>. Existing tools focus on clinical documentation, rostering, or generic workplace surveys—none address the sector's unique challenges: dementia care, emotional labor, resident aggression, and death exposure.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                <div>
+                  <p className="font-semibold text-purple-800 mb-1">What's Missing:</p>
+                  <ul className="text-muted-foreground space-y-1 text-xs">
+                    <li>• Proactive culture monitoring</li>
+                    <li>• Early warning systems</li>
+                    <li>• Sector-specific hazard libraries</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-semibold text-purple-800 mb-1">Result:</p>
+                  <ul className="text-muted-foreground space-y-1 text-xs">
+                    <li>• 69% say reform pace too fast</li>
+                    <li>• 74% need 6+ months to implement</li>
+                    <li>• Only 30% have financial resources</li>
+                  </ul>
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground italic mt-4 pt-3 border-t border-purple-200">
+                — CultureCrunch Market Research 2025 (ACCPA State of Sector 2024)
+              </p>
+            </div>
+          </div>
+        </Card>
       </div>
     </section>
   );
