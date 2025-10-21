@@ -210,41 +210,6 @@ export default function WhyNowSection() {
           psychosocial compliance into a workforce retention strategy.
         </p>
       </div>
-
-      {/* Performance Gap - The Business Case */}
-      <div className="mx-auto mt-16 max-w-7xl">
-        <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-10 border-2 border-indigo-300">
-          <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-3 text-center">
-            Beyond Psychosocial Safety: The ROI of Engaged Teams
-          </h3>
-          <p className="text-lg md:text-xl text-muted-foreground text-center max-w-4xl mx-auto mb-8">
-            Psychosocial safety isn't a "nice to have"—it's a competitive advantage. Engaged teams dramatically outperform disengaged ones:
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { value: "21%", label: "Higher Profitability", desc: "Direct bottom-line impact" },
-              { value: "23%", label: "Higher Productivity", desc: "More output per employee" },
-              { value: "59%", label: "Lower Turnover", desc: "Reduced hiring costs" },
-              { value: "70%", label: "Fewer Safety Incidents", desc: "Lower risk exposure" },
-            ].map((item, index) => (
-              <div key={index} className="text-center p-5 bg-white rounded-xl border-2 border-indigo-400 hover-elevate transition-all">
-                <div className="text-4xl md:text-5xl font-bold text-indigo-700 mb-2" style={{ letterSpacing: '-0.01em' }}>{item.value}</div>
-                <div className="text-base font-bold text-foreground mb-1" style={{ letterSpacing: '-0.005em' }}>{item.label}</div>
-                <div className="text-xs text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>{item.desc}</div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 pt-6 border-t-2 border-indigo-300">
-            <p className="text-center text-base font-semibold text-indigo-700 mb-2">
-              → Leaders who address psychosocial risks unlock measurable business performance
-            </p>
-            <p className="text-center text-sm text-muted-foreground">
-              Source: Gallup Q12 Meta-Analysis (955,905 employees, 152 organisations)
-            </p>
-          </div>
-        </div>
-        <SectionFeedbackButton />
-      </div>
     </section>
   );
 }
