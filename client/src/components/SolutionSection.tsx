@@ -116,6 +116,10 @@ export default function SolutionSection() {
 
         {/* What Changes For You */}
         <div ref={benefitsParallax.ref} style={benefitsParallax.style} className="mb-20">
+          <p className="text-lg text-muted-foreground mb-8 text-center max-w-3xl mx-auto">
+            After our 6-week psychosocial leadership program, you will have installed the following:
+          </p>
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefitCards.map((benefit, index) => {
               const Icon = benefit.icon;
