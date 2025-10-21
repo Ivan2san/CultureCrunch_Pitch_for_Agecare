@@ -40,7 +40,7 @@ const sections = [
     content: [
       {
         label: "Ownership",
-        text: "Take responsibility for your part and acknowledge unmet needs in others."
+        text: "Take responsibility for your part and acknowledge unmet needs in others. Start with your part. Lead from integrity, not blame."
       },
       {
         label: "Observation + Impact",
