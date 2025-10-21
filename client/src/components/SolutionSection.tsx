@@ -81,6 +81,9 @@ export default function SolutionSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8" style={{ letterSpacing: '-0.01em' }}>
             What It Is
           </h2>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed" data-testid="text-intro">
+            We are <span className="font-bold text-indigo-600">CultureCrunch</span>. In six weeks, we turn psychosocial safety from compliance to capability—installing a simple weekly rhythm that builds accountable, safe performance. Powered by real-time behavioural and risk data, your culture becomes visible, measurable, and continuously improving.
+          </p>
         </div>
 
         {/* Hero Value Statement */}
