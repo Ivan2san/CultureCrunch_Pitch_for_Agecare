@@ -39,13 +39,6 @@ export default function VisionSection() {
             <p className="text-2xl md:text-3xl text-foreground leading-relaxed font-medium" style={{ letterSpacing: '-0.01em' }}>
               A world where every aged care leader can spot psychosocial risks early and turn them into the conversations, actions, and habits that build trust, safety, and high performance.
             </p>
-            
-            <div className="mt-8 pt-8 border-t border-border/50">
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Where psychosocial compliance becomes not just a requirement, but a catalyst for culture—
-                unlocking discretionary effort, retention, and elevated resident outcomes.
-              </p>
-            </div>
           </div>
         </div>
         <SectionFeedbackButton />
