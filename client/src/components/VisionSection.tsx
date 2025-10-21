@@ -28,7 +28,7 @@ export default function VisionSection() {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            In aged care, every team member matters. CultureCrunch empowers aged care leaders with AI insight, 
+            In aged care, every team member matters. CultureCrunch empowers aged care leaders with data-driven insights, 
             turning psychosocial compliance into proactive support that keeps your team thriving.
           </p>
         </div>
@@ -37,10 +37,7 @@ export default function VisionSection() {
         <div ref={visionParallax.ref} style={visionParallax.style} className="relative max-w-5xl mx-auto mt-24">
           <div className="bg-gradient-to-br from-card/60 to-card/40 backdrop-blur-md rounded-3xl p-10 md:p-14 border border-border/50">
             <p className="text-2xl md:text-3xl text-foreground leading-relaxed font-medium" style={{ letterSpacing: '-0.01em' }}>
-              A world where every aged care leader has an{" "}
-              <span className="text-primary font-bold">AI co-pilot</span>{" "}
-              that detects psychosocial hazards before they lead to issues, 
-              and provides the exact support conversation needed—every single week.
+              A world where every aged-care leader can spot psychosocial risks early and turn them into the conversations, actions, and habits that build trust, safety, and high performance.
             </p>
             
             <div className="mt-8 pt-8 border-t border-border/50">
