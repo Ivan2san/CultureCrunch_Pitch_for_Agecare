@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MessageSquare, Repeat, TrendingUp, CheckCircle, ChevronDown } from "lucide-react";
+import { MessageSquare, Repeat, TrendingUp, CheckCircle, ChevronDown, Sparkles } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useParallax } from "@/hooks/useParallax";
@@ -75,19 +75,43 @@ export default function SolutionSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div ref={headerParallax.ref} style={headerParallax.style} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16" style={{ letterSpacing: '-0.01em' }} data-testid="heading-solution">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12" style={{ letterSpacing: '-0.01em' }} data-testid="heading-solution">
             THE SOLUTION
           </h2>
           
-          {/* Mission Statement */}
-          <p className="text-2xl md:text-3xl font-bold text-foreground mb-8 max-w-4xl mx-auto leading-tight" style={{ letterSpacing: '-0.01em' }} data-testid="text-mission">
-            We are on a mission to help operational aged care leaders run safer, more engaged teams.
-          </p>
+          {/* Mission Marquee Card */}
+          <Card className="max-w-4xl mx-auto mb-12 bg-gradient-to-br from-purple-50/80 to-indigo-50/80 dark:from-purple-950/40 dark:to-indigo-950/40 border-purple-200 dark:border-purple-800" data-testid="card-mission-marquee">
+            <div className="p-8 md:p-10">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-3">
+                <Sparkles className="w-7 h-7 md:w-7 md:h-7 text-purple-600 dark:text-purple-400" />
+                <p className="text-2xl md:text-3xl font-bold text-foreground leading-tight text-center" style={{ letterSpacing: '-0.01em' }} data-testid="text-mission">
+                  We are on a mission to help operational aged care leaders run safer, more engaged teams.
+                </p>
+                <Sparkles className="w-7 h-7 md:w-7 md:h-7 text-purple-600 dark:text-purple-400" />
+              </div>
+            </div>
+          </Card>
           
-          {/* Solution Headline */}
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-5xl mx-auto leading-relaxed mb-2" style={{ letterSpacing: '-0.01em' }} data-testid="text-solution-headline">
-            A 6-week psychosocial installation program designed for 100-500 staff residential aged care facilities—turning compliance into weekly leadership practice that builds accountable, high performance culture.
-          </p>
+          {/* Program Description - Bullet Format */}
+          <div className="max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl font-semibold text-foreground mb-4">
+              6-Week Psychosocial Installation Program
+            </p>
+            <ul className="text-left text-base md:text-lg text-muted-foreground space-y-2 list-none" data-testid="list-program-features">
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-purple-600 dark:text-purple-400 mt-1 flex-shrink-0" />
+                <span>Designed for 100-500 staff residential aged care facilities</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-purple-600 dark:text-purple-400 mt-1 flex-shrink-0" />
+                <span>Turns compliance into weekly leadership practice</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-purple-600 dark:text-purple-400 mt-1 flex-shrink-0" />
+                <span>Builds accountable, high performance culture</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* What Changes For You */}
