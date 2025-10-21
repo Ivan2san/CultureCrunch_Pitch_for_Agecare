@@ -78,12 +78,16 @@ export default function SolutionSection() {
           <Badge variant="outline" className="mb-6" data-testid="badge-solution">
             The Solution
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8" style={{ letterSpacing: '-0.01em' }}>
-            What It Is
-          </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed" data-testid="text-intro">
-            We are <span className="font-bold text-indigo-600">CultureCrunch</span>. In six weeks, we turn psychosocial safety from compliance to capability—installing a simple weekly rhythm that builds accountable, safe performance. Powered by real-time behavioural and risk data, your culture becomes visible, measurable, and continuously improving.
+          
+          {/* Mission Statement */}
+          <p className="text-2xl md:text-3xl font-bold text-foreground mb-8 max-w-4xl mx-auto leading-tight" style={{ letterSpacing: '-0.01em' }} data-testid="text-mission">
+            We are on a mission to connect operational aged care leaders to help them run safer, more engaged teams.
           </p>
+          
+          {/* Solution Headline */}
+          <h2 className="text-xl md:text-2xl text-muted-foreground max-w-5xl mx-auto leading-relaxed mb-2" style={{ letterSpacing: '-0.01em' }} data-testid="text-solution-headline">
+            A 6-week psychosocial installation program designed for 100-500 staff residential aged care facilities—turning compliance into weekly leadership practice that builds accountable, high performance culture.
+          </h2>
         </div>
 
         {/* Hero Value Statement */}
