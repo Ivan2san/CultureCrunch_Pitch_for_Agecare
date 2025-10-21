@@ -20,7 +20,7 @@ export default function Home() {
       <SolutionSection />
       <ProductFlowSection />
       <HowItWorksSection />
-      <section id="accountable-conversations" className="min-h-screen bg-corporate-gradient px-6 py-32">
+      <section id="accountable-conversations" className="min-h-screen bg-corporate-gradient px-4 md:px-6 py-20 md:py-32">
         <div className="max-w-7xl mx-auto">
           <AccountableConversations />
         </div>
