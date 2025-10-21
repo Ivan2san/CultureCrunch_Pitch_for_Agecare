@@ -37,7 +37,7 @@ export default function VisionSection() {
         <div ref={visionParallax.ref} style={visionParallax.style} className="relative max-w-5xl mx-auto mt-24">
           <div className="bg-gradient-to-br from-card/60 to-card/40 backdrop-blur-md rounded-3xl p-10 md:p-14 border border-border/50">
             <p className="text-2xl md:text-3xl text-foreground leading-relaxed font-medium" style={{ letterSpacing: '-0.01em' }}>
-              A world where every aged-care leader can spot psychosocial risks early and turn them into the conversations, actions, and habits that build trust, safety, and high performance.
+              A world where every aged care leader can spot psychosocial risks early and turn them into the conversations, actions, and habits that build trust, safety, and high performance.
             </p>
             
             <div className="mt-8 pt-8 border-t border-border/50">
