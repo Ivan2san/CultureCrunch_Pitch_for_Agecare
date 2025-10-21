@@ -116,13 +116,6 @@ export default function SolutionSection() {
 
         {/* What Changes For You */}
         <div ref={benefitsParallax.ref} style={benefitsParallax.style} className="mb-20">
-          <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center" style={{ letterSpacing: '-0.01em' }}>
-            What Changes for You
-          </h3>
-          <p className="text-xl text-muted-foreground mb-12 text-center">
-            After our 6week psychosocial installation program you will have:
-          </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefitCards.map((benefit, index) => {
               const Icon = benefit.icon;
