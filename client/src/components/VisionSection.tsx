@@ -26,11 +26,6 @@ export default function VisionSection() {
           <h1 className="text-4xl md:text-5xl font-bold text-foreground leading-[1.1]" style={{ letterSpacing: '-0.01em' }}>
             Transforming Psychosocial Compliance into High Performing Culture
           </h1>
-          
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            In aged care, every team member matters. CultureCrunch empowers aged care leaders with data-driven insights, 
-            turning psychosocial compliance into proactive support that keeps your team thriving.
-          </p>
         </div>
 
         {/* Vision Statement - Transformed into impactful quote centerpiece */}
