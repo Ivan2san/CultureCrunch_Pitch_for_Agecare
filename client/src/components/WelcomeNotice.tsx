@@ -21,7 +21,7 @@ export default function WelcomeNotice() {
         <div className="flex items-start gap-4">
           <Info className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
           
-          <div className="flex-1 text-base">
+          <div className="flex-1 text-lg">
             <p className="text-foreground">
               <strong className="text-purple-700">You're viewing a concept in validation.</strong> This is a well-researched idea being developed by specialists in psychosocial safety, emotional intelligence, and aged care leadership. We welcome your feedback—look for feedback buttons throughout the site.
             </p>
