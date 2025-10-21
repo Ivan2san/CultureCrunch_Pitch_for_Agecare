@@ -11,7 +11,7 @@ export default function HowItWorksSection() {
   const [showWeekly, setShowWeekly] = useState(false);
 
   return (
-    <section id="how-it-works" className="min-h-screen bg-corporate-gradient px-6 py-32 relative overflow-hidden">
+    <section id="how-it-works" className="min-h-screen bg-corporate-gradient px-4 md:px-6 py-20 md:py-32 relative overflow-hidden">
       {/* Decorative gradient backgrounds */}
       <div className="absolute top-10 left-20 w-[700px] h-[700px] bg-gradient-radial from-indigo-400/32 via-purple-400/18 to-transparent rounded-full blur-3xl" />
       <div className="absolute bottom-10 right-20 w-[750px] h-[750px] bg-gradient-radial from-pink-400/28 via-indigo-400/16 to-transparent rounded-full blur-3xl" />

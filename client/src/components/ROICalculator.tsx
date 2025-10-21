@@ -89,7 +89,7 @@ export default function ROICalculator() {
   const headerParallax = useParallax({ speed: -0.1 });
 
   return (
-    <section id="roi" className="min-h-screen bg-corporate-gradient px-6 py-32 relative overflow-hidden">
+    <section id="roi" className="min-h-screen bg-corporate-gradient px-4 md:px-6 py-20 md:py-32 relative overflow-hidden">
       {/* Decorative gradient backgrounds */}
       <div className="absolute top-20 right-10 w-[750px] h-[750px] bg-gradient-radial from-purple-400/35 via-pink-400/20 to-transparent rounded-full blur-3xl" />
       <div className="absolute bottom-40 left-10 w-[800px] h-[800px] bg-gradient-radial from-indigo-400/32 via-purple-400/18 to-transparent rounded-full blur-3xl" />

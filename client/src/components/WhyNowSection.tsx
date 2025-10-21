@@ -73,7 +73,7 @@ export default function WhyNowSection() {
   const cardsParallax = useParallax({ speed: 0.05 });
 
   return (
-    <section id="why-now" className="relative isolate bg-corporate-gradient px-6 py-32 flex-wrap overflow-hidden">
+    <section id="why-now" className="relative isolate bg-corporate-gradient px-4 md:px-6 py-20 md:py-32 flex-wrap overflow-hidden">
       {/* Decorative gradient backgrounds */}
       <div className="absolute top-10 left-10 w-[750px] h-[750px] bg-gradient-radial from-indigo-400/35 via-blue-400/20 to-transparent rounded-full blur-3xl" />
       <div className="absolute bottom-10 right-10 w-[700px] h-[700px] bg-gradient-radial from-purple-400/30 via-pink-400/18 to-transparent rounded-full blur-3xl" />

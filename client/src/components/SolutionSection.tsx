@@ -66,7 +66,7 @@ export default function SolutionSection() {
   };
   
   return (
-    <section id="solution" className="min-h-screen bg-corporate-gradient px-6 py-32 relative overflow-hidden">
+    <section id="solution" className="min-h-screen bg-corporate-gradient px-4 md:px-6 py-20 md:py-32 relative overflow-hidden">
       {/* Decorative gradient backgrounds */}
       <div className="absolute top-20 right-10 w-[800px] h-[800px] bg-gradient-radial from-purple-400/35 via-indigo-400/22 to-transparent rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-10 w-[700px] h-[700px] bg-gradient-radial from-pink-400/30 via-purple-400/18 to-transparent rounded-full blur-3xl" />
