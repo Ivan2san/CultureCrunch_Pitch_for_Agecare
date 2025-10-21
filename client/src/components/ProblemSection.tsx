@@ -355,24 +355,6 @@ export default function ProblemSection() {
           </div>
         </Card>
 
-        {/* Vicious Cycle */}
-        <div className="flex flex-col items-center gap-6 mb-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground text-center">
-            The Self-Perpetuating Cycle
-          </h3>
-
-          <Card ref={diagramParallax.ref} style={diagramParallax.style} className="p-8 md:p-12 bg-card/40 backdrop-blur-sm" data-testid="vicious-cycle-card">
-            <div className="hidden md:flex flex-col items-center gap-6 mb-8">
-              <SvgViciousCycle />
-            </div>
-
-            {/* Mobile Version */}
-            <div className="md:hidden w-full">
-              <MobileViciousCycle />
-            </div>
-          </Card>
-        </div>
-
         {/* Why Current Tools Fail */}
         <Card className="p-8 bg-purple-50 border-l-4 border-purple-600" data-testid="market-gap-card">
           <div className="flex items-start gap-3">
