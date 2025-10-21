@@ -81,7 +81,7 @@ export default function SolutionSection() {
           
           {/* Mission Statement */}
           <p className="text-2xl md:text-3xl font-bold text-foreground mb-8 max-w-4xl mx-auto leading-tight" style={{ letterSpacing: '-0.01em' }} data-testid="text-mission">
-            We are on a mission to connect operational aged care leaders to help them run safer, more engaged teams.
+            We are on a mission to help operational aged care leaders run safer, more engaged teams.
           </p>
           
           {/* Solution Headline */}
