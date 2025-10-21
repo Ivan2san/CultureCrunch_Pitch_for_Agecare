@@ -339,22 +339,6 @@ export default function ProblemSection() {
           </div>
         </div>
 
-        {/* Regulatory Pressure Banner */}
-        <Card className="p-6 mb-12 bg-indigo-50 border-l-4 border-indigo-600" data-testid="regulatory-banner">
-          <div className="flex items-start gap-3">
-            <Shield className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
-            <div>
-              <h4 className="font-bold text-indigo-900 mb-2">Dual Compliance Obligations Since 2023</h4>
-              <p className="text-sm text-muted-foreground mb-2">
-                Aged care managers must now comply with <strong>WHS psychosocial safety regulations</strong> (identifying and managing 17 specific hazards) and <strong>strengthened Aged Care Quality Standards</strong> (November 2025), with penalties up to <strong>$1.5 million per breach</strong>.
-              </p>
-              <p className="text-xs text-muted-foreground italic">
-                Average WHS fine: $116,979 | Victorian toxic culture case: ~$380,000
-              </p>
-            </div>
-          </div>
-        </Card>
-
         {/* Why Current Tools Fail */}
         <Card className="p-8 bg-purple-50 border-l-4 border-purple-600" data-testid="market-gap-card">
           <div className="flex items-start gap-3">
