@@ -20,7 +20,7 @@ const advisors: Advisor[] = [
     role: "Strategic Advisor",
     credentials: "CEO, Genos International",
     background: "Global leader in emotional intelligence research and application. Over 20 years pioneering evidence-based EI assessment and development tools used by organizations worldwide. Expert in translating psychological research into practical workplace interventions that drive measurable performance improvements.",
-    whyIdeal: "Brings world-class expertise in measuring and developing people capabilities—validates our AI-powered approach to workforce insights with proven assessment methodology",
+    whyIdeal: "Brings world-class expertise in measuring and developing people capabilities—validates our data-driven approach to workforce insights with proven assessment methodology",
     email: "ben.palmer@genosinternational.com",
     linkedin: "https://www.linkedin.com/in/benjamin-palmer-genosei/"
   },
@@ -28,7 +28,7 @@ const advisors: Advisor[] = [
     name: "Gourab Rout",
     role: "Technical Advisor",
     credentials: "Enterprise Architect",
-    background: "Seasoned enterprise architect with deep expertise in scalable systems design and AI/ML infrastructure. Specializes in building privacy-first architectures for regulated industries. Proven track record architecting enterprise-grade solutions that balance innovation with compliance requirements.",
+    background: "Seasoned enterprise architect with deep expertise in scalable systems design and ML infrastructure. Specializes in building privacy-first architectures for regulated industries. Proven track record architecting enterprise-grade solutions that balance innovation with compliance requirements.",
     whyIdeal: "Ensures our technical foundation can scale from pilot to enterprise deployment—privacy-minimal design meets regulatory reality",
     email: "gourab.rout@example.com",
     linkedin: "https://linkedin.com/in/gourabrout"

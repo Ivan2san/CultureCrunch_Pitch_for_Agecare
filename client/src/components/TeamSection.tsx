@@ -34,17 +34,17 @@ const teamMembers: TeamMember[] = [
     credentials: "Executive Coach, Leadership Development Specialist",
     photo: grantPhoto,
     background: "20+ years coaching healthcare leaders through operational complexity and culture change. Specializes in developing frontline leadership capability in resource-constrained environments. Expert in translating pulse data into practical leadership conversations that drive team engagement and retention.",
-    whyIdeal: "Transforms AI insights into leadership action—proven track record helping care managers navigate span-of-control challenges while building psychologically safe teams",
+    whyIdeal: "Transforms data insights into leadership action—proven track record helping care managers navigate span-of-control challenges while building psychologically safe teams",
     email: "grant.dale@culturecrunch.ai",
     linkedin: "https://linkedin.com/in/grantdale"
   },
   {
     name: "Ivan Sanchez",
-    role: "Co-founder & Head of Product (AI-enabled)",
+    role: "Co-founder & Head of Product",
     credentials: "PhD (ML), Healthcare Tech Veteran",
     photo: ivanPhoto,
-    background: "10+ years building AI/ML systems for clinical environments with strict privacy requirements. Previously architected predictive analytics platforms for major hospital networks. Specializes in privacy-minimal AI systems and explainable AI for non-technical stakeholders.",
-    whyIdeal: "Delivers enterprise-grade AI with pilot-friendly simplicity—no IT infrastructure burden, seamless magic-link deployment, human-readable insights",
+    background: "10+ years building ML systems for clinical environments with strict privacy requirements. Previously architected predictive analytics platforms for major hospital networks. Specializes in privacy-minimal systems and explainable analytics for non-technical stakeholders.",
+    whyIdeal: "Delivers enterprise-grade technology with pilot-friendly simplicity—no IT infrastructure burden, seamless magic-link deployment, human-readable insights",
     email: "ivan.sanchez@culturecrunch.ai",
     linkedin: "https://linkedin.com/in/ivansanchez"
   }

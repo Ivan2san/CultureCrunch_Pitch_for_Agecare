@@ -69,12 +69,12 @@ export default function DeliverablesSection() {
     {
       id: "weeks2-5",
       title: "Weeks 2-5: Active Sprint",
-      subtitle: "AI-powered insights, team sessions, and behaviour shifts",
+      subtitle: "Data-driven insights, team sessions, and behaviour shifts",
       icon: Zap,
       color: "purple",
       items: [
         {
-          title: "Weekly AI-Generated Leader Briefs (every Monday, 7am)",
+          title: "Weekly Leader Briefs (every Monday, 7am)",
           details: [
             "120-150 word pulse snapshot",
             "One key insight from data (what's working/needs attention)",
@@ -112,7 +112,7 @@ export default function DeliverablesSection() {
       artifacts: {
         title: "Deliverable artifacts:",
         items: [
-          "4 × Weekly Leader Briefs (personalised AI summaries)",
+          "4 × Weekly Leader Briefs (personalised summaries)",
           "4 × Pulse Survey Results (trend data)",
           "Session facilitation guides (for internal reuse)",
           "Micro-action log (what was tried, what happened)"
@@ -170,9 +170,9 @@ export default function DeliverablesSection() {
       color: "blue",
       items: [
         {
-          title: "AI Leader Briefs (Ongoing)",
+          title: "Leader Briefs (Ongoing)",
           details: [
-            "Monthly or fortnightly AI-generated briefs (client chooses cadence)",
+            "Monthly or fortnightly data-driven briefs (client chooses cadence)",
             "Continues pulse → insight → action loop",
             "Evolves focus based on progress and sector trends",
             "Delivered via email + dashboard"
