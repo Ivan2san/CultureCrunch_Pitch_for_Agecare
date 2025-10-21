@@ -30,9 +30,9 @@ export default function ProcessFlowAnimation() {
         color: "purple"
       }
     ],
-    AI: [
+    WeeklyIntelligence: [
       {
-        title: "Weekly AI",
+        title: "Weekly Intelligence",
         subtitle: "Brief with 1 Action",
         points: ["Red→Green index calculation", "Context-aware guidance", "Micro-action selection", "Evidence-based library"],
         icon: Brain,
@@ -154,7 +154,7 @@ export default function ProcessFlowAnimation() {
             iconClass="text-purple-600"
           />
           
-          <Stage data={nodes.AI} color="purple" />
+          <Stage data={nodes.WeeklyIntelligence} color="purple" />
           
           <FlowArrow 
             gradientClass="bg-gradient-to-b from-purple-600 to-indigo-500" 
