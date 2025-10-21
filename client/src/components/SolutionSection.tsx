@@ -95,7 +95,7 @@ export default function SolutionSection() {
           {/* Program Description - Bullet Format */}
           <div className="max-w-3xl mx-auto">
             <p className="text-lg md:text-xl font-semibold text-foreground mb-4">
-              6-Week Psychosocial Installation Program
+              6-Week Psychosocial Leadership Installation Program
             </p>
             <ul className="text-left text-base md:text-lg text-muted-foreground space-y-2 list-none" data-testid="list-program-features">
               <li className="flex items-start gap-3">
