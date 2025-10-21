@@ -375,7 +375,7 @@ export default function ProblemSection() {
             <div className="mt-8 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-200">
               <h4 className="font-bold text-indigo-900 mb-3 text-center">How CultureCrunch Breaks the Cycle</h4>
               <p className="text-sm text-muted-foreground text-center max-w-2xl mx-auto">
-                Weekly <strong>3-question pulse surveys</strong> identify emerging issues early. AI-powered <strong>Monday briefs</strong> give leaders specific, actionable insights. Structured <strong>team check-ins</strong> create psychological safety through honest dialogue—preventing burnout before it drives turnover.
+                Weekly <strong>3-question pulse surveys</strong> identify emerging issues early. Data-driven <strong>Monday briefs</strong> give leaders specific, actionable insights. Structured <strong>team check-ins</strong> create psychological safety through honest dialogue—preventing burnout before it drives turnover.
               </p>
             </div>
           </Card>

@@ -18,7 +18,7 @@ export default function WeekByWeekTimeline() {
       title: "Foundations & Baselines",
       subtitle: "Setting the foundation",
       icon: Target,
-      description: "Triple Goal survey analysed to set starting points for performance, learning and psychosocial safety. Leadership workshop defines Red/Green Zone behaviours and the first three focus areas. LGP360 is launched, leaders configure their AI Copilot, the app is set up, and a short baseline pulse is completed.",
+      description: "Triple Goal survey analysed to set starting points for performance, learning and psychosocial safety. Leadership workshop defines Red/Green Zone behaviours and the first three focus areas. LGP360 is launched, leaders configure their Leadership Copilot, the app is set up, and a short baseline pulse is completed.",
       color: "indigo"
     },
     {
@@ -34,7 +34,7 @@ export default function WeekByWeekTimeline() {
       title: "Skillset Installation + First Sprint",
       subtitle: "Skillset in Action",
       icon: Rocket,
-      description: "First AI Leader Brief lands Monday 7 a.m. Leaders run their first Team Check-In and pick a single micro-practice. The system tracks meeting load, rosters, overtime, recognition and psychosocial signals through the week.",
+      description: "First Leader Brief lands Monday 7 a.m. Leaders run their first Team Check-In and pick a single micro-practice. The system tracks meeting load, rosters, overtime, recognition and psychosocial signals through the week.",
       color: "blue"
     },
     {

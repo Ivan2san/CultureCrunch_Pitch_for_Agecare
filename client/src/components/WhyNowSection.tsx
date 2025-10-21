@@ -144,7 +144,7 @@ export default function WhyNowSection() {
               >
                 <h4 className="text-purple-900 text-2xl font-bold" style={{ letterSpacing: '-0.01em' }}>The Convergence Point</h4>
                 <p className="mt-2 text-purple-800" style={{ letterSpacing: '-0.005em' }}>
-                  Aged care compliance mandates × Workforce crisis × AI capability →{" "}
+                  Aged care compliance mandates × Workforce crisis × Data intelligence →{" "}
                   <span className="font-semibold">
                     the moment to transform psychosocial risk into retention.
                   </span>

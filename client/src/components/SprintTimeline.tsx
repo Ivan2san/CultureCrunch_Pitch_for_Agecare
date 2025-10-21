@@ -48,13 +48,13 @@ export default function SprintTimeline() {
       title: "Skillset Installation + First Sprint",
       icon: Rocket,
       color: "purple",
-      summary: "First AI-powered sprint cycle begins",
+      summary: "First sprint cycle begins",
       items: [
         "Module 2: Accountable Conversations (Skillset) - 2.5 hours virtual instructor-led for leadership team",
-        "First AI-generated Leader Brief delivered Monday @ 7am",
+        "First Leader Brief delivered Monday @ 7am",
         "Leader runs first 10-min OORA conversation ritual",
         "Team picks one micro-practice or action for the week",
-        "AI tracks: meeting load, shifts, rosters, overtime, recognition patterns, psychosocial trends",
+        "System tracks: meeting load, shifts, rosters, overtime, recognition patterns, psychosocial trends",
         "Micro-action implemented: 'Kill 2 recurring meetings', '5-min recognition round', etc."
       ]
     },
@@ -67,7 +67,7 @@ export default function SprintTimeline() {
       summary: "Sprint cycle continues, leader receives 360 feedback",
       items: [
         "Leader LGP360 debrief (60-90 mins) with Grant or Campbell",
-        "Weekly sprint cycle continues with AI brief and OORA ritual",
+        "Weekly sprint cycle continues with brief and OORA ritual",
         "Team implements and tracks micro-actions",
         "Dashboard shows real-time culture shifts"
       ]
@@ -190,7 +190,7 @@ export default function SprintTimeline() {
                 <h3 className="text-xl font-bold text-foreground">12-Month Sustain License</h3>
               </div>
               <p className="text-muted-foreground mb-4">
-                Following the 6-week sprint program, founding partners receive ongoing AI Leader Co-pilot access 
+                Following the 6-week sprint program, founding partners receive ongoing Leadership Co-pilot access 
                 to sustain momentum and continue psychosocial safety improvements across their aged care teams.
               </p>
               <div className="flex items-center gap-2 text-sm font-semibold text-purple-700">

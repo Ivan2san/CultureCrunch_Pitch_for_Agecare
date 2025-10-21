@@ -185,12 +185,12 @@ export default function PositioningSection() {
     {
       title: "Triple Goal Leadership Model™",
       description:
-        "30+ years of organisational behaviour research distilled into our AI training. Competitors don't have this foundation.",
+        "30+ years of organisational behaviour research distilled into our system. Competitors don't have this foundation.",
     },
     {
       title: "Regulatory Deep Integration",
       description:
-        "We're not a survey tool adapting to compliance. We're compliance-native with AI layered on top.",
+        "We're not a survey tool adapting to compliance. We're compliance-native with intelligence layered on top.",
     },
     {
       title: "Founding Partner Network",
@@ -200,7 +200,7 @@ export default function PositioningSection() {
     {
       title: "Closed-Loop Learning",
       description:
-        "Every action tracked → outcomes measured → AI improves. The more it's used, the smarter it gets (org-specific).",
+        "Every action tracked → outcomes measured → system improves. The more it's used, the smarter it gets (org-specific).",
     },
   ];
 
@@ -370,7 +370,7 @@ export default function PositioningSection() {
           <h3 className="text-2xl font-bold mb-4">Market Positioning</h3>
           <p className="text-lg max-w-4xl mx-auto leading-relaxed">
             We're not competing with engagement survey tools (Culture Amp, Peakon). We're not competing with compliance consultants. 
-            We're creating a <span className="font-bold underline">new category</span>: <strong>AI-Powered Psychosocial Safety Platforms</strong>, 
+            We're creating a <span className="font-bold underline">new category</span>: <strong>Data-Driven Psychosocial Safety Platforms</strong>, 
             where compliance meets continuous action, and leaders become better equipped.
           </p>
         </div>

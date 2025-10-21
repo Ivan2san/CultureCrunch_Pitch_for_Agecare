@@ -15,7 +15,7 @@ export async function exportPitchDeckToPDF() {
     
     pdf.setFontSize(20);
     pdf.setFont('helvetica', 'normal');
-    pdf.text('CultureCrunch AI', pageWidth / 2, 80, { align: 'center' });
+    pdf.text('CultureCrunch', pageWidth / 2, 80, { align: 'center' });
     
     pdf.setFontSize(14);
     pdf.text('Psychosocial Safety Platform', pageWidth / 2, 100, { align: 'center' });
@@ -100,7 +100,7 @@ export async function exportPitchDeckToPDF() {
     }
     
     // Save the PDF
-    pdf.save('CultureCrunch-AI-Pitch-Deck.pdf');
+    pdf.save('CultureCrunch-Pitch-Deck.pdf');
     
     return { success: true };
   } catch (error) {

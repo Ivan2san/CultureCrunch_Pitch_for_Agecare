@@ -29,7 +29,7 @@ export default function CompliancePrivacyDiagram() {
     },
     {
       icon: Brain,
-      title: "AI Brief Generation",
+      title: "Brief Generation",
       description: "Privacy-preserving analysis",
       privacy: "No PII in prompts",
       color: "indigo",

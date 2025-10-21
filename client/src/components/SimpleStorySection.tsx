@@ -29,7 +29,7 @@ export default function SimpleStorySection() {
       time: "5 min/week",
       icon: MessageSquare,
       color: "purple",
-      summary: "AI-powered brief delivered every Monday at 6am with one headline insight and one 15-minute micro-action",
+      summary: "Data-driven brief delivered every Monday at 6am with one headline insight and one 15-minute micro-action",
       details: [
         "One data-driven insight from weekly pulse trends",
         "One evidence-based Red→Green behaviour focus",

@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 const loopSteps = [
   {
     icon: Sparkles,
-    title: "AI Brief",
+    title: "Weekly Brief",
     subtitle: "Monday 7 a.m.",
     description: "Brief lands Monday 7 a.m. with the 1–2 focus areas for the week.",
     color: "purple"
@@ -34,7 +34,7 @@ const loopSteps = [
     icon: TrendingUp,
     title: "Evidence Visible",
     subtitle: "Real-time dashboard",
-    description: "Evidence visible on dashboard; feeds next week's AI Brief.",
+    description: "Evidence visible on dashboard; feeds next week's Weekly Brief.",
     color: "purple"
   }
 ];

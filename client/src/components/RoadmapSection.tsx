@@ -84,7 +84,7 @@ export default function RoadmapSection() {
       ],
       deliverables: [
         "Pulse Survey System v1: mobile-friendly delivery, response tracking, aggregation",
-        "Brief Generation Engine v1: rules + AI assistance, micro-action library, delivery automation",
+        "Brief Generation Engine v1: rules-based intelligence, micro-action library, delivery automation",
         "Leader Dashboard v1: trends, actions, compliance exports",
         "SMS/email delivery infrastructure with scheduling & reminders",
       ],

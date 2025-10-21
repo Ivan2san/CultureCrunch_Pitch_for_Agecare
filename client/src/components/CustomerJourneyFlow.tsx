@@ -25,7 +25,7 @@ export default function CustomerJourneyFlow() {
       color: "purple",
       summary: "Weekly pulse-to-brief rhythm with micro-actions",
       keyPoints: [
-        "Monday 6am AI Brief with one micro-action",
+        "Monday 6am Weekly Brief with one micro-action",
         "Leaders implement 15-min actions weekly",
         "Dashboard tracks pulse trends + outcomes",
         "OORA conversations as needed",

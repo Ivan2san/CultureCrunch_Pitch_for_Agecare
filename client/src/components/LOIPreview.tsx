@@ -79,13 +79,13 @@ export default function LOIPreview({ open, onOpenChange }: LOIPreviewProps) {
             <h2 className="text-xl font-bold text-foreground mt-6 mb-3">1. PURPOSE</h2>
             <p className="text-muted-foreground mb-4">
               This Letter of Intent ("LOI") expresses [Client Organisation]'s intent to participate as a Founding Partner 
-              in Culture Crunch's CultureCrunch AI pilot program, subject to mutually agreed terms in a subsequent formal agreement.
+              in Culture Crunch's CultureCrunch pilot program, subject to mutually agreed terms in a subsequent formal agreement.
             </p>
 
             {/* Section 2 */}
             <h2 className="text-xl font-bold text-foreground mt-6 mb-3">2. PILOT PROGRAM OVERVIEW</h2>
             <div className="bg-muted p-4 rounded-lg mb-4">
-              <p className="text-muted-foreground mb-2"><strong>Program Name:</strong> CultureCrunch AI - Founding Partner Pilot</p>
+              <p className="text-muted-foreground mb-2"><strong>Program Name:</strong> CultureCrunch - Founding Partner Pilot</p>
               <p className="text-muted-foreground mb-2"><strong>Duration:</strong> 12 weeks</p>
               <p className="text-muted-foreground mb-2"><strong>Anticipated Start Date:</strong> Q2 2026</p>
               <p className="text-muted-foreground mb-2"><strong>Pilot Scope:</strong></p>
@@ -102,7 +102,7 @@ export default function LOIPreview({ open, onOpenChange }: LOIPreviewProps) {
             <p className="text-muted-foreground mb-3">Culture Crunch will provide:</p>
             <ol className="list-decimal list-inside space-y-3 ml-4">
               <li className="text-foreground">
-                <strong>Weekly AI-Powered Leader Briefs</strong>
+                <strong>Weekly Data-Driven Leader Briefs</strong>
                 <ul className="list-disc list-inside ml-6 mt-1 text-muted-foreground text-sm">
                   <li>Behavioural insights based on workplace metadata</li>
                   <li>Psychosocial risk indicators</li>
