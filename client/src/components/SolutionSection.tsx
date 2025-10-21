@@ -75,9 +75,9 @@ export default function SolutionSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div ref={headerParallax.ref} style={headerParallax.style} className="text-center mb-16">
-          <Badge variant="outline" className="mb-6" data-testid="badge-solution">
-            The Solution
-          </Badge>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16" style={{ letterSpacing: '-0.01em' }} data-testid="heading-solution">
+            THE SOLUTION
+          </h2>
           
           {/* Mission Statement */}
           <p className="text-2xl md:text-3xl font-bold text-foreground mb-8 max-w-4xl mx-auto leading-tight" style={{ letterSpacing: '-0.01em' }} data-testid="text-mission">
@@ -85,9 +85,9 @@ export default function SolutionSection() {
           </p>
           
           {/* Solution Headline */}
-          <h2 className="text-xl md:text-2xl text-muted-foreground max-w-5xl mx-auto leading-relaxed mb-2" style={{ letterSpacing: '-0.01em' }} data-testid="text-solution-headline">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-5xl mx-auto leading-relaxed mb-2" style={{ letterSpacing: '-0.01em' }} data-testid="text-solution-headline">
             A 6-week psychosocial installation program designed for 100-500 staff residential aged care facilities—turning compliance into weekly leadership practice that builds accountable, high performance culture.
-          </h2>
+          </p>
         </div>
 
         {/* What Changes For You */}
