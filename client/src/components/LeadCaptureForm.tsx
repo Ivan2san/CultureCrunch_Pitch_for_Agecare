@@ -147,7 +147,7 @@ export default function LeadCaptureForm({
         </Button>
 
         <p className="text-xs text-muted-foreground text-center mt-4">
-          All fields are optional. We respect your privacy and will only use this information to follow up on your interest in CultureCrunch AI.
+          All fields are optional. We respect your privacy and will only use this information to follow up on your interest in CultureCrunch.
         </p>
       </form>
     </Card>

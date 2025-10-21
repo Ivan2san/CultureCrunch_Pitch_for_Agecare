@@ -3,7 +3,7 @@ import { useParallax } from "@/hooks/useParallax";
 import SectionFeedbackButton from "@/components/SectionFeedbackButton";
 
 type Force = {
-  id: "reg" | "burnout" | "ai";
+  id: "reg" | "burnout" | "tech";
   title: string;
   period: string;
   icon: React.ElementType;
@@ -37,13 +37,13 @@ const FORCES: Force[] = [
     ],
   },
   {
-    id: "ai",
-    title: "AI Maturity for Aged Care",
+    id: "tech",
+    title: "Technology Maturity for Aged Care",
     period: "(2024–2025)",
     icon: BrainCircuit,
     tone: "green",
     bullets: [
-      "Agentic AI can now detect burnout patterns in real-time",
+      "Modern systems can now detect burnout patterns in real-time",
       "Privacy-preserving analysis suitable for aged care compliance",
       "Transforms reactive incident response into proactive risk management",
     ],
@@ -86,7 +86,7 @@ export default function WhyNowSection() {
         </h2>
         <p className="mt-4 text-base md:text-lg text-muted-foreground" style={{ letterSpacing: '-0.005em' }}>
           Clear lanes show regulatory pressure, leaders under strain from external forces, and
-          the leap in AI capability—meeting at a single decision point.
+          the leap in technology capability—meeting at a single decision point.
         </p>
       </div>
 

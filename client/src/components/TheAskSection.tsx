@@ -262,7 +262,7 @@ export default function TheAskSection() {
             <DialogHeader>
               <DialogTitle className="text-2xl font-bold text-center">Schedule a Discovery Call</DialogTitle>
               <DialogDescription className="text-center">
-                Share your details and we'll reach out to schedule a conversation about how CultureCrunch AI can support your organisation
+                Share your details and we'll reach out to schedule a conversation about how CultureCrunch can support your organisation
               </DialogDescription>
             </DialogHeader>
             <LeadCaptureForm

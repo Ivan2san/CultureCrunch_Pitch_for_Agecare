@@ -10,13 +10,13 @@ export default function PositioningSection() {
   const advantages = [
     {
       icon: Activity,
-      title: "Aged Care-Specific AI",
+      title: "Aged Care-Specific Platform",
       description:
         "Purpose-built to detect hazards generic tools miss. The research is clear: there are virtually no aged care-specific psychosocial platforms.",
       differentiators: [
         "17 WHS psychosocial hazards + aged care-specific stressors",
         "Pulse questions calibrated to resident deaths, violence, moral distress",
-        "AI trained on aged care burnout patterns, not generic workplace stress",
+        "System trained on aged care burnout patterns, not generic workplace stress",
       ],
       details: {
         overview: "Market research confirms: 'There are virtually no psychosocial safety software solutions tailored specifically for aged care.' Generic tools like FlourishDx (workplace mental health) and Rely (incident reporting) don't capture aged care's unique hazards. CultureCrunch is purpose-built from the ground up for aged care reality.",
@@ -31,7 +31,7 @@ export default function PositioningSection() {
           },
           {
             title: "Aged Care Burnout Patterns",
-            description: "AI trained on aged care workforce research, not generic employee engagement. Recognizes the unique burnout trajectory: emotional exhaustion from resident deaths → moral distress → departure."
+            description: "System trained on aged care workforce research, not generic employee engagement. Recognizes the unique burnout trajectory: emotional exhaustion from resident deaths → moral distress → departure."
           },
           {
             title: "Proactive vs Reactive",
@@ -52,7 +52,7 @@ export default function PositioningSection() {
         "Hazard register auto-maintained with consultation trails",
       ],
       details: {
-        overview: "Unlike engagement tools that bolt on compliance features, CultureCrunch AI is architected from the ground up to meet Australian WHS psychosocial safety regulations. Every feature maps directly to your legal obligations.",
+        overview: "Unlike engagement tools that bolt on compliance features, CultureCrunch is architected from the ground up to meet Australian WHS psychosocial safety regulations. Every feature maps directly to your legal obligations.",
         keyFeatures: [
           {
             title: "Automated Evidence Generation",
@@ -68,7 +68,7 @@ export default function PositioningSection() {
           },
           {
             title: "Proactive Risk Management",
-            description: "AI monitors for emerging patterns that indicate new or escalating psychosocial hazards, alerting you before they become compliance issues."
+            description: "System monitors for emerging patterns that indicate new or escalating psychosocial hazards, alerting you before they become compliance issues."
           }
         ],
         impact: "Organisations using compliance-first systems reduce audit preparation time by 75% and demonstrate proactive leadership rather than reactive responses to incidents."
@@ -94,7 +94,7 @@ export default function PositioningSection() {
           },
           {
             title: "Smart Brief Generation",
-            description: "Rules-based system with AI assistance synthesizes pulse data into one headline insight and one micro-action (<15 min). Human-reviewed before delivery. Leaders act, not analyze."
+            description: "Data-driven system synthesizes pulse data into one headline insight and one micro-action (<15 min). Human-reviewed before delivery. Leaders act, not analyze."
           },
           {
             title: "Behaviour-Based Focus",
@@ -115,19 +115,19 @@ export default function PositioningSection() {
         "Leaders are 70% of the variance. We make their job manageable, not add to their burden with more training they won't use.",
       differentiators: [
         "10-minute weekly commitment (not 2-hour workshops)",
-        "An AI Leadership Co-Pilot that learns their team's patterns",
+        "A Leadership Co-Pilot that learns their team's patterns",
         "Micro-actions proven to work (from 30+ years research)",
       ],
       details: {
-        overview: "Research shows leaders drive 70% of engagement variance, yet most tools overwhelm aged care managers with dashboards and generic training during workforce crises. We built an AI co-pilot that makes leadership development effortless and effective.",
+        overview: "Research shows leaders drive 70% of engagement variance, yet most tools overwhelm aged care managers with dashboards and generic training during workforce crises. We built a leadership co-pilot that makes leadership development effortless and effective.",
         keyFeatures: [
           {
             title: "Minimal Time Investment",
             description: "10-minute weekly commitment replaces hours of workshops. Micro-actions fit into existing workflows—no separate 'leadership development' time required."
           },
           {
-            title: "Personalised AI Co-Pilot",
-            description: "The AI learns each leader's team patterns, communication style, and challenges. Recommendations become more precise over time, adapting to what works for this specific leader and team."
+            title: "Personalised Leadership Co-Pilot",
+            description: "The system learns each leader's team patterns, communication style, and challenges. Recommendations become more precise over time, adapting to what works for this specific leader and team."
           },
           {
             title: "Research-Backed Actions",
@@ -138,7 +138,7 @@ export default function PositioningSection() {
             description: "Leaders develop psychological safety capabilities through doing, not sitting in training. Each micro-action is a learning opportunity embedded in real work."
           }
         ],
-        impact: "Leaders using AI co-pilot approaches show 44% better retention of practices vs traditional training, with measurable team psychological safety improvements within 6 weeks."
+        impact: "Leaders using co-pilot approaches show 44% better retention of practices vs traditional training, with measurable team psychological safety improvements within 6 weeks."
       }
     },
     {
@@ -164,7 +164,7 @@ export default function PositioningSection() {
             description: "Individual responses never shown. Minimum team size enforced (typically 5+ staff). Leaders see trends, never individual tracking."
           },
           {
-            title: "Transparent AI Briefs",
+            title: "Transparent Briefs",
             description: "Every recommendation shows the evidence: 'Your team's workload score dropped 15 points' → here's why we're suggesting this action. No black-box algorithms."
           },
           {
