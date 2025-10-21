@@ -24,7 +24,7 @@ export default function VisionSection() {
           </div>
           
           <h1 className="text-4xl md:text-5xl font-bold text-foreground leading-[1.1]" style={{ letterSpacing: '-0.01em' }}>
-            Transforming Psychosocial Compliance into High Performing Culture
+            From Compliance To Culture
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed" data-testid="text-intro">
