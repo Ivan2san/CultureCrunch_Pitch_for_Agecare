@@ -36,11 +36,11 @@ const sections = [
     id: "skillset",
     icon: Wrench,
     title: "The Skillset: O.O.R.A. in Action",
-    intro: "A simple, high-trust structure keeps conversations clean and accountable:",
+    intro: "A simple, high-trust structure keeps conversations clean and accountable: Always ask yourself: \"What's My Part In This\", then \"Is there an unmet need in the other I can acknowledge\". Start the conversation here.",
     content: [
       {
         label: "Ownership",
-        text: "Always ask yourself: \"What's My Part In This\", then \"Is there an unmet need in the other I can acknowledge\". Start the conversation here. Request - Be clear and specific. Be sure of understanding. Agreement - Align on clear next steps, outcomes, and shared responsibility."
+        text: "Take responsibility for your part and acknowledge unmet needs in others."
       },
       {
         label: "Observation + Impact",
@@ -48,11 +48,11 @@ const sections = [
       },
       {
         label: "Request",
-        text: "Be specific about what's needed next."
+        text: "Be clear and specific. Be sure of understanding."
       },
       {
         label: "Agreement",
-        text: "Align on clear next steps and shared responsibility."
+        text: "Align on clear next steps, outcomes, and shared responsibility."
       }
     ],
     footer: "It's not a script—it's a backbone for honest, human dialogue.",
