@@ -100,7 +100,7 @@ export default function SolutionSection() {
             <ul className="text-left text-base md:text-lg text-muted-foreground space-y-2 list-none" data-testid="list-program-features">
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-purple-600 dark:text-purple-400 mt-1 flex-shrink-0" />
-                <span>Designed for 100-200 staff residential aged care facilities</span>
+                <span>Designed for 100-200 staff Residential Aged Care facilities and Home Care providers</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-purple-600 dark:text-purple-400 mt-1 flex-shrink-0" />
