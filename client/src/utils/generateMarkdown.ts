@@ -5,7 +5,7 @@
  * a Markdown file (excluding the ROI calculator).
  */
 
-export function generateMarkdownFile() {
+export async function generateMarkdownFile() {
   console.log('📝 Starting Markdown generation...');
   
   const sections = [
@@ -29,11 +29,6 @@ export function generateMarkdownFile() {
     }
     
     markdown += `## ${title}\n\n`;
-    
-    // Extract headings
-    const headings = section.querySelectorAll('h2, h3, h4, h5');
-    const paragraphs = section.querySelectorAll('p');
-    const listItems = section.querySelectorAll('li');
     
     // Get all text content in a structured way
     const allText: string[] = [];
@@ -60,6 +55,22 @@ export function generateMarkdownFile() {
     });
     
     markdown += allText.join('\n');
+    
+    // Special handling for timeline cards with data attributes
+    if (id === 'solution' || id === 'how-it-works') {
+      const timelineCards = section.querySelectorAll('[data-week-title][data-week-description]');
+      if (timelineCards.length > 0) {
+        markdown += '\n\n**Weekly Timeline:**\n\n';
+        timelineCards.forEach((card) => {
+          const weekTitle = card.getAttribute('data-week-title');
+          const weekDescription = card.getAttribute('data-week-description');
+          if (weekTitle && weekDescription) {
+            markdown += `\n**${weekTitle}**: ${weekDescription}\n`;
+          }
+        });
+      }
+    }
+    
     markdown += '\n\n---\n\n';
   });
   

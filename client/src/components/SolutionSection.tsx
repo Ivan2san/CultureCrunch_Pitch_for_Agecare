@@ -170,6 +170,8 @@ export default function SolutionSection() {
                         }`}
                         onClick={() => toggleWeek(item.week)}
                         data-testid={`timeline-card-${item.week}`}
+                        data-week-title={item.title}
+                        data-week-description={item.description}
                       >
                         {/* Collapsed View - Week Badge and Title */}
                         <div className="p-6">

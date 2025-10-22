@@ -494,7 +494,7 @@ export default function ROICalculator() {
           <Button
             variant="outline"
             size="icon"
-            onClick={generateMarkdownFile}
+            onClick={() => generateMarkdownFile()}
             className="shadow-lg bg-background/80 backdrop-blur-sm border-muted-foreground/20 hover:border-muted-foreground/40"
             title="Download pitch as Markdown"
             data-testid="button-download-markdown"
