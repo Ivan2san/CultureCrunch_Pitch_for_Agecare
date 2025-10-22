@@ -10,6 +10,15 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+**October 22, 2025**:
+- Implemented Mission Marquee design in Solution section: wrapped mission statement in gradient card with Sparkles icons for visual prominence
+- Converted 6-week program description to scannable bullet format with checkmark icons
+- Updated program scope from "100-500 staff" to "100-200 staff" facilities  
+- Renamed program to "6-Week Psychosocial Leadership Installation Program" (added "Leadership")
+- Enhanced markdown export functionality to capture collapsed accordion content using data attributes (data-week-title, data-week-description) instead of DOM manipulation, ensuring all weekly timeline descriptions are included in exports regardless of UI state
+- Removed "What Changes for You" heading per streamlining request
+- Added introductory text for benefit cards: "After our 6-week psychosocial leadership program, you will have installed the following:"
+
 **October 21, 2025**:
 - Comprehensive removal of all "AI" terminology across entire codebase (30+ component files) per strategic decision
 - Replaced "AI" references with outcome-focused alternatives: "data-driven," "intelligence-powered," "Weekly Brief," or removed entirely
