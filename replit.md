@@ -58,12 +58,16 @@ Preferred communication style: Simple, everyday language.
 
 **Server**: Express.js with TypeScript on Node.js, designed with a RESTful API structure.
 **Build**: Client built with Vite, server bundled with esbuild, using ESM throughout.
-**Storage**: PostgreSQL database using Drizzle ORM with Neon serverless driver for lead capture. The schema includes `leads` and a placeholder `users` table.
+**Storage**: PostgreSQL database using Drizzle ORM with Neon serverless driver. The schema includes `feedback` (active - captures form submissions with role, name, email, phone, message), `leads` (reserved for future lead capture), and `users` (placeholder for future authentication).
 **Authentication**: No active authentication is implemented, but infrastructure is prepared for session-based authentication with `connect-pg-simple`.
 
 ### System Design Choices
 
 The architecture pivoted from complex metadata-based systems to a lightweight pulse-survey model, emphasizing "Privacy by Minimalism" rather than workplace surveillance. The system comprises a 3-layer model: Client Experience (3-question weekly pulse), Intelligence (rules-based system with data-driven insights and human-reviewed briefs), and Data (privacy-minimal storage of aggregated, team-level pulse responses). The application is highly customized for the Australian aged care sector, incorporating relevant statistics and ROI calculations.
+
+### Technical Conventions
+
+**Data Attribute Pattern for Expandable Content**: When creating expandable/collapsible components (accordions, timeline cards) that need to be captured in markdown exports, use data attributes to store the content independently of UI state. Pattern: `data-week-title` and `data-week-description` attributes on timeline Card elements enable `generateMarkdown.ts` to access collapsed content without DOM manipulation. This convention should be followed for future expandable components requiring export functionality.
 
 ## External Dependencies
 
