@@ -1,16 +1,33 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useParams } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/Home";
 import IndustryPage from "@/pages/IndustryPage";
+import CompanyPitch from "@/pages/CompanyPitch";
 import NotFound from "@/pages/not-found";
 import {
   agedCareConfig,
   healthcareConfig,
   constructionProfessionalServicesConfig
 } from "@/content/industries";
+import { getCompanyBySlug } from "@/content/companies";
+
+/**
+ * Dynamic Company Pitch Route Handler
+ * Looks up company config by slug and renders CompanyPitch or NotFound
+ */
+function CompanyPitchRoute() {
+  const params = useParams<{ slug: string }>();
+  const companyConfig = getCompanyBySlug(params.slug || '');
+
+  if (!companyConfig) {
+    return <NotFound />;
+  }
+
+  return <CompanyPitch config={companyConfig} />;
+}
 
 function Router() {
   return (
@@ -25,6 +42,7 @@ function Router() {
       <Route path="/construction-professional-services">
         <IndustryPage config={constructionProfessionalServicesConfig} />
       </Route>
+      <Route path="/partners/:slug" component={CompanyPitchRoute} />
       <Route component={NotFound} />
     </Switch>
   );
