@@ -1,0 +1,80 @@
+New roadmap (goals, exit criteria, deliverables)
+Phase 1 — Validation (Q4 2025) · target ~5 LOIs
+
+Goals
+
+5 qualified LOIs across 2–3 industries (incl. 1 healthcare).
+
+Validate: detection signal set, OORA micro-practice cadence, and audit artefacts.
+
+Prove manager action rate ≥ 60% with ≤ 10 min/week.
+
+Exit criteria
+
+5 signed LOIs + 3 drafted SoWs; 2 redacted case blurbs; privacy fact sheet + DPA template approved by one legal team.
+
+Deliverables
+
+Clickable demo (Manager Brief → OORA → Audit Pack).
+
+Audit pack sample (PDF/JSON).
+
+Procurement packet v1: data minimisation, AU residency, cohort thresholds.
+
+Phase 2 — Seek funding (Q4 2025–Q1 2026)
+
+Goals
+
+Raise a seed to cover 12–15 months; secure 2–3 domain angels.
+
+Lock first hires: founding engineer, PM/implementer, RevOps contractor.
+
+Exit criteria
+
+Term sheet signed; capital ≥ runway target; security baseline docs ratified (RBAC, encryption, retention policy).
+
+Deliverables
+
+Investor deck + 18-month plan, financial model, product roadmap.
+
+Trust pack: InfoSec policy set, SOC2 readiness plan, DPIA template.
+
+Phase 3 — Build MVP with early adopters (Q1–Q2 2026)
+
+Goals
+
+Ship MVP to 3 early adopters, ≥ 50 managers live.
+
+Achieve time-to-first-action ≤ 7 days; weekly active managers ≥ 60%; action rate ≥ 70%.
+
+Demonstrate two compliance wins: risk register entries + review logs used in governance.
+
+Exit criteria
+
+3 live tenants; 2 documented before/after deltas (e.g., after-hours ↓ 20%+); one board/exec pack delivered.
+
+Deliverables (scope)
+
+SafetyShield v1: signals, hazard cards, risk rating, consultation timeline.
+
+ManagerGPT Coach v1: goals, weekly check-ins, “next best micro-practice.”
+
+ActionLoop v1: milestones, review pulses, audit export.
+
+Light integrations: M365 calendar + Slack events; Perceptyx import adapter read-only.
+
+Phase 4 — Launch (Q2–Q3 2026)
+
+Goals
+
+10 paying customers, ≥ 200 managers covered; net MRR milestone; churn < 5% quarterly.
+
+Self-serve onboarding for small teams; procurement path documented for enterprise.
+
+Exit criteria
+
+Price/packaging validated; 2 public case studies; first external audit or ISO/SOC letter of intent in motion.
+
+Deliverables
+
+Pricing page + contracts; Integration pack v1 (M365, Slack, HRIS read-only); Exec reporting suite; Partner playbook.

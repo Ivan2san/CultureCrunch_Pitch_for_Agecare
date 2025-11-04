@@ -1,0 +1,86 @@
+Culture Crunch could work as a standalone product, and that’s what could helps us land fast. We’re not trying to replace HR, scheduling or payroll. We sit alongside those systems to solve one focused job: psychosocial compliance and team wellbeing.
+
+Why standalone works
+
+Self-contained compliance/wellbeing system, not a systems replacement.
+
+Clear scope: capture weekly signals, turn them into actionable briefs, track follow-through.
+
+Low lift for the provider, high speed for us.
+
+Standalone workflow
+
+Initial setup (Admin/Manager)
+
+Create org (e.g., “Sunnyview Aged Care”).
+
+Create teams (e.g., “Registered Nurses – Ward A”, “Personal Carers – Ward B”).
+
+Add staff by CSV or manual entry: name, email, role, team.
+
+Weekly pulse (Staff)
+
+Friday 3 pm: magic-link emails go out.
+
+One-click login, 3 questions, 2 minutes.
+
+Stored anonymously; results only shown when k≥3 respondents.
+
+AI briefs (Automated)
+
+Monday 6 am: aggregate last week’s pulse; privacy guardrails on.
+
+Generate manager-specific briefs with micro-actions.
+
+Deliver via email.
+
+Manager action (During the week)
+
+Manager opens dashboard via magic link.
+
+Reviews trends, chooses actions, logs completion.
+
+Weekly loop repeats.
+
+flowchart LR
+  A[Setup: org, teams, staff] --> B[Fri Pulse: magic links, 3 Qs, anonymous (k≥3)]
+  B --> C[Mon AI: analyse last week]
+  C --> D[Manager Brief: micro-actions emailed]
+  D --> E[Manager Dashboard: review + log actions]
+  E --> B
+
+What this avoids
+
+No IT approvals: no APIs, no system access, minimal security process.
+
+No data migration: start clean; no legacy imports.
+
+No SSO complexity: magic links work immediately.
+
+No vendor-lock fears: we don’t “open up” their core systems.
+
+Fast pilots: start with one team, prove value, then scale.
+
+The value proposition (how we’d phrase it)
+
+“Send us your staff email list. We’ll handle the rest. Every Monday your managers receive AI-powered team insights. No IT work required.”
+
+Why this lands in aged care:
+
+Many facilities run outdated or brittle IT that’s slow to integrate.
+
+Compliance is easier to approve if data stays contained and anonymous.
+
+Pilots in weeks, not months, so momentum isn’t lost.
+
+Optional integration later (after proof)
+
+Identity: SSO/SAML with their existing identity provider.
+
+HR sync: auto-update staff and roles from their HR system.
+
+Rostering: map teams automatically from schedules.
+
+Analytics: export to their BI tools for executive roll-ups.
+
+Bottom line: standalone is our go-to-market strength. We sell to care managers, deliver value in weeks, and only then have the “integration” conversation for expansion.

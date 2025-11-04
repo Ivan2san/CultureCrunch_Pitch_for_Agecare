@@ -1,0 +1,92 @@
+Culture Crunch: Compliance & Privacy Architecture
+Let me give you a comprehensive overview of the compliance and privacy features built into Culture Crunch so far.
+🛡️ Privacy-by-Design Architecture
+Core Principle: Metadata-Only Collection
+Culture Crunch is built around the idea that you can track team health without collecting personally identifiable information:
+Pulse surveys are completely anonymous- The pulse_responses table has NO user_id field. We only store the respondent's role (carer, nurse, manager), never who they are
+Recognition events use roles, not names - Team members can recognize each other by role ("a carer helped me") without identifying individuals
+Meeting metadata aggregates only - We count meetings and participants, but never record who attended or what was discussed
+K-Anonymity Protection (k≥3)
+The system enforces a minimum threshold of 3 responses before showing any aggregated data:
+In the database layer: storage.getPulseAggregates() returns null if fewer than 3 responses exist
+Prevents re-identification: Even if a team is small, you can't trace feedback back to individuals
+L-diversity for role breakdowns: When showing data by role, we require at least 2 different roles represented
+🔒 Consent Enforcement
+Hard Gate at API Level
+The pulse survey endpoint has a consent check that cannot be bypassed:
+POST /api/pulse/responses
+- Requires userId (401 if missing)
+- Checks user.consentGiven === true (403 if not)
+- Only then accepts the anonymous submission
+This means:
+✅ Users must explicitly consent before participating
+✅ Consent is checked on every submission
+✅ No accidental data collection from non-consenting users
+Granular Consent Types
+The consent_records table tracks different types of consent:
+Pulse survey participation
+Data retention policies
+AI analysis of team data
+Third-party integrations
+📋 Australian Regulatory Compliance
+1. Privacy Act 1988 (APPs 1-13)
+✅ APP 2 (Anonymity): Pulse responses have no user identifiers
+✅ APP 3 (Collection): Only collect what's needed for psychosocial monitoring
+✅ APP 6 (Use/Disclosure): Data used only for team culture insights
+✅ APP 10 (Data Quality): Validation via Zod schemas
+✅ APP 11 (Security): Postgres encryption, HTTPS, session management
+⏳ APP 5 (Privacy Notice): UI not yet implemented - currently Task #7
+2. WHS Psychosocial Hazards (2023+)
+The system addresses all 17 Code of Practice hazards:
+Job demands, low control, poor support, role clarity, violence/aggression, bullying, harassment, etc.
+Risk assessment workflow: Teams can assess hazards, document controls, map to Quality Standards
+Pulse questions mapped to hazards: Each weekly question targets specific psychosocial risks
+Micro-action library: 20+ evidence-based interventions linked to specific hazards
+3. Aged Care Quality Standards
+Every feature maps to specific standards:
+Standard 2 (Governance): Risk assessments, audit trails
+Standard 7 (Human Resources): Workforce wellbeing monitoring
+Standard 8 (Organizational Governance): Compliance reporting, continuous improvement
+🤖 AI Brief Generation (Privacy-Preserving)
+The AI leadership brief system has privacy safeguards:
+Aggregated data only - AI receives team-level averages, never individual responses
+Minimum 3 responses - If k<3, the brief says "insufficient data for analysis"
+No PII in prompts - The AI sees: "Team pulse scores: collaboration 3.2, workload 4.1" not names or details
+Graceful degradation - If OpenAI is unavailable, returns 503 (doesn't crash)
+📊 Automatic Audit Trail
+Every compliance-relevant action generates audit entries automatically:
+Risk assessments created
+Pulse responses submitted (metadata only: timestamp, team, count)
+Micro-actions taken by managers
+Consent decisions recorded
+This means compliance-by-use: The audit trail for regulators is generated as a byproduct of normal operations, not separate documentation work.
+🗄️ Data Retention & Deletion
+Current retention schedule:
+Operational data: 2 years (active team monitoring)
+Compliance evidence: 7 years (WHS + Privacy Act requirements)
+User deletion: 30-day grace period before permanent deletion
+Organization off-boarding: Immediate data anonymization, then archival
+⏳ Pending: Automated cleanup jobs (Task #8) - currently manual via API
+🌏 Cross-Border Data Transfers
+All sub-processors documented with safeguards:
+Neon PostgreSQL: Australia region (data residency)
+Replit hosting: USA (Standard Contractual Clauses)
+OpenAI: USA via Replit AI Integrations (aggregated data only, no PII)
+SendGrid: Multi-region (email only, no survey data)
+📄 Compliance Documentation Package
+Six auditor-ready documents created:
+DPIA/PIA v1.0 - Privacy impact assessment with risk sign-off
+APP 1-13 Mapping - Evidence locations in codebase for each principle
+Sub-Processor Register - Third-party data flows with DPAs
+NDB Breach SOP - Incident response procedures (OAIC notification)
+Aggregation & Suppression Policy - K-anonymity technical specs
+Data Deletion SOP - Retention schedules and deletion workflows
+⚠️ What's NOT Yet Built
+To be transparent, these are still pending:
+⏳ Privacy notice UI (Task #7) - Users need to see what data is collected before consenting
+⏳ RBAC middleware (Task #5) - Role-based access controls not enforced at API level
+⏳ Field-level encryption (Task #5) - Database encryption relies on Postgres defaults
+⏳ Automated retention jobs (Task #8) - Deletion is manual API calls, not scheduled
+
+Bottom line: Culture Crunch is built with privacy as a core architectural principle, not a feature bolted on later. The anonymization, consent enforcement, and k-anonymity protection are in the database schema and storage layer—they can't be accidentally bypassed. The compliance documentation accurately reflects what's implemented versus what's planned.
+
